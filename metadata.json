@@ -1,6 +1,6 @@
 {
   "name": "Arquitecto Maestro",
-  "description": "Plataforma Blue Ocean para hoteles boutique y villas: motor de reservas por horas, arquitectura de datos en Supabase (PostgreSQL), captación de hoteleros y guía de despliegue a costo cero.",
+  "description": "Plataforma Blue Ocean - LCM Total Revenue Management para hoteles y moteles independientes. Estrategia dual: parejas (corta estancia) y transportistas B2B (nodo industrial Ecatepec/Central de Abastos con facturación CFDI). Directorio de renders, simulador de tarifas dinámicas y arquitectura a costo cero.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

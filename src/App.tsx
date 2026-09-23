@@ -11,12 +11,15 @@ import { AdaptiveMemoryView } from './components/AdaptiveMemoryView';
 import { GovernanceView } from './components/GovernanceView';
 import { AirtableDataArchitectureView } from './components/AirtableDataArchitectureView';
 import { BlueOceanPortalView } from './components/BlueOceanPortalView';
+import { HotelDirectoryShowcaseView } from './components/HotelDirectoryShowcaseView';
 import { SupabaseDataArchitectureView } from './components/SupabaseDataArchitectureView';
 import { RescueRoadmapView } from './components/RescueRoadmapView';
 import { InteractiveFeedbackView } from './components/InteractiveFeedbackView';
+import { LCMRevenueMasteryView } from './components/LCMRevenueMasteryView';
+import { ConvocatoriaSliderView } from './components/ConvocatoriaSliderView';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<ActiveTab>('blueocean_portal');
+  const [activeTab, setActiveTab] = useState<ActiveTab>('hotel_directory');
   const [systemStatus, setSystemStatus] = useState<SystemStatus | null>(null);
 
   useEffect(() => {
@@ -46,6 +49,32 @@ export default function App() {
             transition={{ duration: 0.15, ease: 'easeOut' }}
             className="w-full"
           >
+            {activeTab === 'convocatoria' && (
+              <div className="w-full h-full">
+                <ConvocatoriaSliderView 
+                  onGoToHotels={() => setActiveTab('hotel_directory')}
+                  onGoToPortal={() => setActiveTab('blueocean_portal')}
+                />
+              </div>
+            )}
+
+            {activeTab === 'hotel_directory' && (
+              <div className="w-full">
+                <HotelDirectoryShowcaseView 
+                  onSelectHotelForBooking={() => setActiveTab('blueocean_portal')} 
+                  onGoToMethodology={() => setActiveTab('metodologia_lcm')}
+                />
+              </div>
+            )}
+
+            {activeTab === 'metodologia_lcm' && (
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <LCMRevenueMasteryView 
+                  onGoToHotels={() => setActiveTab('hotel_directory')} 
+                />
+              </div>
+            )}
+
             {activeTab === 'blueocean_portal' && <BlueOceanPortalView />}
             
             {activeTab === 'supabase_sql' && (
@@ -120,18 +149,18 @@ export default function App() {
         </AnimatePresence>
       </main>
 
-      {/* Footer de Plataforma */}
+      {/* Footer Ejecutivo */}
       <footer className="border-t border-zinc-800 bg-[#090a0c] py-6 text-xs text-zinc-400">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <span className="font-bold text-white tracking-wide">BLUE OCEAN</span>
             <span>•</span>
-            <span>Hoteles Boutique & Microestancias</span>
+            <span>Hoteles Boutique, Villas & Microestancias</span>
             <span>•</span>
-            <span className="text-emerald-400">Supabase (PostgreSQL) + Vercel</span>
+            <span className="text-[#f5d77f]">Dirección General: Luis César Monroy</span>
           </div>
-          <div className="font-mono text-[11px] text-zinc-500">
-            Alojamiento $0/mes • Dominio Seguro • Trazabilidad 100%
+          <div className="text-zinc-400 text-xs">
+            © 2026 Blue Ocean • Total Revenue Management
           </div>
         </div>
       </footer>

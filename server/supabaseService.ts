@@ -15,8 +15,8 @@ export class SupabaseService {
   private anonKey: string | undefined;
 
   constructor() {
-    this.url = process.env.SUPABASE_URL;
-    this.anonKey = process.env.SUPABASE_ANON_KEY;
+    this.url = process.env.SUPABASE_URL || 'https://ktphxnyadhlcwfspmxns.supabase.co';
+    this.anonKey = process.env.SUPABASE_ANON_KEY || 'sb_publishable_PxLEboKeuup2x-DjJzS5tQ_-JAWjVM5';
   }
 
   public isConfigured(): boolean {

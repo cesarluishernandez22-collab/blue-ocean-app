@@ -103,111 +103,123 @@ export const DEMO_AIRTABLE_CONTACTO: AirtableContactoRecord[] = [
  */
 export const DEMO_AIRTABLE_INVENTARIO: AirtableInventarioPropiedadesRecord[] = [
   {
-    id: 'recInv01Insurgentes',
+    id: 'recInv01CentralAbastos',
     fields: {
-      'Nombre': 'Blue Ocean Hotel & Suites - Insurgentes',
-      'Correo': 'gerencia.insurgentes@oceanrevenue-management.com',
-      'Teléfono': '+52 55 5584 9201',
-      'Dirección': 'Av. Insurgentes Sur 724, Col. del Valle, Benito Juárez, 03100 CDMX',
+      'Nombre': 'Blue Ocean Suites & Villas - Central de Abastos Ecatepec',
+      'Correo': 'centralabastos@oceanrevenue-management.com',
+      'Teléfono': '+52 55 5837 9200',
+      'Dirección': 'Carretera Texcoco-Lechería Km 21.5 (A 10 min caminando de Central de Abastos), Santa Cruz Venta de Carpio, 55060 Ecatepec de Morelos, Méx.',
       'Render Fachada': [
-        'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'
+        '/renders/Polish_20260822_225309771.jpg'
       ],
       'Render Habitaciones': [
-        'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80'
+        '/renders/image~10.jpg',
+        '/renders/image~11.jpg',
+        '/renders/image~12.jpg',
+        '/renders/image~13.jpg'
       ],
-      'Descripción del hotel': 'Propiedad insignia diseñada para estancias cortas y pernoctas ejecutivas. Cuenta con acceso privado express, suites con iluminación ambiental regulable, regadera con hidromasaje y sistema de audio bluetooth integrado.',
-      'Nombre del contacto': 'Ing. Roberto Morales'
+      'Descripción del hotel': 'Propiedad insignia en el nodo logístico e industrial más transitado de Ecatepec. Diseñada con doble canal operativo: suites de romance con máxima discreción para parejas y refugio seguro para operadores de transporte de la Central de Abastos con cochera privada techada y facturación CFDI deducible de viáticos.',
+      'Nombre del contacto': 'Ing. Roberto Morales - Operaciones Ecatepec'
     }
   },
   {
-    id: 'recInv02Periferico',
+    id: 'recInv02ViaMorelos',
     fields: {
-      'Nombre': 'Blue Ocean Grand Suites - Periférico Sur',
-      'Correo': 'operaciones.perisur@oceanrevenue-management.com',
-      'Teléfono': '+52 55 5606 3318',
-      'Dirección': 'Anillo Periférico Sur 4120, Jardines del Pedregal, Álvaro Obregón, 01900 CDMX',
+      'Nombre': 'Blue Ocean Motel & Villas - Vía Morelos Industrial',
+      'Correo': 'viamorelos@oceanrevenue-management.com',
+      'Teléfono': '+52 55 5698 3310',
+      'Dirección': 'Av. Vía Morelos 340, Zona Industrial Santa Clara Coatitla, 55540 Ecatepec de Morelos, Méx.',
       'Render Fachada': [
-        'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80'
+        '/renders/Polish_20260822_230710090.jpg'
       ],
       'Render Habitaciones': [
-        'https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80'
+        '/renders/image~15.jpg',
+        '/renders/image~16.jpg',
+        '/renders/image~17.jpg',
+        '/renders/image~18.jpg'
       ],
-      'Descripción del hotel': 'Arquitectura vanguardista con fuente exterior iluminada y suites de lujo. Equipadas con jacuzzi circular, cama King size suspendida con iluminación perimetral tenue y servicio a la habitación las 24 horas.',
+      'Descripción del hotel': 'Ubicado en la columna vertebral industrial de Ecatepec. Cuenta con portones automatizados herméticos, villas con tina de hidromasaje y convenio empresarial para descanso antifatiga en horas muertas diurnas.',
       'Nombre del contacto': 'Lic. Daniela Valenzuela'
     }
   },
   {
-    id: 'recInv03Polanco',
+    id: 'recInv03MexicoPachuca',
     fields: {
-      'Nombre': 'Blue Ocean Boutique & Suites - Polanco',
-      'Correo': 'reservas.polanco@oceanrevenue-management.com',
-      'Teléfono': '+52 55 5280 4490',
-      'Dirección': 'Calle Leibnitz 95, Anzures / Polanco, Miguel Hidalgo, 11590 CDMX',
+      'Nombre': 'Blue Ocean Express - Autopista México-Pachuca (Venta de Carpio)',
+      'Correo': 'mexicopachuca@oceanrevenue-management.com',
+      'Teléfono': '+52 55 5770 4490',
+      'Dirección': 'Autopista México-Pachuca Km 26.8, Venta de Carpio / Conexión Circuito Exterior Mexiquense, 55060 Ecatepec de Morelos, Méx.',
       'Render Fachada': [
-        'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80'
+        '/renders/Polish_20260822_230305219.jpg'
       ],
       'Render Habitaciones': [
-        'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80'
+        '/renders/image~20.jpg',
+        '/renders/image~21.jpg',
+        '/renders/image~22.jpg',
+        '/renders/image~19.jpg'
       ],
-      'Descripción del hotel': 'Ubicación privilegiada en zona financiera y gastronómica. Máxima discreción y acabados en mármol, smart TV 65 pulgadas con streaming, tina de hidromasaje y climatización inteligente.',
+      'Descripción del hotel': 'Acceso vehicular inmediato a pie de autopista. Resuelve el grave problema del transportista que arriesga su vida durmiendo en el acotamiento: ofrece estancia express facturable, regadera caliente y salvaguarda de unidad con portón cerrado.',
       'Nombre del contacto': 'Mtro. Fernando Carrillo'
     }
   },
   {
-    id: 'recInv04Tlalpan',
+    id: 'recInv04LecheriaTexcoco',
     fields: {
-      'Nombre': 'Blue Ocean Motel & Villas - Tlalpan',
-      'Correo': 'administracion.tlalpan@oceanrevenue-management.com',
-      'Teléfono': '+52 55 5678 1234',
-      'Dirección': 'Calz. de Tlalpan 2840, Santa Úrsula Coapa, Coyoacán, 04650 CDMX',
+      'Nombre': 'Blue Ocean Real Suites - Lechería - Texcoco / San Cristóbal',
+      'Correo': 'sancristobal@oceanrevenue-management.com',
+      'Teléfono': '+52 55 5836 1234',
+      'Dirección': 'Av. Revolución (30-30) 180 esq. Carretera Lechería, San Cristóbal Centro, 55000 Ecatepec de Morelos, Méx.',
       'Render Fachada': [
-        'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80'
+        '/renders/IMG-20260530-WA0001.jpg'
       ],
       'Render Habitaciones': [
-        'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80'
+        '/renders/image~25.jpg',
+        '/renders/image~26.jpg',
+        '/renders/image~27.jpg',
+        '/renders/image~28.jpg'
       ],
-      'Descripción del hotel': 'Diseño tradicional de villas privadas con cochera individual y portón eléctrico automatizado. Opciones de alberca privada en suite, vapor, tubo de pole dance y mobiliario de confort ergonómico.',
+      'Descripción del hotel': 'Conexión estratégica en el corazón de San Cristóbal Ecatepec. Villas modernas equipadas para parejas con cama King suspendida, tubo, vapor y suites de descanso rápido para personal logístico en ruta.',
       'Nombre del contacto': 'Lic. Gabriel Orozco'
     }
   },
   {
-    id: 'recInv05Viaducto',
+    id: 'recInv05AvCentral',
     fields: {
-      'Nombre': 'Blue Ocean Real Motel & Suites - Viaducto',
-      'Correo': 'gerencia.viaducto@oceanrevenue-management.com',
-      'Teléfono': '+52 55 5530 8821',
-      'Dirección': 'Viaducto Miguel Alemán 315, Roma Sur, Cuauhtémoc, 06760 CDMX',
+      'Nombre': 'Blue Ocean Motor Hotel - Av. Central / R-1 Ecatepec',
+      'Correo': 'avcentral@oceanrevenue-management.com',
+      'Teléfono': '+52 55 5775 8820',
+      'Dirección': 'Av. Carlos Hank González (Av. Central) 780, Fracc. Valle de Anáhuac, 55119 Ecatepec de Morelos, Méx.',
       'Render Fachada': [
-        'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=80'
+        '/renders/IMG-20260822-WA0018.jpg'
       ],
       'Render Habitaciones': [
-        'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80'
+        '/renders/image~30.jpg',
+        '/renders/image~33.jpg',
+        '/renders/image~34.jpg',
+        '/renders/image~29.jpg'
       ],
-      'Descripción del hotel': 'Acceso vehicular ágil sobre vía rápida con fachada curvada moderna. Habitaciones temáticas con iluminación LED personalizable en tonalidades magenta/ámbar, minibar surtido y servicio discreto.',
+      'Descripción del hotel': 'Fachada contemporánea iluminada sobre Avenida Central. Habitaciones temáticas con luces LED regulables, servicio a la habitación 24 horas y estacionamiento seguro para camionetas de reparto y choferes de última milla.',
       'Nombre del contacto': 'Sra. Patricia Echeverría'
     }
   },
   {
-    id: 'recInv06SantaFe',
+    id: 'recInv06IndiosVerdes',
     fields: {
-      'Nombre': 'Blue Ocean Executive Tower - Santa Fe',
-      'Correo': 'corporativo.santafe@oceanrevenue-management.com',
-      'Teléfono': '+52 55 5081 7744',
-      'Dirección': 'Av. Vasco de Quiroga 3800, Santa Fe, Cuajimalpa, 05348 CDMX',
+      'Nombre': 'Blue Ocean Grand Hub - Indios Verdes / Entrada Ecatepec',
+      'Correo': 'indiosverdes@oceanrevenue-management.com',
+      'Teléfono': '+52 55 5081 7740',
+      'Dirección': 'Carretera Federal México-Pachuca 14, Puerta Norte Indios Verdes - Conexión Ecatepec, 07300 CDMX / Edomex',
       'Render Fachada': [
-        'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80'
+        '/renders/image~2.jpg'
       ],
       'Render Habitaciones': [
-        'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80'
+        '/renders/image~3.jpg',
+        '/renders/image~4.jpg',
+        '/renders/image~7.jpg',
+        '/renders/image~8.jpg',
+        '/renders/image~9.jpg'
       ],
-      'Descripción del hotel': 'Edificio vertical contemporáneo ideal para ejecutivos en tránsito y descanso de alta gama. Vista panorámica a los cañones de Santa Fe, cortinas black-out automáticas y aislamiento acústico reforzado.',
+      'Descripción del hotel': 'Punto neurálgico en el acceso norte del Valle de México. Excelente opción para que choferes foráneos esperen su ventana de descarga nocturna descansando en una habitación climatizada y facturable, y punto de encuentro discreto para parejas.',
       'Nombre del contacto': 'Lic. Armando Lozano'
     }
   }
@@ -221,7 +233,7 @@ export function buildUnifiedHotelsList(
   inventarioRecords: AirtableInventarioPropiedadesRecord[],
   contactoRecords: AirtableContactoRecord[]
 ): BlueOceanHotel[] {
-  // Configuración de tarifas base y zonas para la Fase 1
+  // Configuración de tarifas base, zonas y descripciones duales para Ecatepec y Corredor Industrial
   const hotelMetadataConfig: Record<string, {
     ciudad: string;
     zona: string;
@@ -236,58 +248,41 @@ export function buildUnifiedHotelsList(
       nocheCompleta: number;
     };
     servicios: string[];
+    descripcionParejas: string;
+    descripcionTransportistas: string;
+    beneficiosTransportistas: string[];
   }> = {
-    'Blue Ocean Hotel & Suites - Insurgentes': {
-      ciudad: 'CDMX',
-      zona: 'Benito Juárez / Del Valle',
+    'Blue Ocean Suites & Villas - Central de Abastos Ecatepec': {
+      ciudad: 'Ecatepec, Edo. Méx.',
+      zona: 'Central de Abastos / Texcoco-Lechería',
+      estrellas: 5,
+      puntuacion: 4.9,
+      totalResenas: 248,
+      tipoPropiedad: 'Motel & Villas',
+      tarifas: {
+        estancia4Horas: 450,
+        estancia6Horas: 600,
+        estancia12Horas: 880,
+        nocheCompleta: 1250
+      },
+      servicios: ['Cochera con Portón Eléctrico', 'Facturación CFDI SAT', 'Agua Caliente 24h', 'Jacuzzi Hidromasaje', 'WiFi Alta Velocidad', 'Room Service'],
+      descripcionParejas: 'El refugio íntimo más exclusivo a minutos de la Central de Abastos. Discreción absoluta desde el acceso vehicular automatizado, villas independientes con tina de hidromasaje, cama King suspendida, iluminación ambiental tenue y room service las 24 horas.',
+      descripcionTransportistas: 'A solo 10 minutos a pie de la Central de Abastos de Ecatepec. Olvídate de arriesgar tu vida y la carga durmiendo en la cabina o el acotamiento. Te ofrecemos descanso digno y seguro: cochera individual techada con portón cerrado para tu unidad, regadera caliente a presión, cama ortopédica y 100% Factura Electrónica CFDI para deducción de tus viáticos empresariales.',
+      beneficiosTransportistas: [
+        'A 10 min de los patios de descarga de Central de Abastos',
+        'Cochera individual con portón eléctrico (máxima protección de unidad y carga)',
+        '100% Facturable ante el SAT para comprobación de viáticos',
+        'Regadera con agua caliente las 24 hrs y presión abundante',
+        'Cama ortopédica para descanso antifatiga reparador',
+        'Tarifas por estancia corta (4h, 6h o pernocta) adaptadas a tu turno'
+      ]
+    },
+    'Blue Ocean Motel & Villas - Vía Morelos Industrial': {
+      ciudad: 'Ecatepec, Edo. Méx.',
+      zona: 'Vía Morelos / Santa Clara Industrial',
       estrellas: 4,
       puntuacion: 4.8,
-      totalResenas: 142,
-      tipoPropiedad: 'Hotel',
-      tarifas: {
-        estancia4Horas: 480,
-        estancia6Horas: 650,
-        estancia12Horas: 950,
-        nocheCompleta: 1350
-      },
-      servicios: ['Acceso Privado', 'Audio Bluetooth', 'Hidromasaje', 'Smart TV 65"', 'WiFi Alta Velocidad', 'Room Service']
-    },
-    'Blue Ocean Grand Suites - Periférico Sur': {
-      ciudad: 'CDMX',
-      zona: 'Pedregal / Perisur',
-      estrellas: 5,
-      puntuacion: 4.9,
-      totalResenas: 218,
-      tipoPropiedad: 'Boutique Suites',
-      tarifas: {
-        estancia4Horas: 580,
-        estancia6Horas: 790,
-        estancia12Horas: 1150,
-        nocheCompleta: 1650
-      },
-      servicios: ['Jacuzzi Circular', 'Cama King Suspendida', 'Luz Perimetral Regulable', 'Cochera Privada', 'Snack Bar Premium']
-    },
-    'Blue Ocean Boutique & Suites - Polanco': {
-      ciudad: 'CDMX',
-      zona: 'Polanco / Anzures',
-      estrellas: 5,
-      puntuacion: 4.9,
-      totalResenas: 184,
-      tipoPropiedad: 'Boutique Suites',
-      tarifas: {
-        estancia4Horas: 650,
-        estancia6Horas: 890,
-        estancia12Horas: 1300,
-        nocheCompleta: 1850
-      },
-      servicios: ['Mármol & Acabados de Lujo', 'Tina de Baño Profunda', 'Valet Parking', 'Streaming 4K', 'Cafetería Gourmet']
-    },
-    'Blue Ocean Motel & Villas - Tlalpan': {
-      ciudad: 'CDMX',
-      zona: 'Coyoacán / Tlalpan',
-      estrellas: 4,
-      puntuacion: 4.7,
-      totalResenas: 310,
+      totalResenas: 192,
       tipoPropiedad: 'Motel & Villas',
       tarifas: {
         estancia4Horas: 420,
@@ -295,37 +290,109 @@ export function buildUnifiedHotelsList(
         estancia12Horas: 820,
         nocheCompleta: 1150
       },
-      servicios: ['Cochera con Portón Eléctrico', 'Opción Villa con Alberca', 'Mobiliario Ergonómico', 'Vapor', 'Discreción 100%']
+      servicios: ['Portón Hermético', 'Factura Electrónica Inmediata', 'Ducha Presurizada', 'TV Smart 65"', 'Climatización', 'Servicio Express'],
+      descripcionParejas: 'Diseño vanguardista con máxima privacidad sobre el corredor Vía Morelos. Suites climatizadas con espejos panorámicos, sonido bluetooth envolvente y menú de coctelería a la habitación.',
+      descripcionTransportistas: 'Ubicación clave sobre Vía Morelos para operadores de transporte de carga y reparto industrial. Aprovecha las horas muertas del día para bañarte y descansar seguro mientras esperas turno de carga o liberas el tráfico del Valle de México. Deducible de impuestos al 100%.',
+      beneficiosTransportistas: [
+        'Ubicación directa sobre el corredor industrial Vía Morelos',
+        'Factura oficial inmediata CFDI para tus viáticos',
+        'Portón hermético cerrado que resguarda tu herramienta y unidad',
+        'Check-in express sin filas ni trámites tardados',
+        'Descanso seguro que previene accidentes por microsueño en carretera'
+      ]
     },
-    'Blue Ocean Real Motel & Suites - Viaducto': {
-      ciudad: 'CDMX',
-      zona: 'Roma Sur / Cuauhtémoc',
+    'Blue Ocean Express - Autopista México-Pachuca (Venta de Carpio)': {
+      ciudad: 'Ecatepec, Edo. Méx.',
+      zona: 'Autopista México-Pachuca / Venta de Carpio',
       estrellas: 4,
-      puntuacion: 4.6,
-      totalResenas: 195,
-      tipoPropiedad: 'Motel & Villas',
-      tarifas: {
-        estancia4Horas: 450,
-        estancia6Horas: 590,
-        estancia12Horas: 880,
-        nocheCompleta: 1250
-      },
-      servicios: ['Entrada Express por Viaducto', 'Iluminación LED Multicolor', 'Minibar Completo', 'Sonido Envolvente']
-    },
-    'Blue Ocean Executive Tower - Santa Fe': {
-      ciudad: 'CDMX',
-      zona: 'Santa Fe / Cuajimalpa',
-      estrellas: 5,
-      puntuacion: 4.8,
-      totalResenas: 126,
+      puntuacion: 4.7,
+      totalResenas: 215,
       tipoPropiedad: 'Hotel',
       tarifas: {
-        estancia4Horas: 520,
-        estancia6Horas: 720,
-        estancia12Horas: 1050,
-        nocheCompleta: 1500
+        estancia4Horas: 390,
+        estancia6Horas: 520,
+        estancia12Horas: 780,
+        nocheCompleta: 1050
       },
-      servicios: ['Vista Panorámica', 'Black-out Automático', 'Aislamiento Acústico Total', 'Escritorio Ergonómico', 'Check-in Digital']
+      servicios: ['Acceso Directo Autopista', 'Cochera Techada', 'Facturación SAT', 'Vigilancia CCTV 24h', 'WiFi Fibra Óptica', 'Café de Cortesía'],
+      descripcionParejas: 'Acceso directo y discreto sobre la autopista México-Pachuca. Habitaciones temáticas confortables con iluminación decorativa, baño amplio y absoluto anonimato.',
+      descripcionTransportistas: 'Parada obligada sobre la México-Pachuca para choferes de trailers, tortons y camionetas de carga. La delincuencia carretera acecha a los choferes estacionados en acotamientos: aquí tu unidad entra a cochera resguardada y tú duermes en cama de hotel con baño limpio por menos de lo que cuesta tu viático.',
+      beneficiosTransportistas: [
+        'Acceso y salida directa sobre la autopista México-Pachuca',
+        'Elimina el peligro de asaltos y robo de mercancía en el acotamiento',
+        'Emisión de factura deducible para la empresa transportista',
+        'Tarifas económicas desde 4 horas para dormir y asearse',
+        'Café caliente y alimentos ligeros disponibles 24 hrs'
+      ]
+    },
+    'Blue Ocean Real Suites - Lechería - Texcoco / San Cristóbal': {
+      ciudad: 'Ecatepec, Edo. Méx.',
+      zona: 'San Cristóbal Centro / Av. 30-30',
+      estrellas: 4,
+      puntuacion: 4.8,
+      totalResenas: 168,
+      tipoPropiedad: 'Boutique Suites',
+      tarifas: {
+        estancia4Horas: 460,
+        estancia6Horas: 620,
+        estancia12Horas: 900,
+        nocheCompleta: 1280
+      },
+      servicios: ['Jacuzzi Circular', 'Cochera Automatizada', 'Facturación CFDI', 'Cama King Size', 'Audio Bluetooth', 'Discreción 100%'],
+      descripcionParejas: 'Suites de lujo y confort romántico en San Cristóbal Ecatepec. Tina de hidromasaje profunda, cama suspendida con luces perimetrales y acabados modernos para momentos inolvidables.',
+      descripcionTransportistas: 'Cruce estratégico entre la Vía Morelos y la Vía José López Portillo / Lechería. Excelente para personal de logística, supervisores de ruta y choferes que requieren descansar unas horas antes de reanudar trayecto.',
+      beneficiosTransportistas: [
+        'Céntrico en el nodo Lechería - Texcoco - San Cristóbal',
+        'Facturación electrónica 100% deducible',
+        'Ducha caliente revitalizante y silencio garantizado para dormir',
+        'Conexión WiFi de alta velocidad para reportar estatus de viaje'
+      ]
+    },
+    'Blue Ocean Motor Hotel - Av. Central / R-1 Ecatepec': {
+      ciudad: 'Ecatepec, Edo. Méx.',
+      zona: 'Av. Central / Valle de Anáhuac',
+      estrellas: 4,
+      puntuacion: 4.7,
+      totalResenas: 177,
+      tipoPropiedad: 'Motel & Villas',
+      tarifas: {
+        estancia4Horas: 430,
+        estancia6Horas: 580,
+        estancia12Horas: 850,
+        nocheCompleta: 1200
+      },
+      servicios: ['Entrada Discreta', 'Portón Automatizado', 'Factura Electrónica', 'Streaming 4K', 'Regadera de Lujo', 'Snacks 24h'],
+      descripcionParejas: 'Villas privadas sobre Avenida Central (R-1) con diseño vanguardista, iluminación LED seleccionable, tubo y mobiliario ergonómico para disfrutar en pareja.',
+      descripcionTransportistas: 'Corredor de distribución comercial hacia Neza, Ecatepec y Aragón. Ideal para unidades de reparto y choferes con jornada partida que buscan descansar de 8:00 AM a 4:00 PM con seguridad y viáticos facturados.',
+      beneficiosTransportistas: [
+        'Ubicación estratégica sobre Avenida Central (Av. Carlos Hank González)',
+        'Descanso en horas diurnas de baja tarifa',
+        'Factura oficial para comprobación ante administración',
+        'Resguardo de vehículo con portón automatizado'
+      ]
+    },
+    'Blue Ocean Grand Hub - Indios Verdes / Entrada Ecatepec': {
+      ciudad: 'CDMX / Edomex',
+      zona: 'Indios Verdes / Acceso Norte Ecatepec',
+      estrellas: 5,
+      puntuacion: 4.9,
+      totalResenas: 310,
+      tipoPropiedad: 'Boutique Suites',
+      tarifas: {
+        estancia4Horas: 520,
+        estancia6Horas: 700,
+        estancia12Horas: 990,
+        nocheCompleta: 1400
+      },
+      servicios: ['Aislamiento Acústico Total', 'Facturación SAT', 'Jacuzzi', 'Cochera Privada', 'Room Service Gourmet', 'Check-in Digital'],
+      descripcionParejas: 'La suite más sofisticada en la puerta norte del Valle de México. Aislamiento acústico de grado hotelero para desconectarse de la ciudad, jacuzzi y amenidades premium.',
+      descripcionTransportistas: 'La antesala perfecta para transportistas foráneos que deben esperar los horarios de restricción vehicular o las ventanas nocturnas de descarga en almacenes de la CDMX. No te arriesgues en la calle: báñate, duerme seguro y factura todo.',
+      beneficiosTransportistas: [
+        'Espera tu ventana de horario de descarga en CDMX de forma segura',
+        'Aislamiento acústico total para dormir de día sin ruido de autopista',
+        'Comprobante fiscal digital (CFDI) 100% válido',
+        'Cochera cerrada y resguardo perimetral monitoreado'
+      ]
     }
   };
 
@@ -342,13 +409,13 @@ export function buildUnifiedHotelsList(
     const extractUrl = (item: any): string => {
       if (typeof item === 'string') return item;
       if (item && item.url) return item.url;
-      return 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80';
+      return '/renders/Polish_20260822_225309771.jpg';
     };
 
     const fachadaRaw = inv.fields['Render Fachada'];
     const renderFachada = Array.isArray(fachadaRaw) && fachadaRaw.length > 0 
       ? extractUrl(fachadaRaw[0])
-      : 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80';
+      : '/renders/Polish_20260822_225309771.jpg';
 
     const habitacionesRaw = inv.fields['Render Habitaciones'];
     const renderHabitaciones = Array.isArray(habitacionesRaw) && habitacionesRaw.length > 0
@@ -356,19 +423,22 @@ export function buildUnifiedHotelsList(
       : [renderFachada];
 
     const config = hotelMetadataConfig[nombre] || {
-      ciudad: 'CDMX',
-      zona: 'Área Metropolitana',
+      ciudad: 'Ecatepec, Edo. Méx.',
+      zona: 'Corredor Industrial Ecatepec',
       estrellas: 4,
-      puntuacion: 4.7,
-      totalResenas: 85,
-      tipoPropiedad: 'Hotel',
+      puntuacion: 4.8,
+      totalResenas: 120,
+      tipoPropiedad: 'Motel & Villas',
       tarifas: {
         estancia4Horas: 450,
         estancia6Horas: 600,
-        estancia12Horas: 900,
-        nocheCompleta: 1300
+        estancia12Horas: 880,
+        nocheCompleta: 1250
       },
-      servicios: ['Acceso Privado', 'Climatización', 'Smart TV', 'Room Service']
+      servicios: ['Cochera con Portón Eléctrico', 'Factura CFDI SAT', 'Agua Caliente 24h', 'WiFi Alta Velocidad'],
+      descripcionParejas: 'Suites con máxima privacidad, iluminación tenue y comodidades para parejas.',
+      descripcionTransportistas: 'Descanso reparador para operadores de transporte con cochera segura y factura oficial.',
+      beneficiosTransportistas: ['Cochera con portón cerrado', '100% Facturable', 'Agua caliente 24h', 'Descanso antifatiga']
     };
 
     return {
@@ -402,7 +472,14 @@ export function buildUnifiedHotelsList(
         tiposDisponibles: ['Suite Estándar', 'Suite con Jacuzzi', 'Villa con Cochera'],
         horariosInmediatos: ['Entrada Inmediata', '14:00 hrs', '16:00 hrs', '18:00 hrs', '20:00 hrs', '22:00 hrs']
       },
-      servicios: config.servicios
+      servicios: config.servicios,
+
+      // Segmentación Estratégica Dual
+      descripcionParejas: config.descripcionParejas,
+      descripcionTransportistas: config.descripcionTransportistas,
+      beneficiosTransportistas: config.beneficiosTransportistas,
+      aptoParaCarga: true,
+      facturacionDisponible: true
     };
   });
 }

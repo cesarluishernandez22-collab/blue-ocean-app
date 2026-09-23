@@ -1,7 +1,9 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
+  "version": 2,
   "rewrites": [
-    { "source": "/(.*)", "destination": "/dist/server.cjs" }
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }

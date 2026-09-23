@@ -101,6 +101,13 @@ export interface BlueOceanHotel {
 
   servicios: string[];
   tipoPropiedad: 'Hotel' | 'Motel & Villas' | 'Boutique Suites';
+
+  // Segmentación Estratégica Dual: Parejas vs. Transportistas / Choferes B2B
+  descripcionParejas?: string;
+  descripcionTransportistas?: string;
+  beneficiosTransportistas?: string[];
+  aptoParaCarga?: boolean; // Para camiones, camionetas o unidades de transporte con cochera segura
+  facturacionDisponible?: boolean;
 }
 
 /**

@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 480" width="1100" height="480">
+  <defs>
+    <!-- Oro Metálico Fino -->
+    <linearGradient id="goldLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9a6e19"/>
+      <stop offset="20%" stop-color="#dfbd5d"/>
+      <stop offset="45%" stop-color="#faecc0"/>
+      <stop offset="70%" stop-color="#c99e32"/>
+      <stop offset="90%" stop-color="#e8ca68"/>
+      <stop offset="100%" stop-color="#7a520e"/>
+    </linearGradient>
+
+    <linearGradient id="goldHoriz" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#faecc0"/>
+      <stop offset="35%" stop-color="#d4af37"/>
+      <stop offset="70%" stop-color="#a6771b"/>
+      <stop offset="100%" stop-color="#5a3b06"/>
+    </linearGradient>
+
+    <linearGradient id="goldDiag" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#69460a"/>
+      <stop offset="25%" stop-color="#b88a28"/>
+      <stop offset="50%" stop-color="#faecc0"/>
+      <stop offset="75%" stop-color="#cda344"/>
+      <stop offset="100%" stop-color="#fff8e1"/>
+    </linearGradient>
+
+    <!-- Esfera Azul Zafiro Blue Ocean -->
+    <radialGradient id="sapphireDial" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1464c8"/>
+      <stop offset="45%" stop-color="#093b82"/>
+      <stop offset="75%" stop-color="#041f48"/>
+      <stop offset="100%" stop-color="#020d20"/>
+    </radialGradient>
+
+    <linearGradient id="silverPlat" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a4f55"/>
+      <stop offset="35%" stop-color="#888f98"/>
+      <stop offset="70%" stop-color="#d0d5db"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+
+  <g id="LCM-HYBRID-LUXURY">
+    <!-- L -->
+    <path d="M 70 65 C 67 65, 62 61, 60 59 L 60 55 L 130 55 L 130 59 C 128 61, 123 65, 120 65 L 120 375 C 120 410, 134 423, 178 423 L 300 423 C 308 423, 314 421, 314 427 L 314 435 L 120 435 C 80 435, 70 415, 70 375 Z" fill="url(#goldLight)"/>
+    <path d="M 70 375 C 70 415, 80 435, 120 435 L 314 435 L 314 427 C 314 421, 308 423, 300 423 L 178 423 C 134 423, 120 410, 120 375 Z" fill="url(#goldHoriz)" opacity="0.85"/>
+
+    <!-- C: Reloj Zafiro de Precisión -->
+    <circle cx="430" cy="245" r="162" fill="url(#sapphireDial)"/>
+    
+    <!-- Anillos de Precisión Guilloché -->
+    <circle cx="430" cy="245" r="148" fill="none" stroke="#1c5db8" stroke-width="0.8" opacity="0.6"/>
+    <circle cx="430" cy="245" r="128" fill="none" stroke="#1c5db8" stroke-width="0.6" stroke-dasharray="3,3" opacity="0.5"/>
+    <circle cx="430" cy="245" r="80" fill="none" stroke="#13478e" stroke-width="0.7" opacity="0.4"/>
+
+    <!-- Engranaje Fino Tourbillon (Dorado Sutil) -->
+    <g transform="translate(375, 290) rotate(15)" opacity="0.45">
+      <circle cx="0" cy="0" r="42" fill="none" stroke="url(#goldDiag)" stroke-width="2"/>
+      <circle cx="0" cy="0" r="14" fill="none" stroke="url(#goldDiag)" stroke-width="1.5"/>
+      <line x1="-38" y1="0" x2="38" y2="0" stroke="url(#goldDiag)" stroke-width="1"/>
+      <line x1="0" y1="-38" x2="0" y2="38" stroke="url(#goldDiag)" stroke-width="1"/>
+      <line x1="-27" y1="-27" x2="27" y2="27" stroke="url(#goldDiag)" stroke-width="1"/>
+      <line x1="-27" y1="27" x2="27" y2="-27" stroke="url(#goldDiag)" stroke-width="1"/>
+      <circle cx="0" cy="0" r="45" fill="none" stroke="url(#goldDiag)" stroke-width="2.5" stroke-dasharray="2,6"/>
+    </g>
+
+    <!-- Engranaje Fino Secundario (Cyan Hairline) -->
+    <g transform="translate(475, 195) rotate(35)" opacity="0.35">
+      <circle cx="0" cy="0" r="32" fill="none" stroke="#4da2ff" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#4da2ff" stroke-width="1"/>
+      <line x1="-28" y1="0" x2="28" y2="0" stroke="#4da2ff" stroke-width="0.8"/>
+      <line x1="0" y1="-28" x2="0" y2="28" stroke="#4da2ff" stroke-width="0.8"/>
+      <circle cx="0" cy="0" r="34" fill="none" stroke="#4da2ff" stroke-width="2" stroke-dasharray="2,5"/>
+    </g>
+
+    <!-- Bisel Dorado de la C -->
+    <path d="M 605 125 C 585 102, 545 70, 475 55 C 370 30, 265 110, 235 220 C 205 330, 260 440, 370 475 C 445 498, 525 482, 575 445 L 546 415 C 505 444, 442 455, 385 440 C 298 412, 252 328, 276 240 C 300 152, 385 90, 468 110 C 520 122, 565 150, 582 172 Z" fill="url(#goldHoriz)"/>
+
+    <!-- Cuarto de Plata en la base -->
+    <path d="M 235 225 C 230 270, 245 335, 282 388 C 325 445, 395 478, 465 480 C 525 482, 575 445, 575 445 L 546 415 C 546 415, 502 444, 452 444 C 392 444, 338 415, 302 368 C 268 320, 258 270, 260 225 Z" fill="url(#silverPlat)"/>
+
+    <!-- Índices de Hora en Oro -->
+    <rect x="425" y="94" width="4" height="20" rx="1" fill="url(#goldHoriz)"/>
+    <rect x="431" y="94" width="4" height="20" rx="1" fill="url(#goldHoriz)"/>
+    <rect x="428" y="376" width="4" height="20" rx="1" fill="url(#goldHoriz)"/>
+    <rect x="280" y="243" width="20" height="4" rx="1" fill="url(#goldHoriz)"/>
+    <rect x="560" y="243" width="20" height="4" rx="1" fill="url(#goldHoriz)"/>
+
+    <circle cx="505" cy="115" r="2.5" fill="#d4af37"/>
+    <circle cx="560" cy="170" r="2.5" fill="#d4af37"/>
+    <circle cx="560" cy="320" r="2.5" fill="#d4af37"/>
+    <circle cx="505" cy="375" r="2.5" fill="#d4af37"/>
+    <circle cx="355" cy="375" r="2.5" fill="#d4af37"/>
+    <circle cx="300" cy="320" r="2.5" fill="#d4af37"/>
+    <circle cx="300" cy="170" r="2.5" fill="#d4af37"/>
+    <circle cx="355" cy="115" r="2.5" fill="#d4af37"/>
+
+    <!-- Pivote Central -->
+    <circle cx="430" cy="245" r="15" fill="url(#goldDiag)" stroke="#523605" stroke-width="1.5"/>
+    <circle cx="430" cy="245" r="6" fill="#041f48"/>
+    <circle cx="430" cy="245" r="3" fill="#ffffff"/>
+
+    <!-- Manecillas de Reloj Suizo -->
+    <path d="M 426 242 L 348 172 L 358 168 L 434 238 Z" fill="url(#goldLight)"/>
+    <path d="M 432 242 L 528 165 L 536 172 L 436 250 Z" fill="url(#goldLight)"/>
+
+    <!-- Flecha Ascendente de Crecimiento -->
+    <path d="M 470 490 L 810 75 L 792 65 L 885 40 L 860 130 L 842 115 L 502 502 Z" fill="url(#goldDiag)"/>
+
+    <!-- M -->
+    <path d="M 695 240 L 695 410 L 675 410 C 665 410, 660 405, 655 405 L 655 415 L 735 415 L 735 405 C 730 405, 725 410, 715 410 L 715 230 L 798 350 L 810 350 L 905 155 L 905 410 L 890 410 C 880 410, 875 405, 870 405 L 870 415 L 950 415 L 950 405 C 945 405, 940 410, 930 410 L 930 130 L 910 130 L 808 315 L 730 195 Z" fill="url(#goldLight)"/>
+  </g>
+</svg>

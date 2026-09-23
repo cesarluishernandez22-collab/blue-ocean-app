@@ -388,27 +388,41 @@ export function SupabaseDataArchitectureView() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="p-4 rounded-xl bg-zinc-950 border border-zinc-800 space-y-2">
-                <div className="flex items-center gap-2 text-emerald-400 font-semibold text-xs">
-                  <Key className="w-4 h-4" />
-                  <span>Dato 1: SUPABASE_URL</span>
+              <div className="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/40 space-y-2">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2 text-emerald-400 font-semibold text-xs">
+                    <Key className="w-4 h-4" />
+                    <span>Dato 1: SUPABASE_URL (¡Listo y Detectado!)</span>
+                  </div>
+                  <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-mono font-semibold">
+                    ID: ktphxnyadhlcwfspmxns
+                  </span>
                 </div>
-                <p className="text-xs text-zinc-400 leading-relaxed">
-                  En Supabase: <strong>Project Settings (⚙️) ➔ API ➔ Project URL</strong>.
+                <p className="text-xs text-zinc-300 leading-relaxed">
+                  Tu URL de base de datos en Supabase es:
                   <br />
-                  Se ve como: <code className="text-zinc-200 font-mono">https://xxxxxxxx.supabase.co</code>
+                  <code className="text-emerald-300 font-mono font-bold bg-zinc-950 px-2.5 py-1 rounded-lg border border-emerald-500/30 inline-block mt-1 select-all">
+                    https://ktphxnyadhlcwfspmxns.supabase.co
+                  </code>
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-zinc-950 border border-zinc-800 space-y-2">
-                <div className="flex items-center gap-2 text-emerald-400 font-semibold text-xs">
-                  <Key className="w-4 h-4" />
-                  <span>Dato 2: SUPABASE_ANON_KEY</span>
+              <div className="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/40 space-y-2">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2 text-emerald-400 font-semibold text-xs">
+                    <Key className="w-4 h-4" />
+                    <span>Dato 2: SUPABASE_ANON_KEY (¡Listo y Enlazado!)</span>
+                  </div>
+                  <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-mono font-semibold">
+                    Listo
+                  </span>
                 </div>
-                <p className="text-xs text-zinc-400 leading-relaxed">
-                  En Supabase: <strong>Project Settings (⚙️) ➔ API ➔ anon / public key</strong>.
+                <p className="text-xs text-zinc-300 leading-relaxed">
+                  Tu llave pública de Supabase:
                   <br />
-                  Es un código largo que empieza por: <code className="text-zinc-200 font-mono">eyJhbGciOi...</code>
+                  <code className="text-emerald-300 font-mono font-bold bg-zinc-950 px-2.5 py-1 rounded-lg border border-emerald-500/30 inline-block mt-1 select-all break-all">
+                    sb_publishable_PxLEboKeuup2x-DjJzS5tQ_-JAWjVM5
+                  </code>
                 </p>
               </div>
             </div>
