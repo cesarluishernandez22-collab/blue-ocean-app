@@ -40,15 +40,15 @@ export function ConvocatoriaLandingView({ onGoToHotels, onGoToPortal }: Convocat
 
   // Galería de Renders de la Convocatoria
   const rendersFila1 = [
-    { title: 'Blue Ocean Hotel & Suites', image: '/renders/Polish_20260822_225309771.jpg' },
-    { title: 'Blue Ocean Insurgentes Norte', image: '/renders/Polish_20260822_230305219.jpg' },
-    { title: 'Blue Ocean Boutique & Spa', image: '/renders/Polish_20260822_230710090.jpg' },
+    { title: 'Blue Ocean Hotel & Suites', image: '/renders/hotel-01-insurgentes/fachada/Polish_20260822_225309771.jpg' },
+    { title: 'Blue Ocean Insurgentes Norte', image: '/renders/hotel-02-periferico/fachada/Polish_20260822_230305219.jpg' },
+    { title: 'Blue Ocean Boutique & Spa', image: '/renders/hotel-03-tlalpan/fachada/Polish_20260822_230710090.jpg' },
   ];
 
   const rendersFila2 = [
-    { title: 'Motel & Villas Privadas', image: '/renders/image~10.jpg' },
-    { title: 'Blue Ocean Luxury Palace', image: '/renders/image~11.jpg' },
-    { title: 'Blue Ocean Hotels Estancia Corta', image: '/renders/image~12.jpg' },
+    { title: 'Motel & Villas Privadas', image: '/renders/hotel-04-villas/fachada/IMG-20260822-WA0018.jpg' },
+    { title: 'Blue Ocean Luxury Palace', image: '/renders/hotel-05-polanco/fachada/IMG-20260530-WA0001.jpg' },
+    { title: 'Blue Ocean Hotels Estancia Corta', image: '/renders/hotel-06-santafe/fachada/image~4.jpg' },
   ];
 
   const handleContactSubmit = (e: React.FormEvent) => {

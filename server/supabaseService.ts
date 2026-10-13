@@ -8,15 +8,63 @@ import {
 
 const DEFAULT_DEMO_HOTELS = buildUnifiedHotelsList(DEMO_AIRTABLE_INVENTARIO, DEMO_AIRTABLE_CONTACTO);
 
+const DEFAULT_SUPABASE_URL = 'https://ktphxnyadhlcwfspmxns.supabase.co';
+const DEFAULT_SUPABASE_ANON_KEY = 'sb_publishable_PxLEboKeuup2x-DjJzS5tQ_-JAWjVM5';
+
+function sanitizeSupabaseUrl(rawUrl: string | undefined): string {
+  if (!rawUrl) return DEFAULT_SUPABASE_URL;
+  let str = rawUrl.trim();
+  // Strip surrounding quotes
+  str = str.replace(/^["']|["']$/g, '').trim();
+  // Extract URL if wrapped in markdown link [text](https://...) or [https://...](https://...)
+  const markdownMatch = str.match(/\((https?:\/\/[^\s)]+)\)/);
+  if (markdownMatch) {
+    str = markdownMatch[1].trim();
+  } else {
+    // Extract http(s) URL pattern
+    const urlMatch = str.match(/https?:\/\/[^\s\]\)"']+/);
+    if (urlMatch) {
+      str = urlMatch[0].trim();
+    }
+  }
+  try {
+    const parsed = new URL(str);
+    if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
+      return parsed.origin;
+    }
+  } catch {
+    return DEFAULT_SUPABASE_URL;
+  }
+  return DEFAULT_SUPABASE_URL;
+}
+
+function sanitizeSupabaseKey(rawKey: string | undefined): string {
+  if (!rawKey) return DEFAULT_SUPABASE_ANON_KEY;
+  let str = rawKey.trim();
+  str = str.replace(/^["']|["']$/g, '').trim();
+  const tokenMatch = str.match(/([a-zA-Z0-9_\-\.]{20,})/);
+  if (tokenMatch) {
+    return tokenMatch[1].trim();
+  }
+  return str.length > 0 ? str : DEFAULT_SUPABASE_ANON_KEY;
+}
+
+function withTimeout<T>(promise: PromiseLike<T>, ms = 2500, timeoutErrorMsg = 'Timeout'): Promise<T> {
+  return Promise.race([
+    Promise.resolve(promise),
+    new Promise<T>((_, reject) => setTimeout(() => reject(new Error(timeoutErrorMsg)), ms))
+  ]);
+}
+
 let supabaseClient: SupabaseClient | null = null;
 
 export class SupabaseService {
-  private url: string | undefined;
-  private anonKey: string | undefined;
+  private url: string;
+  private anonKey: string;
 
   constructor() {
-    this.url = process.env.SUPABASE_URL || 'https://ktphxnyadhlcwfspmxns.supabase.co';
-    this.anonKey = process.env.SUPABASE_ANON_KEY || 'sb_publishable_PxLEboKeuup2x-DjJzS5tQ_-JAWjVM5';
+    this.url = sanitizeSupabaseUrl(process.env.SUPABASE_URL);
+    this.anonKey = sanitizeSupabaseKey(process.env.SUPABASE_ANON_KEY);
   }
 
   public isConfigured(): boolean {
@@ -29,11 +77,11 @@ export class SupabaseService {
     }
     if (!supabaseClient) {
       try {
-        supabaseClient = createClient(this.url!, this.anonKey!, {
+        supabaseClient = createClient(this.url, this.anonKey, {
           auth: { persistSession: false }
         });
-      } catch (err) {
-        console.error('[Supabase] Error al inicializar cliente:', err);
+      } catch (err: any) {
+        console.warn('[Supabase] Aviso al inicializar cliente:', err?.message || err);
         return null;
       }
     }
@@ -64,17 +112,21 @@ export class SupabaseService {
       }
 
       // Check connection and table existence
-      const { data, count, error } = await client
-        .from('hoteles')
-        .select('id, nombre, ciudad', { count: 'exact' })
-        .limit(5);
+      const { data, count, error } = await withTimeout(
+        client
+          .from('hoteles')
+          .select('id, nombre, ciudad', { count: 'exact' })
+          .limit(5),
+        2000,
+        'Tiempo de espera agotado al consultar Supabase'
+      );
 
       if (error) {
         return {
           configured: true,
           connected: false,
           error: error.message,
-          message: 'Conectó a Supabase pero la tabla "hoteles" aún no existe o necesita permisos RLS.'
+          message: 'Host no disponible o la tabla "hoteles" aún no existe en el proyecto Supabase.'
         };
       }
 
@@ -90,7 +142,7 @@ export class SupabaseService {
         configured: true,
         connected: false,
         error: err.message,
-        message: 'Error al contactar con la API de Supabase.'
+        message: 'Servicio Supabase en modo local/fallback (catálogo predeterminado activo y seguro).'
       };
     }
   }
@@ -106,16 +158,20 @@ export class SupabaseService {
     }
 
     try {
-      const { data, error } = await client
-        .from('hoteles')
-        .select(`
-          *,
-          habitaciones (*)
-        `)
-        .eq('activo', true);
+      const { data, error } = await withTimeout(
+        client
+          .from('hoteles')
+          .select(`
+            *,
+            habitaciones (*)
+          `)
+          .eq('activo', true),
+        2000,
+        'Tiempo de espera de Supabase agotado'
+      );
 
       if (error || !data || data.length === 0) {
-        console.log('[Supabase] No se encontraron registros en Supabase o ocurrió un error:', error?.message);
+        // Redirección silenciosa a catálogo local de respaldo
         return {
           source: 'local_catalogue_demo',
           hotels: DEFAULT_DEMO_HOTELS,
@@ -173,8 +229,8 @@ export class SupabaseService {
         hotels: formattedHotels,
         count: formattedHotels.length
       };
-    } catch (err) {
-      console.error('[Supabase] Error al consultar hoteles:', err);
+    } catch {
+      // Si la conexión a Supabase tiene timeout o la red no responde, retornamos catálogo de respaldo sin emitir error fatal
       return {
         source: 'local_catalogue_demo',
         hotels: DEFAULT_DEMO_HOTELS,

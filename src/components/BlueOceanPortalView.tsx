@@ -24,11 +24,13 @@ import { FounderAndMethodologySection } from './FounderAndMethodologySection';
 import { LCMLogo } from './LCMLogo';
 import { BlueOceanHotel } from '../types/airtable';
 import { airtableClient } from '../services/airtableClient';
+import { HeroBookingWidget, MaxChatbotModal } from './MaxChatbotModal';
 
 export function BlueOceanPortalView() {
   const [hotels, setHotels] = useState<BlueOceanHotel[]>([]);
   const [loading, setLoading] = useState(true);
   const [isAffiliationModalOpen, setIsAffiliationModalOpen] = useState(false);
+  const [isChatbotOpen, setIsChatbotOpen] = useState(false);
 
   // Search and Filter State
   const [filters, setFilters] = useState<SearchFilters>({
@@ -133,6 +135,9 @@ export function BlueOceanPortalView() {
             </p>
           </div>
 
+          {/* ENTRADA LIMPIA Y WIDGET DE RESERVA - BLUE OCEAN */}
+          <HeroBookingWidget onOpenChatbot={() => setIsChatbotOpen(true)} />
+
           {/* 2. Buscador de Reservas tipo Booking (Destino, Fechas, Horas de estancia, Huéspedes) */}
           <div className="pt-2">
             <BookingSearchBar
@@ -203,6 +208,12 @@ export function BlueOceanPortalView() {
         onSubmittedSuccess={() => {
           loadHotels();
         }}
+      />
+
+      {/* VENTANA FLOTANTE DEL CHATBOT MAX */}
+      <MaxChatbotModal
+        isOpen={isChatbotOpen}
+        onClose={() => setIsChatbotOpen(false)}
       />
     </div>
   );

@@ -16,8 +16,12 @@ export class AirtableService {
   private useLocalFallbackOnly: boolean = false;
 
   constructor() {
-    this.apiKey = process.env.AIRTABLE_API_KEY;
-    this.baseId = process.env.AIRTABLE_BASE_ID;
+    this.apiKey = process.env.AIRTABLE_API_KEY?.trim();
+    const rawBase = process.env.AIRTABLE_BASE_ID?.trim();
+    if (rawBase) {
+      const match = rawBase.match(/app[a-zA-Z0-9]+/);
+      this.baseId = match ? match[0] : rawBase;
+    }
   }
 
   public isConfigured(): boolean {
@@ -56,7 +60,8 @@ export class AirtableService {
         headers: {
           Authorization: `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        }
+        },
+        signal: AbortSignal.timeout(5000)
       });
 
       if (!response.ok) {
@@ -100,7 +105,8 @@ export class AirtableService {
         headers: {
           Authorization: `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        }
+        },
+        signal: AbortSignal.timeout(5000)
       });
 
       if (!response.ok) {

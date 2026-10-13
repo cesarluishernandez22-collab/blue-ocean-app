@@ -106,11 +106,11 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
           </div>
         </div>
 
-        {/* Cita del Fundador */}
+        {/* Cita Institucional */}
         <div className="mt-6 flex items-center gap-3 text-xs sm:text-sm text-zinc-300 italic bg-black/40 p-3.5 rounded-2xl border border-zinc-800/80">
           <Quote className="w-5 h-5 text-[#d4af37] shrink-0" />
           <span>
-            "Tu inventario ya existe. Nuestra función no es venderte un software ni cobrarte consultorías a ciegas; nosotros invertimos la tecnología, la estrategia y el trabajo operativo. Solo participamos si tu hotel gana más." — <strong>Luis César Monroy</strong>
+            "Tu inventario ya existe. Nuestra función no es venderte un software ni cobrarte consultorías a ciegas; nosotros invertimos la tecnología, la estrategia y el trabajo operativo. Solo participamos si tu hotel gana más." — <strong>Dirección de Total Revenue Management</strong>
           </span>
         </div>
       </div>
@@ -157,7 +157,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
               </div>
               <div>
                 <span className="text-xs font-mono uppercase text-[#d4af37] font-bold">Autoridad & Experiencia Real</span>
-                <h2 className="text-2xl font-bold text-white">¿Quién respalda a Blue Ocean? Luis César Monroy</h2>
+                <h2 className="text-2xl font-bold text-white">¿Quién respalda a Blue Ocean? Dirección de Total Revenue Management</h2>
               </div>
             </div>
 

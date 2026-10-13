@@ -17,10 +17,17 @@ import { RescueRoadmapView } from './components/RescueRoadmapView';
 import { InteractiveFeedbackView } from './components/InteractiveFeedbackView';
 import { LCMRevenueMasteryView } from './components/LCMRevenueMasteryView';
 import { ConvocatoriaSliderView } from './components/ConvocatoriaSliderView';
+import { ChatbotTrainingView } from './components/ChatbotTrainingView';
+import { OnlinePaymentModal } from './components/OnlinePaymentModal';
+import { MaxChatbotModal } from './components/MaxChatbotModal';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<ActiveTab>('hotel_directory');
+  const [activeTab, setActiveTab] = useState<ActiveTab>('convocatoria');
   const [systemStatus, setSystemStatus] = useState<SystemStatus | null>(null);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [targetSlide, setTargetSlide] = useState<number | null>(null);
+  const [isGlobalPaymentModalOpen, setIsGlobalPaymentModalOpen] = useState(false);
+  const [isMaxChatbotOpen, setIsMaxChatbotOpen] = useState(false);
 
   useEffect(() => {
     fetch('/api/system-status')
@@ -29,6 +36,11 @@ export default function App() {
       .catch((err) => console.error('Failed to load system status:', err));
   }, []);
 
+  const handleGoToGraphs = () => {
+    setActiveTab('convocatoria');
+    setTargetSlide(5); // Lámina 6: Tarifa Dinámica (Gráfica Comparativa)
+  };
+
   return (
     <div className="min-h-screen bg-[#0e0f12] text-zinc-100 flex flex-col font-sans selection:bg-amber-500 selection:text-zinc-950">
       {/* Header Unificado de Trabajo */}
@@ -36,6 +48,9 @@ export default function App() {
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         systemStatus={systemStatus}
+        onOpenContact={() => setIsContactModalOpen(true)}
+        onGoToGraphs={handleGoToGraphs}
+        onOpenOnlinePayment={() => setIsGlobalPaymentModalOpen(true)}
       />
 
       {/* Main Content Area */}
@@ -54,6 +69,10 @@ export default function App() {
                 <ConvocatoriaSliderView 
                   onGoToHotels={() => setActiveTab('hotel_directory')}
                   onGoToPortal={() => setActiveTab('blueocean_portal')}
+                  externalContactOpen={isContactModalOpen}
+                  setExternalContactOpen={setIsContactModalOpen}
+                  targetSlide={targetSlide}
+                  onResetTargetSlide={() => setTargetSlide(null)}
                 />
               </div>
             )}
@@ -72,6 +91,12 @@ export default function App() {
                 <LCMRevenueMasteryView 
                   onGoToHotels={() => setActiveTab('hotel_directory')} 
                 />
+              </div>
+            )}
+
+            {activeTab === 'chatbot_entrenamiento' && (
+              <div className="w-full">
+                <ChatbotTrainingView />
               </div>
             )}
 
@@ -164,6 +189,29 @@ export default function App() {
           </div>
         </div>
       </footer>
+      {/* Pasarela Global de Pago en Línea */}
+      <OnlinePaymentModal
+        isOpen={isGlobalPaymentModalOpen}
+        onClose={() => setIsGlobalPaymentModalOpen(false)}
+      />
+
+      {/* Ventana Flotante del Chatbot Max (Recepción Virtual Blue Ocean) */}
+      <MaxChatbotModal
+        isOpen={isMaxChatbotOpen}
+        onClose={() => setIsMaxChatbotOpen(false)}
+      />
+
+      {/* Botón Flotante de Acceso Rápido al Chatbot Max (Ubicado en la parte superior para no obstruir la navegación inferior en móviles) */}
+      {!isMaxChatbotOpen && (
+        <button
+          onClick={() => setIsMaxChatbotOpen(true)}
+          className="fixed top-20 right-4 z-40 flex items-center gap-2 px-3.5 py-2 bg-[#003366] hover:bg-[#002244] text-white rounded-full shadow-2xl border border-white/20 transition-all hover:scale-105 active:scale-95 text-xs font-semibold tracking-wide cursor-pointer"
+          title="Consultar disponibilidad con Max"
+        >
+          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+          <span>Max | Recepción</span>
+        </button>
+      )}
     </div>
   );
 }

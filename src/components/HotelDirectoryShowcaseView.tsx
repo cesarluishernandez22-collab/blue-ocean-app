@@ -51,126 +51,126 @@ export interface ModelHotel {
 const PROPIEDADES_MODELO: ModelHotel[] = [
   {
     id: 1,
-    codigo: 'HOTEL-01',
-    nombreSugerido: 'Blue Ocean Hotel & Suites',
-    direccionZona: 'Insurgentes Norte / Gustavo A. Madero',
+    codigo: 'HOTEL EXCALIBUR',
+    nombreSugerido: 'HOTEL EXCALIBUR',
+    direccionZona: 'Londres 117 Col Juarez',
     tarifa4h: 480,
     tarifa6h: 620,
     tarifaNoche: 850,
-    tags: ['Cochera Privada', 'Jacuzzi Doble', 'Luz Neón'],
+    tags: ['Jacuzzi Doble', 'Luz Neón'],
     renderFachada: {
-      url: '/renders/Polish_20260822_225309771.jpg',
+      url: '/renders/hotel-01-insurgentes/fachada/Polish_20260822_225309771.jpg',
       archivo: 'Polish_20260822_225309771.jpg',
-      descripcion: 'Fachada Principal Blue Ocean Hotel & Suites con marquesina y acceso iluminado'
+      descripcion: 'Excelente ubicación a solo unos pasos de Av. Reforma. Pregunta por el servicio de alimentos'
     },
     renderHabitacion: {
-      url: '/renders/image~10.jpg',
-      archivo: 'image~10.jpg',
-      descripcion: 'Master Suite con iluminación atmosférica LED y acabados de lujo'
+      url: '/renders/hotel-01-insurgentes/habitacion/image~7.jpg',
+      archivo: 'image~7.jpg',
+      descripcion: 'Excelentes habitaciones recientemente remodeladas'
     },
-    descripcionComercial: 'Concepto insignia de alta rotación. Habitaciones acondicionadas con tina de hidromasaje y acceso automatizado directo.'
+    descripcionComercial: 'Ya sea para larga estancia o renta por hora contamos con las mejores tarifas de la zona'
   },
   {
     id: 2,
-    codigo: 'HOTEL-02',
-    nombreSugerido: 'Blue Ocean Insurgentes Norte',
-    direccionZona: 'Tlalnepantla / Periférico Norte',
-    tarifa4h: 420,
-    tarifa6h: 560,
+    codigo: 'HOTEL NOVOA',
+    nombreSugerido: 'HOTEL NOVOA',
+    direccionZona: 'VIRGINIA FABREGAS 14 Col. San Rafael',
+    tarifa4h: 320,
+    tarifa6h: 360,
     tarifaNoche: 780,
     tags: ['Sillón Tántrico', 'Habitación Torre', 'Discreción Total'],
     renderFachada: {
-      url: '/renders/Polish_20260822_230305219.jpg',
+      url: '/renders/hotel-02-periferico/fachada/Polish_20260822_230305219.jpg',
       archivo: 'Polish_20260822_230305219.jpg',
-      descripcion: 'Fachada Moderna Insurgentes Norte con señalización digital Blue Ocean'
+      descripcion: 'Fachada e interiores de reciente remodelacion'
     },
     renderHabitacion: {
-      url: '/renders/image~11.jpg',
-      archivo: 'image~11.jpg',
+      url: '/renders/hotel-02-periferico/habitacion/image~12.jpg',
+      archivo: 'image~12.jpg',
       descripcion: 'Suite con tina de hidromasaje integrada y luz ambiental regulable'
     },
     descripcionComercial: 'Diseñado para parejas y estancias exprés. Optimización de horas valle de lunes a jueves con pricing dinámico.'
   },
   {
     id: 3,
-    codigo: 'HOTEL-03',
-    nombreSugerido: 'Blue Ocean Boutique & Spa',
-    direccionZona: 'Calzada de Tlalpan / Sur',
-    tarifa4h: 550,
-    tarifa6h: 720,
-    tarifaNoche: 990,
+    codigo: 'HOTEL 3 CULTURAS',
+    nombreSugerido: 'HOTEL 3 CULTURAS',
+    direccionZona: 'MINA 168 Colonia Guerrerp',
+    tarifa4h: 350,
+    tarifa6h: 390,
+    tarifaNoche: 500,
     tags: ['Pole Dance', 'Pista Iluminada', 'Jacuzzi Doble'],
     renderFachada: {
-      url: '/renders/Polish_20260822_230710090.jpg',
+      url: '/renders/hotel-03-tlalpan/fachada/Polish_20260822_230710090.jpg',
       archivo: 'Polish_20260822_230710090.jpg',
-      descripcion: 'Fachada Exclusiva Boutique & Spa con arquitectura contemporánea'
+      descripcion: 'La propiedad cuenta con hermoso restaurante bar con servicio las 24 horas a la habitacion'
     },
     renderHabitacion: {
-      url: '/renders/image~12.jpg',
-      archivo: 'image~12.jpg',
+      url: '/renders/hotel-03-tlalpan/habitacion/image~17.jpg',
+      archivo: 'image~17.jpg',
       descripcion: 'Habitación temática con plataforma de pole dance iluminada y acabados de diseño'
     },
     descripcionComercial: 'Máximo ticket promedio de estancia corta. Suites temáticas y de experiencia orientadas a fechas especiales y fines de semana.'
   },
   {
     id: 4,
-    codigo: 'HOTEL-04',
-    nombreSugerido: 'Villas & Suites Blue Ocean',
-    direccionZona: 'Ecatepec / Vía Morelos',
+    codigo: 'HOTEL SAN FRANCISCO',
+    nombreSugerido: 'HOTEL SAN FRANCISCO',
+    direccionZona: 'Colonia Centro Luis Moya 24',
     tarifa4h: 380,
     tarifa6h: 490,
-    tarifaNoche: 680,
-    tags: ['Portón Automático', 'Fácil Acceso', '4 Horas'],
+    tarifaNoche: 610,
+    tags: ['Habitaciones tematicas unicamente adultos'],
     renderFachada: {
-      url: '/renders/IMG-20260822-WA0018.jpg',
+      url: '/renders/hotel-04-villas/fachada/IMG-20260822-WA0018.jpg',
       archivo: 'IMG-20260822-WA0018.jpg',
-      descripcion: 'Villas con cochera individual automatizada y privacidad garantizada'
+      descripcion: 'Hermosa propiedad exclusiva para adultos, combinamos el lujo y la aventura en un mismo lugar'
     },
     renderHabitacion: {
-      url: '/renders/image~13.jpg',
-      archivo: 'image~13.jpg',
+      url: '/renders/hotel-04-villas/habitacion/image~22.jpg',
+      archivo: 'image~22.jpg',
       descripcion: 'Suite con baño de vapor, tina y área de descanso privado'
     },
     descripcionComercial: 'Enfoque de máxima rotación en corredor metropolitano. Check-in vehicular rápido sin contacto con recepción.'
   },
   {
     id: 5,
-    codigo: 'HOTEL-05',
-    nombreSugerido: 'Blue Ocean Luxury Palace',
-    direccionZona: 'Zona Oriente / Calzada Ignacio Zaragoza',
-    tarifa4h: 520,
-    tarifa6h: 680,
-    tarifaNoche: 920,
+    codigo: 'HOTEL SAVOY',
+    nombreSugerido: 'HOTEL SAVOY',
+    direccionZona: 'Calle Zarco 145 Col. Guerrero',
+    tarifa4h: 340,
+    tarifa6h: 390,
+    tarifaNoche: 510,
     tags: ['Vapor Húmedo', 'Jacuzzi', 'Cama King Size'],
     renderFachada: {
-      url: '/renders/image~2.jpg',
-      archivo: 'image~2.jpg',
+      url: '/renders/hotel-05-polanco/fachada/IMG-20260530-WA0001.jpg',
+      archivo: 'IMG-20260530-WA0001.jpg',
       descripcion: 'Acceso vehicular discreto y fachada moderna con iluminación perimetral'
     },
     renderHabitacion: {
-      url: '/renders/image~14.jpg',
-      archivo: 'image~14.jpg',
+      url: '/renders/hotel-05-polanco/habitacion/image~29.jpg',
+      archivo: 'image~29.jpg',
       descripcion: 'Habitación ejecutiva y romance con domótica y control táctil de luces'
     },
     descripcionComercial: 'Propiedad con áreas amplias, sistema de sonido ambiental por bluetooth y acabados en madera y cantera.'
   },
   {
     id: 6,
-    codigo: 'HOTEL-06',
-    nombreSugerido: 'Blue Ocean Express Toreo',
-    direccionZona: 'Naucalpan / Periférico Toreo',
-    tarifa4h: 450,
-    tarifa6h: 590,
-    tarifaNoche: 800,
+    codigo: 'HOTEL ARIZONA',
+    nombreSugerido: 'HOTEL ARIZONA',
+    direccionZona: 'Gomez Farias 986 Col. Tabacalera',
+    tarifa4h: 350,
+    tarifa6h: 420,
+    tarifaNoche: 520,
     tags: ['Cochera Techada', 'Sillón Curvo', 'Smart TV 55"'],
     renderFachada: {
-      url: '/renders/image~4.jpg',
+      url: '/renders/hotel-06-santafe/fachada/image~4.jpg',
       archivo: 'image~4.jpg',
       descripcion: 'Fachada corporativa y de estancia corta en corredor comercial'
     },
     renderHabitacion: {
-      url: '/renders/image~15.jpg',
-      archivo: 'image~15.jpg',
+      url: '/renders/hotel-06-santafe/habitacion/image~36.jpg',
+      archivo: 'image~36.jpg',
       descripcion: 'Suite ejecutiva de paso con cama king, sillón ergonómico y conectividad'
     },
     descripcionComercial: 'Ubicación clave para ejecutivos, viajeros y parejas. Ocupación balanceada entre semana y alta demanda nocturna.'
@@ -346,9 +346,6 @@ export function HotelDirectoryShowcaseView({
           {/* Encabezado del Hero */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-blue-800/40">
             <div className="text-center md:text-left space-y-1">
-              <span className="inline-block px-3 py-0.5 rounded-full bg-[#d4af37]/20 border border-[#d4af37]/40 text-[#f5d77f] text-xs font-mono font-bold tracking-widest uppercase">
-                Metodología Total Revenue Management • L.C. Monroy
-              </span>
               <h1 className="text-2xl sm:text-4xl font-black font-serif tracking-tight text-white">
                 Buscador de Hoteles y Villas de Estancia Corta
               </h1>
@@ -458,7 +455,7 @@ export function HotelDirectoryShowcaseView({
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
                 <span className="text-blue-100">
-                  Mostrando <strong className="text-white font-mono text-sm">{filteredHotels.length}</strong> de {hotelsList.length} propiedades con disponibilidad inmediata
+                  Hoteles con disponibilidad inmediata para reservación
                 </span>
               </div>
 
@@ -824,7 +821,7 @@ export function HotelDirectoryShowcaseView({
         <section className="mt-16 pt-12 border-t border-slate-300">
           <div className="text-center mb-8">
             <span className="text-[#002244] font-mono text-xs uppercase tracking-widest font-bold block mb-1">
-              Arquitectura de Conversión • L.C. Monroy
+              Arquitectura de Conversión • 
             </span>
             <h3 className="text-2xl sm:text-3xl font-black text-slate-900 font-serif">
               ¿Qué es el Sistema Integral BLUE OCEAN?

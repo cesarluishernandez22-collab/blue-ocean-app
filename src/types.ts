@@ -2,6 +2,7 @@ export type ActiveTab =
   | 'convocatoria'
   | 'hotel_directory'
   | 'metodologia_lcm'
+  | 'chatbot_entrenamiento'
   | 'overview'
   | 'blueocean_portal'
   | 'blueocean_data'

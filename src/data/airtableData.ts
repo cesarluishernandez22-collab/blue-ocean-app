@@ -110,13 +110,13 @@ export const DEMO_AIRTABLE_INVENTARIO: AirtableInventarioPropiedadesRecord[] = [
       'Teléfono': '+52 55 5837 9200',
       'Dirección': 'Carretera Texcoco-Lechería Km 21.5 (A 10 min caminando de Central de Abastos), Santa Cruz Venta de Carpio, 55060 Ecatepec de Morelos, Méx.',
       'Render Fachada': [
-        '/renders/Polish_20260822_225309771.jpg'
+        '/renders/hotel-01-insurgentes/fachada/Polish_20260822_225309771.jpg'
       ],
       'Render Habitaciones': [
-        '/renders/image~10.jpg',
-        '/renders/image~11.jpg',
-        '/renders/image~12.jpg',
-        '/renders/image~13.jpg'
+        '/renders/hotel-01-insurgentes/habitacion/image~10.jpg',
+        '/renders/hotel-01-insurgentes/habitacion/image~11.jpg',
+        '/renders/hotel-01-insurgentes/habitacion/image~7.jpg',
+        '/renders/hotel-01-insurgentes/habitacion/image~8.jpg'
       ],
       'Descripción del hotel': 'Propiedad insignia en el nodo logístico e industrial más transitado de Ecatepec. Diseñada con doble canal operativo: suites de romance con máxima discreción para parejas y refugio seguro para operadores de transporte de la Central de Abastos con cochera privada techada y facturación CFDI deducible de viáticos.',
       'Nombre del contacto': 'Ing. Roberto Morales - Operaciones Ecatepec'
@@ -130,13 +130,13 @@ export const DEMO_AIRTABLE_INVENTARIO: AirtableInventarioPropiedadesRecord[] = [
       'Teléfono': '+52 55 5698 3310',
       'Dirección': 'Av. Vía Morelos 340, Zona Industrial Santa Clara Coatitla, 55540 Ecatepec de Morelos, Méx.',
       'Render Fachada': [
-        '/renders/Polish_20260822_230710090.jpg'
+        '/renders/hotel-03-tlalpan/fachada/Polish_20260822_230710090.jpg'
       ],
       'Render Habitaciones': [
-        '/renders/image~15.jpg',
-        '/renders/image~16.jpg',
-        '/renders/image~17.jpg',
-        '/renders/image~18.jpg'
+        '/renders/hotel-02-periferico/habitacion/image~15.jpg',
+        '/renders/hotel-02-periferico/habitacion/image~16.jpg',
+        '/renders/hotel-03-tlalpan/habitacion/image~17.jpg',
+        '/renders/hotel-03-tlalpan/habitacion/image~18.jpg'
       ],
       'Descripción del hotel': 'Ubicado en la columna vertebral industrial de Ecatepec. Cuenta con portones automatizados herméticos, villas con tina de hidromasaje y convenio empresarial para descanso antifatiga en horas muertas diurnas.',
       'Nombre del contacto': 'Lic. Daniela Valenzuela'
@@ -150,13 +150,13 @@ export const DEMO_AIRTABLE_INVENTARIO: AirtableInventarioPropiedadesRecord[] = [
       'Teléfono': '+52 55 5770 4490',
       'Dirección': 'Autopista México-Pachuca Km 26.8, Venta de Carpio / Conexión Circuito Exterior Mexiquense, 55060 Ecatepec de Morelos, Méx.',
       'Render Fachada': [
-        '/renders/Polish_20260822_230305219.jpg'
+        '/renders/hotel-02-periferico/fachada/Polish_20260822_230305219.jpg'
       ],
       'Render Habitaciones': [
-        '/renders/image~20.jpg',
-        '/renders/image~21.jpg',
-        '/renders/image~22.jpg',
-        '/renders/image~19.jpg'
+        '/renders/hotel-03-tlalpan/habitacion/image~20.jpg',
+        '/renders/hotel-03-tlalpan/habitacion/image~21.jpg',
+        '/renders/hotel-04-villas/habitacion/image~22.jpg',
+        '/renders/hotel-03-tlalpan/habitacion/image~19.jpg'
       ],
       'Descripción del hotel': 'Acceso vehicular inmediato a pie de autopista. Resuelve el grave problema del transportista que arriesga su vida durmiendo en el acotamiento: ofrece estancia express facturable, regadera caliente y salvaguarda de unidad con portón cerrado.',
       'Nombre del contacto': 'Mtro. Fernando Carrillo'
@@ -170,13 +170,13 @@ export const DEMO_AIRTABLE_INVENTARIO: AirtableInventarioPropiedadesRecord[] = [
       'Teléfono': '+52 55 5836 1234',
       'Dirección': 'Av. Revolución (30-30) 180 esq. Carretera Lechería, San Cristóbal Centro, 55000 Ecatepec de Morelos, Méx.',
       'Render Fachada': [
-        '/renders/IMG-20260530-WA0001.jpg'
+        '/renders/hotel-05-polanco/fachada/IMG-20260530-WA0001.jpg'
       ],
       'Render Habitaciones': [
-        '/renders/image~25.jpg',
-        '/renders/image~26.jpg',
-        '/renders/image~27.jpg',
-        '/renders/image~28.jpg'
+        '/renders/hotel-04-villas/habitacion/image~25.jpg',
+        '/renders/hotel-04-villas/habitacion/image~26.jpg',
+        '/renders/hotel-04-villas/habitacion/image~27.jpg',
+        '/renders/hotel-04-villas/habitacion/image~28.jpg'
       ],
       'Descripción del hotel': 'Conexión estratégica en el corazón de San Cristóbal Ecatepec. Villas modernas equipadas para parejas con cama King suspendida, tubo, vapor y suites de descanso rápido para personal logístico en ruta.',
       'Nombre del contacto': 'Lic. Gabriel Orozco'
@@ -190,13 +190,13 @@ export const DEMO_AIRTABLE_INVENTARIO: AirtableInventarioPropiedadesRecord[] = [
       'Teléfono': '+52 55 5775 8820',
       'Dirección': 'Av. Carlos Hank González (Av. Central) 780, Fracc. Valle de Anáhuac, 55119 Ecatepec de Morelos, Méx.',
       'Render Fachada': [
-        '/renders/IMG-20260822-WA0018.jpg'
+        '/renders/hotel-04-villas/fachada/IMG-20260822-WA0018.jpg'
       ],
       'Render Habitaciones': [
-        '/renders/image~30.jpg',
-        '/renders/image~33.jpg',
-        '/renders/image~34.jpg',
-        '/renders/image~29.jpg'
+        '/renders/hotel-05-polanco/habitacion/image~30.jpg',
+        '/renders/hotel-05-polanco/habitacion/image~33.jpg',
+        '/renders/hotel-05-polanco/habitacion/image~34.jpg',
+        '/renders/hotel-05-polanco/habitacion/image~29.jpg'
       ],
       'Descripción del hotel': 'Fachada contemporánea iluminada sobre Avenida Central. Habitaciones temáticas con luces LED regulables, servicio a la habitación 24 horas y estacionamiento seguro para camionetas de reparto y choferes de última milla.',
       'Nombre del contacto': 'Sra. Patricia Echeverría'
@@ -210,14 +210,14 @@ export const DEMO_AIRTABLE_INVENTARIO: AirtableInventarioPropiedadesRecord[] = [
       'Teléfono': '+52 55 5081 7740',
       'Dirección': 'Carretera Federal México-Pachuca 14, Puerta Norte Indios Verdes - Conexión Ecatepec, 07300 CDMX / Edomex',
       'Render Fachada': [
-        '/renders/image~2.jpg'
+        '/renders/hotel-04-villas/fachada/image~2.jpg'
       ],
       'Render Habitaciones': [
-        '/renders/image~3.jpg',
-        '/renders/image~4.jpg',
-        '/renders/image~7.jpg',
-        '/renders/image~8.jpg',
-        '/renders/image~9.jpg'
+        '/renders/hotel-05-polanco/fachada/image~3.jpg',
+        '/renders/hotel-06-santafe/fachada/image~4.jpg',
+        '/renders/hotel-06-santafe/habitacion/image~36.jpg',
+        '/renders/hotel-06-santafe/habitacion/image~37.jpg',
+        '/renders/hotel-06-santafe/habitacion/image~38.jpg'
       ],
       'Descripción del hotel': 'Punto neurálgico en el acceso norte del Valle de México. Excelente opción para que choferes foráneos esperen su ventana de descarga nocturna descansando en una habitación climatizada y facturable, y punto de encuentro discreto para parejas.',
       'Nombre del contacto': 'Lic. Armando Lozano'

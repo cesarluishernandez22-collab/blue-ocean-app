@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express';
 import path from 'path';
+import fs from 'fs';
 import { GoogleGenAI } from '@google/genai';
 import dotenv from 'dotenv';
 import { createServer as createViteServer } from 'vite';
@@ -11,7 +12,8 @@ dotenv.config();
 const app = express();
 const PORT = 3000;
 
-app.use(express.json());
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 const airtableService = new AirtableService();
 
@@ -39,6 +41,56 @@ const MASTER_PROMPT_SYSTEM_INSTRUCTION = `Eres el ARQUITECTO MAESTRO Y NÚCLEO D
 - Cero Suposiciones: Si una instrucción o dato es ambiguo, prohibido inventar. Detén el diseño, analiza el conflicto y exige la definición exacta antes de generar código o reglas en borrador.
 - Trazabilidad Estricta: Estados explícitos, auditables y libres de bucles operativos.
 - Límites de Autoridad: Respeto absoluto a límites de negocio, márgenes críticos y autorizaciones financieras.`;
+
+// Ruta Oficial de Aviso de Privacidad y Deslinde Bancario
+app.get('/aviso-de-privacidad', (req: Request, res: Response) => {
+  res.send(`<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviso de Privacidad y Deslinde Bancario • Blue Ocean</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #222; max-width: 780px; margin: 30px auto; padding: 0 20px; background: #f8f9fa; }
+    .card { background: #ffffff; padding: 36px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; }
+    h1 { color: #003366; font-size: 1.6rem; margin-top: 0; line-height: 1.25; }
+    h2 { color: #002244; font-size: 1.15rem; margin-top: 22px; border-bottom: 2px solid #eef2f6; padding-bottom: 6px; }
+    p, li { font-size: 0.9rem; color: #444; line-height: 1.5; }
+    .badge { display: inline-block; background: #e9f0f8; color: #003366; padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; margin-bottom: 14px; }
+    .highlight-box { background: #fef8ec; border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 16px 0; border-radius: 4px; font-size: 0.85rem; color: #78350f; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">CONFORMIDAD LFPDPPP & DESLINDE BANCARIO</div>
+    <h1>Aviso de Privacidad y Autorización de Datos</h1>
+    <p><strong>Blue Ocean & Tradytec • Dirección General Luis César Monroy</strong></p>
+    
+    <div class="highlight-box">
+      <strong>Cláusula de Deslinde Bancario y Titularidad:</strong><br>
+      El usuario declara bajo protesta de decir verdad que el instrumento bancario empleado es de su legítima propiedad y autoriza el cargo de la tarifa de microestancia, <strong>deslindando de forma irrevocable y definitiva al banco emisor, a la plataforma y al establecimiento</strong> de cualquier reclamación, contracargo o disputa posterior.
+    </div>
+
+    <h2>1. Responsable del Tratamiento</h2>
+    <p>Blue Ocean, con operaciones en la Ciudad de México y cobertura en corredores hoteleros principales, es responsable del tratamiento confidencial de los datos personales e imagen de identificación recabados.</p>
+
+    <h2>2. Datos Personales Recabados</h2>
+    <p>Para la verificación de reserva vehicular y cumplimiento antifraude recabamos: Fotografía de Identificación Oficial (INE frontal), Nombre Completo, Teléfono Móvil y confirmación de pago seguro.</p>
+
+    <h2>3. Finalidades y Discreción</h2>
+    <ul>
+      <li>Asignación de folio confidencial para ingreso directo por caseta sin pasar por mostrador.</li>
+      <li>Validación y procesamiento de pago seguro con Mercado Pago.</li>
+      <li>Resguardo temporal y encriptado bajo estándares de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP).</li>
+    </ul>
+
+    <p style="text-align: center; margin-top: 30px; font-size: 0.8rem; color: #888;">
+      © 2026 Blue Ocean • Todos los derechos reservados.
+    </p>
+  </div>
+</body>
+</html>`);
+});
 
 // 1. Health & System Status Endpoint
 app.get('/api/system-status', (req: Request, res: Response) => {
@@ -489,22 +541,9 @@ app.get('/api/airtable/inventario-propiedades', async (req: Request, res: Respon
   }
 });
 
-// 10. Consulta del catálogo unificado de hoteles para el Sitio de Reservas
+// 10. Consulta del catálogo unificado de hoteles para el Sitio de Reservas (Airtable CRM)
 app.get('/api/airtable/hotels', async (req: Request, res: Response) => {
   try {
-    // Si Supabase está configurado, intentamos servir primero desde Supabase
-    if (supabaseService.isConfigured()) {
-      const supaResult = await supabaseService.getHotels();
-      if (supaResult.source === 'supabase_live_database' && supaResult.hotels.length > 0) {
-        return res.json({
-          success: true,
-          source: supaResult.source,
-          totalHotels: supaResult.hotels.length,
-          hotels: supaResult.hotels
-        });
-      }
-    }
-
     const result = await airtableService.getUnifiedHotels();
     res.json({
       success: true,
@@ -641,6 +680,104 @@ app.post('/api/reservas', async (req: Request, res: Response) => {
   }
 });
 
+// Endpoint del Chatbot IA y Entrenamiento Blue Ocean (Luis César Monroy)
+app.post('/api/chatbot/message', async (req: Request, res: Response) => {
+  try {
+    const { message } = req.body;
+    if (!message) {
+      return res.status(400).json({ success: false, error: 'Mensaje requerido' });
+    }
+
+    const systemPrompt = `Eres el Asistente Virtual Concierge de BLUE OCEAN & LCM Total Revenue Management (dirigido por Luis César Monroy).
+OBJETIVOS Y TONO:
+- Atiendes a huéspedes de microestancias y estancias cortas para hoteles y moteles en Ciudad de México.
+- Propiedades modelo oficiales: Hotel Excalibur (Zona Rosa/Reforma), Hotel Novoa (San Rafael), Hotel 3 Culturas (Guerrero), Hotel San Francisco (Centro), Hotel Savoy (Guerrero) y Hotel Arizona (Tabacalera).
+- Tarifas de 4 horas ($320 a $480 MXN), 6 horas y noche completa ($500 a $850 MXN).
+- Resaltas la discreción, el check-in vehicular privado sin fricción y los pagos seguros en línea (tarjeta, SPEI, OXXO Pay).
+- Si quien pregunta es un dueño o administrador de hotel: explicas la metodología TRM de Luis César Monroy, sin cobros fijos iniciales, 100% a resultados con el 15% sobre el incremento real medible de ingresos.
+- Mantén respuestas amables, ejecutivas, claras y profesionales en español.`;
+
+    const gemini = getGeminiClient();
+    if (gemini) {
+      try {
+        const response = await gemini.models.generateContent({
+          model: 'gemini-3.8-flash',
+          contents: message,
+          config: {
+            systemInstruction: systemPrompt,
+            temperature: 0.3
+          }
+        });
+
+        return res.json({
+          success: true,
+          reply: response.text,
+          source: 'gemini-3.8-flash'
+        });
+      } catch (geminiErr: any) {
+        console.warn('[Chatbot] Error en llamada Gemini, usando fallback de reglas:', geminiErr?.message);
+      }
+    }
+
+    // Fallback inteligente basado en reglas si no hay API key
+    let fallbackReply = 'Con gusto te asesoro. Contamos con 6 propiedades modelo en CDMX con tarifas desde $320 por 4 horas y check-in vehicular.';
+    const lower = message.toLowerCase();
+    if (lower.includes('precio') || lower.includes('costo') || lower.includes('tarifa') || lower.includes('cuanto')) {
+      fallbackReply = 'Nuestras tarifas de estancia corta van desde $320 MXN por 4 horas (Hotel Novoa) hasta $480 MXN (Hotel Excalibur con jacuzzi doble). También contamos con estancia nocturna desde $500 MXN.';
+    } else if (lower.includes('hotelero') || lower.includes('dueño') || lower.includes('comision') || lower.includes('propiedad')) {
+      fallbackReply = 'Para dueños de hoteles y moteles, Luis César Monroy y Blue Ocean aplican Total Revenue Management con un esquema 100% a resultados: el hotel retiene el 85% y nosotros el 15% sobre el incremento real medible.';
+    } else if (lower.includes('pago') || lower.includes('pagar') || lower.includes('tarjeta') || lower.includes('spei')) {
+      fallbackReply = 'Puedes pagar en línea mediante tarjeta bancaria, SPEI automatizado 24/7, OXXO Pay o pagar en caseta vehicular al llegar con total discreción.';
+    }
+
+    res.json({
+      success: true,
+      reply: fallbackReply,
+      source: 'rules-engine'
+    });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// Endpoints para gestión de imágenes de láminas de la Convocatoria
+const SLIDES_DIR = path.join(process.cwd(), 'public/images/slides');
+if (!fs.existsSync(SLIDES_DIR)) {
+  fs.mkdirSync(SLIDES_DIR, { recursive: true });
+}
+
+app.use('/images/slides', express.static(SLIDES_DIR));
+
+app.get('/api/slide-images', (req: Request, res: Response) => {
+  try {
+    if (!fs.existsSync(SLIDES_DIR)) {
+      return res.json({ success: true, files: [] });
+    }
+    const files = fs.readdirSync(SLIDES_DIR);
+    res.json({ success: true, files });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.post('/api/upload-slide-image', (req: Request, res: Response) => {
+  try {
+    const { fileName, dataUrl, base64 } = req.body;
+    if (!fileName) {
+      return res.status(400).json({ success: false, error: 'Falta nombre de archivo' });
+    }
+    const safeName = path.basename(fileName);
+    const rawData = base64 || (dataUrl ? dataUrl.replace(/^data:image\/\w+;base64,/, '') : null);
+    if (!rawData) {
+      return res.status(400).json({ success: false, error: 'Falta contenido de imagen' });
+    }
+    const buffer = Buffer.from(rawData, 'base64');
+    fs.writeFileSync(path.join(SLIDES_DIR, safeName), buffer);
+    res.json({ success: true, fileName: safeName, path: `/images/slides/${encodeURIComponent(safeName)}` });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
 
 // Configure Vite or Static Serving
 async function startServer() {
