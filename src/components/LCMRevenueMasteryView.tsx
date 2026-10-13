@@ -73,13 +73,13 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
             <LCMLogo size="lg" className="shrink-0" />
             <div>
               <div className="flex flex-wrap items-center gap-2">
-                <span className="text-xs font-mono uppercase text-[#d4af37] font-bold tracking-widest">
+                <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest">
                   Autoría Intelectual & Dirección
                 </span>
-                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-[#d4af37]/20 text-[#f5d77f] border border-[#d4af37]/40 font-semibold">
+                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-sans bg-[#d4af37]/20 text-[#f5d77f] border border-[#d4af37]/40 font-semibold">
                   LCM Total Revenue Framework
                 </span>
-                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">
+                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-sans bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">
                   Modelo por Resultados 15%
                 </span>
               </div>
@@ -94,13 +94,13 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
 
           <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row items-stretch gap-3 shrink-0">
             <div className="p-3.5 rounded-2xl bg-[#18181b]/90 border border-[#d4af37]/40 text-center">
-              <span className="text-[10px] font-mono uppercase text-zinc-400 block">Esquema Aliado</span>
-              <span className="text-xl font-black text-[#d4af37] font-mono">85% Neto Hotel</span>
+              <span className="text-[10px] font-sans uppercase text-zinc-400 block">Esquema Aliado</span>
+              <span className="text-xl font-black text-[#d4af37] font-sans">85% Neto Hotel</span>
               <span className="text-[10px] text-zinc-500 block">15% a éxito • $0 fijos</span>
             </div>
             <div className="p-3.5 rounded-2xl bg-zinc-900/90 border border-cyan-500/30 text-center">
-              <span className="text-[10px] font-mono uppercase text-zinc-400 block">Impacto TRM</span>
-              <span className="text-xl font-black text-cyan-400 font-mono">+15% a +35%</span>
+              <span className="text-[10px] font-sans uppercase text-zinc-400 block">Impacto TRM</span>
+              <span className="text-xl font-black text-cyan-400 font-sans">+15% a +35%</span>
               <span className="text-[10px] text-zinc-500 block">En ingresos totales</span>
             </div>
           </div>
@@ -156,7 +156,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
                 <Award className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-xs font-mono uppercase text-[#d4af37] font-bold">Autoridad & Experiencia Real</span>
+                <span className="text-xs font-sans uppercase text-[#d4af37] font-bold">Autoridad & Experiencia Real</span>
                 <h2 className="text-2xl font-bold text-white">¿Quién respalda a Blue Ocean? Dirección de Total Revenue Management</h2>
               </div>
             </div>
@@ -168,7 +168,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
             {/* Grid de Cadenas & Certificaciones */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="p-4 rounded-2xl bg-zinc-950 border border-zinc-800">
-                <span className="text-xs font-mono text-zinc-400 uppercase block font-bold">Cadenas Dirigidas</span>
+                <span className="text-xs font-sans text-zinc-400 uppercase block font-bold">Cadenas Dirigidas</span>
                 <div className="mt-2 space-y-1.5 text-xs text-zinc-200">
                   <p className="font-semibold text-white">• Meliá Hotels International</p>
                   <p className="font-semibold text-white">• Barceló Hotel Group</p>
@@ -178,27 +178,27 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
               </div>
 
               <div className="p-4 rounded-2xl bg-zinc-950 border border-zinc-800">
-                <span className="text-xs font-mono text-zinc-400 uppercase block font-bold">Revenue & Demanda</span>
+                <span className="text-xs font-sans text-zinc-400 uppercase block font-bold">Revenue & Demanda</span>
                 <p className="mt-2 text-xs text-zinc-200 font-semibold">
                   Especialidad en Revenue Management y Gestión de Demanda
                 </p>
-                <span className="text-[11px] text-[#d4af37] font-mono mt-1 block">ESSEC Business School</span>
+                <span className="text-[11px] text-[#d4af37] font-sans mt-1 block">ESSEC Business School</span>
               </div>
 
               <div className="p-4 rounded-2xl bg-zinc-950 border border-zinc-800">
-                <span className="text-xs font-mono text-zinc-400 uppercase block font-bold">Finanzas Hoteleras</span>
+                <span className="text-xs font-sans text-zinc-400 uppercase block font-bold">Finanzas Hoteleras</span>
                 <p className="mt-2 text-xs text-zinc-200 font-semibold">
                   Máster en Finanzas Hoteleras y Modelos de Flujo de Caja
                 </p>
-                <span className="text-[11px] text-[#d4af37] font-mono mt-1 block">Starweaver</span>
+                <span className="text-[11px] text-[#d4af37] font-sans mt-1 block">Starweaver</span>
               </div>
 
               <div className="p-4 rounded-2xl bg-zinc-950 border border-zinc-800">
-                <span className="text-xs font-mono text-zinc-400 uppercase block font-bold">Hospitalidad & Datos</span>
+                <span className="text-xs font-sans text-zinc-400 uppercase block font-bold">Hospitalidad & Datos</span>
                 <p className="mt-2 text-xs text-zinc-200 font-semibold">
                   Hospitalidad Operativa (Dubai College of Tourism)
                 </p>
-                <span className="text-[11px] text-cyan-400 font-mono mt-1 block">Google & Microsoft Data Analysis</span>
+                <span className="text-[11px] text-cyan-400 font-sans mt-1 block">Google & Microsoft Data Analysis</span>
               </div>
             </div>
           </div>
@@ -210,14 +210,14 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
                 <Clock className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-xs font-mono uppercase text-cyan-400 font-bold">Evolución Histórica</span>
+                <span className="text-xs font-sans uppercase text-cyan-400 font-bold">Evolución Histórica</span>
                 <h3 className="text-2xl font-bold text-white">La Lección de 1996: El Nacimiento del Pago por Resultados</h3>
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm leading-relaxed">
               <div className="p-5 rounded-2xl bg-zinc-950/80 border border-red-500/20 space-y-3">
-                <div className="flex items-center gap-2 text-rose-400 font-bold font-mono text-xs uppercase">
+                <div className="flex items-center gap-2 text-rose-400 font-bold font-sans text-xs uppercase">
                   <ShieldAlert className="w-4 h-4" />
                   <span>Antes de 1996: El Modelo a Ciegas</span>
                 </div>
@@ -227,7 +227,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
               </div>
 
               <div className="p-5 rounded-2xl bg-zinc-950/80 border border-emerald-500/30 space-y-3">
-                <div className="flex items-center gap-2 text-emerald-400 font-bold font-mono text-xs uppercase">
+                <div className="flex items-center gap-2 text-emerald-400 font-bold font-sans text-xs uppercase">
                   <Zap className="w-4 h-4" />
                   <span>1996: La Revolución de las OTAs</span>
                 </div>
@@ -265,7 +265,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
                 <TrendingUp className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-xs font-mono uppercase text-cyan-400 font-bold">Diferenciador Técnico Fundamental</span>
+                <span className="text-xs font-sans uppercase text-cyan-400 font-bold">Diferenciador Técnico Fundamental</span>
                 <h2 className="text-2xl font-bold text-white">Revenue Management vs. Total Revenue Management (TRM)</h2>
               </div>
             </div>
@@ -279,7 +279,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
               <div className="p-6 rounded-2xl bg-zinc-950 border border-zinc-800 space-y-3">
                 <div className="flex items-center justify-between">
                   <h3 className="text-base font-bold text-zinc-200">Revenue Management Tradicional</h3>
-                  <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-zinc-800 text-zinc-400">Enfoque Limitado</span>
+                  <span className="px-2 py-0.5 rounded text-[10px] font-sans bg-zinc-800 text-zinc-400">Enfoque Limitado</span>
                 </div>
                 <p className="text-xs text-zinc-400 leading-relaxed">
                   Se enfoca <strong>únicamente en maximizar el ingreso por la venta de habitaciones</strong> mediante estrategias de precios, pronósticos de demanda y control básico de inventario. Piensa solo en la tarifa de la noche o la habitación individual.
@@ -295,7 +295,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
               <div className="p-6 rounded-2xl bg-gradient-to-b from-[#d4af37]/15 to-zinc-950 border border-[#d4af37]/40 space-y-3 shadow-lg">
                 <div className="flex items-center justify-between">
                   <h3 className="text-base font-bold text-[#f5d77f]">Total Revenue Management (Blue Ocean)</h3>
-                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-[#d4af37]/20 text-[#f5d77f] font-bold border border-[#d4af37]/50">
+                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-sans bg-[#d4af37]/20 text-[#f5d77f] font-bold border border-[#d4af37]/50">
                     +10% a +35% Ingresos
                   </span>
                 </div>
@@ -324,7 +324,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
               <div className="text-xs text-zinc-300">
                 <strong className="text-white block sm:inline">Resultado Comprobado:</strong> Los hoteles que implementan una estrategia integral de Total Revenue Management incrementan sus ingresos entre un <strong>10% y un 25% (pudiendo llegar al 35%)</strong> dependiendo de su nivel de digitalización.
               </div>
-              <span className="px-3 py-1 rounded-xl bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold shrink-0">
+              <span className="px-3 py-1 rounded-xl bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 text-xs font-sans font-bold shrink-0">
                 TRevPAR Optimizado
               </span>
             </div>
@@ -343,7 +343,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
                 <BarChart3 className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-xs font-mono uppercase text-amber-400 font-bold">Ciencia Tarifaria</span>
+                <span className="text-xs font-sans uppercase text-amber-400 font-bold">Ciencia Tarifaria</span>
                 <h2 className="text-2xl font-bold text-white">Tarifa Plana vs. Tarifa Dinámica</h2>
               </div>
             </div>
@@ -355,14 +355,14 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
               <div className="p-4 rounded-2xl bg-rose-950/20 border border-rose-500/30 space-y-2">
-                <span className="font-bold text-rose-300 uppercase font-mono block">1. En Alta Demanda (Pérdida de Excedente):</span>
+                <span className="font-bold text-rose-300 uppercase font-sans block">1. En Alta Demanda (Pérdida de Excedente):</span>
                 <p className="text-zinc-300">
                   Un viernes en la noche tienes 10 personas esperando habitación. Al cobrar tu tarifa plana de $450, <strong>dejas dinero sobre la mesa</strong> cuando el huésped pagaría $650 o $750 felizmente.
                 </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-amber-950/20 border border-amber-500/30 space-y-2">
-                <span className="font-bold text-amber-300 uppercase font-mono block">2. En Baja Demanda (Habitación Vacía):</span>
+                <span className="font-bold text-amber-300 uppercase font-sans block">2. En Baja Demanda (Habitación Vacía):</span>
                 <p className="text-zinc-300">
                   Un martes a las 10:00 AM tienes 25 habitaciones vacías. Mantener la tarifa fija de $450 ahuyenta a transportistas y trabajadores que pagarían $350 por dormir 4 horas. <strong>Habitación que no se vende hoy, es ingreso perdido para siempre</strong>.
                 </p>
@@ -373,7 +373,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
             <div className="mt-8 p-6 sm:p-8 rounded-3xl bg-zinc-950 border border-cyan-500/30 space-y-6">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-800 pb-4">
                 <div>
-                  <span className="text-xs font-mono uppercase text-cyan-400 font-bold flex items-center gap-1.5">
+                  <span className="text-xs font-sans uppercase text-cyan-400 font-bold flex items-center gap-1.5">
                     <Sliders className="w-3.5 h-3.5" />
                     Simulador Interactivo de Captura de Ingresos
                   </span>
@@ -383,11 +383,11 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="text-right">
-                    <span className="text-[10px] font-mono text-zinc-400 block">Habitaciones:</span>
+                    <span className="text-[10px] font-sans text-zinc-400 block">Habitaciones:</span>
                     <select
                       value={roomCount}
                       onChange={(e) => setRoomCount(Number(e.target.value))}
-                      className="bg-zinc-900 border border-zinc-700 text-xs font-mono text-white rounded-lg px-2.5 py-1"
+                      className="bg-zinc-900 border border-zinc-700 text-xs font-sans text-white rounded-lg px-2.5 py-1"
                     >
                       <option value={15}>15 habitaciones</option>
                       <option value={25}>25 habitaciones</option>
@@ -400,7 +400,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
 
               {/* Control Deslizante de Demanda */}
               <div className="space-y-2">
-                <div className="flex justify-between items-center text-xs font-mono">
+                <div className="flex justify-between items-center text-xs font-sans">
                   <span className="text-zinc-300">Nivel de Demanda del Mercado / Momento:</span>
                   <strong className="text-cyan-400 font-bold text-sm">
                     {simulatedDemand}% {simulatedDemand < 40 ? '(Horas Muertas / Martes 11 AM)' : simulatedDemand < 75 ? '(Demanda Moderada / Jueves)' : '(Alta Demanda / Fin de Semana)'}
@@ -414,7 +414,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
                   onChange={(e) => setSimulatedDemand(Number(e.target.value))}
                   className="w-full accent-cyan-400 cursor-pointer h-2 bg-zinc-800 rounded-lg"
                 />
-                <div className="flex justify-between text-[10px] font-mono text-zinc-500">
+                <div className="flex justify-between text-[10px] font-sans text-zinc-500">
                   <span>10% (Poca afluencia)</span>
                   <span>50% (Día normal)</span>
                   <span>100% (Viernes/Sábado Noche)</span>
@@ -425,11 +425,11 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
                 {/* Caja Tarifa Plana */}
                 <div className="p-5 rounded-2xl bg-zinc-900/80 border border-zinc-800 space-y-3">
-                  <div className="flex items-center justify-between text-xs font-mono">
+                  <div className="flex items-center justify-between text-xs font-sans">
                     <span className="text-zinc-400 font-bold">OPERACIÓN TRADICIONAL (Plana)</span>
                     <span className="text-zinc-300">${flatRate} fijo</span>
                   </div>
-                  <div className="space-y-1.5 text-xs text-zinc-300 font-mono">
+                  <div className="space-y-1.5 text-xs text-zinc-300 font-sans">
                     <p className="flex justify-between">
                       <span>Habitaciones vendidas:</span>
                       <strong>{flatRoomsSold} de {roomCount}</strong>
@@ -447,13 +447,13 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
 
                 {/* Caja Tarifa Dinámica Blue Ocean */}
                 <div className="p-5 rounded-2xl bg-gradient-to-br from-cyan-950/30 via-zinc-900/90 to-zinc-900 border border-cyan-500/40 space-y-3 shadow-xl">
-                  <div className="flex items-center justify-between text-xs font-mono">
+                  <div className="flex items-center justify-between text-xs font-sans">
                     <span className="text-cyan-400 font-bold">BLUE OCEAN (Dinámica + TRM)</span>
                     <span className="px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-bold">
                       ${dynamicRate} optimizado
                     </span>
                   </div>
-                  <div className="space-y-1.5 text-xs text-zinc-300 font-mono">
+                  <div className="space-y-1.5 text-xs text-zinc-300 font-sans">
                     <p className="flex justify-between">
                       <span>Estancias totales (con rotación):</span>
                       <strong className="text-cyan-300">{dynamicTotalStays} estancias</strong>
@@ -471,7 +471,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
               </div>
 
               {/* Beneficio Neto Extra para el Hotel */}
-              <div className="p-4 rounded-2xl bg-[#d4af37]/15 border border-[#d4af37]/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
+              <div className="p-4 rounded-2xl bg-[#d4af37]/15 border border-[#d4af37]/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans">
                 <div>
                   <span className="text-zinc-400 uppercase text-[10px] block">Incremento Neto Mensual Estimado:</span>
                   <span className="text-xl sm:text-2xl font-black text-[#f5d77f]">
@@ -499,17 +499,17 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
                 <Compass className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-xs font-mono uppercase text-purple-400 font-bold">Las Tres Preguntas Clave</span>
+                <span className="text-xs font-sans uppercase text-purple-400 font-bold">Las Tres Preguntas Clave</span>
                 <h2 className="text-2xl font-bold text-white">Pricing & Forecasting: El Corazón de la Estrategia</h2>
               </div>
             </div>
 
             {/* El Axioma LCM */}
             <div className="p-5 rounded-2xl bg-zinc-950 border border-zinc-800 text-center space-y-2">
-              <span className="text-xs font-mono text-[#d4af37] uppercase font-bold tracking-wider">
+              <span className="text-xs font-sans text-[#d4af37] uppercase font-bold tracking-wider">
                 La Regla de Oro de Luis César Monroy
               </span>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-sm font-mono">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-sm font-sans">
                 <div className="p-3 rounded-xl bg-zinc-900 border border-zinc-700/60">
                   <span className="text-zinc-400 text-xs block">El Pricing</span>
                   <strong className="text-white text-base">Responde cuánto cobrar</strong>
@@ -568,7 +568,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
                 <Truck className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-xs font-mono uppercase text-amber-400 font-bold">Estrategia de Nicho B2B</span>
+                <span className="text-xs font-sans uppercase text-amber-400 font-bold">Estrategia de Nicho B2B</span>
                 <h2 className="text-2xl font-bold text-white">El Doble Canal: Parejas & Romance + Transportistas B2B</h2>
               </div>
             </div>
@@ -590,7 +590,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
                   <p><strong>Propuesta de valor:</strong> Discreción absoluta, jacuzzi, tubo, camas suspendidas, ambientación LED íntima, anonimato total desde el coche.</p>
                   <p><strong>Comportamiento:</strong> Alta sensibilidad emocional, pagan tarifas premium en picos de demanda.</p>
                 </div>
-                <span className="inline-block px-2.5 py-1 rounded-lg bg-rose-500/10 text-rose-300 text-[11px] font-mono">
+                <span className="inline-block px-2.5 py-1 rounded-lg bg-rose-500/10 text-rose-300 text-[11px] font-sans">
                   Genera el 60% del RevPAR nocturno
                 </span>
               </div>
@@ -606,7 +606,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
                   <p><strong>Propuesta de valor:</strong> Resguardo de unidad en cochera techada con portón cerrado, regadera con agua caliente 24h, cama limpia para sueño reparador y <strong>100% Factura CFDI deducible de viáticos</strong>.</p>
                   <p><strong>Comportamiento:</strong> Empresas pagan viáticos que hoy el chofer pierde durmiendo en el camarote por falta de opciones seguras.</p>
                 </div>
-                <span className="inline-block px-2.5 py-1 rounded-lg bg-amber-500/20 text-amber-300 text-[11px] font-mono font-bold">
+                <span className="inline-block px-2.5 py-1 rounded-lg bg-amber-500/20 text-amber-300 text-[11px] font-sans font-bold">
                   Llena el 100% de las horas muertas diurnas
                 </span>
               </div>
@@ -621,7 +621,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
               <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
                 Ecatepec alberga uno de los corredores logísticos e industriales más densos de América Latina (Central de Abastos, Vía Morelos, Autopista México-Pachuca, Lechería). A los choferes de carga pesada las empresas les asignan viáticos; sin embargo, muchos choferes:
               </p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-zinc-300 font-mono">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-zinc-300 font-sans">
                 <li className="p-3 rounded-xl bg-zinc-900 border border-zinc-800">
                   ❌ <strong>Prefieren dormir en la cabina o el acotamiento</strong> para quedarse con una parte del dinero o porque no conocen moteles con factura.
                 </li>
@@ -652,7 +652,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
           <div className="bg-gradient-to-br from-zinc-900 via-[#14151a] to-zinc-900 border border-[#d4af37]/30 rounded-3xl p-6 sm:p-10 space-y-8 shadow-2xl">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-800 pb-6">
               <div>
-                <span className="text-xs font-mono uppercase text-[#d4af37] font-bold">
+                <span className="text-xs font-sans uppercase text-[#d4af37] font-bold">
                   Convocatoria Oficial a Hoteles y Moteles de Estancia Corta
                 </span>
                 <h2 className="text-3xl font-black text-white mt-1">
@@ -664,8 +664,8 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
               </div>
 
               <div className="px-4 py-2 rounded-2xl bg-[#d4af37]/20 border border-[#d4af37]/50 text-center self-start sm:self-auto">
-                <span className="text-[10px] font-mono uppercase text-zinc-300 block">Esquema Compartido</span>
-                <span className="text-2xl font-black text-[#f5d77f] font-mono">15% a Éxito</span>
+                <span className="text-[10px] font-sans uppercase text-zinc-300 block">Esquema Compartido</span>
+                <span className="text-2xl font-black text-[#f5d77f] font-sans">15% a Éxito</span>
               </div>
             </div>
 
@@ -673,7 +673,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Lo que aporta Blue Ocean */}
               <div className="p-6 rounded-2xl bg-zinc-950/80 border border-cyan-500/30 space-y-4">
-                <span className="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider block">
+                <span className="text-xs font-sans text-cyan-400 font-bold uppercase tracking-wider block">
                   BLUE OCEAN APORTA EL 100%:
                 </span>
                 <ul className="space-y-2.5 text-xs sm:text-sm text-zinc-200">
@@ -702,7 +702,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
 
               {/* Lo que hace el Hotel */}
               <div className="p-6 rounded-2xl bg-zinc-950/80 border border-emerald-500/30 space-y-4">
-                <span className="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider block">
+                <span className="text-xs font-sans text-emerald-400 font-bold uppercase tracking-wider block">
                   TU PROPIEDAD HOTELERA:
                 </span>
                 <ul className="space-y-2.5 text-xs sm:text-sm text-zinc-200">
@@ -737,7 +737,7 @@ export function LCMRevenueMasteryView({ onGoToHotels }: { onGoToHotels?: () => v
                 <p className="text-xs text-zinc-400">
                   Atención directa de Luis César Monroy • Dirección General Blue Ocean
                 </p>
-                <p className="text-xs font-mono text-[#d4af37]">
+                <p className="text-xs font-sans text-[#d4af37]">
                   direccion@oceanrevenue-management.com • www.oceanrevenue-management.com
                 </p>
               </div>

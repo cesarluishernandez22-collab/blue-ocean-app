@@ -45,11 +45,11 @@ export function CommercialModelSection({ onOpenAffiliationModal }: CommercialMod
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-zinc-800 pb-6">
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-mono font-bold bg-[#d4af37]/20 text-[#d4af37] border border-[#d4af37]/40">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-sans font-bold bg-[#d4af37]/20 text-[#d4af37] border border-[#d4af37]/40">
               <Sparkles className="w-3 h-3" />
               METODOLOGÍA DE REVENUE MANAGEMENT
             </span>
-            <span className="text-[11px] text-zinc-500 font-mono">
+            <span className="text-[11px] text-zinc-500 font-sans">
               Autoría: Luis César Monroy
             </span>
           </div>
@@ -78,27 +78,27 @@ export function CommercialModelSection({ onOpenAffiliationModal }: CommercialMod
         <div className="bg-[#18181b]/60 border border-zinc-800 rounded-2xl p-6 space-y-4">
           <div className="flex items-center justify-between border-b border-zinc-800 pb-3">
             <div>
-              <span className="text-[10px] font-mono uppercase text-red-400 font-bold tracking-wider block">
+              <span className="text-[10px] font-sans uppercase text-red-400 font-bold tracking-wider block">
                 Mercado Saturado (Océano Rojo)
               </span>
               <h3 className="text-base font-bold text-white">El Modelo Hotelero Tradicional</h3>
             </div>
-            <span className="px-2.5 py-1 rounded text-[10px] font-mono bg-red-950/40 text-red-300 border border-red-800/60">
+            <span className="px-2.5 py-1 rounded text-[10px] font-sans bg-red-950/40 text-red-300 border border-red-800/60">
               Inflexibilidad
             </span>
           </div>
 
           <ul className="space-y-3 text-xs text-zinc-400">
             <li className="flex items-start gap-2.5">
-              <span className="w-4 h-4 rounded-full bg-red-950/80 text-red-400 flex items-center justify-center shrink-0 mt-0.5 text-[10px] font-mono">✕</span>
+              <span className="w-4 h-4 rounded-full bg-red-950/80 text-red-400 flex items-center justify-center shrink-0 mt-0.5 text-[10px] font-sans">✕</span>
               <span><strong>Activos Ociosos:</strong> Más del 45% del inventario permanece desocupado entre las 10:00 y las 18:00 hrs mientras se espera el check-in de la tarde.</span>
             </li>
             <li className="flex items-start gap-2.5">
-              <span className="w-4 h-4 rounded-full bg-red-950/80 text-red-400 flex items-center justify-center shrink-0 mt-0.5 text-[10px] font-mono">✕</span>
+              <span className="w-4 h-4 rounded-full bg-red-950/80 text-red-400 flex items-center justify-center shrink-0 mt-0.5 text-[10px] font-sans">✕</span>
               <span><strong>Costos Fijos Elevados:</strong> Proveedores de software cobran fees mensuales fijos o licencias costosas independientemente de si el hotel vende o no.</span>
             </li>
             <li className="flex items-start gap-2.5">
-              <span className="w-4 h-4 rounded-full bg-red-950/80 text-red-400 flex items-center justify-center shrink-0 mt-0.5 text-[10px] font-mono">✕</span>
+              <span className="w-4 h-4 rounded-full bg-red-950/80 text-red-400 flex items-center justify-center shrink-0 mt-0.5 text-[10px] font-sans">✕</span>
               <span><strong>Comisiones Excesivas de OTAs:</strong> Plataformas como Booking y Expedia retienen entre 18% y 25% únicamente por pernoctas rígidas.</span>
             </li>
           </ul>
@@ -110,7 +110,7 @@ export function CommercialModelSection({ onOpenAffiliationModal }: CommercialMod
 
           <div className="flex items-center justify-between border-b border-zinc-800 pb-3">
             <div>
-              <span className="text-[10px] font-mono uppercase text-[#e07a9e] font-bold tracking-wider block">
+              <span className="text-[10px] font-sans uppercase text-[#e07a9e] font-bold tracking-wider block">
                 Metodología Innovadora (Océano Azul)
               </span>
               <h3 className="text-base font-bold text-white flex items-center gap-2">
@@ -118,7 +118,7 @@ export function CommercialModelSection({ onOpenAffiliationModal }: CommercialMod
                 <span className="text-[#d4af37] text-xs">★</span>
               </h3>
             </div>
-            <span className="px-2.5 py-1 rounded text-[10px] font-mono bg-[#e07a9e]/20 text-[#e07a9e] border border-[#e07a9e]/40 font-bold">
+            <span className="px-2.5 py-1 rounded text-[10px] font-sans bg-[#e07a9e]/20 text-[#e07a9e] border border-[#e07a9e]/40 font-bold">
               15% a Éxito
             </span>
           </div>
@@ -157,7 +157,7 @@ export function CommercialModelSection({ onOpenAffiliationModal }: CommercialMod
             </div>
           </div>
 
-          <span className="text-[11px] font-mono text-[#38a3a5] bg-[#38a3a5]/10 border border-[#38a3a5]/30 px-3 py-1 rounded-lg">
+          <span className="text-[11px] font-sans text-[#38a3a5] bg-[#38a3a5]/10 border border-[#38a3a5]/30 px-3 py-1 rounded-lg">
             Cálculo en tiempo real
           </span>
         </div>
@@ -166,7 +166,7 @@ export function CommercialModelSection({ onOpenAffiliationModal }: CommercialMod
           {/* Controles del Simulador */}
           <div className="lg:col-span-6 space-y-5">
             <div>
-              <div className="flex justify-between text-xs mb-1.5 font-mono">
+              <div className="flex justify-between text-xs mb-1.5 font-sans">
                 <span className="text-zinc-300">Habitaciones destinadas a Renta por Tiempo:</span>
                 <span className="text-[#e07a9e] font-bold">{habitacionesDisponibles} habitaciones</span>
               </div>
@@ -179,7 +179,7 @@ export function CommercialModelSection({ onOpenAffiliationModal }: CommercialMod
                 onChange={(e) => setHabitacionesDisponibles(parseInt(e.target.value, 10))}
                 className="w-full accent-[#e07a9e] cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-zinc-500 font-mono mt-1">
+              <div className="flex justify-between text-[10px] text-zinc-500 font-sans mt-1">
                 <span>3 habs (Piloto)</span>
                 <span>20 habs</span>
                 <span>40 habs (Hotel completo)</span>
@@ -187,7 +187,7 @@ export function CommercialModelSection({ onOpenAffiliationModal }: CommercialMod
             </div>
 
             <div>
-              <div className="flex justify-between text-xs mb-1.5 font-mono">
+              <div className="flex justify-between text-xs mb-1.5 font-sans">
                 <span className="text-zinc-300">Tarifa Promedio por Estancia (4 a 6 horas):</span>
                 <span className="text-[#38a3a5] font-bold">${tarifaPromedio4Hrs} MXN</span>
               </div>
@@ -200,7 +200,7 @@ export function CommercialModelSection({ onOpenAffiliationModal }: CommercialMod
                 onChange={(e) => setTarifaPromedio4Hrs(parseInt(e.target.value, 10))}
                 className="w-full accent-[#38a3a5] cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-zinc-500 font-mono mt-1">
+              <div className="flex justify-between text-[10px] text-zinc-500 font-sans mt-1">
                 <span>$450 MXN (Express)</span>
                 <span>$750 MXN (Confort)</span>
                 <span>$1,200 MXN (Suite Jacuzzi)</span>
@@ -208,7 +208,7 @@ export function CommercialModelSection({ onOpenAffiliationModal }: CommercialMod
             </div>
 
             <div>
-              <div className="flex justify-between text-xs mb-1.5 font-mono">
+              <div className="flex justify-between text-xs mb-1.5 font-sans">
                 <span className="text-zinc-300">Rotación promedio estimada por día:</span>
                 <span className="text-[#d4af37] font-bold">{rotacionesDia} turnos / día</span>
               </div>
@@ -221,7 +221,7 @@ export function CommercialModelSection({ onOpenAffiliationModal }: CommercialMod
                 onChange={(e) => setRotacionesDia(parseFloat(e.target.value))}
                 className="w-full accent-[#d4af37] cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-zinc-500 font-mono mt-1">
+              <div className="flex justify-between text-[10px] text-zinc-500 font-sans mt-1">
                 <span>0.8 (Moderada)</span>
                 <span>1.5 (Típica fin de semana)</span>
                 <span>2.5 (Alta rotación)</span>
@@ -232,18 +232,18 @@ export function CommercialModelSection({ onOpenAffiliationModal }: CommercialMod
           {/* Tarjeta de Resultados del Simulador */}
           <div className="lg:col-span-6 bg-[#121214] border border-zinc-700/90 rounded-xl p-5 space-y-4">
             <div className="text-center pb-3 border-b border-zinc-800">
-              <span className="text-[10px] uppercase font-mono text-zinc-400 tracking-wider">
+              <span className="text-[10px] uppercase font-sans text-zinc-400 tracking-wider">
                 Ingreso Neto Adicional Estimado para el Propietario (85%)
               </span>
-              <div className="text-3xl sm:text-4xl font-black text-emerald-400 font-mono mt-1">
+              <div className="text-3xl sm:text-4xl font-black text-emerald-400 font-sans mt-1">
                 ${ingresoNetoHotelero.toLocaleString()} <span className="text-xs text-zinc-400 font-normal">MXN / mes</span>
               </div>
               <p className="text-[11px] text-zinc-400 mt-1">
-                Generado a partir de aproximadamente <strong className="text-white font-mono">{estanciasMes}</strong> reservas diurnas mensuales.
+                Generado a partir de aproximadamente <strong className="text-white font-sans">{estanciasMes}</strong> reservas diurnas mensuales.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 text-xs font-mono">
+            <div className="grid grid-cols-2 gap-3 text-xs font-sans">
               <div className="bg-zinc-900/90 p-3 rounded-lg border border-zinc-800">
                 <span className="text-[10px] text-zinc-500 block">Facturación Bruta</span>
                 <span className="text-sm font-bold text-white">${ingresoBrutoMensual.toLocaleString()} MXN</span>
@@ -271,7 +271,7 @@ export function CommercialModelSection({ onOpenAffiliationModal }: CommercialMod
       {/* 4. Los 4 Pilares Operativos de la Metodología LCM */}
       <div className="space-y-4">
         <div className="text-center max-w-2xl mx-auto space-y-1">
-          <span className="text-[11px] font-mono uppercase text-[#38a3a5] font-bold">
+          <span className="text-[11px] font-sans uppercase text-[#38a3a5] font-bold">
             Garantías de Ejecución
           </span>
           <h3 className="text-lg sm:text-xl font-bold text-white">

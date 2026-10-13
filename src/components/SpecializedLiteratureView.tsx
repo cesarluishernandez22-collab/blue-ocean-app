@@ -201,7 +201,7 @@ export function SpecializedLiteratureView() {
                 <span className="px-2 py-0.5 rounded text-xs font-semibold bg-purple-100 text-purple-800">
                   {selectedItem.category}
                 </span>
-                <span className="text-xs text-zinc-400 font-mono">ID: {selectedItem.id}</span>
+                <span className="text-xs text-zinc-400 font-sans">ID: {selectedItem.id}</span>
               </div>
               <h3 className="text-lg font-bold text-zinc-900 leading-tight">
                 {selectedItem.title}

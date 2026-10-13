@@ -177,7 +177,7 @@ export function ChatbotTrainingView() {
         <div className="bg-[#002244] border-2 border-[#d4af37]/60 rounded-2xl p-4 sm:p-5 shadow-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1 text-left">
             <div className="flex items-center gap-2">
-              <span className="px-2.5 py-0.5 rounded-full bg-[#d4af37]/20 border border-[#d4af37]/50 text-[#f5d77f] font-mono text-[10px] font-bold uppercase">
+              <span className="px-2.5 py-0.5 rounded-full bg-[#d4af37]/20 border border-[#d4af37]/50 text-[#f5d77f] font-sans text-[10px] font-bold uppercase">
                 Módulo IA • Blue Ocean Concierge
               </span>
               <span className="flex items-center gap-1 text-[11px] text-emerald-400 font-bold">
@@ -342,7 +342,7 @@ export function ChatbotTrainingView() {
 
               {/* Tarjeta Informativa de Estado */}
               <div className="p-4 rounded-2xl bg-black/40 border border-[#d4af37]/40 space-y-2">
-                <span className="text-xs font-mono font-bold text-[#f5d77f] uppercase">
+                <span className="text-xs font-sans font-bold text-[#f5d77f] uppercase">
                   Parámetros de Entrenamiento
                 </span>
                 <div className="text-[11px] text-zinc-300 space-y-1">
@@ -457,10 +457,10 @@ export function ChatbotTrainingView() {
                     className="p-3.5 rounded-xl bg-black/40 border border-blue-800/60 space-y-1.5"
                   >
                     <div className="flex items-center justify-between">
-                      <span className="px-2 py-0.5 rounded bg-[#d4af37]/20 border border-[#d4af37]/40 text-[#f5d77f] font-mono text-[9px] font-bold">
+                      <span className="px-2 py-0.5 rounded bg-[#d4af37]/20 border border-[#d4af37]/40 text-[#f5d77f] font-sans text-[9px] font-bold">
                         {rule.categoria}
                       </span>
-                      <span className="text-[9px] font-mono text-zinc-400">{rule.id}</span>
+                      <span className="text-[9px] font-sans text-zinc-400">{rule.id}</span>
                     </div>
 
                     <p className="text-xs text-white leading-relaxed font-medium">

@@ -149,7 +149,7 @@ export function AdaptiveMemoryView() {
                 value={newRule}
                 onChange={(e) => setNewRule(e.target.value)}
                 placeholder="Ejemplo: Regla 29-X: Todo payload sin hash de firma financiera es rechazado con código ERR_CREDIT_UNVERIFIED."
-                className="w-full rounded-md border border-zinc-300 p-2 text-zinc-900 bg-white focus:ring-1 focus:ring-purple-500 font-mono"
+                className="w-full rounded-md border border-zinc-300 p-2 text-zinc-900 bg-white focus:ring-1 focus:ring-purple-500 font-sans"
               />
             </div>
           </div>
@@ -182,7 +182,7 @@ export function AdaptiveMemoryView() {
               Libro Mayor de Reglas Inmutables y Post-Mortems Estructurales
             </h3>
           </div>
-          <span className="text-xs font-mono text-zinc-500">Total selladas: {memoryRecords.length}</span>
+          <span className="text-xs font-sans text-zinc-500">Total selladas: {memoryRecords.length}</span>
         </div>
 
         <div className="space-y-4">
@@ -193,13 +193,13 @@ export function AdaptiveMemoryView() {
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-zinc-200/60 pb-2">
                 <div className="flex items-center gap-2">
-                  <span className="font-mono font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200">
+                  <span className="font-sans font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200">
                     {record.incidentCode}
                   </span>
                   <span className="text-zinc-500">Origen: <strong className="text-zinc-800">{record.sourceCell}</strong></span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="font-mono text-[10px] text-zinc-400">{record.timestamp}</span>
+                  <span className="font-sans text-[10px] text-zinc-400">{record.timestamp}</span>
                   <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
                     <CheckCircle2 className="w-3 h-3" />
                     <span>ENFORCED</span>
@@ -218,7 +218,7 @@ export function AdaptiveMemoryView() {
                 </div>
               </div>
 
-              <div className="bg-white p-3 rounded border border-purple-200/80 text-purple-950 font-mono text-xs space-y-1">
+              <div className="bg-white p-3 rounded border border-purple-200/80 text-purple-950 font-sans text-xs space-y-1">
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] uppercase font-bold text-purple-700">
                     Directriz Cerrada e Inmutable (Código Resultante):

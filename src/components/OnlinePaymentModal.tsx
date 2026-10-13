@@ -127,7 +127,7 @@ export function OnlinePaymentModal({ isOpen, onClose, hotelData }: OnlinePayment
             </div>
 
             <div className="space-y-1">
-              <span className="text-xs font-mono uppercase text-[#f5d77f] font-bold tracking-widest">
+              <span className="text-xs font-sans uppercase text-[#f5d77f] font-bold tracking-widest">
                 ¡Pago Procesado Exitosamente!
               </span>
               <h4 className="text-xl sm:text-2xl font-black text-white font-serif">
@@ -142,7 +142,7 @@ export function OnlinePaymentModal({ isOpen, onClose, hotelData }: OnlinePayment
             <div className="p-4 rounded-2xl bg-black/50 border border-blue-700/60 max-w-sm mx-auto text-left space-y-3">
               <div className="flex justify-between items-center border-b border-white/10 pb-2">
                 <span className="text-xs text-zinc-400">Folio de Acceso:</span>
-                <span className="text-sm font-mono font-black text-[#f5d77f]">{folioReserva}</span>
+                <span className="text-sm font-sans font-black text-[#f5d77f]">{folioReserva}</span>
               </div>
               <div className="flex justify-between items-center text-xs">
                 <span className="text-zinc-400">Propiedad:</span>
@@ -156,7 +156,7 @@ export function OnlinePaymentModal({ isOpen, onClose, hotelData }: OnlinePayment
               </div>
               <div className="flex justify-between items-center text-xs">
                 <span className="text-zinc-400">Monto Total Pagado:</span>
-                <span className="font-mono font-black text-emerald-400 text-sm">${total} MXN</span>
+                <span className="font-sans font-black text-emerald-400 text-sm">${total} MXN</span>
               </div>
               <div className="flex justify-between items-center text-xs">
                 <span className="text-zinc-400">Método:</span>
@@ -168,7 +168,7 @@ export function OnlinePaymentModal({ isOpen, onClose, hotelData }: OnlinePayment
                 <div className="p-2 bg-white rounded-lg">
                   <QrCode className="w-20 h-20 text-black" />
                 </div>
-                <span className="text-[10px] font-mono text-zinc-400">Escanea en caseta o recepción</span>
+                <span className="text-[10px] font-sans text-zinc-400">Escanea en caseta o recepción</span>
               </div>
             </div>
 
@@ -188,7 +188,7 @@ export function OnlinePaymentModal({ isOpen, onClose, hotelData }: OnlinePayment
             {/* Detalle del Hotel y Duración */}
             <div className="p-3.5 rounded-2xl bg-black/40 border border-blue-800/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div className="space-y-0.5">
-                <span className="text-[10px] font-mono uppercase text-[#d4af37] font-bold">
+                <span className="text-[10px] font-sans uppercase text-[#d4af37] font-bold">
                   {currentHotel.codigo}
                 </span>
                 <h4 className="text-sm font-bold text-white font-serif leading-tight">
@@ -280,7 +280,7 @@ export function OnlinePaymentModal({ isOpen, onClose, hotelData }: OnlinePayment
                       maxLength={19}
                       value={cardNumber}
                       onChange={(e) => setCardNumber(e.target.value)}
-                      className="w-full text-xs p-2.5 rounded-lg bg-black/60 border border-blue-500/40 text-white font-mono focus:outline-none focus:border-[#d4af37]"
+                      className="w-full text-xs p-2.5 rounded-lg bg-black/60 border border-blue-500/40 text-white font-sans focus:outline-none focus:border-[#d4af37]"
                     />
                     <CreditCard className="w-4 h-4 text-zinc-400 absolute right-3 top-2.5" />
                   </div>
@@ -307,7 +307,7 @@ export function OnlinePaymentModal({ isOpen, onClose, hotelData }: OnlinePayment
                       maxLength={5}
                       value={cardExpiry}
                       onChange={(e) => setCardExpiry(e.target.value)}
-                      className="w-full text-xs p-2.5 rounded-lg bg-black/60 border border-blue-500/40 text-white font-mono focus:outline-none focus:border-[#d4af37]"
+                      className="w-full text-xs p-2.5 rounded-lg bg-black/60 border border-blue-500/40 text-white font-sans focus:outline-none focus:border-[#d4af37]"
                     />
                   </div>
                   <div>
@@ -319,7 +319,7 @@ export function OnlinePaymentModal({ isOpen, onClose, hotelData }: OnlinePayment
                       maxLength={4}
                       value={cardCvv}
                       onChange={(e) => setCardCvv(e.target.value)}
-                      className="w-full text-xs p-2.5 rounded-lg bg-black/60 border border-blue-500/40 text-white font-mono focus:outline-none focus:border-[#d4af37]"
+                      className="w-full text-xs p-2.5 rounded-lg bg-black/60 border border-blue-500/40 text-white font-sans focus:outline-none focus:border-[#d4af37]"
                     />
                   </div>
                 </div>
@@ -335,7 +335,7 @@ export function OnlinePaymentModal({ isOpen, onClose, hotelData }: OnlinePayment
                 <p className="text-zinc-300 text-[11px] leading-relaxed">
                   Al confirmar, se genera tu CLABE STP única. Tu pago se valida en menos de 10 segundos y te arroja tu código de acceso.
                 </p>
-                <div className="p-2 rounded bg-black/60 font-mono text-[11px] text-[#f5d77f]">
+                <div className="p-2 rounded bg-black/60 font-sans text-[11px] text-[#f5d77f]">
                   Banco: STP • Beneficiario: Blue Ocean Hoteles • Referencia automática
                 </div>
               </div>
@@ -424,7 +424,7 @@ export function OnlinePaymentModal({ isOpen, onClose, hotelData }: OnlinePayment
             <div className="pt-2 border-t border-blue-900/60 flex items-center justify-between gap-3">
               <div>
                 <span className="text-[10px] text-zinc-400 block">Total a Pagar en Línea:</span>
-                <span className="text-lg font-black text-[#f5d77f] font-mono">${total} MXN</span>
+                <span className="text-lg font-black text-[#f5d77f] font-sans">${total} MXN</span>
                 <span className="text-[9px] text-emerald-400 block">✓ Cero comisiones añadidas</span>
               </div>
 

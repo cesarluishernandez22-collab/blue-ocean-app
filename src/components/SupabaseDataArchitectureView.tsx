@@ -263,7 +263,7 @@ export function SupabaseDataArchitectureView() {
         >
           <Zap className="w-4 h-4 text-emerald-400" />
           <span>Estado & Despliegue en Vercel</span>
-          <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-mono font-bold">
+          <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-sans font-bold">
             Siguiente Paso
           </span>
         </button>
@@ -350,22 +350,22 @@ export function SupabaseDataArchitectureView() {
             {/* Tarjetas de Tablas Activas */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
               <div className="p-3 rounded-xl bg-zinc-950/60 border border-zinc-800/80">
-                <span className="text-[10px] font-mono text-zinc-400 uppercase">Tabla 1</span>
+                <span className="text-[10px] font-sans text-zinc-400 uppercase">Tabla 1</span>
                 <p className="text-sm font-bold text-white mt-0.5">hoteles</p>
                 <p className="text-[11px] text-zinc-400">Identidad, fotos y amenidades</p>
               </div>
               <div className="p-3 rounded-xl bg-zinc-950/60 border border-zinc-800/80">
-                <span className="text-[10px] font-mono text-zinc-400 uppercase">Tabla 2</span>
+                <span className="text-[10px] font-sans text-zinc-400 uppercase">Tabla 2</span>
                 <p className="text-sm font-bold text-white mt-0.5">habitaciones</p>
                 <p className="text-[11px] text-zinc-400">Tarifas 4h, 6h, 12h y noche</p>
               </div>
               <div className="p-3 rounded-xl bg-zinc-950/60 border border-zinc-800/80">
-                <span className="text-[10px] font-mono text-zinc-400 uppercase">Tabla 3</span>
+                <span className="text-[10px] font-sans text-zinc-400 uppercase">Tabla 3</span>
                 <p className="text-sm font-bold text-white mt-0.5">reservas</p>
                 <p className="text-[11px] text-zinc-400">Comisión 15% / 85% Hotel</p>
               </div>
               <div className="p-3 rounded-xl bg-zinc-950/60 border border-zinc-800/80">
-                <span className="text-[10px] font-mono text-zinc-400 uppercase">Tabla 4</span>
+                <span className="text-[10px] font-sans text-zinc-400 uppercase">Tabla 4</span>
                 <p className="text-sm font-bold text-white mt-0.5">solicitudes_afiliacion</p>
                 <p className="text-[11px] text-zinc-400">Hoteles que quieren sumarse</p>
               </div>
@@ -394,14 +394,14 @@ export function SupabaseDataArchitectureView() {
                     <Key className="w-4 h-4" />
                     <span>Dato 1: SUPABASE_URL (¡Listo y Detectado!)</span>
                   </div>
-                  <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-mono font-semibold">
+                  <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-sans font-semibold">
                     ID: ktphxnyadhlcwfspmxns
                   </span>
                 </div>
                 <p className="text-xs text-zinc-300 leading-relaxed">
                   Tu URL de base de datos en Supabase es:
                   <br />
-                  <code className="text-emerald-300 font-mono font-bold bg-zinc-950 px-2.5 py-1 rounded-lg border border-emerald-500/30 inline-block mt-1 select-all">
+                  <code className="text-emerald-300 font-sans font-bold bg-zinc-950 px-2.5 py-1 rounded-lg border border-emerald-500/30 inline-block mt-1 select-all">
                     https://ktphxnyadhlcwfspmxns.supabase.co
                   </code>
                 </p>
@@ -413,14 +413,14 @@ export function SupabaseDataArchitectureView() {
                     <Key className="w-4 h-4" />
                     <span>Dato 2: SUPABASE_ANON_KEY (¡Listo y Enlazado!)</span>
                   </div>
-                  <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-mono font-semibold">
+                  <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-sans font-semibold">
                     Listo
                   </span>
                 </div>
                 <p className="text-xs text-zinc-300 leading-relaxed">
                   Tu llave pública de Supabase:
                   <br />
-                  <code className="text-emerald-300 font-mono font-bold bg-zinc-950 px-2.5 py-1 rounded-lg border border-emerald-500/30 inline-block mt-1 select-all break-all">
+                  <code className="text-emerald-300 font-sans font-bold bg-zinc-950 px-2.5 py-1 rounded-lg border border-emerald-500/30 inline-block mt-1 select-all break-all">
                     sb_publishable_PxLEboKeuup2x-DjJzS5tQ_-JAWjVM5
                   </code>
                 </p>
@@ -443,7 +443,7 @@ export function SupabaseDataArchitectureView() {
                 </div>
                 <div className="flex items-start gap-2.5">
                   <span className="w-5 h-5 rounded-full bg-zinc-800 text-zinc-300 font-bold flex items-center justify-center shrink-0 text-[11px]">3</span>
-                  <p>En la sección <strong>"Environment Variables"</strong> de Vercel, agrega <code className="text-emerald-300 font-mono">SUPABASE_URL</code> y <code className="text-emerald-300 font-mono">SUPABASE_ANON_KEY</code> con los valores de Supabase.</p>
+                  <p>En la sección <strong>"Environment Variables"</strong> de Vercel, agrega <code className="text-emerald-300 font-sans">SUPABASE_URL</code> y <code className="text-emerald-300 font-sans">SUPABASE_ANON_KEY</code> con los valores de Supabase.</p>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center shrink-0 text-[11px]">✓</span>
@@ -461,7 +461,7 @@ export function SupabaseDataArchitectureView() {
           <div className="flex items-center justify-between bg-zinc-900/90 border border-zinc-800 px-4 py-3 rounded-xl">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
-              <span className="text-xs font-mono text-zinc-300">schema_blueocean_supabase.sql</span>
+              <span className="text-xs font-sans text-zinc-300">schema_blueocean_supabase.sql</span>
               <span className="text-xs text-zinc-500">• 4 Tablas + Llaves Foráneas + Restricciones de Precios + RLS</span>
             </div>
             <button
@@ -482,7 +482,7 @@ export function SupabaseDataArchitectureView() {
             </button>
           </div>
 
-          <div className="relative rounded-2xl bg-[#0d1117] border border-zinc-800 overflow-hidden text-xs font-mono leading-relaxed text-zinc-300 p-6 shadow-inner max-h-[550px] overflow-y-auto">
+          <div className="relative rounded-2xl bg-[#0d1117] border border-zinc-800 overflow-hidden text-xs font-sans leading-relaxed text-zinc-300 p-6 shadow-inner max-h-[550px] overflow-y-auto">
             <pre className="whitespace-pre-wrap">{SQL_SCHEMA}</pre>
           </div>
 
@@ -518,7 +518,7 @@ export function SupabaseDataArchitectureView() {
           <div className="flex items-center justify-between bg-zinc-900/90 border border-zinc-800 px-4 py-3 rounded-xl">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
-              <span className="text-xs font-mono text-zinc-300">seed_data_demo.sql</span>
+              <span className="text-xs font-sans text-zinc-300">seed_data_demo.sql</span>
               <span className="text-xs text-zinc-500">• Inserta hoteles reales con fotos, tarifas de 4h, 6h, 12h y noche</span>
             </div>
             <button
@@ -539,7 +539,7 @@ export function SupabaseDataArchitectureView() {
             </button>
           </div>
 
-          <div className="relative rounded-2xl bg-[#0d1117] border border-zinc-800 overflow-hidden text-xs font-mono leading-relaxed text-zinc-300 p-6 shadow-inner max-h-[550px] overflow-y-auto">
+          <div className="relative rounded-2xl bg-[#0d1117] border border-zinc-800 overflow-hidden text-xs font-sans leading-relaxed text-zinc-300 p-6 shadow-inner max-h-[550px] overflow-y-auto">
             <pre className="whitespace-pre-wrap">{SQL_SEEDS}</pre>
           </div>
         </div>
@@ -578,7 +578,7 @@ export function SupabaseDataArchitectureView() {
                   <h3 className="text-lg font-bold text-white">Estructura de la Tabla: <code className="text-emerald-400">hoteles</code></h3>
                   <p className="text-xs text-zinc-400">Almacena las propiedades autorizadas en la plataforma con sus fotos y datos de contacto.</p>
                 </div>
-                <span className="text-xs font-mono bg-zinc-800 px-3 py-1 rounded-full text-zinc-300">Clave Primaria: id (UUID)</span>
+                <span className="text-xs font-sans bg-zinc-800 px-3 py-1 rounded-full text-zinc-300">Clave Primaria: id (UUID)</span>
               </div>
 
               <div className="overflow-x-auto">
@@ -591,7 +591,7 @@ export function SupabaseDataArchitectureView() {
                       <th className="py-2.5 px-3">Ejemplo</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-zinc-800 font-mono">
+                  <tbody className="divide-y divide-zinc-800 font-sans">
                     <tr>
                       <td className="py-2.5 px-3 font-semibold text-emerald-400">id</td>
                       <td className="py-2.5 px-3 text-zinc-400">UUID (PK)</td>
@@ -642,7 +642,7 @@ export function SupabaseDataArchitectureView() {
                   <h3 className="text-lg font-bold text-white">Estructura de la Tabla: <code className="text-emerald-400">habitaciones</code></h3>
                   <p className="text-xs text-zinc-400">El núcleo del modelo de negocio: franjas horarias y amenidades específicas.</p>
                 </div>
-                <span className="text-xs font-mono bg-zinc-800 px-3 py-1 rounded-full text-zinc-300">FK: hotel_id → hoteles.id</span>
+                <span className="text-xs font-sans bg-zinc-800 px-3 py-1 rounded-full text-zinc-300">FK: hotel_id → hoteles.id</span>
               </div>
 
               <div className="overflow-x-auto">
@@ -655,7 +655,7 @@ export function SupabaseDataArchitectureView() {
                       <th className="py-2.5 px-3">Ejemplo</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-zinc-800 font-mono">
+                  <tbody className="divide-y divide-zinc-800">
                     <tr>
                       <td className="py-2.5 px-3 font-semibold text-emerald-400">precio_4_horas</td>
                       <td className="py-2.5 px-3 text-zinc-400">NUMERIC(10,2)</td>
@@ -706,7 +706,7 @@ export function SupabaseDataArchitectureView() {
                   <h3 className="text-lg font-bold text-white">Estructura de la Tabla: <code className="text-emerald-400">reservas</code></h3>
                   <p className="text-xs text-zinc-400">Registro auditable de cada reserva con el cálculo del 15% de comisión garantizada.</p>
                 </div>
-                <span className="text-xs font-mono bg-zinc-800 px-3 py-1 rounded-full text-zinc-300">Código único: BO-XXXXXXXX</span>
+                <span className="text-xs bg-zinc-800 px-3 py-1 rounded-full text-zinc-300">Código único: BO-XXXXXXXX</span>
               </div>
 
               <div className="overflow-x-auto">
@@ -719,7 +719,7 @@ export function SupabaseDataArchitectureView() {
                       <th className="py-2.5 px-3">Ejemplo</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-zinc-800 font-mono">
+                  <tbody className="divide-y divide-zinc-800">
                     <tr>
                       <td className="py-2.5 px-3 font-semibold text-emerald-400">monto_total</td>
                       <td className="py-2.5 px-3 text-zinc-400">NUMERIC(10,2)</td>
@@ -758,7 +758,7 @@ export function SupabaseDataArchitectureView() {
                   <h3 className="text-lg font-bold text-white">Estructura de la Tabla: <code className="text-emerald-400">solicitudes_afiliacion</code></h3>
                   <p className="text-xs text-zinc-400">Captura a los dueños de hoteles y villas interesados en sumarse a la red Blue Ocean.</p>
                 </div>
-                <span className="text-xs font-mono bg-zinc-800 px-3 py-1 rounded-full text-zinc-300">CRM de Hoteleros</span>
+                <span className="text-xs bg-zinc-800 px-3 py-1 rounded-full text-zinc-300">CRM de Hoteleros</span>
               </div>
 
               <div className="overflow-x-auto">
@@ -770,7 +770,7 @@ export function SupabaseDataArchitectureView() {
                       <th className="py-2.5 px-3">Propósito</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-zinc-800 font-mono">
+                  <tbody className="divide-y divide-zinc-800">
                     <tr>
                       <td className="py-2.5 px-3 font-semibold text-white">nombre_establecimiento</td>
                       <td className="py-2.5 px-3 text-zinc-400">VARCHAR(150)</td>

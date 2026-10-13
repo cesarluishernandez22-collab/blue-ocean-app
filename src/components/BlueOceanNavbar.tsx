@@ -39,7 +39,7 @@ export function BlueOceanNavbar({ onOpenConsultoriaModal, onNavigateSection }: B
       <div className="bg-[#18181b] border-b border-zinc-800/80 px-4 py-1.5 text-xs">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-zinc-400">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#c05c80]/20 text-[#e07a9e] border border-[#c05c80]/30 uppercase tracking-wider font-mono">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#c05c80]/20 text-[#e07a9e] border border-[#c05c80]/30 uppercase tracking-wider font-sans">
               Fase 1 • Validación
             </span>
             <span className="text-zinc-300 font-medium">
@@ -54,7 +54,7 @@ export function BlueOceanNavbar({ onOpenConsultoriaModal, onNavigateSection }: B
             </span>
             <a 
               href="mailto:direccion@oceanrevenue-management.com" 
-              className="hover:text-white transition font-mono text-zinc-400"
+              className="hover:text-white transition font-sans text-zinc-400"
             >
               direccion@oceanrevenue-management.com
             </a>
@@ -75,7 +75,7 @@ export function BlueOceanNavbar({ onOpenConsultoriaModal, onNavigateSection }: B
                 <span className="text-lg font-extrabold tracking-tight text-white font-sans">
                   Blue Ocean <span className="text-[#38a3a5] font-light">Hotels</span>
                 </span>
-                <span className="text-[10px] uppercase font-mono px-1.5 py-0.2 rounded bg-zinc-800 text-zinc-300 border border-zinc-700">
+                <span className="text-[10px] uppercase font-sans px-1.5 py-0.2 rounded bg-zinc-800 text-zinc-300 border border-zinc-700">
                   MX
                 </span>
               </div>
@@ -85,12 +85,12 @@ export function BlueOceanNavbar({ onOpenConsultoriaModal, onNavigateSection }: B
             </div>
           </div>
 
-          {/* LCM Author / Consultoría badge */}
+        
           <div className="hidden lg:flex items-center gap-2 pl-4 border-l border-zinc-800">
             <LCMLogo size="sm" />
             <div className="leading-tight">
-              <span className="text-[11px] font-bold text-[#d4af37] block font-mono">
-                LCM METODOLOGÍA
+              <span className="text-[11px] font-bold text-[#d4af37] block font-sans">
+                
               </span>
               <span className="text-[9px] text-zinc-500">
                 Luis César Monroy • Revenue Management
@@ -185,7 +185,7 @@ export function BookingSearchBar({
               <MapPin className="w-4 h-4" />
             </div>
             <div className="flex-1 min-w-0">
-              <label className="block text-[10px] uppercase font-mono tracking-wider text-zinc-400">
+              <label className="block text-[10px] uppercase font-sans tracking-wider text-zinc-400">
                 Destino o Zona (CDMX)
               </label>
               <select
@@ -210,7 +210,7 @@ export function BookingSearchBar({
               <Calendar className="w-4 h-4" />
             </div>
             <div className="flex-1 min-w-0">
-              <label className="block text-[10px] uppercase font-mono tracking-wider text-zinc-400">
+              <label className="block text-[10px] uppercase font-sans tracking-wider text-zinc-400">
                 Fecha de Reserva
               </label>
               <input
@@ -228,7 +228,7 @@ export function BookingSearchBar({
               <Clock className="w-4 h-4" />
             </div>
             <div className="flex-1 min-w-0">
-              <label className="block text-[10px] uppercase font-mono tracking-wider text-zinc-400">
+              <label className="block text-[10px] uppercase font-sans tracking-wider text-zinc-400">
                 Tiempo de Estancia
               </label>
               <select
@@ -252,7 +252,7 @@ export function BookingSearchBar({
                 <Users className="w-4 h-4" />
               </div>
               <div className="flex-1 min-w-0">
-                <label className="block text-[10px] uppercase font-mono tracking-wider text-zinc-400">
+                <label className="block text-[10px] uppercase font-sans tracking-wider text-zinc-400">
                   Huéspedes
                 </label>
                 <select
@@ -283,7 +283,7 @@ export function BookingSearchBar({
         {/* Filters Toggle and Quick Tags */}
         <div className="mt-2.5 pt-2.5 border-t border-zinc-800/80 flex flex-wrap items-center justify-between gap-2 text-xs">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-[11px] text-zinc-500 font-mono">Filtros rápidos:</span>
+            <span className="text-[11px] text-zinc-500 font-sans">Filtros rápidos:</span>
             
             <button
               type="button"
@@ -311,13 +311,13 @@ export function BookingSearchBar({
 
             {/* Selector de Estrellas */}
             <div className="flex items-center gap-1 ml-1 text-zinc-400">
-              <span className="text-[11px] text-zinc-500 font-mono">Categoría:</span>
+              <span className="text-[11px] text-zinc-500 font-sans">Categoría:</span>
               {(['todas', 4, 5] as const).map((stars) => (
                 <button
                   key={stars}
                   type="button"
                   onClick={() => handleInputChange('estrellas', stars)}
-                  className={`px-2 py-0.5 rounded text-[10px] font-mono border transition ${
+                  className={`px-2 py-0.5 rounded text-[10px] font-sans border transition ${
                     filters.estrellas === stars
                       ? 'bg-[#e07a9e]/20 text-[#e07a9e] border-[#e07a9e]/40 font-bold'
                       : 'bg-zinc-900 text-zinc-500 border-zinc-800 hover:text-zinc-300'
@@ -329,7 +329,7 @@ export function BookingSearchBar({
             </div>
           </div>
 
-          <div className="text-[11px] text-zinc-400 font-mono flex items-center gap-1.5">
+          <div className="text-[11px] text-zinc-400 font-sans flex items-center gap-1.5">
             <span className="text-[#38a3a5] font-bold">{totalResults}</span> propiedades disponibles con confirmación inmediata
           </div>
         </div>

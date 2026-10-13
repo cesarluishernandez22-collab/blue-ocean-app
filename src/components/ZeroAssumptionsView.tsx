@@ -75,7 +75,7 @@ export function ZeroAssumptionsView() {
             </div>
           </div>
 
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-zinc-900 text-emerald-400 text-xs font-mono">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-zinc-900 text-emerald-400 text-xs font-sans">
             <span>CERO ALUCINACIÓN OPERATIVA</span>
           </div>
         </div>
@@ -100,7 +100,7 @@ export function ZeroAssumptionsView() {
             >
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-zinc-900">{preset.title}</span>
-                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-zinc-100 text-zinc-600">
+                <span className="text-[10px] font-sans px-1.5 py-0.5 rounded bg-zinc-100 text-zinc-600">
                   {preset.cell}
                 </span>
               </div>
@@ -141,7 +141,7 @@ export function ZeroAssumptionsView() {
               value={requirementText}
               onChange={(e) => setRequirementText(e.target.value)}
               placeholder="Introduce aquí la instrucción, solicitud de viaje o requerimiento de hotelería..."
-              className="w-full text-xs font-mono p-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-zinc-900 focus:outline-none bg-zinc-50 text-zinc-900"
+              className="w-full text-xs font-sans p-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-zinc-900 focus:outline-none bg-zinc-50 text-zinc-900"
             />
           </div>
 
@@ -165,7 +165,7 @@ export function ZeroAssumptionsView() {
                 <span>Dictamen del Arquitecto Maestro</span>
               </h3>
               {auditResult && (
-                <span className="text-[11px] font-mono text-zinc-500">
+                <span className="text-[11px] font-sans text-zinc-500">
                   Confianza: {auditResult.confidenceScore}%
                 </span>
               )}
@@ -242,7 +242,7 @@ export function ZeroAssumptionsView() {
             )}
           </div>
 
-          <div className="pt-3 border-t border-zinc-100 flex items-center justify-between text-[11px] text-zinc-400 font-mono">
+          <div className="pt-3 border-t border-zinc-100 flex items-center justify-between text-[11px] text-zinc-400 font-sans">
             <span>NORMA: ISO-AGNT-2026-ZERO-ASSUME</span>
             <span>AUTORIDAD: ARQUITECTO MAESTRO</span>
           </div>
@@ -259,19 +259,19 @@ export function ZeroAssumptionsView() {
         </p>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs pt-2">
-          <div className="w-full p-3 rounded-lg border border-zinc-300 bg-zinc-50 text-center font-mono font-medium text-zinc-800">
+          <div className="w-full p-3 rounded-lg border border-zinc-300 bg-zinc-50 text-center font-sans font-medium text-zinc-800">
             [1. ENTRADA_BRUTA]
           </div>
           <ArrowRight className="w-4 h-4 text-zinc-400 transform md:rotate-0 rotate-90 flex-shrink-0" />
-          <div className="w-full p-3 rounded-lg border border-red-200 bg-red-50 text-center font-mono font-bold text-red-800">
+          <div className="w-full p-3 rounded-lg border border-red-200 bg-red-50 text-center font-sans font-bold text-red-800">
             [2. AUDITORÍA_CERO_SUP]
           </div>
           <ArrowRight className="w-4 h-4 text-zinc-400 transform md:rotate-0 rotate-90 flex-shrink-0" />
-          <div className="w-full p-3 rounded-lg border border-sky-200 bg-sky-50 text-center font-mono font-bold text-sky-800">
+          <div className="w-full p-3 rounded-lg border border-sky-200 bg-sky-50 text-center font-sans font-bold text-sky-800">
             [3. EVALUACIÓN_POLÍTICA]
           </div>
           <ArrowRight className="w-4 h-4 text-zinc-400 transform md:rotate-0 rotate-90 flex-shrink-0" />
-          <div className="w-full p-3 rounded-lg border border-emerald-200 bg-emerald-50 text-center font-mono font-bold text-emerald-800">
+          <div className="w-full p-3 rounded-lg border border-emerald-200 bg-emerald-50 text-center font-sans font-bold text-emerald-800">
             [4. EMISIÓN_AUDITADA]
           </div>
         </div>

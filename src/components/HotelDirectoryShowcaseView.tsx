@@ -47,7 +47,7 @@ export interface ModelHotel {
   descripcionComercial: string;
 }
 
-// 6 Propiedades Modelo con sus renders reales emparejados (Fachada + Habitación)
+// 35 Propiedades Modelo con sus renders reales emparejados (Fachada + Habitación)
 const PROPIEDADES_MODELO: ModelHotel[] = [
   {
     id: 1,
@@ -57,14 +57,14 @@ const PROPIEDADES_MODELO: ModelHotel[] = [
     tarifa4h: 480,
     tarifa6h: 620,
     tarifaNoche: 850,
-    tags: ['Jacuzzi Doble', 'Luz Neón'],
+    tags: ['Jacuzzi Doble', 'Luz Neón', 'Alimentos 24h'],
     renderFachada: {
-      url: '/renders/hotel-01-insurgentes/fachada/Polish_20260822_225309771.jpg',
+      url: '/renders/Polish_20260822_225309771.jpg',
       archivo: 'Polish_20260822_225309771.jpg',
       descripcion: 'Excelente ubicación a solo unos pasos de Av. Reforma. Pregunta por el servicio de alimentos'
     },
     renderHabitacion: {
-      url: '/renders/hotel-01-insurgentes/habitacion/image~7.jpg',
+      url: '/renders/image~7.jpg',
       archivo: 'image~7.jpg',
       descripcion: 'Excelentes habitaciones recientemente remodeladas'
     },
@@ -80,12 +80,12 @@ const PROPIEDADES_MODELO: ModelHotel[] = [
     tarifaNoche: 780,
     tags: ['Sillón Tántrico', 'Habitación Torre', 'Discreción Total'],
     renderFachada: {
-      url: '/renders/hotel-02-periferico/fachada/Polish_20260822_230305219.jpg',
+      url: '/renders/Polish_20260822_230305219.jpg',
       archivo: 'Polish_20260822_230305219.jpg',
       descripcion: 'Fachada e interiores de reciente remodelacion'
     },
     renderHabitacion: {
-      url: '/renders/hotel-02-periferico/habitacion/image~12.jpg',
+      url: '/renders/image~12.jpg',
       archivo: 'image~12.jpg',
       descripcion: 'Suite con tina de hidromasaje integrada y luz ambiental regulable'
     },
@@ -101,12 +101,12 @@ const PROPIEDADES_MODELO: ModelHotel[] = [
     tarifaNoche: 500,
     tags: ['Pole Dance', 'Pista Iluminada', 'Jacuzzi Doble'],
     renderFachada: {
-      url: '/renders/hotel-03-tlalpan/fachada/Polish_20260822_230710090.jpg',
+      url: '/renders/Polish_20260822_230710090.jpg',
       archivo: 'Polish_20260822_230710090.jpg',
       descripcion: 'La propiedad cuenta con hermoso restaurante bar con servicio las 24 horas a la habitacion'
     },
     renderHabitacion: {
-      url: '/renders/hotel-03-tlalpan/habitacion/image~17.jpg',
+      url: '/renders/image~17.jpg',
       archivo: 'image~17.jpg',
       descripcion: 'Habitación temática con plataforma de pole dance iluminada y acabados de diseño'
     },
@@ -120,14 +120,14 @@ const PROPIEDADES_MODELO: ModelHotel[] = [
     tarifa4h: 380,
     tarifa6h: 490,
     tarifaNoche: 610,
-    tags: ['Habitaciones tematicas unicamente adultos'],
+    tags: ['Habitaciones tematicas unicamente adultos', 'Check-in Vehicular'],
     renderFachada: {
-      url: '/renders/hotel-04-villas/fachada/IMG-20260822-WA0018.jpg',
+      url: '/renders/IMG-20260822-WA0018.jpg',
       archivo: 'IMG-20260822-WA0018.jpg',
       descripcion: 'Hermosa propiedad exclusiva para adultos, combinamos el lujo y la aventura en un mismo lugar'
     },
     renderHabitacion: {
-      url: '/renders/hotel-04-villas/habitacion/image~22.jpg',
+      url: '/renders/image~22.jpg',
       archivo: 'image~22.jpg',
       descripcion: 'Suite con baño de vapor, tina y área de descanso privado'
     },
@@ -143,12 +143,12 @@ const PROPIEDADES_MODELO: ModelHotel[] = [
     tarifaNoche: 510,
     tags: ['Vapor Húmedo', 'Jacuzzi', 'Cama King Size'],
     renderFachada: {
-      url: '/renders/hotel-05-polanco/fachada/IMG-20260530-WA0001.jpg',
-      archivo: 'IMG-20260530-WA0001.jpg',
+      url: '/renders/image~2.jpg',
+      archivo: 'image~2.jpg',
       descripcion: 'Acceso vehicular discreto y fachada moderna con iluminación perimetral'
     },
     renderHabitacion: {
-      url: '/renders/hotel-05-polanco/habitacion/image~29.jpg',
+      url: '/renders/image~29.jpg',
       archivo: 'image~29.jpg',
       descripcion: 'Habitación ejecutiva y romance con domótica y control táctil de luces'
     },
@@ -164,16 +164,625 @@ const PROPIEDADES_MODELO: ModelHotel[] = [
     tarifaNoche: 520,
     tags: ['Cochera Techada', 'Sillón Curvo', 'Smart TV 55"'],
     renderFachada: {
-      url: '/renders/hotel-06-santafe/fachada/image~4.jpg',
+      url: '/renders/image~4.jpg',
       archivo: 'image~4.jpg',
       descripcion: 'Fachada corporativa y de estancia corta en corredor comercial'
     },
     renderHabitacion: {
-      url: '/renders/hotel-06-santafe/habitacion/image~36.jpg',
+      url: '/renders/image~36.jpg',
       archivo: 'image~36.jpg',
       descripcion: 'Suite ejecutiva de paso con cama king, sillón ergonómico y conectividad'
     },
     descripcionComercial: 'Ubicación clave para ejecutivos, viajeros y parejas. Ocupación balanceada entre semana y alta demanda nocturna.'
+  },
+  {
+    id: 7,
+    codigo: 'HOTEL CENTRAL DE ABASTOS',
+    nombreSugerido: 'HOTEL CENTRAL DE ABASTOS',
+    direccionZona: 'Carretera Texcoco-Lechería Km 21.5, Santa Cruz Venta de Carpio, Ecatepec',
+    tarifa4h: 320,
+    tarifa6h: 380,
+    tarifaNoche: 550,
+    tags: ['Cochera Techada', 'Facturación CFDI', 'Discreción Parejas'],
+    renderFachada: {
+      url: '/renders/IMG-20260530-WA0001.jpg',
+      archivo: 'IMG-20260530-WA0001.jpg',
+      descripcion: 'Fachada perimetral segura a pie de carretera con acceso hermético'
+    },
+    renderHabitacion: {
+      url: '/renders/image~10.jpg',
+      archivo: 'image~10.jpg',
+      descripcion: 'Master Suite con iluminación neón y tina de hidromasaje'
+    },
+    descripcionComercial: 'Propiedad insignia en el nodo logístico e industrial más transitado de Ecatepec. Diseñada con doble canal operativo: suites de romance con máxima discreción para parejas y refugio seguro para operadores de transporte de la Central de Abastos con cochera privada techada y facturación CFDI deducible de viáticos.'
+  },
+  {
+    id: 8,
+    codigo: 'HOTEL VÍA MORELOS INDUSTRIAL',
+    nombreSugerido: 'HOTEL VÍA MORELOS INDUSTRIAL',
+    direccionZona: 'Av. Vía Morelos 340, Santa Clara Coatitla, Ecatepec',
+    tarifa4h: 340,
+    tarifa6h: 400,
+    tarifaNoche: 580,
+    tags: ['Portón Hermético', 'Tina Hidromasaje', 'Descanso Antifatiga'],
+    renderFachada: {
+      url: '/renders/image~3.jpg',
+      archivo: 'image~3.jpg',
+      descripcion: 'Portón automatizado de alta seguridad y acceso vehicular continuo'
+    },
+    renderHabitacion: {
+      url: '/renders/image~15.jpg',
+      archivo: 'image~15.jpg',
+      descripcion: 'Habitación ejecutiva con cama king size y tina de hidromasaje'
+    },
+    descripcionComercial: 'Ubicado en la columna vertebral industrial de Ecatepec. Cuenta con portones automatizados herméticos, villas con tina de hidromasaje y convenio empresarial para descanso antifatiga en horas muertas diurnas.'
+  },
+  {
+    id: 9,
+    codigo: 'HOTEL VENTA DE CARPIO EXPRESS',
+    nombreSugerido: 'HOTEL VENTA DE CARPIO EXPRESS',
+    direccionZona: 'Autopista México-Pachuca Km 26.8, Venta de Carpio',
+    tarifa4h: 310,
+    tarifa6h: 370,
+    tarifaNoche: 520,
+    tags: ['Estancia Express', 'Regadera Caliente', 'Unidad Segura'],
+    renderFachada: {
+      url: '/renders/Polish_20260822_225309771.jpg',
+      archivo: 'Polish_20260822_225309771.jpg',
+      descripcion: 'Acceso directo desde acotamiento de autopista con caseta 24h'
+    },
+    renderHabitacion: {
+      url: '/renders/image~20.jpg',
+      archivo: 'image~20.jpg',
+      descripcion: 'Villa con cochera techada individual y acceso directo a habitación'
+    },
+    descripcionComercial: 'Acceso vehicular inmediato a pie de autopista. Resuelve el grave problema del transportista que arriesga su vida durmiendo en el acotamiento: ofrece estancia express facturable, regadera caliente y salvaguarda de unidad con portón cerrado.'
+  },
+  {
+    id: 10,
+    codigo: 'HOTEL REAL SAN CRISTÓBAL',
+    nombreSugerido: 'HOTEL REAL SAN CRISTÓBAL',
+    direccionZona: 'Av. Revolución (30-30) 180 esq. Carretera Lechería, San Cristóbal Centro',
+    tarifa4h: 360,
+    tarifa6h: 430,
+    tarifaNoche: 600,
+    tags: ['Cama Suspendida', 'Vapor', 'Tubo Pole Dance'],
+    renderFachada: {
+      url: '/renders/Polish_20260822_230305219.jpg',
+      archivo: 'Polish_20260822_230305219.jpg',
+      descripcion: 'Fachada moderna iluminada en nodo central de San Cristóbal'
+    },
+    renderHabitacion: {
+      url: '/renders/image~25.jpg',
+      archivo: 'image~25.jpg',
+      descripcion: 'Suite de lujo con acabados en madera, tina y cama suspendida'
+    },
+    descripcionComercial: 'Conexión estratégica en el corazón de San Cristóbal Ecatepec. Villas modernas equipadas para parejas con cama King suspendida, tubo, vapor y suites de descanso rápido para personal logístico en ruta.'
+  },
+  {
+    id: 11,
+    codigo: 'HOTEL MOTOR R-1 CENTRAL',
+    nombreSugerido: 'HOTEL MOTOR R-1 CENTRAL',
+    direccionZona: 'Av. Carlos Hank González (Av. Central) 780, Valle de Anáhuac',
+    tarifa4h: 330,
+    tarifa6h: 390,
+    tarifaNoche: 540,
+    tags: ['Luces LED Regulables', 'Servicio Cuarto 24h', 'Camionetas Reparto'],
+    renderFachada: {
+      url: '/renders/Polish_20260822_230710090.jpg',
+      archivo: 'Polish_20260822_230710090.jpg',
+      descripcion: 'Fachada contemporánea iluminada sobre Avenida Central'
+    },
+    renderHabitacion: {
+      url: '/renders/image~30.jpg',
+      archivo: 'image~30.jpg',
+      descripcion: 'Suite con iluminación ambiental cálida y privacidad garantizada'
+    },
+    descripcionComercial: 'Fachada contemporánea iluminada sobre Avenida Central. Habitaciones temáticas con luces LED regulables, servicio a la habitación 24 horas y estacionamiento seguro para camionetas de reparto y choferes de última milla.'
+  },
+  {
+    id: 12,
+    codigo: 'HOTEL GRAND INDIOS VERDES',
+    nombreSugerido: 'HOTEL GRAND INDIOS VERDES',
+    direccionZona: 'Carretera Federal México-Pachuca 14, Puerta Norte Indios Verdes',
+    tarifa4h: 350,
+    tarifa6h: 420,
+    tarifaNoche: 590,
+    tags: ['Climatizada', 'Facturable', 'Punto Norte Discreto'],
+    renderFachada: {
+      url: '/renders/IMG-20260822-WA0018.jpg',
+      archivo: 'IMG-20260822-WA0018.jpg',
+      descripcion: 'Pórtico vehicular discreto con carril de desaceleración seguro'
+    },
+    renderHabitacion: {
+      url: '/renders/image~37.jpg',
+      archivo: 'image~37.jpg',
+      descripcion: 'Suite con espejo cenital, luces neón y cama king size'
+    },
+    descripcionComercial: 'Punto neurálgico en el acceso norte del Valle de México. Excelente opción para que choferes foráneos esperen su ventana de descarga nocturna descansando en una habitación climatizada y facturable, y punto de encuentro discreto para parejas.'
+  },
+  {
+    id: 13,
+    codigo: 'HOTEL SUITES REFORMA NORTE',
+    nombreSugerido: 'HOTEL SUITES REFORMA NORTE',
+    direccionZona: 'Paseo de la Reforma 410, Cuauhtémoc',
+    tarifa4h: 490,
+    tarifa6h: 640,
+    tarifaNoche: 890,
+    tags: ['Jacuzzi Doble', 'Insonorización', 'Alimentos Gourmet'],
+    renderFachada: {
+      url: '/renders/image~2.jpg',
+      archivo: 'image~2.jpg',
+      descripcion: 'Fachada iluminada sobre Paseo de la Reforma con acceso discreto'
+    },
+    renderHabitacion: {
+      url: '/renders/image~8.jpg',
+      archivo: 'image~8.jpg',
+      descripcion: 'Suite amplia con acabados en madera, cama king y baño privado'
+    },
+    descripcionComercial: 'Ubicación privilegiada sobre el corredor financiero y turístico de Reforma. Suites acústicamente aisladas con jacuzzi doble y servicio gastronómico a la habitación las 24 horas.'
+  },
+  {
+    id: 14,
+    codigo: 'HOTEL BOUTIQUE INSURGENTES SUR',
+    nombreSugerido: 'HOTEL BOUTIQUE INSURGENTES SUR',
+    direccionZona: 'Av. Insurgentes Sur 724, Col. del Valle',
+    tarifa4h: 460,
+    tarifa6h: 590,
+    tarifaNoche: 820,
+    tags: ['Check-in Privado', 'Confort Ejecutivo', 'Discreción Total'],
+    renderFachada: {
+      url: '/renders/image~4.jpg',
+      archivo: 'image~4.jpg',
+      descripcion: 'Acceso vehicular subterráneo con total privacidad desde Insurgentes'
+    },
+    renderHabitacion: {
+      url: '/renders/image~9.jpg',
+      archivo: 'image~9.jpg',
+      descripcion: 'Suite estilo nórdico contemporáneo con climatización y Smart TV'
+    },
+    descripcionComercial: 'Propiedad boutique en el corazón de la Colonia del Valle. Diseñada para parejas y ejecutivos que buscan estancias cortas de alto confort con check-in vehicular privado y discreción absoluta.'
+  },
+  {
+    id: 15,
+    codigo: 'HOTEL VILLAS PERIFÉRICO SUR',
+    nombreSugerido: 'HOTEL VILLAS PERIFÉRICO SUR',
+    direccionZona: 'Anillo Periférico Sur 4120, Jardines del Pedregal',
+    tarifa4h: 490,
+    tarifa6h: 650,
+    tarifaNoche: 920,
+    tags: ['Cochera Individual', 'Vapor y Tina', 'Servicio Automatizado'],
+    renderFachada: {
+      url: '/renders/IMG-20260530-WA0001.jpg',
+      archivo: 'IMG-20260530-WA0001.jpg',
+      descripcion: 'Villas residenciales con pórticos herméticos y jardines interiores'
+    },
+    renderHabitacion: {
+      url: '/renders/image~11.jpg',
+      archivo: 'image~11.jpg',
+      descripcion: 'Suite con tina de hidromasaje integrada y espejos panorámicos'
+    },
+    descripcionComercial: 'Villas de gran lujo en el sur de la Ciudad de México. Cuentan con cochera privada techada, tina de hidromasaje, vapor y servicio exprés automatizado sin contacto con recepción.'
+  },
+  {
+    id: 16,
+    codigo: 'HOTEL ROMA BOUTIQUE',
+    nombreSugerido: 'HOTEL ROMA BOUTIQUE',
+    direccionZona: 'Calle Orizaba 88, Roma Norte',
+    tarifa4h: 440,
+    tarifa6h: 560,
+    tarifaNoche: 780,
+    tags: ['Diseño Vanguardista', 'Sonido Bluetooth', 'Luces Escénicas'],
+    renderFachada: {
+      url: '/renders/image~3.jpg',
+      archivo: 'image~3.jpg',
+      descripcion: 'Fachada urbana protegida y restaurada en el corazón de Roma Norte'
+    },
+    renderHabitacion: {
+      url: '/renders/image~13.jpg',
+      archivo: 'image~13.jpg',
+      descripcion: 'Suite con baño de vapor, tina de relajación y cama suspendida'
+    },
+    descripcionComercial: 'Concepto cosmopolita en Roma Norte con diseño vanguardista. Suites equipadas con iluminación escénica regulable, sonido envolvente y tarifas dinámicas optimizadas para microestancias.'
+  },
+  {
+    id: 17,
+    codigo: 'HOTEL CONDESA EXECUTIVE',
+    nombreSugerido: 'HOTEL CONDESA EXECUTIVE',
+    direccionZona: 'Av. Michoacán 120, Condesa',
+    tarifa4h: 450,
+    tarifa6h: 580,
+    tarifaNoche: 800,
+    tags: ['Microestancias 4h', 'Escapadas Romance', 'Privacidad Total'],
+    renderFachada: {
+      url: '/renders/Polish_20260822_225309771.jpg',
+      archivo: 'Polish_20260822_225309771.jpg',
+      descripcion: 'Entrada discreta perimetral con acabados contemporáneos en cantera'
+    },
+    renderHabitacion: {
+      url: '/renders/image~14.jpg',
+      archivo: 'image~14.jpg',
+      descripcion: 'Suite con domótica táctil, sonido bluetooth y control de escenas'
+    },
+    descripcionComercial: 'Ubicación estratégica en la zona gastronómica de Condesa. Opciones flexibles de 4 y 6 horas para escapadas espontáneas y estancias nocturnas de descanso con máxima privacidad.'
+  },
+  {
+    id: 18,
+    codigo: 'HOTEL COYOACÁN REAL',
+    nombreSugerido: 'HOTEL COYOACÁN REAL',
+    direccionZona: 'Av. Miguel Ángel de Quevedo 450, Coyoacán',
+    tarifa4h: 390,
+    tarifa6h: 480,
+    tarifaNoche: 680,
+    tags: ['Cama King Size', 'Madera Fina', 'Ambiente Íntimo'],
+    renderFachada: {
+      url: '/renders/Polish_20260822_230305219.jpg',
+      archivo: 'Polish_20260822_230305219.jpg',
+      descripcion: 'Fachada colonial moderna con control de acceso automatizado'
+    },
+    renderHabitacion: {
+      url: '/renders/image~16.jpg',
+      archivo: 'image~16.jpg',
+      descripcion: 'Suite torre con vista panorámica y aislamiento acústico total'
+    },
+    descripcionComercial: 'Ambiente cálido y acogedor en el corredor cultural y bohemio de Coyoacán. Habitaciones amplias con cama King Size, acabados en madera fina y amenidades de romance de primer nivel.'
+  },
+  {
+    id: 19,
+    codigo: 'HOTEL TLALPAN EXPRESS',
+    nombreSugerido: 'HOTEL TLALPAN EXPRESS',
+    direccionZona: 'Calz. de Tlalpan 2840, Santa Úrsula Coapa',
+    tarifa4h: 340,
+    tarifa6h: 410,
+    tarifaNoche: 560,
+    tags: ['Rotación 24/7', 'Check-in Rápido', 'Smart TV 50"'],
+    renderFachada: {
+      url: '/renders/Polish_20260822_230710090.jpg',
+      archivo: 'Polish_20260822_230710090.jpg',
+      descripcion: 'Acceso vehicular continuo directo desde lateral de Tlalpan'
+    },
+    renderHabitacion: {
+      url: '/renders/image~18.jpg',
+      archivo: 'image~18.jpg',
+      descripcion: 'Suite con iluminación rasante, cabecera acolchada y amenidades premium'
+    },
+    descripcionComercial: 'Ubicación clave sobre Calzada de Tlalpan para tránsito continuo sur-centro. Alta rotación vehicular 24/7 con habitaciones remodeladas, pantallas Smart TV y tarifas accesibles.'
+  },
+  {
+    id: 20,
+    codigo: 'HOTEL VIADUCTO SUITES',
+    nombreSugerido: 'HOTEL VIADUCTO SUITES',
+    direccionZona: 'Viaducto Miguel Alemán 315, Roma Sur',
+    tarifa4h: 380,
+    tarifa6h: 460,
+    tarifaNoche: 640,
+    tags: ['Conexión Exprés', 'Hidromasaje', 'Facturación Rápida'],
+    renderFachada: {
+      url: '/renders/IMG-20260822-WA0018.jpg',
+      archivo: 'IMG-20260822-WA0018.jpg',
+      descripcion: 'Pórtico vehicular con bahía de desaceleración sobre lateral de Viaducto'
+    },
+    renderHabitacion: {
+      url: '/renders/image~19.jpg',
+      archivo: 'image~19.jpg',
+      descripcion: 'Suite con cabecera acolchada de lujo, espejo cenital y luz indirecta'
+    },
+    descripcionComercial: 'Conexión vial inmediata para viajeros y parejas en ruta metropolitana. Suites modernas con tina de hidromasaje, portón automatizado y facturación instantánea CFDI.'
+  },
+  {
+    id: 21,
+    codigo: 'HOTEL POLANCO BOUTIQUE',
+    nombreSugerido: 'HOTEL POLANCO BOUTIQUE',
+    direccionZona: 'Calle Leibnitz 95, Anzures / Polanco',
+    tarifa4h: 490,
+    tarifa6h: 630,
+    tarifaNoche: 890,
+    tags: ['Mármol y Domótica', 'Discreción VIP', 'Check-in Sin Contacto'],
+    renderFachada: {
+      url: '/renders/image~2.jpg',
+      archivo: 'image~2.jpg',
+      descripcion: 'Fachada sobria de diseño sobrio y moderno con portón eléctrico'
+    },
+    renderHabitacion: {
+      url: '/renders/image~21.jpg',
+      archivo: 'image~21.jpg',
+      descripcion: 'Suite ejecutiva minimalista de alta rotación con escritorio y cama king'
+    },
+    descripcionComercial: 'Exclusividad y diseño contemporáneo a minutos de Polanco y Reforma. Suites ejecutivas y de romance con acabados en mármol, domótica avanzada y discreción de primer nivel.'
+  },
+  {
+    id: 22,
+    codigo: 'HOTEL SANTA FE TOWER',
+    nombreSugerido: 'HOTEL SANTA FE TOWER',
+    direccionZona: 'Av. Vasco de Quiroga 3800, Santa Fe',
+    tarifa4h: 470,
+    tarifa6h: 590,
+    tarifaNoche: 830,
+    tags: ['Torre Corporativa', 'Insonorizada', 'WiFi Alta Velocidad'],
+    renderFachada: {
+      url: '/renders/image~4.jpg',
+      archivo: 'image~4.jpg',
+      descripcion: 'Torre ejecutiva con acceso controlado y estacionamiento subterráneo'
+    },
+    renderHabitacion: {
+      url: '/renders/image~26.jpg',
+      archivo: 'image~26.jpg',
+      descripcion: 'Suite spa con tina de hidromasaje doble y cromoterapia'
+    },
+    descripcionComercial: 'Torre moderna para ejecutivos y parejas en el centro corporativo de Santa Fe. Habitaciones insonorizadas con vista urbana, sillón ergonómico y conectividad de alta velocidad.'
+  },
+  {
+    id: 23,
+    codigo: 'HOTEL VALLEJO INDUSTRIAL',
+    nombreSugerido: 'HOTEL VALLEJO INDUSTRIAL',
+    direccionZona: 'Calz. Vallejo 920, Nueva Industrial Vallejo',
+    tarifa4h: 330,
+    tarifa6h: 390,
+    tarifaNoche: 530,
+    tags: ['Doble Vocación', 'Transportistas y Parejas', 'Portón Hermético'],
+    renderFachada: {
+      url: '/renders/IMG-20260530-WA0001.jpg',
+      archivo: 'IMG-20260530-WA0001.jpg',
+      descripcion: 'Fachada industrial limpia con portón hermético y caseta de vigilancia'
+    },
+    renderHabitacion: {
+      url: '/renders/image~27.jpg',
+      archivo: 'image~27.jpg',
+      descripcion: 'Suite de experiencia visual con espejos perimetrales y luz tenue'
+    },
+    descripcionComercial: 'Ubicado en el polo logístico de Vallejo. Doble vocación para transportistas con descanso seguro en horas diurnas y parejas con villas privadas y portón hermético.'
+  },
+  {
+    id: 24,
+    codigo: 'HOTEL NAUCALPAN BUSINESS',
+    nombreSugerido: 'HOTEL NAUCALPAN BUSINESS',
+    direccionZona: 'Av. Gustavo Baz 210, Naucalpan de Juárez',
+    tarifa4h: 340,
+    tarifa6h: 410,
+    tarifaNoche: 570,
+    tags: ['Aire Acondicionado', 'Estacionamiento Cerrado', 'Tarifas Escalonadas'],
+    renderFachada: {
+      url: '/renders/image~3.jpg',
+      archivo: 'image~3.jpg',
+      descripcion: 'Entrada vehicular amplia con portón de acceso individual'
+    },
+    renderHabitacion: {
+      url: '/renders/image~28.jpg',
+      archivo: 'image~28.jpg',
+      descripcion: 'Suite con diseño geométrico, regadera de alta presión y cama king'
+    },
+    descripcionComercial: 'Eje comercial e industrial poniente con acceso directo a Periférico Norte. Habitaciones confortables con estacionamiento cerrado, aire acondicionado y tarifas escalonadas.'
+  },
+  {
+    id: 25,
+    codigo: 'HOTEL AEROPUERTO EXPRESS',
+    nombreSugerido: 'HOTEL AEROPUERTO EXPRESS',
+    direccionZona: 'Av. Santos Dumont 180, Aviación Civil / AICM',
+    tarifa4h: 390,
+    tarifa6h: 490,
+    tarifaNoche: 690,
+    tags: ['5 Minutos AICM', 'Escalas y Descanso', 'Check-in 24 Horas'],
+    renderFachada: {
+      url: '/renders/Polish_20260822_225309771.jpg',
+      archivo: 'Polish_20260822_225309771.jpg',
+      descripcion: 'Fachada iluminada con bahía para taxis y transporte de enlace'
+    },
+    renderHabitacion: {
+      url: '/renders/image~33.jpg',
+      archivo: 'image~33.jpg',
+      descripcion: 'Suite living con sala integrada, Smart TV y cama king size'
+    },
+    descripcionComercial: 'A 5 minutos de las terminales del AICM. Ideal para escalas de vuelo, descanso de tripulaciones y parejas, con check-in rápido 24 horas y traslados coordinados.'
+  },
+  {
+    id: 26,
+    codigo: 'HOTEL ZÓCALO HISTÓRICO',
+    nombreSugerido: 'HOTEL ZÓCALO HISTÓRICO',
+    direccionZona: 'República de Uruguay 75, Centro Histórico',
+    tarifa4h: 370,
+    tarifa6h: 450,
+    tarifaNoche: 630,
+    tags: ['Doble Acristalamiento', 'Silencioso', 'Céntrico 100%'],
+    renderFachada: {
+      url: '/renders/Polish_20260822_230305219.jpg',
+      archivo: 'Polish_20260822_230305219.jpg',
+      descripcion: 'Fachada de cantera tradicional con interiores remodelados'
+    },
+    renderHabitacion: {
+      url: '/renders/image~34.jpg',
+      archivo: 'image~34.jpg',
+      descripcion: 'Suite confort con espacio amplio, frigobar y servicio a la habitación'
+    },
+    descripcionComercial: 'En el centro neurálgico de la capital. Habitaciones silenciosas con doble acristalamiento, tina de baño y excelente conectividad para estancia de paso o nocturna.'
+  },
+  {
+    id: 27,
+    codigo: 'HOTEL TACUBAYA CONEXIÓN',
+    nombreSugerido: 'HOTEL TACUBAYA CONEXIÓN',
+    direccionZona: 'Av. Revolución 85, Tacubaya / San Miguel Chapultepec',
+    tarifa4h: 350,
+    tarifa6h: 420,
+    tarifaNoche: 580,
+    tags: ['Sillón Curvo', 'Acceso Periférico', 'Tarifa Competitiva'],
+    renderFachada: {
+      url: '/renders/Polish_20260822_230710090.jpg',
+      archivo: 'Polish_20260822_230710090.jpg',
+      descripcion: 'Pórtico vehicular discreto en el cruce de Revolución y Viaducto'
+    },
+    renderHabitacion: {
+      url: '/renders/image~38.jpg',
+      archivo: 'image~38.jpg',
+      descripcion: 'Suite de gran lujo con acabados en mármol, granito y tina romana'
+    },
+    descripcionComercial: 'Nodo de interconexión hacia Periférico, Viaducto y Constituyentes. Check-in vehicular rápido, habitaciones con sillón curvo y tarifas de alta competitividad.'
+  },
+  {
+    id: 28,
+    codigo: 'HOTEL PATRIOTISMO SUITES',
+    nombreSugerido: 'HOTEL PATRIOTISMO SUITES',
+    direccionZona: 'Av. Patriotismo 560, San Pedro de los Pinos',
+    tarifa4h: 380,
+    tarifa6h: 470,
+    tarifaNoche: 660,
+    tags: ['Luz Indirecta', 'Smart TV 55"', 'Frigobar Completo'],
+    renderFachada: {
+      url: '/renders/IMG-20260822-WA0018.jpg',
+      archivo: 'IMG-20260822-WA0018.jpg',
+      descripcion: 'Fachada contemporánea sobre Patriotismo con rampa de acceso directo'
+    },
+    renderHabitacion: {
+      url: '/renders/image~7.jpg',
+      archivo: 'image~7.jpg',
+      descripcion: 'Excelentes habitaciones recientemente remodeladas con iluminación ambiental'
+    },
+    descripcionComercial: 'Corredor vial céntrico con acceso ágil. Suites con iluminación indirecta, Smart TV de 55 pulgadas, frigobar y servicio a la habitación continuo.'
+  },
+  {
+    id: 29,
+    codigo: 'HOTEL SAN ÁNGEL RESIDENTIAL',
+    nombreSugerido: 'HOTEL SAN ÁNGEL RESIDENTIAL',
+    direccionZona: 'Av. Altavista 140, San Ángel',
+    tarifa4h: 460,
+    tarifa6h: 580,
+    tarifaNoche: 810,
+    tags: ['Tina Romana', 'Chimenea Decorativa', 'Máxima Discreción'],
+    renderFachada: {
+      url: '/renders/image~2.jpg',
+      archivo: 'image~2.jpg',
+      descripcion: 'Acceso señorial discreto en cantera oscura y portón automatizado'
+    },
+    renderHabitacion: {
+      url: '/renders/image~12.jpg',
+      archivo: 'image~12.jpg',
+      descripcion: 'Suite con tina de hidromasaje integrada y luz ambiental regulable'
+    },
+    descripcionComercial: 'Entorno residencial discreto y elegante en el sur de la ciudad. Habitaciones con tina romana, chimenea decorativa y servicio personalizado con total privacidad.'
+  },
+  {
+    id: 30,
+    codigo: 'HOTEL XOCHIMILCO EMBARCADERO',
+    nombreSugerido: 'HOTEL XOCHIMILCO EMBARCADERO',
+    direccionZona: 'Prolongación División del Norte 5200, Xochimilco',
+    tarifa4h: 340,
+    tarifa6h: 420,
+    tarifaNoche: 580,
+    tags: ['Villas Independientes', 'Jardines Interiores', 'Ambiente Tranquilo'],
+    renderFachada: {
+      url: '/renders/image~4.jpg',
+      archivo: 'image~4.jpg',
+      descripcion: 'Acceso a villas independientes rodeadas de vegetación y muros altos'
+    },
+    renderHabitacion: {
+      url: '/renders/image~17.jpg',
+      archivo: 'image~17.jpg',
+      descripcion: 'Habitación temática con plataforma de pole dance iluminada y acabados de diseño'
+    },
+    descripcionComercial: 'Punto de descanso y romance en el sur de la ciudad. Cabañas y villas independientes con jardines interiores, estacionamiento privado y ambiente tranquilo.'
+  },
+  {
+    id: 31,
+    codigo: 'HOTEL INTERLOMAS TOWER',
+    nombreSugerido: 'HOTEL INTERLOMAS TOWER',
+    direccionZona: 'Vía Magna 25, Bosque de las Lomas / Interlomas',
+    tarifa4h: 490,
+    tarifa6h: 640,
+    tarifaNoche: 890,
+    tags: ['Vapor y Cromoterapia', 'Suites Temáticas', 'Alta Gama VIP'],
+    renderFachada: {
+      url: '/renders/IMG-20260530-WA0001.jpg',
+      archivo: 'IMG-20260530-WA0001.jpg',
+      descripcion: 'Fachada cristalina de vanguardia con caseta de recepción blindada'
+    },
+    renderHabitacion: {
+      url: '/renders/image~22.jpg',
+      archivo: 'image~22.jpg',
+      descripcion: 'Suite con baño de vapor, tina y área de descanso privado'
+    },
+    descripcionComercial: 'Complejo de alta gama en la zona poniente. Suites temáticas con vapor, jacuzzi con cromoterapia y acabados de lujo para escapadas exclusivas.'
+  },
+  {
+    id: 32,
+    codigo: 'HOTEL CIUDAD SATÉLITE',
+    nombreSugerido: 'HOTEL CIUDAD SATÉLITE',
+    direccionZona: 'Circuito Centro Comercial 18, Ciudad Satélite',
+    tarifa4h: 380,
+    tarifa6h: 460,
+    tarifaNoche: 640,
+    tags: ['Villas Satélite', 'Tubo y Tántrico', 'Menú 24 Horas'],
+    renderFachada: {
+      url: '/renders/image~3.jpg',
+      archivo: 'image~3.jpg',
+      descripcion: 'Villas con acceso vehicular independiente y portones eléctricos'
+    },
+    renderHabitacion: {
+      url: '/renders/image~29.jpg',
+      archivo: 'image~29.jpg',
+      descripcion: 'Habitación ejecutiva y romance con domótica y control táctil de luces'
+    },
+    descripcionComercial: 'Referente de estancia corta en Satélite y Naucalpan. Amplias villas con cochera individual, tubo de pole dance, sillón tántrico y menú de alimentos 24h.'
+  },
+  {
+    id: 33,
+    codigo: 'HOTEL TLALNEPANTLA INDUSTRIAL',
+    nombreSugerido: 'HOTEL TLALNEPANTLA INDUSTRIAL',
+    direccionZona: 'Av. Mario Colín 300, Tlalnepantla Centro',
+    tarifa4h: 320,
+    tarifa6h: 390,
+    tarifaNoche: 530,
+    tags: ['Bloques 4h y 6h', 'Logística y Parejas', 'Precio Especial'],
+    renderFachada: {
+      url: '/renders/Polish_20260822_225309771.jpg',
+      archivo: 'Polish_20260822_225309771.jpg',
+      descripcion: 'Entrada perimetral amplia con estacionamiento techado y vigilancia'
+    },
+    renderHabitacion: {
+      url: '/renders/image~36.jpg',
+      archivo: 'image~36.jpg',
+      descripcion: 'Suite ejecutiva de paso con cama king, sillón ergonómico y conectividad'
+    },
+    descripcionComercial: 'Corredor industrial norte con acceso directo a Gustavo Baz. Atención a operadores de logística y parejas con tarifas especiales por bloques de 4, 6 y 12 horas.'
+  },
+  {
+    id: 34,
+    codigo: 'HOTEL RÍO CHURUBUSCO',
+    nombreSugerido: 'HOTEL RÍO CHURUBUSCO',
+    direccionZona: 'Circuito Interior Río Churubusco 890, Iztapalapa / Coyoacán',
+    tarifa4h: 360,
+    tarifa6h: 440,
+    tarifaNoche: 610,
+    tags: ['Regadera de Lluvia', 'Cama Suspendida', 'Control Táctil'],
+    renderFachada: {
+      url: '/renders/Polish_20260822_230305219.jpg',
+      archivo: 'Polish_20260822_230305219.jpg',
+      descripcion: 'Fachada iluminada con acceso directo desde carriles laterales'
+    },
+    renderHabitacion: {
+      url: '/renders/image~10.jpg',
+      archivo: 'image~10.jpg',
+      descripcion: 'Master Suite con iluminación neón y tina de hidromasaje'
+    },
+    descripcionComercial: 'Eje vial oriente-sur de máxima conectividad. Habitaciones modernas con regadera de lluvia, cama King Size suspendida y control de luces táctil.'
+  },
+  {
+    id: 35,
+    codigo: 'HOTEL BLUE OCEAN PÓRTICO INSIGNIA',
+    nombreSugerido: 'HOTEL BLUE OCEAN PÓRTICO INSIGNIA',
+    direccionZona: 'Paseo de la Reforma 250 esq. Florencia',
+    tarifa4h: 520,
+    tarifa6h: 690,
+    tarifaNoche: 950,
+    tags: ['Insignia Red TRM', 'Tarifas Algorítmicas', 'Máxima Rentabilidad'],
+    renderFachada: {
+      url: '/renders/Polish_20260822_230710090.jpg',
+      archivo: 'Polish_20260822_230710090.jpg',
+      descripcion: 'Fachada insignia iluminada en oro y azul marino con tecnología Blue Ocean'
+    },
+    renderHabitacion: {
+      url: '/renders/image~15.jpg',
+      archivo: 'image~15.jpg',
+      descripcion: 'Suite de gran lujo con acabados en mármol, granito y tina romana'
+    },
+    descripcionComercial: 'Propiedad cumbre y escaparate insignia de la Red Blue Ocean. Reúne toda la arquitectura de Total Revenue Management: tarifas algorítmicas, suites temáticas y máxima rentabilidad por metro cuadrado.'
   }
 ];
 
@@ -188,12 +797,12 @@ export interface RenderItem {
 
 export const TODOS_LOS_35_RENDERS: RenderItem[] = [
   { id: 1, archivo: 'Polish_20260822_225309771.jpg', url: '/renders/Polish_20260822_225309771.jpg', tituloSugerido: 'Fachada Principal Insignia (Blue Ocean Iluminado)', categoria: 'Fachada / Acceso', usoActual: 'Hotel 01 (Fachada)' },
-  { id: 2, archivo: 'Polish_20260822_230305219.jpg', url: '/renders/Polish_20260822_230305219.jpg', tituloSugerido: 'Fachada Cristal & Luz Nocturna Blue Ocean', categoria: 'Fachada / Acceso', usoActual: 'Hotel 02 (Fachada)' },
+    { id: 2, archivo: 'Polish_20260822_230305219.jpg', url: '/renders/Polish_20260822_230305219.jpg', tituloSugerido: 'Fachada Cristal & Luz Nocturna Blue Ocean', categoria: 'Fachada / Acceso', usoActual: 'Hotel 02 (Fachada)' },
   { id: 3, archivo: 'Polish_20260822_230710090.jpg', url: '/renders/Polish_20260822_230710090.jpg', tituloSugerido: 'Fachada Perspectiva Acceso Moderno', categoria: 'Fachada / Acceso', usoActual: 'Hotel 03 (Fachada)' },
   { id: 4, archivo: 'IMG-20260822-WA0018.jpg', url: '/renders/IMG-20260822-WA0018.jpg', tituloSugerido: 'Fachada Villas y Acceso Vehicular Privado', categoria: 'Fachada / Acceso', usoActual: 'Hotel 04 (Fachada)' },
   { id: 5, archivo: 'image~2.jpg', url: '/renders/image~2.jpg', tituloSugerido: 'Fachada / Entrada Discreta Perimetral', categoria: 'Fachada / Acceso', usoActual: 'Hotel 05 (Fachada)' },
   { id: 6, archivo: 'image~4.jpg', url: '/renders/image~4.jpg', tituloSugerido: 'Fachada Urbana / Corredor Comercial', categoria: 'Fachada / Acceso', usoActual: 'Hotel 06 (Fachada)' },
-  { id: 7, archivo: 'image~3.jpg', url: '/renders/image~3.jpg', tituloSugerido: 'Suite de Diseño Elegante 03', categoria: 'Suite Cama & Espejos' },
+  { id: 7, archivo: 'image~3.jpg', url: '/renders/image~3.jpg', tituloSugerido: 'Fachada / Entrada Discreta Perimetral Polanco', categoria: 'Fachada / Acceso', usoActual: 'Hotel 08 (Fachada)' },
   { id: 8, archivo: 'image~7.jpg', url: '/renders/image~7.jpg', tituloSugerido: 'Suite Iluminación Cálida y Confort 07', categoria: 'Suite Cama & Espejos' },
   { id: 9, archivo: 'image~8.jpg', url: '/renders/image~8.jpg', tituloSugerido: 'Suite Amplia con Detalles en Madera 08', categoria: 'Suite Cama & Espejos' },
   { id: 10, archivo: 'image~9.jpg', url: '/renders/image~9.jpg', tituloSugerido: 'Suite Estilo Nórdico Contemporáneo 09', categoria: 'Suite Cama & Espejos' },
@@ -221,7 +830,7 @@ export const TODOS_LOS_35_RENDERS: RenderItem[] = [
   { id: 32, archivo: 'image~36.jpg', url: '/renders/image~36.jpg', tituloSugerido: 'Suite Jacuzzi Doble Nivel 36', categoria: 'Suite Jacuzzi' },
   { id: 33, archivo: 'image~37.jpg', url: '/renders/image~37.jpg', tituloSugerido: 'Suite Espejo Cenital & Luz Neón 37', categoria: 'Suite Temática / Neón' },
   { id: 34, archivo: 'image~38.jpg', url: '/renders/image~38.jpg', tituloSugerido: 'Suite Acabados en Mármol & Granito 38', categoria: 'Suite Cama & Espejos' },
-  { id: 35, archivo: 'IMG-20260530-WA0001.jpg', url: '/renders/IMG-20260530-WA0001.jpg', tituloSugerido: 'Render Fachada / Acceso Pórtico Adicional', categoria: 'Fachada / Acceso' }
+  { id: 35, archivo: 'IMG-20260530-WA0001.jpg', url: '/renders/IMG-20260530-WA0001.jpg', tituloSugerido: 'Fachada Principal Insignia Polanco', categoria: 'Fachada / Acceso', usoActual: 'Hotel 07 (Fachada)' }
 ];
 
 export function HotelDirectoryShowcaseView({ 
@@ -231,8 +840,8 @@ export function HotelDirectoryShowcaseView({
   onSelectHotelForBooking?: () => void;
   onGoToMethodology?: () => void;
 }) {
-  // Modo de visualización: catálogo por hotel o inventario de todos los renders
-  const [viewMode, setViewMode] = useState<'hoteles' | 'galeria35'>('galeria35');
+  // Modo de visualización: directorio de 35 hoteles por defecto
+  const [viewMode, setViewMode] = useState<'hoteles' | 'galeria35'>('hoteles');
   
   // Estado de los hoteles (para que el usuario pueda cambiar nombres si lo desea)
   const [hotelsList, setHotelsList] = useState<ModelHotel[]>(PROPIEDADES_MODELO);
@@ -367,7 +976,7 @@ export function HotelDirectoryShowcaseView({
               
               {/* Filtro 1: Destino / Zona */}
               <div className="bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-3 transition flex flex-col justify-between">
-                <label className="text-[10px] font-mono uppercase text-[#f5d77f] font-bold flex items-center gap-1.5 mb-1">
+                <label className="text-[10px] font-sans uppercase text-[#f5d77f] font-bold flex items-center gap-1.5 mb-1">
                   <MapPin className="w-3.5 h-3.5 text-[#d4af37]" />
                   <span>Destino / Zona</span>
                 </label>
@@ -376,13 +985,13 @@ export function HotelDirectoryShowcaseView({
                   onChange={(e) => setFilterZona(e.target.value)}
                   className="bg-slate-900 text-white text-xs font-semibold rounded-lg p-2 border border-blue-400/40 focus:outline-none focus:ring-2 focus:ring-[#d4af37] w-full"
                 >
-                  <option value="TODAS">📍 Todas las Zonas (CDMX y Edo. Méx.)</option>
-                  <option value="Insurgentes">📍 Insurgentes Norte / GAM</option>
-                  <option value="Tlalnepantla">📍 Tlalnepantla / Periférico Norte</option>
-                  <option value="Tlalpan">📍 Calzada de Tlalpan / Sur</option>
-                  <option value="Ecatepec">📍 Ecatepec / Vía Morelos</option>
-                  <option value="Oriente">📍 Zona Oriente / Zaragoza</option>
-                  <option value="Naucalpan">📍 Naucalpan / Toreo</option>
+                  <option value="TODAS">Todas las Zonas (CDMX y Edo. Méx.)</option>
+                  <option value="Insurgentes">Insurgentes Norte / GAM</option>
+                  <option value="Tlalnepantla">Tlalnepantla / Periférico Norte</option>
+                  <option value="Tlalpan">Calzada de Tlalpan / Sur</option>
+                  <option value="Ecatepec">Ecatepec / Vía Morelos</option>
+                  <option value="Oriente">Zona Oriente / Zaragoza</option>
+                  <option value="Naucalpan">Naucalpan / Toreo</option>
                 </select>
               </div>
 
@@ -397,11 +1006,11 @@ export function HotelDirectoryShowcaseView({
                   onChange={(e) => setFilterModalidad(e.target.value)}
                   className="bg-slate-900 text-white text-xs font-semibold rounded-lg p-2 border border-blue-400/40 focus:outline-none focus:ring-2 focus:ring-[#d4af37] w-full"
                 >
-                  <option value="TODAS">⏱️ Cualquier Modalidad</option>
-                  <option value="4H">⏱️ 4 Horas</option>
-                  <option value="6H">⏱️ 6 Horas</option>
-                  <option value="8H">⏱️ 8 Horas</option>
-                  <option value="12H">⏱️ 12 Horas</option>
+                  <option value="TODAS">Cualquier Modalidad</option>
+                  <option value="4H">4 Horas</option>
+                  <option value="6H">6 Horas</option>
+                  <option value="8H">8 Horas</option>
+                  <option value="12H">12 Horas</option>
                   <option value="NOCHE">🌙 Noche Completa</option>
                 </select>
               </div>
@@ -462,7 +1071,7 @@ export function HotelDirectoryShowcaseView({
               {(filterZona !== 'TODAS' || filterModalidad !== 'TODAS' || filterAmenidad !== 'TODAS' || filterMaxPrecio < 1000) && (
                 <button
                   onClick={resetFilters}
-                  className="inline-flex items-center gap-1.5 text-[#f5d77f] hover:text-white transition font-mono text-xs underline cursor-pointer"
+                  className="inline-flex items-center gap-1.5 text-[#f5d77f] hover:text-white transition font-sans text-xs underline cursor-pointer"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
                   <span>Limpiar Filtros</span>
@@ -486,21 +1095,6 @@ export function HotelDirectoryShowcaseView({
         <div className="mb-8 p-3 rounded-3xl bg-white border border-slate-300 shadow-md flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
             <button
-              onClick={() => setViewMode('galeria35')}
-              className={`py-3 px-5 rounded-2xl font-black text-xs transition-all flex items-center gap-2.5 cursor-pointer shadow-sm ${
-                viewMode === 'galeria35'
-                  ? 'bg-[#002244] text-[#f5d77f] ring-2 ring-[#d4af37]'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-              }`}
-            >
-              <Grid className="w-4 h-4 text-[#d4af37]" />
-              <span>🖼️ Galería Visual de TODOS los 35 Renders (Ver fotos en grande)</span>
-              <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#d4af37]/30 text-[#f5d77f] font-mono font-bold">
-                35 Fotos
-              </span>
-            </button>
-
-            <button
               onClick={() => setViewMode('hoteles')}
               className={`py-3 px-5 rounded-2xl font-black text-xs transition-all flex items-center gap-2.5 cursor-pointer shadow-sm ${
                 viewMode === 'hoteles'
@@ -509,14 +1103,29 @@ export function HotelDirectoryShowcaseView({
               }`}
             >
               <Building2 className="w-4 h-4 text-[#d4af37]" />
-              <span>🏨 Catálogo de 6 Hoteles Modelo (Fachada + Suite)</span>
-              <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#002244]/10 text-slate-800 font-mono font-bold">
-                6 Hoteles
+              <span>🏨 Directorio Oficial de los 35 Hoteles (Fachada Real + Habitación)</span>
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#d4af37]/30 text-[#f5d77f] font-sans font-bold">
+                35 Hoteles
+              </span>
+            </button>
+
+            <button
+              onClick={() => setViewMode('galeria35')}
+              className={`py-3 px-5 rounded-2xl font-black text-xs transition-all flex items-center gap-2.5 cursor-pointer shadow-sm ${
+                viewMode === 'galeria35'
+                  ? 'bg-[#002244] text-[#f5d77f] ring-2 ring-[#d4af37]'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              <Grid className="w-4 h-4 text-[#d4af37]" />
+              <span>🖼️ Galería de 35 Renders Individuales (HD)</span>
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-slate-300 text-slate-800 font-sans font-bold">
+                35 Fotos
               </span>
             </button>
           </div>
 
-          <div className="text-xs text-slate-600 font-mono text-center md:text-right">
+          <div className="text-xs text-slate-600 font-sans text-center md:text-right">
             <span>✨ Haz clic en cualquier imagen para abrirla en <strong>Pantalla Completa con Flechas</strong></span>
           </div>
         </div>
@@ -555,7 +1164,7 @@ export function HotelDirectoryShowcaseView({
                 ))}
               </div>
 
-              <div className="text-xs font-mono text-slate-500">
+              <div className="text-xs font-sans text-slate-500">
                 Mostrando <strong className="text-slate-900 font-bold">{rendersFiltrados.length}</strong> de {TODOS_LOS_35_RENDERS.length} fotos reales
               </div>
             </div>
@@ -579,7 +1188,7 @@ export function HotelDirectoryShowcaseView({
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         {/* Número de Foto */}
-                        <div className="absolute top-2 left-2 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-sm text-[#f5d77f] font-mono text-xs font-bold border border-white/10 shadow">
+                        <div className="absolute top-2 left-2 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-sm text-[#f5d77f] font-sans text-xs font-bold border border-white/10 shadow">
                           #{String(render.id).padStart(2, '0')}
                         </div>
 
@@ -591,7 +1200,7 @@ export function HotelDirectoryShowcaseView({
 
                         {/* Etiqueta de uso en Hotel si aplica */}
                         {render.usoActual && (
-                          <div className="absolute top-2 right-2 px-2 py-0.5 rounded-md bg-emerald-700/90 text-white font-mono text-[10px] font-bold shadow">
+                          <div className="absolute top-2 right-2 px-2 py-0.5 rounded-md bg-emerald-700/90 text-white font-sans text-[10px] font-bold shadow">
                             ✓ {render.usoActual}
                           </div>
                         )}
@@ -599,7 +1208,7 @@ export function HotelDirectoryShowcaseView({
 
                       {/* Información Detallada */}
                       <div className="p-3.5">
-                        <span className="inline-block text-[10px] font-mono uppercase text-[#002244] bg-blue-50 border border-blue-200 px-2 py-0.5 rounded font-bold mb-1.5">
+                        <span className="inline-block text-[10px] font-sans uppercase text-[#002244] bg-blue-50 border border-blue-200 px-2 py-0.5 rounded font-bold mb-1.5">
                           {render.categoria}
                         </span>
 
@@ -607,7 +1216,7 @@ export function HotelDirectoryShowcaseView({
                           {render.tituloSugerido}
                         </h4>
 
-                        <div className="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <div className="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] font-sans text-slate-500">
                           <span className="truncate max-w-[170px]" title={render.archivo}>📁 {render.archivo}</span>
                           <span className="text-[#002244] font-bold group-hover:translate-x-0.5 transition-transform">Ver en HD →</span>
                         </div>
@@ -629,14 +1238,14 @@ export function HotelDirectoryShowcaseView({
             <div className="mb-6 p-4 rounded-2xl bg-amber-50 border border-amber-200 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs text-amber-900">
               <div className="flex items-center gap-2.5">
                 <span className="p-2 rounded-xl bg-amber-200/80 text-amber-900 font-bold">
-                  📸 Catálogo por Propiedad
+                  📸 Directorio Oficial de los 35 Hoteles
                 </span>
                 <div>
                   <p className="font-bold text-slate-900">
-                    Cada tarjeta muestra 2 Renders Reales: [1 Fachada Oficial] y [1 Habitación / Suite]
+                    Directorio completo de las 35 propiedades: cada tarjeta muestra su Render Real de Fachada y Habitación / Suite emparejada.
                   </p>
                   <p className="text-amber-800">
-                    Los nombres y direcciones actuales son de referencia visual para que me indiques los definitivos.
+                    Fotos reales de fachadas de public/renders/ (sin logotipos), habitaciones reales emparejadas y descripciones comerciales originales completas.
                   </p>
                 </div>
               </div>
@@ -676,7 +1285,7 @@ export function HotelDirectoryShowcaseView({
                   <div className="p-5 pb-3 border-b border-slate-100 flex items-start justify-between gap-3">
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="px-2.5 py-0.5 rounded-md bg-blue-50 text-[#002244] font-mono text-[10px] font-bold border border-blue-100">
+                        <span className="px-2.5 py-0.5 rounded-md bg-blue-50 text-[#002244] font-sans text-[10px] font-bold border border-blue-100">
                           {hotel.codigo}
                         </span>
                         <h3 className="text-lg sm:text-xl font-black text-slate-900 font-serif">
@@ -689,7 +1298,7 @@ export function HotelDirectoryShowcaseView({
                       </p>
                     </div>
 
-                    <span className="text-[10px] font-mono bg-emerald-50 text-emerald-800 border border-emerald-200 px-2 py-1 rounded font-bold shrink-0">
+                    <span className="text-[10px] font-sans bg-emerald-50 text-emerald-800 border border-emerald-200 px-2 py-1 rounded font-bold shrink-0">
                       Hotel Activo
                     </span>
                   </div>
@@ -710,14 +1319,14 @@ export function HotelDirectoryShowcaseView({
                         alt={`Fachada - ${hotel.nombreSugerido}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-black/80 backdrop-blur-sm text-[#f5d77f] font-mono text-[10px] font-bold border border-white/20">
+                      <div className="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-black/80 backdrop-blur-sm text-[#f5d77f] font-sans text-[10px] font-bold border border-white/20">
                         1. FACHADA
                       </div>
                       <div className="absolute bottom-2 right-2 p-1.5 rounded-full bg-black/70 text-white opacity-0 group-hover:opacity-100 transition">
                         <Maximize2 className="w-3.5 h-3.5" />
                       </div>
                       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-2">
-                        <p className="text-[10px] font-mono text-zinc-300 truncate">
+                        <p className="text-[10px] font-sans text-zinc-300 truncate">
                           📁 {hotel.renderFachada.archivo}
                         </p>
                       </div>
@@ -736,14 +1345,14 @@ export function HotelDirectoryShowcaseView({
                         alt={`Habitación - ${hotel.nombreSugerido}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-blue-950/85 backdrop-blur-sm text-cyan-300 font-mono text-[10px] font-bold border border-white/20">
+                      <div className="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-blue-950/85 backdrop-blur-sm text-cyan-300 font-sans text-[10px] font-bold border border-white/20">
                         2. HABITACIÓN
                       </div>
                       <div className="absolute bottom-2 right-2 p-1.5 rounded-full bg-black/70 text-white opacity-0 group-hover:opacity-100 transition">
                         <Maximize2 className="w-3.5 h-3.5" />
                       </div>
                       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-2">
-                        <p className="text-[10px] font-mono text-zinc-300 truncate">
+                        <p className="text-[10px] font-sans text-zinc-300 truncate">
                           📁 {hotel.renderHabitacion.archivo}
                         </p>
                       </div>
@@ -772,20 +1381,21 @@ export function HotelDirectoryShowcaseView({
                     {/* Bloque de Tarifas Dinámicas (Por Hora vs Noche) */}
                     <div className="grid grid-cols-2 gap-3 p-3.5 rounded-2xl bg-blue-50/70 border border-blue-100">
                       <div className="space-y-0.5">
-                        <span className="text-[10px] font-mono uppercase text-blue-900 font-bold block">
-                          ⏱️ Renta 4 Horas
+                        <span className="text-[10px] font-sans uppercase text-blue-900 font-bold flex items-center gap-1">
+                          <Clock className="w-3 h-3 text-[#f5d77f]" />
+                          <span>Renta 4 Horas</span>
                         </span>
-                        <div className="text-base sm:text-lg font-black font-mono text-blue-950">
+                        <div className="text-base sm:text-lg font-black font-sans text-blue-950">
                           ${hotel.tarifa4h} <span className="text-xs font-normal text-slate-500">MXN</span>
                         </div>
                         <span className="text-[10px] text-slate-500 block">Horas muertas / Alta rotación</span>
                       </div>
 
                       <div className="space-y-0.5 border-l border-blue-200 pl-3">
-                        <span className="text-[10px] font-mono uppercase text-slate-600 font-bold block">
+                        <span className="text-[10px] font-sans uppercase text-slate-600 font-bold block">
                           🌙 Noche Completa
                         </span>
-                        <div className="text-base sm:text-lg font-black font-mono text-slate-900">
+                        <div className="text-base sm:text-lg font-black font-sans text-slate-900">
                           ${hotel.tarifaNoche} <span className="text-xs font-normal text-slate-500">MXN</span>
                         </div>
                         <span className="text-[10px] text-slate-500 block">Check-in nocturno</span>
@@ -820,7 +1430,7 @@ export function HotelDirectoryShowcaseView({
         {/* ========================================================= */}
         <section className="mt-16 pt-12 border-t border-slate-300">
           <div className="text-center mb-8">
-            <span className="text-[#002244] font-mono text-xs uppercase tracking-widest font-bold block mb-1">
+            <span className="text-[#002244] font-sans text-xs uppercase tracking-widest font-bold block mb-1">
               Arquitectura de Conversión • 
             </span>
             <h3 className="text-2xl sm:text-3xl font-black text-slate-900 font-serif">
@@ -862,13 +1472,13 @@ export function HotelDirectoryShowcaseView({
           {/* Tarjeta de Contacto Directo con Luis César Monroy */}
           <div className="max-w-2xl mx-auto p-6 rounded-3xl bg-white border border-slate-200 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-center sm:text-left">
-              <span className="text-[10px] font-mono uppercase text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded font-bold">
+              <span className="text-[10px] font-sans uppercase text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded font-bold">
                 Línea Directa Oficial
               </span>
               <h4 className="text-base font-black text-slate-900 mt-1 font-serif">
                 Atención para Propietarios y Hoteleros
               </h4>
-              <p className="text-xs text-slate-500 font-mono">
+              <p className="text-xs text-slate-500 font-sans">
                 WhatsApp Business: +52 55 1230 5860
               </p>
             </div>
@@ -905,7 +1515,7 @@ export function HotelDirectoryShowcaseView({
 
             {/* Encabezado del Modal */}
             <div className="mb-4">
-              <span className="text-xs font-mono font-bold text-[#002244] uppercase tracking-wider">
+              <span className="text-xs font-sans font-bold text-[#002244] uppercase tracking-wider">
                 Ficha de Propiedad Modelo • {selectedHotel.codigo}
               </span>
               <h2 className="text-2xl font-black text-slate-900 font-serif">
@@ -928,7 +1538,7 @@ export function HotelDirectoryShowcaseView({
                 }`}
               >
                 <span>🏢 1. Fachada</span>
-                <span className="text-[10px] font-mono opacity-80">({selectedHotel.renderFachada.archivo})</span>
+                <span className="text-[10px] font-sans opacity-80">({selectedHotel.renderFachada.archivo})</span>
               </button>
 
               <button
@@ -940,7 +1550,7 @@ export function HotelDirectoryShowcaseView({
                 }`}
               >
                 <span>🛏️ 2. Habitación / Suite</span>
-                <span className="text-[10px] font-mono opacity-80">({selectedHotel.renderHabitacion.archivo})</span>
+                <span className="text-[10px] font-sans opacity-80">({selectedHotel.renderHabitacion.archivo})</span>
               </button>
             </div>
 
@@ -962,7 +1572,7 @@ export function HotelDirectoryShowcaseView({
                 <Maximize2 className="w-3.5 h-3.5" />
                 <span>Pantalla Completa</span>
               </button>
-              <div className="absolute top-3 left-3 bg-black/75 px-3 py-1 rounded-lg text-xs font-mono text-[#f5d77f]">
+              <div className="absolute top-3 left-3 bg-black/75 px-3 py-1 rounded-lg text-xs font-sans text-[#f5d77f]">
                 {modalActivePhoto === 'fachada' ? selectedHotel.renderFachada.descripcion : selectedHotel.renderHabitacion.descripcion}
               </div>
             </div>
@@ -970,20 +1580,26 @@ export function HotelDirectoryShowcaseView({
             {/* Tarifas y Propuesta para el Dueño */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
-                <span className="text-[10px] font-mono uppercase text-slate-500 font-bold block">
+                <span className="text-[10px] font-sans uppercase text-slate-500 font-bold block">
                   Estructura Tarifaria Sugerida
                 </span>
                 <div className="flex justify-between items-center text-xs">
-                  <span className="text-slate-600">⏱️ Estancia 4 Horas:</span>
-                  <span className="font-mono font-bold text-slate-900">${selectedHotel.tarifa4h} MXN</span>
+                  <span className="text-slate-600 flex items-center gap-1.5">
+                    <Clock className="w-3.5 h-3.5 text-[#f5d77f]" />
+                    <span>Estancia 4 Horas:</span>
+                  </span>
+                  <span className="font-sans font-bold text-slate-900">${selectedHotel.tarifa4h} MXN</span>
                 </div>
                 <div className="flex justify-between items-center text-xs">
-                  <span className="text-slate-600">⏱️ Estancia 6 Horas:</span>
-                  <span className="font-mono font-bold text-slate-900">${selectedHotel.tarifa6h} MXN</span>
+                  <span className="text-slate-600 flex items-center gap-1.5">
+                    <Clock className="w-3.5 h-3.5 text-[#f5d77f]" />
+                    <span>Estancia 6 Horas:</span>
+                  </span>
+                  <span className="font-sans font-bold text-slate-900">${selectedHotel.tarifa6h} MXN</span>
                 </div>
                 <div className="flex justify-between items-center text-xs">
                   <span className="text-slate-600">🌙 Noche Completa:</span>
-                  <span className="font-mono font-bold text-slate-900">${selectedHotel.tarifaNoche} MXN</span>
+                  <span className="font-sans font-bold text-slate-900">${selectedHotel.tarifaNoche} MXN</span>
                 </div>
               </div>
 
@@ -1093,7 +1709,7 @@ export function HotelDirectoryShowcaseView({
           </div>
 
           {/* Barra Inferior del Visor con Controles */}
-          <div className="w-full max-w-6xl flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-white/10 text-xs text-zinc-400 font-mono z-10">
+          <div className="w-full max-w-6xl flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-white/10 text-xs text-zinc-400 font-sans z-10">
             <div className="flex items-center gap-2">
               <span className="hidden md:inline">Tip: Usa las flechas de tu teclado <strong>(← / →)</strong> para pasar las fotos rápidamente.</span>
             </div>

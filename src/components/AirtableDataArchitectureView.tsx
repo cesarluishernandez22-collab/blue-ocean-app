@@ -123,13 +123,13 @@ export function AirtableDataArchitectureView() {
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-3">
-              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-mono font-semibold bg-[#c05c80]/20 text-[#e07a9e] border border-[#c05c80]/30">
+              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-sans font-semibold bg-[#c05c80]/20 text-[#e07a9e] border border-[#c05c80]/30">
                 FASE 1 • BLOQUE 1
               </span>
-              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-mono bg-[#38a3a5]/20 text-[#4ba3a3] border border-[#38a3a5]/30">
+              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-sans bg-[#38a3a5]/20 text-[#4ba3a3] border border-[#38a3a5]/30">
                 ESTRUCTURA DE DATOS AIRTABLE
               </span>
-              <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-mono text-[#d4af37] border border-[#d4af37]/40 bg-[#d4af37]/10">
+              <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-sans text-[#d4af37] border border-[#d4af37]/40 bg-[#d4af37]/10">
                 LCM ARCHITECTURE
               </span>
             </div>
@@ -138,8 +138,8 @@ export function AirtableDataArchitectureView() {
             </h2>
             <p className="text-sm text-zinc-400 mt-1 max-w-3xl">
               Arquitectura de datos para el motor de reservas Blue Ocean. Operando exclusivamente sobre las dos tablas autorizadas: 
-              <strong className="text-zinc-200 font-mono"> "Inventario de propiedades"</strong> y 
-              <strong className="text-zinc-200 font-mono"> "Contacto"</strong>, sin dependencias de servicios de pago y bajo el principio de cero suposiciones.
+              <strong className="text-zinc-200 font-sans"> "Inventario de propiedades"</strong> y 
+              <strong className="text-zinc-200 font-sans"> "Contacto"</strong>, sin dependencias de servicios de pago y bajo el principio de cero suposiciones.
             </p>
           </div>
 
@@ -154,7 +154,7 @@ export function AirtableDataArchitectureView() {
               Sincronizar
             </button>
             <div className="text-right pl-3 border-l border-zinc-800">
-              <div className="text-[11px] uppercase tracking-wider text-zinc-500 font-mono">Estado API</div>
+              <div className="text-[11px] uppercase tracking-wider text-zinc-500 font-sans">Estado API</div>
               <div className="flex items-center gap-1.5 text-xs font-medium text-emerald-400">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                 {configStatus?.mode === 'LIVE_AIRTABLE_API' ? 'Airtable Live API' : 'Modo Espejo Activo'}
@@ -167,25 +167,25 @@ export function AirtableDataArchitectureView() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-4 border-t border-zinc-800/80">
           <div className="bg-[#121214] p-3 rounded-lg border border-zinc-800/80">
             <span className="text-[11px] text-zinc-500 block">Base de Airtable</span>
-            <span className="text-sm font-semibold text-white font-mono flex items-center gap-1.5 mt-0.5">
+            <span className="text-sm font-semibold text-white font-sans flex items-center gap-1.5 mt-0.5">
               <Database className="w-3.5 h-3.5 text-[#e07a9e]" /> Hoteles
             </span>
           </div>
           <div className="bg-[#121214] p-3 rounded-lg border border-zinc-800/80">
             <span className="text-[11px] text-zinc-500 block">Tabla 1: Inventario</span>
-            <span className="text-sm font-semibold text-zinc-200 font-mono flex items-center gap-1.5 mt-0.5">
+            <span className="text-sm font-semibold text-zinc-200 font-sans flex items-center gap-1.5 mt-0.5">
               <Table className="w-3.5 h-3.5 text-[#38a3a5]" /> {inventarioRecords.length} Propiedades
             </span>
           </div>
           <div className="bg-[#121214] p-3 rounded-lg border border-zinc-800/80">
             <span className="text-[11px] text-zinc-500 block">Tabla 2: Contacto</span>
-            <span className="text-sm font-semibold text-zinc-200 font-mono flex items-center gap-1.5 mt-0.5">
+            <span className="text-sm font-semibold text-zinc-200 font-sans flex items-center gap-1.5 mt-0.5">
               <User className="w-3.5 h-3.5 text-[#d4af37]" /> {contactoRecords.length} Contactos
             </span>
           </div>
           <div className="bg-[#121214] p-3 rounded-lg border border-zinc-800/80">
             <span className="text-[11px] text-zinc-500 block">Catálogo Unificado</span>
-            <span className="text-sm font-semibold text-white font-mono flex items-center gap-1.5 mt-0.5">
+            <span className="text-sm font-semibold text-white font-sans flex items-center gap-1.5 mt-0.5">
               <Layers className="w-3.5 h-3.5 text-[#e07a9e]" /> {unifiedHotels.length} Disponibles
             </span>
           </div>
@@ -250,13 +250,13 @@ export function AirtableDataArchitectureView() {
             <div>
               <h3 className="text-lg font-bold text-white flex items-center gap-2">
                 <span>Inventario de propiedades</span>
-                <span className="text-xs font-normal text-zinc-400 font-mono">(8 campos exactos)</span>
+                <span className="text-xs font-normal text-zinc-400 font-sans">(8 campos exactos)</span>
               </h3>
               <p className="text-xs text-zinc-400 mt-0.5">
                 Campos: Nombre, Correo, Teléfono, Dirección, Render Fachada, Render Habitaciones, Descripción del hotel, Nombre del contacto.
               </p>
             </div>
-            <span className="text-xs text-zinc-400 font-mono bg-zinc-900 px-2.5 py-1 rounded border border-zinc-800">
+            <span className="text-xs text-zinc-400 font-sans bg-zinc-900 px-2.5 py-1 rounded border border-zinc-800">
               {inventarioRecords.length} registros cargados
             </span>
           </div>
@@ -286,7 +286,7 @@ export function AirtableDataArchitectureView() {
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#18181b] via-transparent to-transparent"></div>
-                    <div className="absolute top-3 left-3 bg-[#121214]/80 backdrop-blur-sm border border-zinc-700/60 px-2.5 py-1 rounded-md text-[11px] font-mono text-zinc-300">
+                    <div className="absolute top-3 left-3 bg-[#121214]/80 backdrop-blur-sm border border-zinc-700/60 px-2.5 py-1 rounded-md text-[11px] font-sans text-zinc-300">
                       ID: {record.id}
                     </div>
                     <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between">
@@ -312,11 +312,11 @@ export function AirtableDataArchitectureView() {
                       </div>
                       <div className="flex items-center gap-1.5 truncate">
                         <Mail className="w-3.5 h-3.5 text-zinc-400 shrink-0" />
-                        <span className="truncate font-mono text-[11px]">{record.fields['Correo']}</span>
+                        <span className="truncate font-sans text-[11px]">{record.fields['Correo']}</span>
                       </div>
                       <div className="flex items-center gap-1.5 truncate">
                         <Phone className="w-3.5 h-3.5 text-zinc-400 shrink-0" />
-                        <span className="font-mono text-[11px]">{record.fields['Teléfono']}</span>
+                        <span className="font-sans text-[11px]">{record.fields['Teléfono']}</span>
                       </div>
                     </div>
 
@@ -344,11 +344,11 @@ export function AirtableDataArchitectureView() {
                     <div className="pt-2 flex items-center justify-between border-t border-zinc-800/80 text-[11px]">
                       <button
                         onClick={() => setSelectedRecordJson(record)}
-                        className="inline-flex items-center gap-1 text-[#e07a9e] hover:text-[#c05c80] transition font-mono"
+                        className="inline-flex items-center gap-1 text-[#e07a9e] hover:text-[#c05c80] transition font-sans"
                       >
                         <FileText className="w-3 h-3" /> Ver JSON de Airtable
                       </button>
-                      <span className="text-zinc-500 font-mono">Tabla: Inventario de propiedades</span>
+                      <span className="text-zinc-500 font-sans">Tabla: Inventario de propiedades</span>
                     </div>
                   </div>
                 </div>
@@ -365,7 +365,7 @@ export function AirtableDataArchitectureView() {
             <div>
               <h3 className="text-lg font-bold text-white flex items-center gap-2">
                 <span>Tabla: Contacto</span>
-                <span className="text-xs font-normal text-zinc-400 font-mono">(9 campos exactos)</span>
+                <span className="text-xs font-normal text-zinc-400 font-sans">(9 campos exactos)</span>
               </h3>
               <p className="text-xs text-zinc-400 mt-0.5">
                 Campos: Nombre del Hotel, Correo, Teléfono, Dirección, Contacto, Web, Redes Sociales, Fecha, Próximo seguimiento.
@@ -396,7 +396,7 @@ export function AirtableDataArchitectureView() {
           <div className="bg-[#18181b] border border-zinc-800 rounded-xl overflow-hidden shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs text-zinc-300">
-                <thead className="bg-[#121214] text-zinc-400 uppercase tracking-wider font-mono text-[11px] border-b border-zinc-800">
+                <thead className="bg-[#121214] text-zinc-400 uppercase tracking-wider font-sans text-[11px] border-b border-zinc-800">
                   <tr>
                     <th className="px-4 py-3">Nombre del Hotel</th>
                     <th className="px-4 py-3">Contacto</th>
@@ -412,13 +412,13 @@ export function AirtableDataArchitectureView() {
                     <tr key={c.id} className="hover:bg-zinc-900/40 transition">
                       <td className="px-4 py-3 font-semibold text-white">
                         <div>{c.fields['Nombre del Hotel']}</div>
-                        <div className="text-[10px] text-zinc-500 font-mono mt-0.5">{c.id}</div>
+                        <div className="text-[10px] text-zinc-500 font-sans mt-0.5">{c.id}</div>
                       </td>
                       <td className="px-4 py-3 text-zinc-300">
                         {c.fields['Contacto']}
                       </td>
                       <td className="px-4 py-3 space-y-0.5">
-                        <div className="font-mono text-zinc-400">{c.fields['Teléfono']}</div>
+                        <div className="font-sans text-zinc-400">{c.fields['Teléfono']}</div>
                         <div className="text-zinc-500 truncate max-w-[160px]">{c.fields['Correo']}</div>
                       </td>
                       <td className="px-4 py-3 text-zinc-400 max-w-[200px] truncate" title={c.fields['Dirección']}>
@@ -453,7 +453,7 @@ export function AirtableDataArchitectureView() {
                       <td className="px-4 py-3 text-right">
                         <button
                           onClick={() => setSelectedRecordJson(c)}
-                          className="px-2 py-1 text-[11px] rounded bg-zinc-800 hover:bg-zinc-700 text-zinc-300 font-mono transition"
+                          className="px-2 py-1 text-[11px] rounded bg-zinc-800 hover:bg-zinc-700 text-zinc-300 font-sans transition"
                         >
                           Ver JSON
                         </button>
@@ -474,13 +474,13 @@ export function AirtableDataArchitectureView() {
             <div>
               <h3 className="text-lg font-bold text-white flex items-center gap-2">
                 <span>Modelo Unificado: BlueOceanHotel</span>
-                <span className="text-xs font-normal text-[#d4af37] font-mono">(Fusión de Inventario + Contacto)</span>
+                <span className="text-xs font-normal text-[#d4af37] font-sans">(Fusión de Inventario + Contacto)</span>
               </h3>
               <p className="text-xs text-zinc-400 mt-0.5">
                 Estructura preparada para el Catálogo y Buscador de Reservas tipo Booking de la Fase 1.
               </p>
             </div>
-            <span className="text-xs text-[#38a3a5] font-mono bg-[#38a3a5]/10 px-2.5 py-1 rounded border border-[#38a3a5]/30">
+            <span className="text-xs text-[#38a3a5] font-sans bg-[#38a3a5]/10 px-2.5 py-1 rounded border border-[#38a3a5]/30">
               {unifiedHotels.length} hoteles listos para reserva
             </span>
           </div>
@@ -498,10 +498,10 @@ export function AirtableDataArchitectureView() {
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute top-2.5 left-2.5 bg-zinc-950/80 backdrop-blur-sm border border-zinc-700/60 px-2 py-0.5 rounded text-[11px] font-mono text-[#d4af37]">
+                  <div className="absolute top-2.5 left-2.5 bg-zinc-950/80 backdrop-blur-sm border border-zinc-700/60 px-2 py-0.5 rounded text-[11px] font-sans text-[#d4af37]">
                     ★ {hotel.puntuacion} ({hotel.totalResenas})
                   </div>
-                  <div className="absolute top-2.5 right-2.5 bg-[#e07a9e]/90 text-zinc-950 font-bold px-2 py-0.5 rounded text-[11px] font-mono">
+                  <div className="absolute top-2.5 right-2.5 bg-[#e07a9e]/90 text-zinc-950 font-bold px-2 py-0.5 rounded text-[11px] font-sans">
                     {hotel.tipoPropiedad}
                   </div>
                 </div>
@@ -517,25 +517,25 @@ export function AirtableDataArchitectureView() {
 
                   {/* Pricing Matrix */}
                   <div className="bg-[#121214] p-3 rounded-lg border border-zinc-800/80 space-y-1.5">
-                    <span className="text-[10px] uppercase tracking-wider text-zinc-500 font-mono block">
+                    <span className="text-[10px] uppercase tracking-wider text-zinc-500 font-sans block">
                       Tarifas por estancia (Fase 1)
                     </span>
                     <div className="grid grid-cols-2 gap-2 text-xs">
                       <div className="bg-zinc-900/80 px-2 py-1.5 rounded border border-zinc-800">
                         <span className="text-zinc-500 block text-[10px]">4 Horas</span>
-                        <span className="font-bold text-white font-mono">${hotel.tarifas.estancia4Horas} MXN</span>
+                        <span className="font-bold text-white font-sans">${hotel.tarifas.estancia4Horas} MXN</span>
                       </div>
                       <div className="bg-zinc-900/80 px-2 py-1.5 rounded border border-zinc-800">
                         <span className="text-zinc-500 block text-[10px]">6 Horas</span>
-                        <span className="font-bold text-white font-mono">${hotel.tarifas.estancia6Horas} MXN</span>
+                        <span className="font-bold text-white font-sans">${hotel.tarifas.estancia6Horas} MXN</span>
                       </div>
                       <div className="bg-zinc-900/80 px-2 py-1.5 rounded border border-zinc-800">
                         <span className="text-zinc-500 block text-[10px]">12 Horas</span>
-                        <span className="font-bold text-white font-mono">${hotel.tarifas.estancia12Horas} MXN</span>
+                        <span className="font-bold text-white font-sans">${hotel.tarifas.estancia12Horas} MXN</span>
                       </div>
                       <div className="bg-zinc-900/80 px-2 py-1.5 rounded border border-zinc-800">
                         <span className="text-zinc-500 block text-[10px]">Noche Completa</span>
-                        <span className="font-bold text-[#e07a9e] font-mono">${hotel.tarifas.nocheCompleta} MXN</span>
+                        <span className="font-bold text-[#e07a9e] font-sans">${hotel.tarifas.nocheCompleta} MXN</span>
                       </div>
                     </div>
                   </div>
@@ -544,7 +544,7 @@ export function AirtableDataArchitectureView() {
                     <span>Contacto: {hotel.nombreContacto}</span>
                     <button
                       onClick={() => setSelectedRecordJson(hotel)}
-                      className="text-[#38a3a5] hover:underline font-mono"
+                      className="text-[#38a3a5] hover:underline font-sans"
                     >
                       Ver Objeto Completo
                     </button>
@@ -571,13 +571,13 @@ export function AirtableDataArchitectureView() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-[#121214] p-4 rounded-lg border border-zinc-800 space-y-3">
-              <span className="text-xs font-semibold text-zinc-300 uppercase tracking-wider font-mono block">
+              <span className="text-xs font-semibold text-zinc-300 uppercase tracking-wider font-sans block">
                 1. Token de Acceso Personal (PAT)
               </span>
               <div className="space-y-1 text-xs text-zinc-400">
-                <p>Variable requerida: <code className="text-[#e07a9e] font-mono bg-zinc-900 px-1.5 py-0.5 rounded">AIRTABLE_API_KEY</code></p>
+                <p>Variable requerida: <code className="text-[#e07a9e] font-sans bg-zinc-900 px-1.5 py-0.5 rounded">AIRTABLE_API_KEY</code></p>
                 <p>Se genera en <a href="https://airtable.com/create/tokens" target="_blank" rel="noopener noreferrer" className="text-[#38a3a5] underline">airtable.com/create/tokens</a> con los permisos:</p>
-                <ul className="list-disc pl-5 space-y-0.5 text-zinc-400 mt-1 font-mono text-[11px]">
+                <ul className="list-disc pl-5 space-y-0.5 text-zinc-400 mt-1 font-sans text-[11px]">
                   <li><code>data.records:read</code> (Lectura de tablas)</li>
                   <li><code>data.records:write</code> (Creación de registros)</li>
                   <li><code>schema.bases:read</code> (Opcional)</li>
@@ -586,13 +586,13 @@ export function AirtableDataArchitectureView() {
             </div>
 
             <div className="bg-[#121214] p-4 rounded-lg border border-zinc-800 space-y-3">
-              <span className="text-xs font-semibold text-zinc-300 uppercase tracking-wider font-mono block">
+              <span className="text-xs font-semibold text-zinc-300 uppercase tracking-wider font-sans block">
                 2. Identificador de Base (Base ID)
               </span>
               <div className="space-y-1 text-xs text-zinc-400">
-                <p>Variable requerida: <code className="text-[#e07a9e] font-mono bg-zinc-900 px-1.5 py-0.5 rounded">AIRTABLE_BASE_ID</code></p>
-                <p>Es el identificador que inicia con <code className="text-white font-mono">app...</code> visible en la URL de tu base "Hoteles" en el navegador:</p>
-                <p className="font-mono text-[11px] bg-zinc-900 p-2 rounded text-zinc-300">
+                <p>Variable requerida: <code className="text-[#e07a9e] font-sans bg-zinc-900 px-1.5 py-0.5 rounded">AIRTABLE_BASE_ID</code></p>
+                <p>Es el identificador que inicia con <code className="text-white font-sans">app...</code> visible en la URL de tu base "Hoteles" en el navegador:</p>
+                <p className="font-sans text-[11px] bg-zinc-900 p-2 rounded text-zinc-300">
                   https://airtable.com/<span className="text-[#d4af37] font-bold">appXXXXXXXXXXXXXX</span>/tbl...
                 </p>
               </div>
@@ -617,7 +617,7 @@ export function AirtableDataArchitectureView() {
         <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-[#18181b] border border-zinc-800 rounded-xl max-w-2xl w-full max-h-[80vh] flex flex-col overflow-hidden shadow-2xl">
             <div className="p-4 border-b border-zinc-800 flex items-center justify-between bg-[#121214]">
-              <span className="text-sm font-bold text-white font-mono flex items-center gap-2">
+              <span className="text-sm font-bold text-white font-sans flex items-center gap-2">
                 <FileText className="w-4 h-4 text-[#e07a9e]" />
                 Inspección de Registro / Payload
               </span>
@@ -628,7 +628,7 @@ export function AirtableDataArchitectureView() {
                 Cerrar
               </button>
             </div>
-            <div className="p-4 overflow-y-auto flex-1 bg-[#121214] font-mono text-xs text-zinc-300">
+            <div className="p-4 overflow-y-auto flex-1 bg-[#121214] font-sans text-xs text-zinc-300">
               <pre className="whitespace-pre-wrap">{JSON.stringify(selectedRecordJson, null, 2)}</pre>
             </div>
           </div>

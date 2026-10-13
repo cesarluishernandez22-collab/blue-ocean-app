@@ -174,10 +174,10 @@ export function RenderOrganizerModal({
         <div className="p-5 sm:p-6 border-b border-zinc-800 bg-zinc-900/60 flex items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-sans font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
                 Organizador Inteligente de Renders
               </span>
-              <span className="text-xs text-zinc-400 font-mono">
+              <span className="text-xs text-zinc-400 font-sans">
                 {unassignedImages.length} fotos por clasificar
               </span>
             </div>
@@ -244,7 +244,7 @@ export function RenderOrganizerModal({
               </button>
               <button
                 onClick={() => setUnassignedImages([])}
-                className="px-3 py-1.5 rounded-xl bg-zinc-900 hover:bg-rose-950/40 hover:text-rose-400 text-zinc-400 font-mono transition"
+                className="px-3 py-1.5 rounded-xl bg-zinc-900 hover:bg-rose-950/40 hover:text-rose-400 text-zinc-400 font-sans transition"
               >
                 Limpiar bandeja
               </button>
@@ -317,11 +317,11 @@ export function RenderOrganizerModal({
               ) : (
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-sm font-mono uppercase font-bold text-zinc-300 flex items-center gap-2">
+                    <h3 className="text-sm font-sans uppercase font-bold text-zinc-300 flex items-center gap-2">
                       <Eye className="w-4 h-4 text-cyan-400" />
                       Fotos en la Bandeja ({unassignedImages.length}):
                     </h3>
-                    <span className="text-xs text-zinc-400 font-mono">
+                    <span className="text-xs text-zinc-400 font-sans">
                       Selecciona el hotel y haz clic en "Asignar"
                     </span>
                   </div>
@@ -347,7 +347,7 @@ export function RenderOrganizerModal({
                           >
                             <Maximize2 className="w-3.5 h-3.5" />
                           </button>
-                          <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-mono bg-black/80 text-zinc-300 border border-zinc-700">
+                          <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-sans bg-black/80 text-zinc-300 border border-zinc-700">
                             #{idx + 1}
                           </span>
                         </div>
@@ -357,7 +357,7 @@ export function RenderOrganizerModal({
                           <div className="space-y-2">
                             {/* Selector de Hotel */}
                             <div>
-                              <label className="text-[10px] font-mono uppercase text-zinc-400 block mb-1">
+                              <label className="text-[10px] font-sans uppercase text-zinc-400 block mb-1">
                                 ¿A qué Hotel pertenece?
                               </label>
                               <select
@@ -382,7 +382,7 @@ export function RenderOrganizerModal({
 
                             {/* Selector de Rol (Fachada o Habitación) */}
                             <div>
-                              <label className="text-[10px] font-mono uppercase text-zinc-400 block mb-1">
+                              <label className="text-[10px] font-sans uppercase text-zinc-400 block mb-1">
                                 ¿Qué tipo de render es?
                               </label>
                               <div className="grid grid-cols-2 gap-1.5">
@@ -464,9 +464,9 @@ export function RenderOrganizerModal({
                           <Building2 className="w-4 h-4 text-cyan-400" />
                           {h.nombre}
                         </h4>
-                        <span className="text-xs text-zinc-400 font-mono">{h.zona} • {h.tipoPropiedad}</span>
+                        <span className="text-xs text-zinc-400 font-sans">{h.zona} • {h.tipoPropiedad}</span>
                       </div>
-                      <span className="text-xs font-mono text-zinc-400">
+                      <span className="text-xs font-sans text-zinc-400">
                         {h.renderHabitaciones.length + 1} fotos totales
                       </span>
                     </div>
@@ -476,7 +476,7 @@ export function RenderOrganizerModal({
                       <div className="space-y-1">
                         <div className="aspect-video rounded-xl overflow-hidden border border-cyan-500/50 bg-zinc-950 relative">
                           <img src={h.renderFachada} alt="Fachada" className="w-full h-full object-cover" />
-                          <span className="absolute bottom-1 left-1 bg-black/80 text-[8px] font-mono text-cyan-300 px-1 rounded">
+                          <span className="absolute bottom-1 left-1 bg-black/80 text-[8px] font-sans text-cyan-300 px-1 rounded">
                             Fachada
                           </span>
                         </div>
@@ -487,7 +487,7 @@ export function RenderOrganizerModal({
                         <div key={idx} className="space-y-1">
                           <div className="aspect-video rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950 relative">
                             <img src={habImg} alt={`Hab ${idx}`} className="w-full h-full object-cover" />
-                            <span className="absolute bottom-1 left-1 bg-black/80 text-[8px] font-mono text-zinc-300 px-1 rounded">
+                            <span className="absolute bottom-1 left-1 bg-black/80 text-[8px] font-sans text-zinc-300 px-1 rounded">
                               Hab #{idx + 1}
                             </span>
                           </div>

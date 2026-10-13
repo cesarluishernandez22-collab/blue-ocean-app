@@ -213,11 +213,10 @@ export const DEMO_AIRTABLE_INVENTARIO: AirtableInventarioPropiedadesRecord[] = [
         '/renders/hotel-04-villas/fachada/image~2.jpg'
       ],
       'Render Habitaciones': [
-        '/renders/hotel-05-polanco/fachada/image~3.jpg',
-        '/renders/hotel-06-santafe/fachada/image~4.jpg',
         '/renders/hotel-06-santafe/habitacion/image~36.jpg',
         '/renders/hotel-06-santafe/habitacion/image~37.jpg',
-        '/renders/hotel-06-santafe/habitacion/image~38.jpg'
+        '/renders/hotel-06-santafe/habitacion/image~38.jpg',
+        '/renders/hotel-05-polanco/habitacion/image~34.jpg'
       ],
       'Descripción del hotel': 'Punto neurálgico en el acceso norte del Valle de México. Excelente opción para que choferes foráneos esperen su ventana de descarga nocturna descansando en una habitación climatizada y facturable, y punto de encuentro discreto para parejas.',
       'Nombre del contacto': 'Lic. Armando Lozano'

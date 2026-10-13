@@ -69,7 +69,7 @@ export function TradytecCellView() {
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-xs font-mono text-zinc-500">Reglas Activas: 24</span>
+            <span className="text-xs font-sans text-zinc-500">Reglas Activas: 24</span>
             <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
               Trazabilidad 100%
             </span>
@@ -85,7 +85,7 @@ export function TradytecCellView() {
               <User className="w-4 h-4 text-sky-700" />
               <span>Perfil Corporativo Activo</span>
             </h3>
-            <span className="text-xs font-mono text-zinc-400">ID: {activeProfile.id}</span>
+            <span className="text-xs font-sans text-zinc-400">ID: {activeProfile.id}</span>
           </div>
 
           <div className="space-y-3">
@@ -117,7 +117,7 @@ export function TradytecCellView() {
             </div>
             <div className="flex justify-between">
               <span className="text-zinc-500">Centro de Costos:</span>
-              <span className="font-mono text-zinc-800">{activeProfile.costCenter}</span>
+              <span className="font-sans text-zinc-800">{activeProfile.costCenter}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-zinc-500">Tope Hotel / Noche:</span>
@@ -204,7 +204,7 @@ export function TradytecCellView() {
                 type="number"
                 value={quotedAmount}
                 onChange={(e) => setQuotedAmount(Number(e.target.value))}
-                className="w-full rounded-md border border-zinc-300 p-2 text-zinc-900 bg-white focus:outline-none focus:ring-1 focus:ring-sky-500 font-mono"
+                className="w-full rounded-md border border-zinc-300 p-2 text-zinc-900 bg-white focus:outline-none focus:ring-1 focus:ring-sky-500 font-sans"
               />
             </div>
 
@@ -215,7 +215,7 @@ export function TradytecCellView() {
                 type="number"
                 value={advanceDays}
                 onChange={(e) => setAdvanceDays(Number(e.target.value))}
-                className="w-full rounded-md border border-zinc-300 p-2 text-zinc-900 bg-white focus:outline-none focus:ring-1 focus:ring-sky-500 font-mono"
+                className="w-full rounded-md border border-zinc-300 p-2 text-zinc-900 bg-white focus:outline-none focus:ring-1 focus:ring-sky-500 font-sans"
               />
             </div>
 
@@ -254,7 +254,7 @@ export function TradytecCellView() {
                       <h4 className="font-bold text-base">
                         Estado de Máquina: {evaluationResult.machineState}
                       </h4>
-                      <span className="text-xs px-2 py-0.5 rounded font-mono font-semibold bg-white border border-zinc-200">
+                      <span className="text-xs px-2 py-0.5 rounded font-sans font-semibold bg-white border border-zinc-200">
                         VEE: {evaluationResult.veeScore}/100
                       </span>
                     </div>
@@ -266,7 +266,7 @@ export function TradytecCellView() {
                   </div>
                 </div>
 
-                <span className="text-[11px] font-mono text-zinc-500 whitespace-nowrap">
+                <span className="text-[11px] font-sans text-zinc-500 whitespace-nowrap">
                   {evaluationResult.auditLogId}
                 </span>
               </div>
@@ -275,15 +275,15 @@ export function TradytecCellView() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4 pt-4 border-t border-zinc-200/60 text-xs">
                 <div>
                   <span className="text-zinc-500 block">Techo Máximo:</span>
-                  <span className="font-mono font-bold">${evaluationResult.maxAllowedFare} USD</span>
+                  <span className="font-sans font-bold">${evaluationResult.maxAllowedFare} USD</span>
                 </div>
                 <div>
                   <span className="text-zinc-500 block">Anticipación Mínima:</span>
-                  <span className="font-mono font-bold">{evaluationResult.minRequiredAdvance} días</span>
+                  <span className="font-sans font-bold">{evaluationResult.minRequiredAdvance} días</span>
                 </div>
                 <div>
                   <span className="text-zinc-500 block">Ahorro Convenio:</span>
-                  <span className="font-mono font-bold text-emerald-700">
+                  <span className="font-sans font-bold text-emerald-700">
                     +${evaluationResult.agreementDiscountApplied.toFixed(2)} USD
                   </span>
                 </div>
@@ -317,7 +317,7 @@ export function TradytecCellView() {
               Reglas duras inmutables aplicadas por el agente ejecutor en cada emisión
             </p>
           </div>
-          <span className="text-xs font-mono text-zinc-400">Versión: POL-TMC-2026.4</span>
+          <span className="text-xs font-sans text-zinc-400">Versión: POL-TMC-2026.4</span>
         </div>
 
         <div className="overflow-x-auto">
@@ -338,27 +338,27 @@ export function TradytecCellView() {
                 <td className="p-3 font-semibold text-zinc-900">Directivo (C-Level / VP)</td>
                 <td className="p-3">7 días</td>
                 <td className="p-3">14 días</td>
-                <td className="p-3 font-mono">$800 USD</td>
-                <td className="p-3 font-mono">$2,200 USD</td>
-                <td className="p-3 font-mono">$280 USD</td>
+                <td className="p-3 font-sans">$800 USD</td>
+                <td className="p-3 font-sans">$2,200 USD</td>
+                <td className="p-3 font-sans">$280 USD</td>
                 <td className="p-3 text-sky-700 font-medium">Ejecutiva (Vuelos &gt;6h)</td>
               </tr>
               <tr className="hover:bg-zinc-50/50">
                 <td className="p-3 font-semibold text-zinc-900">Gerencial (Gerentes / Heads)</td>
                 <td className="p-3">14 días</td>
                 <td className="p-3">21 días</td>
-                <td className="p-3 font-mono">$450 USD</td>
-                <td className="p-3 font-mono">$1,500 USD</td>
-                <td className="p-3 font-mono">$160 USD</td>
+                <td className="p-3 font-sans">$450 USD</td>
+                <td className="p-3 font-sans">$1,500 USD</td>
+                <td className="p-3 font-sans">$160 USD</td>
                 <td className="p-3 text-zinc-600">Turista Premium</td>
               </tr>
               <tr className="hover:bg-zinc-50/50">
                 <td className="p-3 font-semibold text-zinc-900">Operativo (Especialistas / Campo)</td>
                 <td className="p-3">21 días</td>
                 <td className="p-3">30 días</td>
-                <td className="p-3 font-mono">$280 USD</td>
-                <td className="p-3 font-mono">$950 USD</td>
-                <td className="p-3 font-mono">$95 USD</td>
+                <td className="p-3 font-sans">$280 USD</td>
+                <td className="p-3 font-sans">$950 USD</td>
+                <td className="p-3 font-sans">$95 USD</td>
                 <td className="p-3 text-zinc-600">Turista Básica</td>
               </tr>
             </tbody>

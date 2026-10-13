@@ -25,7 +25,8 @@ import {
   Eye,
   Check,
   Percent,
-  CreditCard
+  CreditCard,
+  MessageCircle
 } from 'lucide-react';
 import { LCMLogo } from './LCMLogo';
 import { OnlinePaymentModal } from './OnlinePaymentModal';
@@ -268,7 +269,7 @@ export function ConvocatoriaSliderView({
                 <div className="max-w-[1680px] mx-auto flex items-center justify-between gap-3 overflow-x-auto no-scrollbar">
                   
                   <div className="flex items-center gap-1.5 shrink-0">
-                    <span className={`text-[11px] font-mono uppercase tracking-wider font-bold ${isBlueSlide ? 'text-[#f5d77f]' : 'text-blue-950'}`}>
+                    <span className={`text-[11px] font-sans uppercase tracking-wider font-bold ${isBlueSlide ? 'text-[#f5d77f]' : 'text-blue-950'}`}>
                       Láminas & Apartados:
                     </span>
                   </div>
@@ -310,7 +311,7 @@ export function ConvocatoriaSliderView({
                   <div className="flex items-center gap-2 shrink-0">
                     <button
                       onClick={() => setIsBatchImageModalOpen(true)}
-                      className={`text-[11px] font-mono font-bold px-2.5 py-1 rounded border transition cursor-pointer flex items-center gap-1 ${
+                      className={`text-[11px] font-sans font-bold px-2.5 py-1 rounded border transition cursor-pointer flex items-center gap-1 ${
                         isBlueSlide ? 'bg-[#d4af37]/20 text-[#f5d77f] border-[#d4af37]/50 hover:bg-[#d4af37]/30' : 'bg-amber-100 text-blue-950 border-amber-300 hover:bg-amber-200'
                       }`}
                       title="Gestionar las 9 imágenes oficiales"
@@ -319,7 +320,7 @@ export function ConvocatoriaSliderView({
                     </button>
                     <button
                       onClick={() => setShowTopNav(false)}
-                      className={`text-[11px] font-mono font-bold px-2.5 py-1 rounded border transition cursor-pointer ${
+                      className={`text-[11px] font-sans font-bold px-2.5 py-1 rounded border transition cursor-pointer ${
                         isBlueSlide ? 'text-amber-300 border-amber-400/40 hover:bg-white/10' : 'text-blue-950 border-zinc-300 hover:bg-zinc-100'
                       }`}
                       title="Ocultar para ganar espacio vertical"
@@ -391,7 +392,7 @@ export function ConvocatoriaSliderView({
             <div className="w-full flex justify-end px-4 py-1 z-20">
               <button
                 onClick={() => setShowTopNav(true)}
-                className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full border transition opacity-60 hover:opacity-100 cursor-pointer ${
+                className={`text-[10px] font-sans font-bold px-2 py-0.5 rounded-full border transition opacity-60 hover:opacity-100 cursor-pointer ${
                   isBlueSlide ? 'text-amber-300 border-amber-400/40 bg-blue-950/80' : 'text-zinc-600 border-zinc-300 bg-white/80 shadow-sm'
                 }`}
                 title="Mostrar temas de navegación superior"
@@ -425,7 +426,7 @@ export function ConvocatoriaSliderView({
                 <div className="text-left space-y-1">
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-                    <span className="text-[11px] uppercase font-mono tracking-widest text-[#f5d77f] font-bold">
+                    <span className="text-[11px] uppercase font-sans tracking-widest text-[#f5d77f] font-bold">
                       Disponibilidad Inmediata
                     </span>
                   </div>
@@ -458,7 +459,7 @@ export function ConvocatoriaSliderView({
                     className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-md transition active:scale-95"
                     title="Reservar directamente por WhatsApp"
                   >
-                    <span className="text-base">📱</span>
+                    <MessageCircle className="w-4 h-4 text-[#f5d77f]" />
                     <span>Tel: +52 55 1230 5860</span>
                   </a>
                 </div>
@@ -470,7 +471,7 @@ export function ConvocatoriaSliderView({
                 
                 {/* Filtro 1: Fecha de Reservación */}
                 <div className="bg-[#002244] border border-blue-700/60 rounded-xl p-2.5 text-left">
-                  <label className="text-[10px] font-mono uppercase text-[#f5d77f] font-bold flex items-center gap-1.5 mb-1">
+                  <label className="text-[10px] font-sans uppercase text-[#f5d77f] font-bold flex items-center gap-1.5 mb-1">
                     <Calendar className="w-3.5 h-3.5 text-[#d4af37]" />
                     <span>Fecha de Reservación</span>
                   </label>
@@ -484,7 +485,7 @@ export function ConvocatoriaSliderView({
 
                 {/* Filtro 2: Modalidad de Estancia por Hora */}
                 <div className="bg-[#002244] border border-blue-700/60 rounded-xl p-2.5 text-left">
-                  <label className="text-[10px] font-mono uppercase text-[#f5d77f] font-bold flex items-center gap-1.5 mb-1">
+                  <label className="text-[10px] font-sans uppercase text-[#f5d77f] font-bold flex items-center gap-1.5 mb-1">
                     <Clock className="w-3.5 h-3.5 text-[#d4af37]" />
                     <span>Modalidad de Renta por Tiempo</span>
                   </label>
@@ -502,7 +503,7 @@ export function ConvocatoriaSliderView({
 
                 {/* Filtro 3: Tipo de Habitación / Amenidad */}
                 <div className="bg-[#002244] border border-blue-700/60 rounded-xl p-2.5 text-left">
-                  <label className="text-[10px] font-mono uppercase text-[#f5d77f] font-bold flex items-center gap-1.5 mb-1">
+                  <label className="text-[10px] font-sans uppercase text-[#f5d77f] font-bold flex items-center gap-1.5 mb-1">
                     <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" />
                     <span>Tipo de Habitación</span>
                   </label>
@@ -532,7 +533,7 @@ export function ConvocatoriaSliderView({
                     Selecciona tu Hotel para Reservar
                   </span>
                 </div>
-                <span className="text-xs text-[#f5d77f] font-mono">
+                <span className="text-xs text-[#f5d77f] font-sans">
                   Fecha: {bookingDate}
                 </span>
               </div>
@@ -612,15 +613,15 @@ export function ConvocatoriaSliderView({
                         <div className="bg-black/40 rounded-lg p-1.5 border border-white/5 space-y-0.5 text-xs">
                           <div className="flex justify-between items-center text-[11px]">
                             <span className="text-zinc-400">⏱️ 4h:</span>
-                            <span className="font-bold text-[#f5d77f] font-mono">${hotel.tarifa4h}</span>
+                            <span className="font-bold text-[#f5d77f] font-sans">${hotel.tarifa4h}</span>
                           </div>
                           <div className="flex justify-between items-center text-[11px]">
                             <span className="text-zinc-400">⏱️ 6h:</span>
-                            <span className="font-bold text-white font-mono">${hotel.tarifa6h}</span>
+                            <span className="font-bold text-white font-sans">${hotel.tarifa6h}</span>
                           </div>
                           <div className="flex justify-between items-center text-[11px]">
                             <span className="text-zinc-400">🌙 Noche:</span>
-                            <span className="font-bold text-emerald-400 font-mono">${hotel.tarifaNoche}</span>
+                            <span className="font-bold text-emerald-400 font-sans">${hotel.tarifaNoche}</span>
                           </div>
                         </div>
 
@@ -671,7 +672,7 @@ export function ConvocatoriaSliderView({
             {/* Encabezado Institucional de la Lámina Unificada */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b-2 border-amber-200/90 pb-4 sticky top-0 bg-[#fcfbf9]/95 backdrop-blur-sm z-10">
               <div>
-                <span className="text-xs font-mono uppercase text-[#b89028] font-bold tracking-widest block">
+                <span className="text-xs font-sans uppercase text-[#b89028] font-bold tracking-widest block">
                   Apartado 02 • Modelo, Fundamentos & Sistema Integral
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-black text-blue-950 font-serif tracking-tight">
@@ -687,7 +688,7 @@ export function ConvocatoriaSliderView({
             {/* BLOQUE 1: PROPÓSITO CENTRAL Y DEFINICIÓN DEL MODELO */}
             <div className="bg-white border-2 border-amber-300/80 rounded-2xl p-5 sm:p-6 shadow-sm space-y-4">
               <div className="flex items-center gap-2">
-                <span className="text-[11px] uppercase font-mono font-bold text-amber-900 bg-amber-100/90 px-3 py-1 rounded border border-amber-300">
+                <span className="text-[11px] uppercase font-sans font-bold text-amber-900 bg-amber-100/90 px-3 py-1 rounded border border-amber-300">
                   Definición & Propósito
                 </span>
                 <span className="text-xs font-black text-blue-950 uppercase tracking-wide">
@@ -719,14 +720,14 @@ export function ConvocatoriaSliderView({
             <div className="bg-white border-2 border-[#d4af37]/60 rounded-2xl p-5 sm:p-6 shadow-md space-y-4">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-amber-200 pb-3">
                 <div className="flex items-center gap-2">
-                  <span className="text-[11px] uppercase font-mono font-bold text-blue-950 bg-blue-100/90 px-3 py-1 rounded border border-blue-200">
+                  <span className="text-[11px] uppercase font-sans font-bold text-blue-950 bg-blue-100/90 px-3 py-1 rounded border border-blue-200">
                     Bases Estratégicas & Credenciales
                   </span>
                   <h3 className="text-sm sm:text-base font-black text-blue-950 font-serif">
                     Respaldo del Creador: Confianza y Fundamento Profesional
                   </h3>
                 </div>
-                <span className="text-xs font-mono font-bold text-amber-800 bg-amber-50 px-2.5 py-1 rounded border border-amber-200">
+                <span className="text-xs font-sans font-bold text-amber-800 bg-amber-50 px-2.5 py-1 rounded border border-amber-200">
                   30+ Años de Experiencia
                 </span>
               </div>
@@ -737,7 +738,7 @@ export function ConvocatoriaSliderView({
 
               {/* Trayectoria Corporativa con Cadenas de Alto Nivel */}
               <div className="p-4 rounded-xl bg-amber-50/70 border border-amber-200/90 space-y-2">
-                <span className="text-xs font-mono uppercase tracking-wider text-amber-900 font-bold block">
+                <span className="text-xs font-sans uppercase tracking-wider text-amber-900 font-bold block">
                   Trayectoria en Cadenas Hoteleras Corporativas
                 </span>
                 <p className="text-xs sm:text-sm text-zinc-800 leading-relaxed">
@@ -761,7 +762,7 @@ export function ConvocatoriaSliderView({
 
               {/* Credenciales Académicas Oficiales y Especializadas */}
               <div className="space-y-2">
-                <span className="text-xs font-mono uppercase tracking-wider text-blue-950 font-bold block">
+                <span className="text-xs font-sans uppercase tracking-wider text-blue-950 font-bold block">
                   Preparación Académica Especializada & Certificaciones de Autoridad:
                 </span>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
@@ -806,10 +807,10 @@ export function ConvocatoriaSliderView({
               {/* Dos Años de Investigación Inmersiva en Campo */}
               <div className="p-4 rounded-xl bg-gradient-to-r from-blue-950 to-[#00172e] text-white space-y-2 border border-[#d4af37]/60 shadow-sm">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono uppercase tracking-wider text-[#f5d77f] font-bold">
+                  <span className="text-xs font-sans uppercase tracking-wider text-[#f5d77f] font-bold">
                     Origen del Modelo • 2 Años de Investigación Inmersiva
                   </span>
-                  <span className="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 px-2 py-0.5 rounded font-mono font-bold">
+                  <span className="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 px-2 py-0.5 rounded font-sans font-bold">
                     Investigación en Campo
                   </span>
                 </div>
@@ -827,7 +828,7 @@ export function ConvocatoriaSliderView({
             {/* BLOQUE 3: MÉTRICA ESPECIALIZADA (RevPASH) Y ENFOQUE OPERATIVO */}
             <div className="bg-white border border-amber-200/90 rounded-2xl p-5 sm:p-6 shadow-sm space-y-4">
               <div className="flex items-center gap-2">
-                <span className="text-[11px] uppercase font-mono font-bold text-amber-900 bg-amber-100/90 px-3 py-1 rounded border border-amber-300">
+                <span className="text-[11px] uppercase font-sans font-bold text-amber-900 bg-amber-100/90 px-3 py-1 rounded border border-amber-300">
                   Métrica Exclusiva
                 </span>
                 <h3 className="text-sm sm:text-base font-black text-blue-950 font-serif">
@@ -859,7 +860,7 @@ export function ConvocatoriaSliderView({
             {/* BLOQUE 4: QUÉ ES EL SISTEMA INTEGRAL BLUE OCEAN Y CADENA DE VALOR (8 MÓDULOS) */}
             <div className="bg-white border border-amber-200/90 rounded-2xl p-5 sm:p-6 shadow-sm space-y-4">
               <div className="border-b border-amber-100 pb-3">
-                <span className="text-[11px] uppercase font-mono font-bold text-[#b89028] tracking-widest block">
+                <span className="text-[11px] uppercase font-sans font-bold text-[#b89028] tracking-widest block">
                   Arquitectura Operativa
                 </span>
                 <h3 className="text-lg sm:text-xl font-black text-blue-950 font-serif">
@@ -875,7 +876,7 @@ export function ConvocatoriaSliderView({
               </p>
 
               <div className="space-y-2 pt-1">
-                <span className="text-xs font-bold text-zinc-700 uppercase font-mono block">
+                <span className="text-xs font-bold text-zinc-700 uppercase font-sans block">
                   Cadena de Valor Articulada (8 Módulos de Conversión Indivisibles):
                 </span>
                 <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 w-full">
@@ -893,7 +894,7 @@ export function ConvocatoriaSliderView({
                       key={i} 
                       className="p-2.5 rounded-xl text-center text-xs font-bold border bg-gradient-to-b from-white to-amber-50/40 border-amber-300/80 shadow-sm hover:border-[#d4af37] transition"
                     >
-                      <span className="block text-[10px] text-amber-700 font-mono">0{i + 1}</span>
+                      <span className="block text-[10px] text-amber-700 font-sans">0{i + 1}</span>
                       <span className="text-blue-950 block text-[11px] leading-tight font-black">{s.title}</span>
                       <span className="text-[9px] text-zinc-500 font-normal block pt-1">{s.desc}</span>
                     </div>
@@ -905,7 +906,7 @@ export function ConvocatoriaSliderView({
             {/* BLOQUE 5: EL COMPROMISO BLUE OCEAN (INVERSIÓN, CAPACITACIÓN Y VALIDACIÓN) */}
             <div className="bg-gradient-to-br from-amber-50 to-orange-50/50 border-2 border-amber-300/80 rounded-2xl p-5 sm:p-6 shadow-sm space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-mono uppercase tracking-wider text-amber-900 font-black">
+                <span className="text-xs font-sans uppercase tracking-wider text-amber-900 font-black">
                   Compromiso Central Blue Ocean
                 </span>
                 <span className="text-xs font-bold text-emerald-800 bg-emerald-100/80 px-2.5 py-0.5 rounded border border-emerald-300">
@@ -947,7 +948,7 @@ export function ConvocatoriaSliderView({
           <div className="w-full bg-[#fcfbf9] border-2 border-[#d4af37]/50 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-amber-200/80 pb-3">
               <div>
-                <span className="text-xs font-mono uppercase text-[#b89028] font-bold tracking-widest block">
+                <span className="text-xs font-sans uppercase text-[#b89028] font-bold tracking-widest block">
                   Apartado 03 • Arquitectura Operativa
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-black text-blue-950 font-serif">
@@ -982,7 +983,7 @@ export function ConvocatoriaSliderView({
 
             {/* Cadena de Valor Indivisible 8 Pasos */}
             <div className="space-y-2">
-              <span className="text-xs font-bold text-zinc-500 uppercase font-mono block">
+              <span className="text-xs font-bold text-zinc-500 uppercase font-sans block">
                 Cadena de Valor Articulada (8 Módulos de Conversión):
               </span>
               <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 w-full">
@@ -1004,7 +1005,7 @@ export function ConvocatoriaSliderView({
                         : 'bg-zinc-50 text-blue-950 border-zinc-300 shadow-sm'
                     }`}
                   >
-                    <span className="block text-[10px] opacity-60 font-mono">0{i + 1}</span>
+                    <span className="block text-[10px] opacity-60 font-sans">0{i + 1}</span>
                     {s.title}
                   </div>
                 ))}
@@ -1024,7 +1025,7 @@ export function ConvocatoriaSliderView({
         {currentSlide === 3 && (
           <div className="w-full bg-white border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
             <div>
-              <span className="text-xs font-mono uppercase text-[#d4af37] font-bold tracking-widest block">
+              <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
                 Apartado 04 • Conversión Digital
               </span>
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-blue-950 font-serif">
@@ -1055,19 +1056,19 @@ export function ConvocatoriaSliderView({
                 <div className="grid grid-cols-2 gap-2.5">
                   <div className="relative rounded-lg overflow-hidden border border-zinc-300 shadow-sm">
                     <img src="/renders/hotel-01-insurgentes/fachada/Polish_20260822_225309771.jpg" alt="Excalibur" className="aspect-video object-cover w-full" />
-                    <span className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-black/70 text-[9px] font-mono text-[#f5d77f]">HOTEL EXCALIBUR</span>
+                    <span className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-black/70 text-[9px] font-sans text-[#f5d77f]">HOTEL EXCALIBUR</span>
                   </div>
                   <div className="relative rounded-lg overflow-hidden border border-zinc-300 shadow-sm">
                     <img src="/renders/hotel-02-periferico/fachada/Polish_20260822_230305219.jpg" alt="Novoa" className="aspect-video object-cover w-full" />
-                    <span className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-black/70 text-[9px] font-mono text-[#f5d77f]">HOTEL NOVOA</span>
+                    <span className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-black/70 text-[9px] font-sans text-[#f5d77f]">HOTEL NOVOA</span>
                   </div>
                   <div className="relative rounded-lg overflow-hidden border border-zinc-300 shadow-sm">
                     <img src="/renders/hotel-03-tlalpan/fachada/Polish_20260822_230710090.jpg" alt="3 Culturas" className="aspect-video object-cover w-full" />
-                    <span className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-black/70 text-[9px] font-mono text-[#f5d77f]">HOTEL 3 CULTURAS</span>
+                    <span className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-black/70 text-[9px] font-sans text-[#f5d77f]">HOTEL 3 CULTURAS</span>
                   </div>
                   <div className="relative rounded-lg overflow-hidden border border-zinc-300 shadow-sm">
                     <img src="/renders/hotel-04-villas/fachada/IMG-20260822-WA0018.jpg" alt="San Francisco" className="aspect-video object-cover w-full" />
-                    <span className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-black/70 text-[9px] font-mono text-[#f5d77f]">HOTEL SAN FRANCISCO</span>
+                    <span className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-black/70 text-[9px] font-sans text-[#f5d77f]">HOTEL SAN FRANCISCO</span>
                   </div>
                 </div>
 
@@ -1086,7 +1087,8 @@ export function ConvocatoriaSliderView({
                     }}
                     className="flex-1 py-2.5 rounded-xl bg-[#003366] hover:bg-[#002244] text-white font-bold text-xs uppercase shadow transition cursor-pointer flex items-center justify-center gap-1.5"
                   >
-                    <span>💬 Consultar con Max</span>
+                    <MessageCircle className="w-4 h-4 text-[#f5d77f]" />
+                    <span>Consultar con Max</span>
                   </button>
                   <button
                     onClick={() => setIsContactOpen(true)}
@@ -1106,7 +1108,7 @@ export function ConvocatoriaSliderView({
         {currentSlide === 4 && (
           <div className="w-full bg-white border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
             <div>
-              <span className="text-xs font-mono uppercase text-[#d4af37] font-bold tracking-widest block">
+              <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
                 Apartado 05 • Metodología Comparada & Gráfica
               </span>
               <h2 className="text-xl sm:text-2xl font-black text-blue-950 font-serif">
@@ -1154,7 +1156,7 @@ export function ConvocatoriaSliderView({
                   </div>
                 </div>
 
-                <span className="text-[11px] font-mono text-zinc-500 mt-2 block font-semibold">
+                <span className="text-[11px] font-sans text-zinc-500 mt-2 block font-semibold">
                   Incremento sostenido por captación digital y rotación en horas valle
                 </span>
               </div>
@@ -1180,7 +1182,7 @@ export function ConvocatoriaSliderView({
                 <div className="p-4 rounded-xl bg-amber-500/10 border border-[#d4af37] text-blue-950 font-bold text-sm">
                   Los hoteles que implementan TRM incrementan sus ingresos globales entre un <strong>10% y un 25%</strong> sostenido.
                 </div>
-                <div className="text-right text-xs font-mono text-blue-900 font-bold pt-1">
+                <div className="text-right text-xs font-sans text-blue-900 font-bold pt-1">
                   direccion@oceanrevenue-management.com
                 </div>
               </div>
@@ -1194,7 +1196,7 @@ export function ConvocatoriaSliderView({
         {currentSlide === 5 && (
           <div className="w-full bg-white border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
             <div className="border-b border-zinc-200 pb-2">
-              <span className="text-xs font-mono uppercase text-[#d4af37] font-bold tracking-widest block">
+              <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
                 Apartado 06 • Gráfica Comparativa Oficial
               </span>
               <h2 className="text-2xl sm:text-3xl font-black text-blue-950 font-serif">
@@ -1228,7 +1230,7 @@ export function ConvocatoriaSliderView({
                   
                   {/* Barra 1: Madrugada */}
                   <div className="flex flex-col items-center gap-1.5 z-10">
-                    <span className="text-[11px] font-mono font-bold text-blue-900">$380</span>
+                    <span className="text-[11px] font-sans font-bold text-blue-900">$380</span>
                     <div className="w-12 bg-[#d4af37] h-14 rounded-t-lg shadow" />
                     <span className="text-[10px] text-zinc-600 font-bold">Madrugada</span>
                     <span className="text-[9px] text-zinc-400">02:00 - 08:00</span>
@@ -1236,7 +1238,7 @@ export function ConvocatoriaSliderView({
 
                   {/* Barra 2: Horas Valle Diurnas */}
                   <div className="flex flex-col items-center gap-1.5 z-10">
-                    <span className="text-[11px] font-mono font-bold text-blue-900">$480</span>
+                    <span className="text-[11px] font-sans font-bold text-blue-900">$480</span>
                     <div className="w-12 bg-[#d4af37] h-22 rounded-t-lg shadow" />
                     <span className="text-[10px] text-zinc-600 font-bold">Horas Valle</span>
                     <span className="text-[9px] text-zinc-400">11:00 - 16:00</span>
@@ -1244,7 +1246,7 @@ export function ConvocatoriaSliderView({
 
                   {/* Barra 3: Tarde / Noche */}
                   <div className="flex flex-col items-center gap-1.5 z-10">
-                    <span className="text-[11px] font-mono font-bold text-blue-900">$650</span>
+                    <span className="text-[11px] font-sans font-bold text-blue-900">$650</span>
                     <div className="w-12 bg-[#d4af37] h-30 rounded-t-lg shadow" />
                     <span className="text-[10px] text-zinc-600 font-bold">Tarde-Noche</span>
                     <span className="text-[9px] text-zinc-400">17:00 - 22:00</span>
@@ -1252,7 +1254,7 @@ export function ConvocatoriaSliderView({
 
                   {/* Barra 4: Pico Fin de Semana */}
                   <div className="flex flex-col items-center gap-1.5 z-10">
-                    <span className="text-xs font-mono font-black text-amber-700">$850</span>
+                    <span className="text-xs font-sans font-black text-amber-700">$850</span>
                     <div className="w-12 bg-gradient-to-t from-[#d4af37] to-amber-300 h-38 rounded-t-lg shadow-lg" />
                     <span className="text-[10px] text-blue-950 font-black">Pico Sábado</span>
                     <span className="text-[9px] text-amber-700 font-bold">Alta Demanda</span>
@@ -1294,25 +1296,25 @@ export function ConvocatoriaSliderView({
                 {/* Gráfica Rígida y Plana */}
                 <div className="h-44 flex items-end justify-around gap-2 px-2 border-b-2 border-zinc-300 pb-2">
                   <div className="flex flex-col items-center gap-1.5">
-                    <span className="text-[11px] font-mono text-zinc-500">$450</span>
+                    <span className="text-[11px] font-sans text-zinc-500">$450</span>
                     <div className="w-12 bg-zinc-300 h-20 rounded-t-lg" />
                     <span className="text-[10px] text-zinc-500">Madrugada</span>
                     <span className="text-[9px] text-zinc-400">02:00 - 08:00</span>
                   </div>
                   <div className="flex flex-col items-center gap-1.5">
-                    <span className="text-[11px] font-mono text-zinc-500">$450</span>
+                    <span className="text-[11px] font-sans text-zinc-500">$450</span>
                     <div className="w-12 bg-zinc-300 h-20 rounded-t-lg" />
                     <span className="text-[10px] text-zinc-500">Horas Valle</span>
                     <span className="text-[9px] text-zinc-400">11:00 - 16:00</span>
                   </div>
                   <div className="flex flex-col items-center gap-1.5">
-                    <span className="text-[11px] font-mono text-zinc-500">$450</span>
+                    <span className="text-[11px] font-sans text-zinc-500">$450</span>
                     <div className="w-12 bg-zinc-300 h-20 rounded-t-lg" />
                     <span className="text-[10px] text-zinc-500">Tarde-Noche</span>
                     <span className="text-[9px] text-zinc-400">17:00 - 22:00</span>
                   </div>
                   <div className="flex flex-col items-center gap-1.5">
-                    <span className="text-[11px] font-mono text-rose-600 font-bold">$450</span>
+                    <span className="text-[11px] font-sans text-rose-600 font-bold">$450</span>
                     <div className="w-12 bg-rose-200 border-2 border-dashed border-rose-400 h-20 rounded-t-lg" />
                     <span className="text-[10px] text-rose-700 font-bold">Pico Sábado</span>
                     <span className="text-[9px] text-rose-600">Regala $400</span>
@@ -1346,7 +1348,7 @@ export function ConvocatoriaSliderView({
         {currentSlide === 6 && (
           <div className="w-full bg-white border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
             <div className="border-b border-zinc-200 pb-2">
-              <span className="text-xs font-mono uppercase text-[#d4af37] font-bold tracking-widest block">
+              <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
                 Apartado 07 • Estrategia Comercial Oficial
               </span>
               <h2 className="text-2xl sm:text-3xl font-black text-blue-950 font-serif">
@@ -1381,7 +1383,7 @@ export function ConvocatoriaSliderView({
             {/* 4 Pilares del Pricing */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 flex-1">
               <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 shadow-md space-y-2">
-                <span className="text-xs font-mono uppercase text-[#d4af37] font-bold block">Pilar 01</span>
+                <span className="text-xs font-sans uppercase text-[#d4af37] font-bold block">Pilar 01</span>
                 <span className="text-sm font-bold text-blue-950 block">Costos Operativos</span>
                 <p className="text-xs text-zinc-600 leading-relaxed">
                   Cálculo del costo marginal por habitación, lavandería y personal de limpieza en cada rotación.
@@ -1389,7 +1391,7 @@ export function ConvocatoriaSliderView({
               </div>
 
               <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 shadow-md space-y-2">
-                <span className="text-xs font-mono uppercase text-[#d4af37] font-bold block">Pilar 02</span>
+                <span className="text-xs font-sans uppercase text-[#d4af37] font-bold block">Pilar 02</span>
                 <span className="text-sm font-bold text-blue-950 block">Demanda en Tiempo Real</span>
                 <p className="text-xs text-zinc-600 leading-relaxed">
                   Detección de horas muertas (11:00 AM a 5:00 PM) para activar tarifas de estímulo inmediato.
@@ -1397,7 +1399,7 @@ export function ConvocatoriaSliderView({
               </div>
 
               <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 shadow-md space-y-2">
-                <span className="text-xs font-mono uppercase text-[#d4af37] font-bold block">Pilar 03</span>
+                <span className="text-xs font-sans uppercase text-[#d4af37] font-bold block">Pilar 03</span>
                 <span className="text-sm font-bold text-blue-950 block">Competencia Local</span>
                 <p className="text-xs text-zinc-600 leading-relaxed">
                   Monitoreo de tarifas de moteles y hoteles del mismo corredor para capturar clientes en ruta.
@@ -1405,7 +1407,7 @@ export function ConvocatoriaSliderView({
               </div>
 
               <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 shadow-md space-y-2">
-                <span className="text-xs font-mono uppercase text-[#d4af37] font-bold block">Pilar 04</span>
+                <span className="text-xs font-sans uppercase text-[#d4af37] font-bold block">Pilar 04</span>
                 <span className="text-sm font-bold text-blue-950 block">Momento de Compra</span>
                 <p className="text-xs text-zinc-600 leading-relaxed">
                   Diferenciación entre reserva anticipada digital y llegada directa espontánea a recepción.
@@ -1434,7 +1436,7 @@ export function ConvocatoriaSliderView({
         {currentSlide === 7 && (
           <div className="w-full bg-white border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
             <div>
-              <span className="text-xs font-mono uppercase text-[#d4af37] font-bold tracking-widest block">
+              <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
                 Apartado 08 • Anticipación Estratégica
               </span>
               <h2 className="text-xl sm:text-2xl font-black text-blue-950 font-serif">
@@ -1470,7 +1472,7 @@ export function ConvocatoriaSliderView({
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-blue-950 border border-blue-900 text-white font-mono text-xs sm:text-sm space-y-2 shadow-md">
+                <div className="p-4 rounded-xl bg-blue-950 border border-blue-900 text-white font-sans text-xs sm:text-sm space-y-2 shadow-md">
                   <p className="text-[#f5d77f] font-bold">• El Pricing responde cuánto cobrar.</p>
                   <p className="text-cyan-300 font-bold">• El Revenue Management responde cómo maximizar.</p>
                   <p className="text-emerald-400 font-bold">• El Forecasting responde cuándo actuar.</p>
@@ -1478,7 +1480,7 @@ export function ConvocatoriaSliderView({
               </div>
             </div>
 
-            <div className="text-center text-xs font-mono text-blue-900 font-bold">
+            <div className="text-center text-xs font-sans text-blue-900 font-bold">
               Metodología Total Revenue Management • L.C. Monroy
             </div>
           </div>
@@ -1490,7 +1492,7 @@ export function ConvocatoriaSliderView({
         {currentSlide === 8 && (
           <div className="w-full bg-white border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
             <div>
-              <span className="text-xs font-mono uppercase text-[#d4af37] font-bold tracking-widest block">
+              <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
                 Apartado 09 • Canales Comerciales
               </span>
               <h2 className="text-2xl sm:text-4xl font-black text-blue-950 font-serif">
@@ -1517,7 +1519,7 @@ export function ConvocatoriaSliderView({
                     Captación digital de alta discreción orientada a estancias cortas de 4 a 6 horas y fines de semana. Reserva sin fricción y acceso vehicular directo.
                   </p>
                 </div>
-                <div className="p-3 rounded-lg bg-white border border-zinc-200 text-xs font-mono text-zinc-700">
+                <div className="p-3 rounded-lg bg-white border border-zinc-200 text-xs font-sans text-zinc-700">
                   Mayor ticket promedio por rotación en viernes, sábados y fechas especiales.
                 </div>
               </div>
@@ -1535,14 +1537,14 @@ export function ConvocatoriaSliderView({
                     Llenado de horas muertas de lunes a jueves con operadores de carga y paquetería que requieren descanso diurno seguro, estacionamiento y regadera.
                   </p>
                 </div>
-                <div className="p-3 rounded-lg bg-white border border-zinc-200 text-xs font-mono text-zinc-700">
+                <div className="p-3 rounded-lg bg-white border border-zinc-200 text-xs font-sans text-zinc-700">
                   Flujo de caja garantizado durante horarios valle (10:00 AM a 4:00 PM).
                 </div>
               </div>
 
             </div>
 
-            <div className="text-center text-xs font-mono text-blue-900 font-bold">
+            <div className="text-center text-xs font-sans text-blue-900 font-bold">
               direccion@oceanrevenue-management.com
             </div>
           </div>
@@ -1554,7 +1556,7 @@ export function ConvocatoriaSliderView({
         {currentSlide === 9 && (
           <div className="w-full bg-white border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
             <div className="border-b border-zinc-200 pb-2">
-              <span className="text-xs font-mono uppercase text-[#d4af37] font-bold tracking-widest block">
+              <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
                 Apartado 10 • Gráfica de Retorno Oficial
               </span>
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-blue-950 font-serif">
@@ -1583,7 +1585,7 @@ export function ConvocatoriaSliderView({
                   
                   {/* Sem 1 */}
                   <div className="flex flex-col items-center gap-1.5 z-10">
-                    <span className="text-[10px] font-mono font-bold text-zinc-500">Base</span>
+                    <span className="text-[10px] font-sans font-bold text-zinc-500">Base</span>
                     <div className="w-8 bg-blue-300 h-10 rounded-t-lg shadow" />
                     <span className="text-[9px] font-bold text-zinc-500">SEM 1</span>
                     <span className="text-[8px] text-zinc-400">Diagnóstico</span>
@@ -1591,7 +1593,7 @@ export function ConvocatoriaSliderView({
 
                   {/* Sem 2 */}
                   <div className="flex flex-col items-center gap-1.5 z-10">
-                    <span className="text-[10px] font-mono font-bold text-blue-700">+10%</span>
+                    <span className="text-[10px] font-sans font-bold text-blue-700">+10%</span>
                     <div className="w-8 bg-blue-400 h-16 rounded-t-lg shadow" />
                     <span className="text-[9px] font-bold text-zinc-500">SEM 2</span>
                     <span className="text-[8px] text-zinc-400">Tarifa Valle</span>
@@ -1599,7 +1601,7 @@ export function ConvocatoriaSliderView({
 
                   {/* Sem 3 */}
                   <div className="flex flex-col items-center gap-1.5 z-10">
-                    <span className="text-[10px] font-mono font-bold text-blue-800">+18%</span>
+                    <span className="text-[10px] font-sans font-bold text-blue-800">+18%</span>
                     <div className="w-8 bg-blue-500 h-22 rounded-t-lg shadow" />
                     <span className="text-[9px] font-bold text-zinc-500">SEM 3</span>
                     <span className="text-[8px] text-zinc-400">Reservas</span>
@@ -1607,7 +1609,7 @@ export function ConvocatoriaSliderView({
 
                   {/* Sem 4 */}
                   <div className="flex flex-col items-center gap-1.5 z-10">
-                    <span className="text-[10px] font-mono font-bold text-blue-900">+25%</span>
+                    <span className="text-[10px] font-sans font-bold text-blue-900">+25%</span>
                     <div className="w-8 bg-blue-700 h-28 rounded-t-lg shadow" />
                     <span className="text-[9px] font-bold text-zinc-500">SEM 4</span>
                     <span className="text-[8px] text-zinc-400">Picos Vie-Sáb</span>
@@ -1615,7 +1617,7 @@ export function ConvocatoriaSliderView({
 
                   {/* Sem 5 */}
                   <div className="flex flex-col items-center gap-1.5 z-10">
-                    <span className="text-[10px] font-mono font-bold text-amber-600">+30%</span>
+                    <span className="text-[10px] font-sans font-bold text-amber-600">+30%</span>
                     <div className="w-8 bg-[#d4af37] h-34 rounded-t-lg shadow" />
                     <span className="text-[9px] font-bold text-zinc-500">SEM 5</span>
                     <span className="text-[8px] text-zinc-400">Rotación 24/7</span>
@@ -1623,7 +1625,7 @@ export function ConvocatoriaSliderView({
 
                   {/* Sem 6 */}
                   <div className="flex flex-col items-center gap-1.5 z-10">
-                    <span className="text-xs font-mono font-black text-amber-700">+35%</span>
+                    <span className="text-xs font-sans font-black text-amber-700">+35%</span>
                     <div className="w-8 bg-gradient-to-t from-[#d4af37] to-amber-300 h-40 rounded-t-lg shadow-lg" />
                     <span className="text-[9px] font-black text-blue-950">SEM 6</span>
                     <span className="text-[8px] text-amber-700 font-bold">TRM Pleno</span>
@@ -1635,7 +1637,7 @@ export function ConvocatoriaSliderView({
                   </svg>
                 </div>
 
-                <span className="text-[11px] font-mono text-zinc-500 mt-2 block font-semibold">
+                <span className="text-[11px] font-sans text-zinc-500 mt-2 block font-semibold">
                   Metodología validada con IA y optimización de rotación 24/7
                 </span>
               </div>
@@ -1663,7 +1665,7 @@ export function ConvocatoriaSliderView({
 
                 <div className="p-3 rounded-xl bg-blue-950 text-white flex justify-between items-center text-xs shadow">
                   <span className="text-blue-200">Esquema Aliado:</span>
-                  <span className="font-black text-[#f5d77f] font-mono text-sm">85% Neto Hotel / 15% a Resultados</span>
+                  <span className="font-black text-[#f5d77f] font-sans text-sm">85% Neto Hotel / 15% a Resultados</span>
                 </div>
               </div>
 
@@ -1677,7 +1679,7 @@ export function ConvocatoriaSliderView({
         {currentSlide === 10 && (
           <div className="w-full bg-[#00172e] border-2 border-[#d4af37]/60 rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col justify-between items-center text-center space-y-5">
             <div>
-              <span className="text-xs font-mono uppercase text-[#d4af37] font-bold tracking-widest block">
+              <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
                 Apartado 11 • Convocatoria Abierta
               </span>
               <h2 className="text-xl sm:text-3xl font-black text-[#f5d77f] font-serif mt-1">
@@ -1715,7 +1717,7 @@ export function ConvocatoriaSliderView({
               </button>
               <a 
                 href="mailto:direccion@oceanrevenue-management.com" 
-                className="text-xs font-mono text-blue-200 underline hover:text-white"
+                className="text-xs font-sans text-blue-200 underline hover:text-white"
               >
                 direccion@oceanrevenue-management.com
               </a>
@@ -1756,7 +1758,7 @@ export function ConvocatoriaSliderView({
               title={SECCIONES_TITULOS[i].title}
             />
           ))}
-          <span className={`text-xs font-mono font-bold ml-2 ${isBlueSlide ? 'text-[#f5d77f]' : 'text-blue-950'}`}>
+          <span className={`text-xs font-sans font-bold ml-2 ${isBlueSlide ? 'text-[#f5d77f]' : 'text-blue-950'}`}>
             {currentSlide + 1} / {totalSlides}
           </span>
         </div>
@@ -1789,7 +1791,7 @@ export function ConvocatoriaSliderView({
             </button>
 
             <div className="flex items-center gap-2 mb-3">
-              <span className="px-2.5 py-0.5 rounded bg-[#d4af37] text-black font-mono font-bold text-xs">
+              <span className="px-2.5 py-0.5 rounded bg-[#d4af37] text-black font-sans font-bold text-xs">
                 {activeHotelDetail.codigo}
               </span>
               <h3 className="text-base sm:text-lg font-bold text-white font-serif">
@@ -1843,15 +1845,15 @@ export function ConvocatoriaSliderView({
               <div className="flex items-center gap-3 text-xs">
                 <div>
                   <span className="text-zinc-400 block text-[10px]">Tarifa 4 Horas:</span>
-                  <span className="font-bold text-[#f5d77f] font-mono text-sm">${activeHotelDetail.tarifa4h} MXN</span>
+                  <span className="font-bold text-[#f5d77f] font-sans text-sm">${activeHotelDetail.tarifa4h} MXN</span>
                 </div>
                 <div>
                   <span className="text-zinc-400 block text-[10px]">Tarifa 6 Horas:</span>
-                  <span className="font-bold text-white font-mono text-sm">${activeHotelDetail.tarifa6h} MXN</span>
+                  <span className="font-bold text-white font-sans text-sm">${activeHotelDetail.tarifa6h} MXN</span>
                 </div>
                 <div>
                   <span className="text-zinc-400 block text-[10px]">Noche Completa:</span>
-                  <span className="font-bold text-emerald-400 font-mono text-sm">${activeHotelDetail.tarifaNoche} MXN</span>
+                  <span className="font-bold text-emerald-400 font-sans text-sm">${activeHotelDetail.tarifaNoche} MXN</span>
                 </div>
               </div>
 
@@ -1875,7 +1877,8 @@ export function ConvocatoriaSliderView({
                   rel="noopener noreferrer"
                   className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase shadow transition cursor-pointer flex items-center gap-1.5"
                 >
-                  <span>📱 Reservar por WhatsApp</span>
+                  <MessageCircle className="w-4 h-4 text-[#f5d77f]" />
+                  <span>Reservar por WhatsApp</span>
                 </a>
               </div>
             </div>

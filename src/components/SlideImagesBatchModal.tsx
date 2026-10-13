@@ -195,7 +195,7 @@ export function SlideImagesBatchModal({
         {/* Cabecera */}
         <div className="p-4 sm:p-5 border-b border-blue-900/80 bg-blue-950/80 flex items-center justify-between">
           <div>
-            <span className="text-[10px] font-mono uppercase text-[#d4af37] font-bold tracking-widest block">
+            <span className="text-[10px] font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
               Gestor de Imágenes Oficiales • Blue Ocean
             </span>
             <h3 className="text-lg sm:text-xl font-bold text-white font-serif">
@@ -277,10 +277,10 @@ export function SlideImagesBatchModal({
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-900/80 text-[#f5d77f] font-bold">
+                      <span className="text-[10px] font-sans px-2 py-0.5 rounded bg-blue-900/80 text-[#f5d77f] font-bold">
                         {def.slideName}
                       </span>
-                      <span className="text-xs font-bold text-white font-mono">
+                      <span className="text-xs font-bold text-white font-sans">
                         "{def.fileName}"
                       </span>
                     </div>

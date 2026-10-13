@@ -136,7 +136,7 @@ PROMESA COMERCIAL A RESULTADOS:
                   type="number"
                   value={totalUnits}
                   onChange={(e) => setTotalUnits(Number(e.target.value))}
-                  className="w-full rounded-md border border-zinc-300 p-2 text-zinc-900 bg-white focus:outline-none focus:ring-1 focus:ring-amber-500 font-mono"
+                  className="w-full rounded-md border border-zinc-300 p-2 text-zinc-900 bg-white focus:outline-none focus:ring-1 focus:ring-amber-500 font-sans"
                 />
               </div>
               <div className="space-y-1.5">
@@ -146,7 +146,7 @@ PROMESA COMERCIAL A RESULTADOS:
                   type="number"
                   value={currentOccupancy}
                   onChange={(e) => setCurrentOccupancy(Number(e.target.value))}
-                  className="w-full rounded-md border border-zinc-300 p-2 text-zinc-900 bg-white focus:outline-none focus:ring-1 focus:ring-amber-500 font-mono"
+                  className="w-full rounded-md border border-zinc-300 p-2 text-zinc-900 bg-white focus:outline-none focus:ring-1 focus:ring-amber-500 font-sans"
                 />
               </div>
             </div>
@@ -159,7 +159,7 @@ PROMESA COMERCIAL A RESULTADOS:
                   type="number"
                   value={currentADR}
                   onChange={(e) => setCurrentADR(Number(e.target.value))}
-                  className="w-full rounded-md border border-zinc-300 p-2 text-zinc-900 bg-white focus:outline-none focus:ring-1 focus:ring-amber-500 font-mono"
+                  className="w-full rounded-md border border-zinc-300 p-2 text-zinc-900 bg-white focus:outline-none focus:ring-1 focus:ring-amber-500 font-sans"
                 />
               </div>
               <div className="space-y-1.5">
@@ -169,7 +169,7 @@ PROMESA COMERCIAL A RESULTADOS:
                   type="number"
                   value={otaCommissionRate}
                   onChange={(e) => setOtaCommissionRate(Number(e.target.value))}
-                  className="w-full rounded-md border border-zinc-300 p-2 text-zinc-900 bg-white focus:outline-none focus:ring-1 focus:ring-amber-500 font-mono"
+                  className="w-full rounded-md border border-zinc-300 p-2 text-zinc-900 bg-white focus:outline-none focus:ring-1 focus:ring-amber-500 font-sans"
                 />
               </div>
             </div>
@@ -240,25 +240,25 @@ PROMESA COMERCIAL A RESULTADOS:
                     <div className="space-y-1.5 pt-1">
                       <div className="flex justify-between">
                         <span className="text-zinc-500">Ocupación / ADR:</span>
-                        <span className="font-mono font-medium text-zinc-800">
+                        <span className="font-sans font-medium text-zinc-800">
                           {diagnostic.current.occupancy}% / ${diagnostic.current.adr} USD
                         </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-zinc-500">RevPAR Actual:</span>
-                        <span className="font-mono font-bold text-zinc-900">
+                        <span className="font-sans font-bold text-zinc-900">
                           ${diagnostic.current.revPar} USD
                         </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-zinc-500">Fuga Comisiones OTAs:</span>
-                        <span className="font-mono text-red-600 font-semibold">
+                        <span className="font-sans text-red-600 font-semibold">
                           -${diagnostic.current.otaCommissions.toLocaleString()} USD
                         </span>
                       </div>
                       <div className="flex justify-between pt-1 border-t border-zinc-200">
                         <span className="font-semibold text-zinc-800">Ingreso Neto Actual:</span>
-                        <span className="font-mono font-bold text-zinc-950">
+                        <span className="font-sans font-bold text-zinc-950">
                           ${diagnostic.current.netRevenue.toLocaleString()} USD / mes
                         </span>
                       </div>
@@ -273,25 +273,25 @@ PROMESA COMERCIAL A RESULTADOS:
                     <div className="space-y-1.5 pt-1">
                       <div className="flex justify-between">
                         <span className="text-amber-800">Ocupación / ADR:</span>
-                        <span className="font-mono font-semibold text-amber-950">
+                        <span className="font-sans font-semibold text-amber-950">
                           {diagnostic.blueOceanOptimized.occupancy}% / ${diagnostic.blueOceanOptimized.adr} USD
                         </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-amber-800">RevPAR Optimizado:</span>
-                        <span className="font-mono font-bold text-emerald-700">
+                        <span className="font-sans font-bold text-emerald-700">
                           ${diagnostic.blueOceanOptimized.revPar} USD
                         </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-amber-800">Plus Franja Diurna:</span>
-                        <span className="font-mono text-emerald-700 font-semibold">
+                        <span className="font-sans text-emerald-700 font-semibold">
                           +${diagnostic.blueOceanOptimized.ancillaryHourlyRevenue.toLocaleString()} USD
                         </span>
                       </div>
                       <div className="flex justify-between pt-1 border-t border-amber-200">
                         <span className="font-semibold text-amber-950">Nuevo Ingreso Neto:</span>
-                        <span className="font-mono font-bold text-emerald-800 text-sm">
+                        <span className="font-sans font-bold text-emerald-800 text-sm">
                           ${diagnostic.blueOceanOptimized.netRevenue.toLocaleString()} USD / mes
                         </span>
                       </div>
@@ -305,7 +305,7 @@ PROMESA COMERCIAL A RESULTADOS:
                     <span className="text-xs font-bold text-amber-400 tracking-wider uppercase">
                       La Promesa Comercial a Resultados
                     </span>
-                    <span className="text-xs font-mono bg-zinc-800 px-2 py-0.5 rounded text-zinc-300">
+                    <span className="text-xs font-sans bg-zinc-800 px-2 py-0.5 rounded text-zinc-300">
                       Costo Fijo: $0 USD
                     </span>
                   </div>
@@ -313,7 +313,7 @@ PROMESA COMERCIAL A RESULTADOS:
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
                     <div className="bg-zinc-900 p-3 rounded-lg border border-zinc-800">
                       <span className="text-zinc-400 block text-[11px]">Incremento Neto Total</span>
-                      <span className="text-lg font-bold text-emerald-400 font-mono">
+                      <span className="text-lg font-bold text-emerald-400 font-sans">
                         +${diagnostic.commercialProposal.netIncrementalLift.toLocaleString()} USD
                       </span>
                       <span className="text-[10px] text-zinc-500 block">
@@ -323,7 +323,7 @@ PROMESA COMERCIAL A RESULTADOS:
 
                     <div className="bg-zinc-900 p-3 rounded-lg border border-zinc-800">
                       <span className="text-zinc-400 block text-[11px]">Fee Blue Ocean (15% éxito)</span>
-                      <span className="text-lg font-bold text-amber-400 font-mono">
+                      <span className="text-lg font-bold text-amber-400 font-sans">
                         ${diagnostic.commercialProposal.blueOceanSuccessFee.toLocaleString()} USD
                       </span>
                       <span className="text-[10px] text-zinc-500 block">Solo si se genera el incremento</span>
@@ -331,7 +331,7 @@ PROMESA COMERCIAL A RESULTADOS:
 
                     <div className="bg-zinc-900 p-3 rounded-lg border border-zinc-800">
                       <span className="text-zinc-400 block text-[11px]">Ganancia Propietario</span>
-                      <span className="text-lg font-bold text-white font-mono">
+                      <span className="text-lg font-bold text-white font-sans">
                         +${diagnostic.commercialProposal.ownerRetainedGain.toLocaleString()} USD
                       </span>
                       <span className="text-[10px] text-emerald-400 font-medium block">

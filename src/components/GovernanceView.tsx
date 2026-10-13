@@ -98,7 +98,7 @@ export function GovernanceView() {
             </div>
           </div>
 
-          <span className="text-xs font-mono text-zinc-500 bg-zinc-100 px-3 py-1.5 rounded-lg border border-zinc-200">
+          <span className="text-xs font-sans text-zinc-500 bg-zinc-100 px-3 py-1.5 rounded-lg border border-zinc-200">
             HASH AUDIT: SHA-256 ENFORCED
           </span>
         </div>
@@ -113,7 +113,7 @@ export function GovernanceView() {
             </span>
             <ShieldCheck className="w-4 h-4 text-sky-600" />
           </div>
-          <div className="text-2xl font-bold text-zinc-900 font-mono">14.0% Mínimo</div>
+          <div className="text-2xl font-bold text-zinc-900 font-sans">14.0% Mínimo</div>
           <p className="text-xs text-zinc-600">
             Ningún agente puede emitir con fee o descuento que degrade el margen por debajo del 14% sin firma del CFO.
           </p>
@@ -126,7 +126,7 @@ export function GovernanceView() {
             </span>
             <ShieldCheck className="w-4 h-4 text-amber-600" />
           </div>
-          <div className="text-2xl font-bold text-zinc-900 font-mono">15.0% Neto Lift</div>
+          <div className="text-2xl font-bold text-zinc-900 font-sans">15.0% Neto Lift</div>
           <p className="text-xs text-zinc-600">
             Estrictamente sobre el incremento neto generado por encima de la línea base histórica del hotel.
           </p>
@@ -139,7 +139,7 @@ export function GovernanceView() {
             </span>
             <ShieldCheck className="w-4 h-4 text-emerald-600" />
           </div>
-          <div className="text-2xl font-bold text-zinc-900 font-mono">$0.00 USD</div>
+          <div className="text-2xl font-bold text-zinc-900 font-sans">$0.00 USD</div>
           <p className="text-xs text-zinc-600">
             Tolerancia cero a sobregiro no respaldado por orden de compra o depósito en garantía.
           </p>
@@ -181,7 +181,7 @@ export function GovernanceView() {
                 value={directorPin}
                 onChange={(e) => setDirectorPin(e.target.value)}
                 placeholder="Ingresar PIN de 4 dígitos (Prueba: 2026)"
-                className="w-full rounded-md border border-zinc-300 p-2 text-zinc-900 focus:outline-none focus:ring-1 focus:ring-zinc-900 font-mono"
+                className="w-full rounded-md border border-zinc-300 p-2 text-zinc-900 focus:outline-none focus:ring-1 focus:ring-zinc-900 font-sans"
               />
             </div>
 
@@ -216,14 +216,14 @@ export function GovernanceView() {
               <Database className="w-4 h-4 text-zinc-700" />
               <span>Libro de Trazabilidad e Integridad Criptográfica</span>
             </h3>
-            <span className="text-xs font-mono text-zinc-400">Ledger Inmutable</span>
+            <span className="text-xs font-sans text-zinc-400">Ledger Inmutable</span>
           </div>
 
           <div className="space-y-3 overflow-y-auto max-h-[360px] pr-1">
             {auditLogs.map((log) => (
               <div
                 key={log.id}
-                className="p-3 rounded-lg border border-zinc-200 bg-zinc-50/50 space-y-1.5 text-xs font-mono"
+                className="p-3 rounded-lg border border-zinc-200 bg-zinc-50/50 space-y-1.5 text-xs font-sans"
               >
                 <div className="flex items-center justify-between">
                   <span className="font-bold text-zinc-900">{log.event}</span>

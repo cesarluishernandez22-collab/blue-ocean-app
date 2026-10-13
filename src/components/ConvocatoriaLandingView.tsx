@@ -253,7 +253,7 @@ export function ConvocatoriaLandingView({ onGoToHotels, onGoToPortal }: Convocat
             {/* Insignia Oficial del Fundador */}
             <div className="lg:col-span-4 flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-zinc-800">
               <LCMLogo size="lg" className="drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]" />
-              <span className="text-xs font-mono font-bold text-[#f5d77f] mt-3">Luis César Monroy</span>
+              <span className="text-xs font-sans font-bold text-[#f5d77f] mt-3">Luis César Monroy</span>
               <span className="text-[11px] text-zinc-400 text-center mt-1">Autoría & Metodología Total Revenue</span>
             </div>
 
@@ -277,7 +277,7 @@ export function ConvocatoriaLandingView({ onGoToHotels, onGoToPortal }: Convocat
             <div className="px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-700 text-xs font-bold text-zinc-300 font-serif">
               ESSEC BUSINESS SCHOOL
             </div>
-            <div className="px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-700 text-xs font-bold text-emerald-400 font-mono">
+            <div className="px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-700 text-xs font-bold text-emerald-400 font-sans">
               STARWEAVER FINANCE
             </div>
             <div className="px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-700 text-xs font-bold text-cyan-400 font-sans">
@@ -286,7 +286,7 @@ export function ConvocatoriaLandingView({ onGoToHotels, onGoToPortal }: Convocat
           </div>
 
           <div className="text-center pt-4">
-            <a href="mailto:direccion@oceanrevenue-management.com" className="text-xs font-mono text-[#f5d77f] hover:underline">
+            <a href="mailto:direccion@oceanrevenue-management.com" className="text-xs font-sans text-[#f5d77f] hover:underline">
               direccion@oceanrevenue-management.com
             </a>
           </div>
@@ -447,19 +447,19 @@ export function ConvocatoriaLandingView({ onGoToHotels, onGoToPortal }: Convocat
               <div className="flex items-end justify-center gap-4 h-64 pt-6 px-2">
                 <div className="flex flex-col items-center gap-2 flex-1">
                   <div className="w-full bg-[#d4af37]/60 rounded-t-lg h-24 flex items-center justify-center text-xs font-bold text-zinc-950">10</div>
-                  <span className="text-[10px] font-mono text-zinc-400">AGOSTO</span>
+                  <span className="text-[10px] font-sans text-zinc-400">AGOSTO</span>
                 </div>
                 <div className="flex flex-col items-center gap-2 flex-1">
                   <div className="w-full bg-[#d4af37]/80 rounded-t-lg h-36 flex items-center justify-center text-xs font-bold text-zinc-950">15</div>
-                  <span className="text-[10px] font-mono text-zinc-400">SEPTIEMBRE</span>
+                  <span className="text-[10px] font-sans text-zinc-400">SEPTIEMBRE</span>
                 </div>
                 <div className="flex flex-col items-center gap-2 flex-1">
                   <div className="w-full bg-[#d4af37] rounded-t-lg h-48 flex items-center justify-center text-xs font-bold text-zinc-950">20</div>
-                  <span className="text-[10px] font-mono text-zinc-400">OCTUBRE</span>
+                  <span className="text-[10px] font-sans text-zinc-400">OCTUBRE</span>
                 </div>
                 <div className="flex flex-col items-center gap-2 flex-1">
                   <div className="w-full bg-gradient-to-t from-[#d4af37] to-[#fbe89d] rounded-t-lg h-60 flex items-center justify-center text-xs font-black text-zinc-950 shadow-lg">30+</div>
-                  <span className="text-[10px] font-mono font-bold text-[#f5d77f]">NOVIEMBRE</span>
+                  <span className="text-[10px] font-sans font-bold text-[#f5d77f]">NOVIEMBRE</span>
                 </div>
               </div>
             </div>
@@ -482,7 +482,7 @@ export function ConvocatoriaLandingView({ onGoToHotels, onGoToPortal }: Convocat
           </div>
 
           <div className="text-center pt-2">
-            <span className="text-xs font-mono text-[#f5d77f]">direccion@oceanrevenue-management.com</span>
+            <span className="text-xs font-sans text-[#f5d77f]">direccion@oceanrevenue-management.com</span>
           </div>
 
         </div>
@@ -508,7 +508,7 @@ export function ConvocatoriaLandingView({ onGoToHotels, onGoToPortal }: Convocat
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
             <div className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-4">
-              <span className="text-xs font-mono font-bold text-[#f5d77f] uppercase block">TARIFA DINÁMICA</span>
+              <span className="text-xs font-sans font-bold text-[#f5d77f] uppercase block">TARIFA DINÁMICA</span>
               <div className="h-32 flex items-end justify-center gap-2">
                 <div className="w-10 bg-[#d4af37] h-32 rounded-t"></div>
                 <div className="w-10 bg-[#d4af37] h-20 rounded-t"></div>
@@ -521,7 +521,7 @@ export function ConvocatoriaLandingView({ onGoToHotels, onGoToPortal }: Convocat
             </div>
 
             <div className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-4">
-              <span className="text-xs font-mono font-bold text-zinc-400 uppercase block">TARIFA PLANA</span>
+              <span className="text-xs font-sans font-bold text-zinc-400 uppercase block">TARIFA PLANA</span>
               <div className="h-32 flex items-end justify-center gap-2">
                 <div className="w-10 bg-zinc-600 h-16 rounded-t"></div>
                 <div className="w-10 bg-zinc-600 h-16 rounded-t"></div>
@@ -644,7 +644,7 @@ export function ConvocatoriaLandingView({ onGoToHotels, onGoToPortal }: Convocat
                 En <strong className="text-white">Blue Ocean</strong> utilizamos Forecasting como el punto de partida para construir estrategias comerciales más inteligentes y ayudar a los hoteles independientes a tomar decisiones basadas en información, no en intuición.
               </p>
               
-              <div className="pt-2 space-y-1 font-mono text-xs">
+              <div className="pt-2 space-y-1 font-sans text-xs">
                 <p className="text-[#f5d77f] font-bold">• El Pricing responde cuánto cobrar.</p>
                 <p className="text-cyan-400 font-bold">• El Revenue Management responde cómo maximizar.</p>
                 <p className="text-emerald-400 font-bold">• El Forecasting responde cuándo actuar.</p>
@@ -704,7 +704,7 @@ export function ConvocatoriaLandingView({ onGoToHotels, onGoToPortal }: Convocat
                 <div className="w-8 bg-cyan-400 h-44 rounded-t"></div>
                 <div className="w-8 bg-cyan-300 h-52 rounded-t"></div>
               </div>
-              <span className="text-[10px] font-mono text-zinc-400">Semana 1 ➔ Semana 6 de Implementación</span>
+              <span className="text-[10px] font-sans text-zinc-400">Semana 1 ➔ Semana 6 de Implementación</span>
             </div>
 
             <div className="space-y-6">
@@ -774,7 +774,7 @@ export function ConvocatoriaLandingView({ onGoToHotels, onGoToPortal }: Convocat
 
             <a
               href="mailto:direccion@oceanrevenue-management.com"
-              className="text-xs font-mono text-zinc-300 hover:text-[#f5d77f] underline"
+              className="text-xs font-sans text-zinc-300 hover:text-[#f5d77f] underline"
             >
               direccion@oceanrevenue-management.com
             </a>
@@ -797,7 +797,7 @@ export function ConvocatoriaLandingView({ onGoToHotels, onGoToPortal }: Convocat
             </button>
 
             <div className="space-y-2 mb-6">
-              <span className="text-[11px] font-mono font-bold text-[#f5d77f] uppercase block">
+              <span className="text-[11px] font-sans font-bold text-[#f5d77f] uppercase block">
                 Postulación de Propiedad
               </span>
               <h3 className="text-xl font-bold text-white font-serif">

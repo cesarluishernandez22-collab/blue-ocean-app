@@ -139,7 +139,7 @@ export function OverviewView({ systemStatus, setActiveTab }: OverviewViewProps) 
             </div>
 
             <div className="pt-6 mt-4 border-t border-zinc-100 flex items-center justify-between">
-              <span className="text-xs font-mono text-zinc-400">ID: CELL-TRADYTEC-V4</span>
+              <span className="text-xs font-sans text-zinc-400">ID: CELL-TRADYTEC-V4</span>
               <button
                 id="btn-open-tradytec"
                 onClick={() => setActiveTab('tradytec')}
@@ -192,7 +192,7 @@ export function OverviewView({ systemStatus, setActiveTab }: OverviewViewProps) 
             </div>
 
             <div className="pt-6 mt-4 border-t border-zinc-100 flex items-center justify-between">
-              <span className="text-xs font-mono text-zinc-400">ID: CELL-BLUEOCEAN-V3</span>
+              <span className="text-xs font-sans text-zinc-400">ID: CELL-BLUEOCEAN-V3</span>
               <button
                 id="btn-open-blueocean"
                 onClick={() => setActiveTab('blueocean')}
@@ -221,7 +221,7 @@ export function OverviewView({ systemStatus, setActiveTab }: OverviewViewProps) 
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-4 text-xs font-mono">
+          <div className="flex flex-wrap gap-4 text-xs font-sans">
             <div className="bg-zinc-900 px-3 py-2 rounded border border-zinc-800">
               <span className="text-zinc-500 block">CERO SUPOSICIONES</span>
               <span className="text-emerald-400 font-bold">ESTRICTO / 100%</span>

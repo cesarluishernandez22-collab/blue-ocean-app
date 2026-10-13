@@ -167,10 +167,10 @@ export function HotelCatalogAndBookingFlow({
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-zinc-800 pb-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#e07a9e]/20 text-[#e07a9e] border border-[#e07a9e]/30">
+            <span className="text-[10px] font-sans uppercase px-2 py-0.5 rounded bg-[#e07a9e]/20 text-[#e07a9e] border border-[#e07a9e]/30">
               Catálogo Oficial
             </span>
-            <span className="text-[10px] font-mono text-zinc-400">
+            <span className="text-[10px] font-sans text-zinc-400">
               Datos: Airtable "Inventario de propiedades"
             </span>
           </div>
@@ -183,7 +183,7 @@ export function HotelCatalogAndBookingFlow({
         </div>
 
         <div className="flex items-center gap-3 text-xs text-zinc-400">
-          <span className="font-mono text-zinc-300 font-bold">{safeHotelsList.length} Hoteles en lista</span>
+          <span className="font-sans text-zinc-300 font-bold">{safeHotelsList.length} Hoteles en lista</span>
         </div>
       </div>
 
@@ -206,16 +206,16 @@ export function HotelCatalogAndBookingFlow({
 
               {/* Badges on Image */}
               <div className="absolute top-3 left-3 flex items-center gap-1.5">
-                <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-bold bg-[#121214]/90 text-[#d4af37] border border-[#d4af37]/40 shadow-sm backdrop-blur-sm">
+                <span className="px-2.5 py-1 rounded-md text-[11px] font-sans font-bold bg-[#121214]/90 text-[#d4af37] border border-[#d4af37]/40 shadow-sm backdrop-blur-sm">
                   ★ {hotel.puntuacion} <span className="text-zinc-400 font-normal">({hotel.totalResenas})</span>
                 </span>
-                <span className="px-2 py-1 rounded-md text-[10px] font-mono font-semibold bg-[#121214]/90 text-zinc-200 border border-zinc-700 backdrop-blur-sm">
+                <span className="px-2 py-1 rounded-md text-[10px] font-sans font-semibold bg-[#121214]/90 text-zinc-200 border border-zinc-700 backdrop-blur-sm">
                   {hotel.tipoPropiedad}
                 </span>
               </div>
 
               <div className="absolute top-3 right-3">
-                <span className="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-[#38a3a5] text-zinc-950 shadow-sm">
+                <span className="px-2.5 py-1 rounded-md text-[10px] font-sans font-bold bg-[#38a3a5] text-zinc-950 shadow-sm">
                   Disponibilidad Inmediata
                 </span>
               </div>
@@ -226,7 +226,7 @@ export function HotelCatalogAndBookingFlow({
                   <MapPin className="w-3.5 h-3.5 text-[#e07a9e]" />
                   {hotel.zona}
                 </span>
-                <span className="text-[11px] font-mono text-zinc-400 bg-[#121214]/80 px-2 py-0.5 rounded">
+                <span className="text-[11px] font-sans text-zinc-400 bg-[#121214]/80 px-2 py-0.5 rounded">
                   {hotel.ciudad}
                 </span>
               </div>
@@ -247,7 +247,7 @@ export function HotelCatalogAndBookingFlow({
                   {hotel.servicios.slice(0, 3).map((serv, idx) => (
                     <span 
                       key={idx}
-                      className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] bg-zinc-900 text-zinc-300 border border-zinc-800 font-mono"
+                      className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] bg-zinc-900 text-zinc-300 border border-zinc-800 font-sans"
                     >
                       <Sparkles className="w-2.5 h-2.5 text-[#38a3a5]" />
                       {serv}
@@ -260,12 +260,12 @@ export function HotelCatalogAndBookingFlow({
               <div className="pt-4 border-t border-zinc-800/80 space-y-3">
                 <div className="flex items-end justify-between">
                   <div>
-                    <span className="text-[10px] text-zinc-500 uppercase tracking-wider block font-mono">
+                    <span className="text-[10px] text-zinc-500 uppercase tracking-wider block font-sans">
                       Tarifa Estancia Corta
                     </span>
                     <div className="flex items-baseline gap-1 mt-0.5">
                       <span className="text-xs text-zinc-400">desde</span>
-                      <span className="text-lg font-black text-white font-mono tracking-tight">
+                      <span className="text-lg font-black text-white font-sans tracking-tight">
                         ${hotel.tarifas.estancia4Horas}
                       </span>
                       <span className="text-[11px] text-zinc-400">MXN / 4 hrs</span>
@@ -273,15 +273,15 @@ export function HotelCatalogAndBookingFlow({
                   </div>
 
                   <div className="text-right">
-                    <span className="text-[10px] text-zinc-500 block font-mono">Noche completa</span>
-                    <span className="text-xs font-mono font-bold text-[#e07a9e]">
+                    <span className="text-[10px] text-zinc-500 block font-sans">Noche completa</span>
+                    <span className="text-xs font-sans font-bold text-[#e07a9e]">
                       ${hotel.tarifas.nocheCompleta} MXN
                     </span>
                   </div>
                 </div>
 
                 {/* Trust badge: Pago con Tarjeta en Portal o Recepción */}
-                <div className="flex items-center gap-1.5 py-1 px-2 rounded-lg bg-zinc-900/90 border border-zinc-800 text-[10px] text-zinc-400 font-mono">
+                <div className="flex items-center gap-1.5 py-1 px-2 rounded-lg bg-zinc-900/90 border border-zinc-800 text-[10px] text-zinc-400 font-sans">
                   <CreditCard className="w-3.5 h-3.5 text-[#e07a9e] shrink-0" />
                   <span>Pago con tarjeta en portal o en recepción</span>
                 </div>
@@ -313,7 +313,7 @@ export function HotelCatalogAndBookingFlow({
                 </div>
                 <div>
                   <h3 className="text-base font-bold text-white">{selectedHotelForModal.nombre}</h3>
-                  <p className="text-xs text-zinc-400 font-mono flex items-center gap-2">
+                  <p className="text-xs text-zinc-400 font-sans flex items-center gap-2">
                     <span>{selectedHotelForModal.zona}</span>
                     <span>•</span>
                     <span className="text-[#d4af37]">★ {selectedHotelForModal.puntuacion} ({selectedHotelForModal.totalResenas} reseñas)</span>
@@ -344,7 +344,7 @@ export function HotelCatalogAndBookingFlow({
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute top-3 left-3 bg-[#121214]/80 px-2.5 py-1 rounded text-[11px] font-mono text-zinc-300 border border-zinc-700">
+                  <div className="absolute top-3 left-3 bg-[#121214]/80 px-2.5 py-1 rounded text-[11px] font-sans text-zinc-300 border border-zinc-700">
                     {activeImageIndex === 0 ? 'Render Fachada Exterior' : `Render Habitación #${activeImageIndex}`}
                   </div>
                 </div>
@@ -377,7 +377,7 @@ export function HotelCatalogAndBookingFlow({
               {/* Description & Contact Verification */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="md:col-span-2 space-y-3">
-                  <h4 className="text-sm font-bold text-white uppercase tracking-wider font-mono">
+                  <h4 className="text-sm font-bold text-white uppercase tracking-wider font-sans">
                     Descripción y Equipamiento
                   </h4>
                   <p className="text-xs text-zinc-300 leading-relaxed">
@@ -385,7 +385,7 @@ export function HotelCatalogAndBookingFlow({
                   </p>
                   
                   <div className="pt-2">
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400 block mb-2">
+                    <span className="text-[11px] font-sans uppercase tracking-wider text-zinc-400 block mb-2">
                       Servicios Incluidos en la Propiedad
                     </span>
                     <div className="grid grid-cols-2 gap-2">
@@ -401,7 +401,7 @@ export function HotelCatalogAndBookingFlow({
 
                 {/* Airtable Verified Metadata */}
                 <div className="bg-[#121214] p-4 rounded-xl border border-zinc-800 space-y-2.5 text-xs">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#d4af37] block font-bold">
+                  <span className="text-[10px] font-sans uppercase tracking-wider text-[#d4af37] block font-bold">
                     Registro Airtable Verificado
                   </span>
                   <div className="space-y-1 text-zinc-400">
@@ -411,20 +411,20 @@ export function HotelCatalogAndBookingFlow({
                     </p>
                     <p className="flex items-center gap-1.5">
                       <Phone className="w-3.5 h-3.5 text-zinc-400 shrink-0" />
-                      <span className="font-mono text-zinc-300">{selectedHotelForModal.telefono}</span>
+                      <span className="font-sans text-zinc-300">{selectedHotelForModal.telefono}</span>
                     </p>
                     <p className="flex items-center gap-1.5">
                       <User className="w-3.5 h-3.5 text-[#38a3a5] shrink-0" />
                       <span>Contacto: {selectedHotelForModal.nombreContacto}</span>
                     </p>
                   </div>
-                  <div className="pt-2 border-t border-zinc-800 text-[10px] text-zinc-500 font-mono">
+                  <div className="pt-2 border-t border-zinc-800 text-[10px] text-zinc-500 font-sans">
                     ID Airtable: {selectedHotelForModal.airtableRecordId}
                   </div>
 
                   <div className="pt-2 border-t border-zinc-800/80">
                     <div className="p-2 rounded bg-zinc-900/90 border border-amber-500/20 text-[10px] text-zinc-400 space-y-1">
-                      <span className="font-mono text-amber-400 font-bold block flex items-center gap-1">
+                      <span className="font-sans text-amber-400 font-bold block flex items-center gap-1">
                         <Lock className="w-3 h-3 text-amber-400" />
                         Política de Pago Protegida:
                       </span>
@@ -442,7 +442,7 @@ export function HotelCatalogAndBookingFlow({
               <div className="border-t border-zinc-800 pt-6">
                 <div className="flex items-center justify-between mb-4">
                   <div>
-                    <span className="text-[11px] font-mono text-[#e07a9e] font-bold uppercase tracking-wider block">
+                    <span className="text-[11px] font-sans text-[#e07a9e] font-bold uppercase tracking-wider block">
                       Flujo de Reserva Funcional
                     </span>
                     <h4 className="text-base font-bold text-white">
@@ -453,7 +453,7 @@ export function HotelCatalogAndBookingFlow({
                   </div>
 
                   {/* Step Pills */}
-                  <div className="flex items-center gap-1.5 text-[10px] font-mono">
+                  <div className="flex items-center gap-1.5 text-[10px] font-sans">
                     <span className={`px-2 py-0.5 rounded ${bookingStep === 'SELECT_STAY' ? 'bg-[#e07a9e] text-zinc-950 font-bold' : 'bg-zinc-800 text-zinc-400'}`}>
                       Paso 1
                     </span>
@@ -488,10 +488,10 @@ export function HotelCatalogAndBookingFlow({
                         >
                           <div>
                             <span className="text-xs font-bold text-white block">{stay.label}</span>
-                            <span className="text-[10px] text-zinc-400 font-mono">{stay.subtitle}</span>
+                            <span className="text-[10px] text-zinc-400 font-sans">{stay.subtitle}</span>
                           </div>
                           <div className="mt-3">
-                            <span className="text-sm font-black font-mono text-[#e07a9e]">${stay.price}</span>
+                            <span className="text-sm font-black font-sans text-[#e07a9e]">${stay.price}</span>
                             <span className="text-[10px] text-zinc-500 ml-1">MXN</span>
                           </div>
                         </button>
@@ -527,7 +527,7 @@ export function HotelCatalogAndBookingFlow({
                         <select
                           value={bookingTime}
                           onChange={(e) => setBookingTime(e.target.value)}
-                          className="w-full bg-[#121214] border border-zinc-700 rounded-lg px-3 py-2 text-xs text-white focus:border-[#e07a9e] outline-none font-mono"
+                          className="w-full bg-[#121214] border border-zinc-700 rounded-lg px-3 py-2 text-xs text-white focus:border-[#e07a9e] outline-none font-sans"
                         >
                           {selectedHotelForModal.disponibilidad.horariosInmediatos.map((hora, idx) => (
                             <option key={idx} value={hora}>{hora}</option>
@@ -538,8 +538,8 @@ export function HotelCatalogAndBookingFlow({
 
                     <div className="flex items-center justify-between pt-4 border-t border-zinc-800">
                       <div>
-                        <span className="text-[11px] text-zinc-500 font-mono block">Tarifa de Estancia Seleccionada</span>
-                        <span className="text-xl font-black text-white font-mono">
+                        <span className="text-[11px] text-zinc-500 font-sans block">Tarifa de Estancia Seleccionada</span>
+                        <span className="text-xl font-black text-white font-sans">
                           ${getPriceForSelectedStay(selectedHotelForModal)} MXN
                         </span>
                       </div>
@@ -561,11 +561,11 @@ export function HotelCatalogAndBookingFlow({
                     {/* Security Financial Policy Banner */}
                     <div className="p-3.5 bg-zinc-900/90 rounded-xl border border-[#e07a9e]/30 text-xs space-y-2">
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2 text-[#e07a9e] font-bold text-xs uppercase tracking-wide font-mono">
+                        <div className="flex items-center gap-2 text-[#e07a9e] font-bold text-xs uppercase tracking-wide font-sans">
                           <CreditCard className="w-4 h-4 text-[#e07a9e] shrink-0" />
                           <span>Flexibilidad Comercial y Seguridad Financiera</span>
                         </div>
-                        <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
+                        <span className="px-2 py-0.5 rounded text-[10px] font-sans font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
                           Pasarela Directa Habilitada
                         </span>
                       </div>
@@ -625,7 +625,7 @@ export function HotelCatalogAndBookingFlow({
 
                     {/* Selector Explícito de Método de Liquidación y Pago con Tarjeta en el Portal */}
                     <div className="space-y-2 pt-1">
-                      <label className="block text-zinc-300 text-xs font-bold font-mono uppercase tracking-wider">
+                      <label className="block text-zinc-300 text-xs font-bold font-sans uppercase tracking-wider">
                         Modalidad de Pago y Liquidación *
                       </label>
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -651,7 +651,7 @@ export function HotelCatalogAndBookingFlow({
                                 <CreditCard className="w-3.5 h-3.5 text-[#e07a9e]" />
                                 <span className="text-xs font-bold text-white">Pagar con Tarjeta Ahora</span>
                               </div>
-                              <span className="text-[10px] font-mono text-[#e07a9e] block mt-0.5 font-bold">
+                              <span className="text-[10px] font-sans text-[#e07a9e] block mt-0.5 font-bold">
                                 Liquidación Inmediata en Portal
                               </span>
                               <p className="text-[11px] text-zinc-400 mt-1.5 leading-relaxed">
@@ -659,7 +659,7 @@ export function HotelCatalogAndBookingFlow({
                               </p>
                             </div>
                           </div>
-                          <div className="mt-3 pt-2 border-t border-zinc-800 text-[10px] text-zinc-400 flex items-center justify-between font-mono">
+                          <div className="mt-3 pt-2 border-t border-zinc-800 text-[10px] text-zinc-400 flex items-center justify-between font-sans">
                             <span>A cargar a tu tarjeta:</span>
                             <span className="text-[#e07a9e] font-bold">${getPriceForSelectedStay(selectedHotelForModal)} MXN</span>
                           </div>
@@ -687,7 +687,7 @@ export function HotelCatalogAndBookingFlow({
                                 <Building2 className="w-3.5 h-3.5 text-[#38a3a5]" />
                                 <span className="text-xs font-bold text-white">Pago en Recepción</span>
                               </div>
-                              <span className="text-[10px] font-mono text-[#38a3a5] block mt-0.5">
+                              <span className="text-[10px] font-sans text-[#38a3a5] block mt-0.5">
                                 Efectivo o Tarjeta en Mostrador
                               </span>
                               <p className="text-[11px] text-zinc-400 mt-1.5 leading-relaxed">
@@ -695,7 +695,7 @@ export function HotelCatalogAndBookingFlow({
                               </p>
                             </div>
                           </div>
-                          <div className="mt-3 pt-2 border-t border-zinc-800 text-[10px] text-zinc-400 flex items-center justify-between font-mono">
+                          <div className="mt-3 pt-2 border-t border-zinc-800 text-[10px] text-zinc-400 flex items-center justify-between font-sans">
                             <span>A liquidar al llegar:</span>
                             <span className="text-white font-bold">${getPriceForSelectedStay(selectedHotelForModal)} MXN</span>
                           </div>
@@ -723,7 +723,7 @@ export function HotelCatalogAndBookingFlow({
                                 <Lock className="w-3.5 h-3.5 text-[#d4af37]" />
                                 <span className="text-xs font-bold text-white">Garantía del 15%</span>
                               </div>
-                              <span className="text-[10px] font-mono text-[#d4af37] block mt-0.5">
+                              <span className="text-[10px] font-sans text-[#d4af37] block mt-0.5">
                                 Retención Enlazada Ocean Blue
                               </span>
                               <p className="text-[11px] text-zinc-400 mt-1.5 leading-relaxed">
@@ -731,7 +731,7 @@ export function HotelCatalogAndBookingFlow({
                               </p>
                             </div>
                           </div>
-                          <div className="mt-3 pt-2 border-t border-zinc-800 text-[10px] text-zinc-400 flex items-center justify-between font-mono">
+                          <div className="mt-3 pt-2 border-t border-zinc-800 text-[10px] text-zinc-400 flex items-center justify-between font-sans">
                             <span>Garantía (15%):</span>
                             <span className="text-[#d4af37] font-bold">
                               ${Math.round(getPriceForSelectedStay(selectedHotelForModal) * 0.15)} MXN
@@ -747,11 +747,11 @@ export function HotelCatalogAndBookingFlow({
                         <div className="flex items-center justify-between border-b border-zinc-800 pb-2.5">
                           <div className="flex items-center gap-2">
                             <CreditCard className="w-4 h-4 text-[#e07a9e]" />
-                            <span className="text-xs font-bold text-white font-mono uppercase">
+                            <span className="text-xs font-bold text-white font-sans uppercase">
                               Pasarela de Pago Segura en Línea
                             </span>
                           </div>
-                          <div className="flex items-center gap-2 text-[10px] font-mono text-zinc-400">
+                          <div className="flex items-center gap-2 text-[10px] font-sans text-zinc-400">
                             <span className="px-1.5 py-0.5 bg-zinc-800 rounded border border-zinc-700 text-zinc-300">Visa</span>
                             <span className="px-1.5 py-0.5 bg-zinc-800 rounded border border-zinc-700 text-zinc-300">Mastercard</span>
                             <span className="px-1.5 py-0.5 bg-zinc-800 rounded border border-zinc-700 text-zinc-300">AMEX</span>
@@ -771,7 +771,7 @@ export function HotelCatalogAndBookingFlow({
                               onChange={(e) => setCardNumber(e.target.value)}
                               placeholder="4532 •••• •••• 8821"
                               maxLength={19}
-                              className="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-xs text-white focus:border-[#e07a9e] outline-none font-mono"
+                              className="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-xs text-white focus:border-[#e07a9e] outline-none font-sans"
                             />
                           </div>
 
@@ -798,7 +798,7 @@ export function HotelCatalogAndBookingFlow({
                               onChange={(e) => setCardExpiry(e.target.value)}
                               placeholder="12/28"
                               maxLength={5}
-                              className="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-xs text-white focus:border-[#e07a9e] outline-none font-mono text-center"
+                              className="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-xs text-white focus:border-[#e07a9e] outline-none font-sans text-center"
                             />
                           </div>
 
@@ -811,7 +811,7 @@ export function HotelCatalogAndBookingFlow({
                               onChange={(e) => setCardCvc(e.target.value)}
                               placeholder="•••"
                               maxLength={4}
-                              className="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-xs text-white focus:border-[#e07a9e] outline-none font-mono text-center"
+                              className="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-xs text-white focus:border-[#e07a9e] outline-none font-sans text-center"
                             />
                           </div>
 
@@ -825,7 +825,7 @@ export function HotelCatalogAndBookingFlow({
 
                         {/* Gateway connection indicator */}
                         {gatewayProcessingStage !== 'IDLE' && (
-                          <div className="p-2.5 rounded-lg bg-zinc-900 border border-[#e07a9e]/60 flex items-center justify-between text-xs font-mono">
+                          <div className="p-2.5 rounded-lg bg-zinc-900 border border-[#e07a9e]/60 flex items-center justify-between text-xs font-sans">
                             <span className="text-zinc-300 flex items-center gap-2">
                               <span className="w-2 h-2 rounded-full bg-[#e07a9e] animate-ping" />
                               {gatewayProcessingStage === 'CONNECTING_GATEWAY' && 'Estableciendo conexión con pasarela bancaria...'}
@@ -841,11 +841,11 @@ export function HotelCatalogAndBookingFlow({
                     {/* Desglose de Liquidación y Auditoría Financiera */}
                     <div className="p-3.5 bg-[#121214] rounded-xl border border-zinc-800 text-xs space-y-2 text-zinc-300">
                       <div className="flex items-center justify-between text-zinc-200 font-semibold border-b border-zinc-800 pb-2">
-                        <span className="font-mono uppercase text-[11px] text-zinc-400">Desglose de Liquidación</span>
-                        <span className="text-[#d4af37] font-mono font-bold">${getPriceForSelectedStay(selectedHotelForModal)} MXN Total</span>
+                        <span className="font-sans uppercase text-[11px] text-zinc-400">Desglose de Liquidación</span>
+                        <span className="text-[#d4af37] font-sans font-bold">${getPriceForSelectedStay(selectedHotelForModal)} MXN Total</span>
                       </div>
                       
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-[11px] font-mono pt-1">
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-[11px] font-sans pt-1">
                         <div className="bg-zinc-900/80 p-2 rounded border border-zinc-800/80">
                           <span className="text-zinc-500 block text-[10px]">Ingreso Hotel (85%)</span>
                           <span className="text-emerald-400 font-bold">
@@ -930,13 +930,13 @@ export function HotelCatalogAndBookingFlow({
                         <CheckCircle2 className="w-6 h-6" />
                       </div>
                       <div>
-                        <span className="text-[11px] font-mono uppercase text-emerald-400 font-bold">
+                        <span className="text-[11px] font-sans uppercase text-emerald-400 font-bold">
                           {confirmedReservation.metodoPago === 'PAGO_TARJETA_EN_LINEA'
                             ? '¡Pago con Tarjeta Aprobado & Reserva Confirmada!'
                             : 'Reserva y Garantía Financiera Asegurada'}
                         </span>
                         <h4 className="text-lg font-bold text-white">
-                          Código de Reserva: <span className="text-[#d4af37] font-mono">{confirmedReservation.codigoReserva}</span>
+                          Código de Reserva: <span className="text-[#d4af37] font-sans">{confirmedReservation.codigoReserva}</span>
                         </h4>
                       </div>
                     </div>
@@ -956,18 +956,18 @@ export function HotelCatalogAndBookingFlow({
                       </div>
                       <div>
                         <span className="text-zinc-500 block text-[10px]">Tarifa Total</span>
-                        <span className="text-[#e07a9e] font-mono font-bold">${confirmedReservation.precioTotal} MXN</span>
+                        <span className="text-[#e07a9e] font-sans font-bold">${confirmedReservation.precioTotal} MXN</span>
                       </div>
                     </div>
 
                     {/* Certificación de Pago en Recepción / Tarjeta en Línea / Garantía Ocean Blue */}
                     <div className="p-4 bg-zinc-900/90 rounded-lg border border-zinc-700/80 text-xs space-y-2">
                       <div className="flex items-center justify-between border-b border-zinc-800 pb-2">
-                        <span className="font-mono text-zinc-300 font-bold flex items-center gap-1.5">
+                        <span className="font-sans text-zinc-300 font-bold flex items-center gap-1.5">
                           <Receipt className="w-4 h-4 text-[#d4af37]" />
                           Estado de Pago y Pasarela:
                         </span>
-                        <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold ${
+                        <span className={`px-2 py-0.5 rounded text-[10px] font-sans font-bold ${
                           confirmedReservation.metodoPago === 'PAGO_TARJETA_EN_LINEA'
                             ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40'
                             : confirmedReservation.metodoPago === 'PASARELA_GARANTIA_OCEAN_BLUE'
@@ -984,7 +984,7 @@ export function HotelCatalogAndBookingFlow({
 
                       {confirmedReservation.metodoPago === 'PAGO_TARJETA_EN_LINEA' ? (
                         <div className="space-y-1.5 text-zinc-300 text-[11px]">
-                          <div className="flex items-center justify-between p-2 rounded bg-black/40 border border-emerald-500/30 text-emerald-400 font-mono text-[11px]">
+                          <div className="flex items-center justify-between p-2 rounded bg-black/40 border border-emerald-500/30 text-emerald-400 font-sans text-[11px]">
                             <span>Transacción Pasarela: {confirmedReservation.datosPasarela?.autorizacionId || 'AUTH-OK'}</span>
                             <span>Tarjeta: •••• {confirmedReservation.datosPasarela?.ultimosCuatroDigitos || '4242'}</span>
                           </div>
@@ -992,7 +992,7 @@ export function HotelCatalogAndBookingFlow({
                             • Tarifa 100% liquidada en el portal: ${confirmedReservation.precioTotal} MXN.
                           </p>
                           <p className="text-zinc-400">
-                            • Al llegar a la recepción o cochera, solo presenta tu código <strong className="text-white font-mono">{confirmedReservation.codigoReserva}</strong>. Acceso directo garantizado sin pagos adicionales.
+                            • Al llegar a la recepción o cochera, solo presenta tu código <strong className="text-white font-sans">{confirmedReservation.codigoReserva}</strong>. Acceso directo garantizado sin pagos adicionales.
                           </p>
                         </div>
                       ) : confirmedReservation.metodoPago === 'PASARELA_GARANTIA_OCEAN_BLUE' ? (

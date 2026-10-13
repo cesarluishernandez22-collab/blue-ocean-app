@@ -96,7 +96,7 @@ export function HotelerosAffiliationModal({
             <div>
               <h3 className="text-sm sm:text-base font-bold text-white flex items-center gap-2">
                 <span>Afiliación de Propiedad Hotelera</span>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#d4af37]/20 text-[#d4af37] border border-[#d4af37]/40">
+                <span className="text-[10px] font-sans px-2 py-0.5 rounded bg-[#d4af37]/20 text-[#d4af37] border border-[#d4af37]/40">
                   Modelo 15% Comisión
                 </span>
               </h3>
@@ -118,7 +118,7 @@ export function HotelerosAffiliationModal({
         <div className="p-6 overflow-y-auto max-h-[80vh] space-y-6 text-zinc-300 text-xs">
           {/* Commercial Promise Card */}
           <div className="bg-[#121214] p-4 rounded-xl border border-zinc-800 space-y-2">
-            <div className="flex items-center gap-2 text-[#e07a9e] font-bold text-xs uppercase font-mono">
+            <div className="flex items-center gap-2 text-[#e07a9e] font-bold text-xs uppercase font-sans">
               <DollarSign className="w-4 h-4 text-[#e07a9e]" />
               <span>Condiciones del Modelo de Afiliación Fase 1</span>
             </div>
@@ -151,7 +151,7 @@ export function HotelerosAffiliationModal({
               <p className="text-xs text-zinc-300 max-w-md mx-auto">
                 Los datos de <strong className="text-white">{nombreHotel}</strong> se han almacenado exitosamente en la tabla <strong>"Contacto"</strong> de Airtable.
               </p>
-              <div className="p-3 bg-zinc-900 rounded-lg text-[11px] text-zinc-400 border border-zinc-800 font-mono">
+              <div className="p-3 bg-zinc-900 rounded-lg text-[11px] text-zinc-400 border border-zinc-800 font-sans">
                 SLA de Respuesta: Dentro de las próximas 24-48 hrs hábiles el equipo de Luis César Monroy se pondrá en contacto para la auditoría de inventario.
               </div>
               <button
@@ -164,7 +164,7 @@ export function HotelerosAffiliationModal({
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               {feedbackMsg && (
-                <div className="p-3 bg-red-950/40 border border-red-800 rounded-lg text-red-300 text-xs font-mono">
+                <div className="p-3 bg-red-950/40 border border-red-800 rounded-lg text-red-300 text-xs font-sans">
                   {feedbackMsg}
                 </div>
               )}

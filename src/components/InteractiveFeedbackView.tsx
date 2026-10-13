@@ -205,7 +205,7 @@ ${generalComment ? `--- COMENTARIOS GENERALES ---\n${generalComment}\n` : ''}`;
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-zinc-800">
                 <div className="space-y-0.5">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-500">
+                  <span className="text-[10px] font-sans uppercase tracking-wider text-zinc-500">
                     {item.category}
                   </span>
                   <h4 className="text-base font-bold text-white flex items-center gap-2">

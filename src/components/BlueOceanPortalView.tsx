@@ -120,7 +120,7 @@ export function BlueOceanPortalView() {
               <span className="w-2 h-2 rounded-full bg-[#e07a9e] animate-ping" />
               <span>Plataforma de Renta por Tiempo & Pernocta • CDMX</span>
               <span className="text-zinc-500">•</span>
-              <span className="text-[#d4af37] font-mono font-bold">Autoría LCM</span>
+              <span className="text-[#d4af37] font-sans font-bold">Autoría LCM</span>
             </div>
 
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
@@ -156,7 +156,7 @@ export function BlueOceanPortalView() {
         {loading ? (
           <div className="py-20 text-center space-y-3">
             <div className="w-10 h-10 border-2 border-[#e07a9e] border-t-transparent rounded-full animate-spin mx-auto" />
-            <p className="text-xs text-zinc-400 font-mono">Cargando inventario de Airtable...</p>
+            <p className="text-xs text-zinc-400 font-sans">Cargando inventario de Airtable...</p>
           </div>
         ) : (
           <HotelCatalogAndBookingFlow
@@ -196,7 +196,7 @@ export function BlueOceanPortalView() {
 
           <div className="text-center md:text-right text-[11px] text-zinc-500">
             <p>Diseño y Consultoría por <strong>Luis César Monroy</strong> • Todos los derechos reservados</p>
-            <p className="font-mono mt-0.5 text-zinc-400">direccion@oceanrevenue-management.com</p>
+            <p className="font-sans mt-0.5 text-zinc-400">direccion@oceanrevenue-management.com</p>
           </div>
         </div>
       </footer>

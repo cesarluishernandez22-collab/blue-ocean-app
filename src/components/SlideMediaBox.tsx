@@ -92,12 +92,12 @@ export function SlideMediaBox({
           />
           {caption && (
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-blue-950/95 via-blue-950/70 to-transparent p-3 sm:p-4 flex items-end justify-between gap-2">
-              <div className="text-[11px] sm:text-xs font-mono font-bold text-[#f5d77f]">
+              <div className="text-[11px] sm:text-xs font-sans font-bold text-[#f5d77f]">
                 {caption}
               </div>
               <button
                 onClick={() => fileInputRef.current?.click()}
-                className="opacity-0 group-hover:opacity-100 transition px-2 py-1 rounded bg-black/70 hover:bg-black text-[#d4af37] text-[10px] font-mono border border-[#d4af37]/40 cursor-pointer"
+                className="opacity-0 group-hover:opacity-100 transition px-2 py-1 rounded bg-black/70 hover:bg-black text-[#d4af37] text-[10px] font-sans border border-[#d4af37]/40 cursor-pointer"
                 title="Cambiar o actualizar imagen"
               >
                 Reemplazar
@@ -111,7 +111,7 @@ export function SlideMediaBox({
             <ImageIcon className="w-6 h-6" />
           </div>
 
-          <span className="text-[10px] font-mono uppercase text-[#d4af37] font-bold tracking-wider mb-1">
+          <span className="text-[10px] font-sans uppercase text-[#d4af37] font-bold tracking-wider mb-1">
             Espacio Oficial Designado
           </span>
           <h4 className="text-sm font-bold text-white mb-1">
@@ -140,7 +140,7 @@ export function SlideMediaBox({
               </>
             )}
           </button>
-          <span className="text-[10px] text-blue-200/80 mt-2 font-mono">
+          <span className="text-[10px] text-blue-200/80 mt-2 font-sans">
             Selecciona el archivo para incrustarlo de inmediato
           </span>
         </div>
