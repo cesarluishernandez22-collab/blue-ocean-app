@@ -40,6 +40,7 @@ interface ConvocatoriaSliderViewProps {
   setExternalContactOpen?: (open: boolean) => void;
   targetSlide?: number | null;
   onResetTargetSlide?: () => void;
+  onOpenChatbot?: () => void;
 }
 
 interface Slide1Hotel {
@@ -172,7 +173,8 @@ export function ConvocatoriaSliderView({
   externalContactOpen,
   setExternalContactOpen,
   targetSlide,
-  onResetTargetSlide
+  onResetTargetSlide,
+  onOpenChatbot
 }: ConvocatoriaSliderViewProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [internalContactOpen, setInternalContactOpen] = useState(false);
@@ -256,7 +258,7 @@ export function ConvocatoriaSliderView({
   });
 
   return (
-    <div className={`relative w-full min-h-[calc(100vh-64px)] ${containerBg} ${mainTextColor} flex flex-col justify-between overflow-x-hidden overflow-y-auto select-none font-sans transition-colors duration-300 pb-16`}>
+    <div className={`relative w-full min-h-[calc(100vh-64px)] ${containerBg} ${mainTextColor} flex flex-col justify-start overflow-x-hidden overflow-y-auto select-none font-sans transition-colors duration-300 pb-28 sm:pb-24`}>
 
       {/* ========================================================= */}
       {/* 1. BARRA SUPERIOR DE APARTADOS (OCULTABLE PARA GANAR ESPACIO) */}
@@ -407,7 +409,7 @@ export function ConvocatoriaSliderView({
       {/* ========================================================= */}
       {/* 3. CONTENEDOR PRINCIPAL DE LA SECCIÓN ACTIVA */}
       {/* ========================================================= */}
-      <div className={`flex-1 w-full ${currentSlide === 0 ? 'max-w-[1680px]' : 'max-w-6xl'} mx-auto px-3 sm:px-6 py-4 flex flex-col justify-between items-center`}>
+      <div className={`w-full ${currentSlide === 0 ? 'max-w-[1680px]' : 'max-w-6xl'} mx-auto px-3 sm:px-6 py-4 flex flex-col items-stretch space-y-6 h-auto`}>
 
         {/* ========================================================= */}
         {/* SECCIÓN 1: HERO COMPACTO + GALERÍA DE HOTELES MODELO */}
@@ -416,7 +418,7 @@ export function ConvocatoriaSliderView({
         {/* SECCIÓN 1: MOTOR DE RESERVACIÓN DIRECTA - BLUE OCEAN */}
         {/* ========================================================= */}
         {currentSlide === 0 && (
-          <div className="w-full flex flex-col justify-between space-y-3">
+          <div className="w-full flex flex-col space-y-4 h-auto text-left">
             
             {/* HERO PRINCIPAL DE RESERVACIÓN */}
             <div className="bg-[#1E3A66] border border-[#D7B158]/50 rounded-2xl p-3 sm:p-4 shadow-xl relative overflow-hidden">
@@ -424,11 +426,13 @@ export function ConvocatoriaSliderView({
               <div className="absolute top-2.5 right-3 z-20">
                 <button
                   onClick={() => {
-                    if (typeof (window as any).toggleChatbot === 'function') {
+                    if (onOpenChatbot) {
+                      onOpenChatbot();
+                    } else if (typeof (window as any).toggleChatbot === 'function') {
                       (window as any).toggleChatbot();
                     }
                   }}
-                  className="px-2.5 py-1 rounded-lg bg-[#D7B158]/20 hover:bg-[#D7B158]/30 text-[#D7B158] border border-[#D7B158]/40 text-[10px] sm:text-xs font-bold transition cursor-pointer flex items-center gap-1 shadow-sm"
+                  className="px-2.5 py-1 rounded-lg bg-[#D7B158]/20 hover:bg-[#D7B158]/30 text-[#D7B158] border border-[#D7B158]/40 text-[10px] sm:text-xs font-bold transition cursor-pointer flex items-center gap-1 shadow-sm active:scale-95"
                   title="Abrir Chat con Max"
                 >
                   <span>💬 CHAT CON MAX</span>
@@ -606,21 +610,19 @@ export function ConvocatoriaSliderView({
                           </button>
                         </div>
 
-                        <div className="absolute bottom-1 left-1.5 right-1.5">
-                          <p className="text-[10px] text-zinc-300 flex items-center gap-1 truncate">
-                            <MapPin className="w-2.5 h-2.5 text-[#D7B158] shrink-0" />
-                            <span className="truncate">{hotel.zona}</span>
-                          </p>
-                        </div>
                       </div>
 
-                      {/* Datos de Reservación y Tarifas */}
-                      <div className="p-2.5 space-y-2 flex-1 flex flex-col justify-between">
+                      {/* Datos de Reservación y Tarifas (Cero elementos encimados sobre la imagen) */}
+                      <div className="p-3 space-y-2 flex-1 flex flex-col justify-between">
                         <div>
-                          <h4 className="font-bold text-[#F0F2F7] text-xs font-['Trebuchet_MS'] leading-snug line-clamp-1">
+                          <h4 className="font-bold text-[#F0F2F7] text-sm font-['Trebuchet_MS'] leading-snug line-clamp-1">
                             {hotel.nombre}
                           </h4>
-                          <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#12284c] border border-[#D7B158]/30 text-[#D7B158] block truncate mt-0.5">
+                          <p className="text-[10px] text-zinc-300 flex items-center gap-1 truncate mt-0.5">
+                            <MapPin className="w-3 h-3 text-[#D7B158] shrink-0" />
+                            <span className="truncate">{hotel.zona}</span>
+                          </p>
+                          <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#12284c] border border-[#D7B158]/30 text-[#D7B158] inline-block truncate mt-1">
                             {hotel.tag}
                           </span>
                         </div>

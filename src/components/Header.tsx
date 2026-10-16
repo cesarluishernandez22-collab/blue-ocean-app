@@ -40,16 +40,19 @@ export function Header({ setActiveTab, onOpenOnlinePayment }: HeaderProps) {
           </button>
         </div>
 
-        {/* Acciones Obligatorias: Únicamente Pagar en Línea y Teléfono de Reservas */}
-        <div className="flex items-center gap-2.5 sm:gap-3">
+        {/* Acciones Superiores Discretas y Compactas (Regla Estricta: Fondo Oscuro y Logo de Pago) */}
+        <div className="flex items-center gap-2">
           {onOpenOnlinePayment && (
             <button
               onClick={onOpenOnlinePayment}
-              className="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold rounded-xl whitespace-nowrap transition cursor-pointer bg-gradient-to-r from-amber-500 to-[#d4af37] text-zinc-950 hover:from-amber-400 hover:to-amber-300 shadow-md ring-1 ring-[#d4af37]/60 active:scale-95"
-              title="Abrir Pasarela de Pago en Línea"
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-lg whitespace-nowrap transition cursor-pointer bg-[#12284c] hover:bg-[#18325a] text-[#F0F2F7] border border-[#D7B158]/40 shadow-sm active:scale-95"
+              title="Pasarela de Pago Seguro Mercado Pago"
             >
-              <CreditCard className="w-3.5 h-3.5 text-zinc-950" />
-              <span>💳 Pagar en Línea</span>
+              {/* Logo Sutil Azul Mercado Pago */}
+              <svg className="w-3.5 h-3.5 text-[#009EE3]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/>
+              </svg>
+              <span>Pagar en Línea</span>
             </button>
           )}
 
@@ -57,11 +60,12 @@ export function Header({ setActiveTab, onOpenOnlinePayment }: HeaderProps) {
             href="https://wa.me/525512305860?text=Hola%2C%20deseo%20hacer%20una%20reservaci%C3%B3n%20en%20Blue%20Ocean."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition shadow-md active:scale-95"
-            title="Teléfono y WhatsApp de Reservas"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#12284c] hover:bg-[#18325a] text-[#F0F2F7] border border-emerald-500/40 text-xs font-bold transition shadow-sm active:scale-95"
+            title="Reservaciones directas vía WhatsApp"
           >
-            <PhoneCall className="w-3.5 h-3.5" />
-            <span>Tel: +52 55 1230 5860</span>
+            <PhoneCall className="w-3.5 h-3.5 text-emerald-400" />
+            <span className="hidden sm:inline">WhatsApp:</span>
+            <span>+52 55 1230 5860</span>
           </a>
         </div>
       </div>

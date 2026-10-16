@@ -36,6 +36,10 @@ export default function App() {
       .catch((err) => console.error('Failed to load system status:', err));
   }, []);
 
+  useEffect(() => {
+    (window as any).toggleChatbot = () => setIsMaxChatbotOpen((prev) => !prev);
+  }, []);
+
   const handleGoToGraphs = () => {
     setActiveTab('convocatoria');
     setTargetSlide(5); // Lámina 6: Tarifa Dinámica (Gráfica Comparativa)
@@ -73,6 +77,7 @@ export default function App() {
                   setExternalContactOpen={setIsContactModalOpen}
                   targetSlide={targetSlide}
                   onResetTargetSlide={() => setTargetSlide(null)}
+                  onOpenChatbot={() => setIsMaxChatbotOpen(true)}
                 />
               </div>
             )}
@@ -200,18 +205,6 @@ export default function App() {
         isOpen={isMaxChatbotOpen}
         onClose={() => setIsMaxChatbotOpen(false)}
       />
-
-      {/* Botón Flotante de Acceso Rápido al Chatbot Max (Ubicado en la parte superior para no obstruir la navegación inferior en móviles) */}
-      {!isMaxChatbotOpen && (
-        <button
-          onClick={() => setIsMaxChatbotOpen(true)}
-          className="fixed top-20 right-4 z-40 flex items-center gap-2 px-3.5 py-2 bg-[#003366] hover:bg-[#002244] text-white rounded-full shadow-2xl border border-white/20 transition-all hover:scale-105 active:scale-95 text-xs font-semibold tracking-wide cursor-pointer"
-          title="Consultar disponibilidad con Max"
-        >
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-          <span>Max | Recepción</span>
-        </button>
-      )}
     </div>
   );
 }
