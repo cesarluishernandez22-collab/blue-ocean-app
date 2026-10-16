@@ -1,12 +1,14 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap');
 
 @layer base {
   body {
-    font-family: 'Inter', 'Calibri', sans-serif;
+    font-family: 'Calibri', 'Inter', sans-serif;
+    color: #F0F2F7;
+    background-color: #1E3A66;
   }
-  h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
   }
 }
+

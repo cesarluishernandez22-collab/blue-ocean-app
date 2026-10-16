@@ -416,50 +416,66 @@ export function ConvocatoriaSliderView({
         {/* SECCIÓN 1: MOTOR DE RESERVACIÓN DIRECTA - BLUE OCEAN */}
         {/* ========================================================= */}
         {currentSlide === 0 && (
-          <div className="w-full flex flex-col justify-between space-y-3.5">
+          <div className="w-full flex flex-col justify-between space-y-3">
             
             {/* HERO PRINCIPAL DE RESERVACIÓN */}
-            <div className="bg-[#00172e] border-2 border-[#d4af37]/70 rounded-2xl p-3.5 sm:p-5 shadow-2xl">
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="bg-[#1E3A66] border border-[#D7B158]/50 rounded-2xl p-3 sm:p-4 shadow-xl relative overflow-hidden">
+              {/* CHAT CON MAX EN ESQUINA SUPERIOR DERECHA */}
+              <div className="absolute top-2.5 right-3 z-20">
+                <button
+                  onClick={() => {
+                    if (typeof (window as any).toggleChatbot === 'function') {
+                      (window as any).toggleChatbot();
+                    }
+                  }}
+                  className="px-2.5 py-1 rounded-lg bg-[#D7B158]/20 hover:bg-[#D7B158]/30 text-[#D7B158] border border-[#D7B158]/40 text-[10px] sm:text-xs font-bold transition cursor-pointer flex items-center gap-1 shadow-sm"
+                  title="Abrir Chat con Max"
+                >
+                  <span>💬 CHAT CON MAX</span>
+                </button>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-2 sm:pt-0">
                 
-                {/* Título de Marca y Subtítulo Obligatorio */}
-                <div className="text-left space-y-1">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-                    <span className="text-[11px] uppercase font-sans tracking-widest text-[#f5d77f] font-bold">
+                {/* Título de Marca y Subtítulo */}
+                <div className="text-left space-y-0.5">
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="text-[10px] uppercase font-sans tracking-widest text-[#D7B158] font-bold">
                       Disponibilidad Inmediata
                     </span>
                   </div>
-                  <h1 className="text-2xl sm:text-4xl font-black text-[#f5d77f] font-serif tracking-tight leading-tight">
-                    Blue Ocean
+                  <h1 className="text-xl sm:text-3xl font-black text-[#F0F2F7] font-['Trebuchet_MS'] tracking-tight leading-tight">
+                    HOTELES Y SUITES ON LINE
                   </h1>
-                  <p className="text-xs sm:text-sm text-blue-100 font-sans tracking-wide font-medium">
-                    Hoteles y Moteles de renta por hora
+                  <p className="text-xs text-[#D7B158] font-sans tracking-wide font-bold">
+                    BLUE OCEAN
                   </p>
                 </div>
 
-                {/* Acciones Obligatorias: Pagar en Línea y Teléfono WhatsApp */}
-                <div className="shrink-0 flex items-center gap-2.5 sm:gap-3">
+                {/* Botones de Acción Superiores (Compactos y Discretos) */}
+                <div className="shrink-0 flex items-center gap-2 mt-1 sm:mt-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-white/10 w-full sm:w-auto justify-end">
                   <button
                     onClick={() => {
                       setSelectedHotelForPayment(SLIDE1_PROPIEDADES[0]);
                       setPaymentModalOpen(true);
                     }}
-                    className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-[#d4af37] text-zinc-950 font-black text-xs sm:text-sm shadow-md hover:from-amber-400 transition cursor-pointer active:scale-95"
-                    title="Abrir Pasarela de Pago Seguro"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#12284c] hover:bg-[#18325a] text-[#F0F2F7] border border-[#D7B158]/60 font-bold text-xs shadow-sm transition cursor-pointer active:scale-95"
+                    title="Pasarela de Pago Seguro Mercado Pago"
                   >
-                    <CreditCard className="w-4 h-4 text-zinc-950" />
-                    <span>💳 Pagar en Línea</span>
+                    <div className="w-2 h-2 rounded-full bg-cyan-400" />
+                    <CreditCard className="w-3.5 h-3.5 text-[#D7B158]" />
+                    <span>Pagar en Línea</span>
                   </button>
 
                   <a
                     href="https://wa.me/525512305860?text=Hola%2C%20deseo%20hacer%20una%20reservaci%C3%B3n%20en%20Blue%20Ocean."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-md transition active:scale-95"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#12284c] hover:bg-[#18325a] text-[#F0F2F7] border border-emerald-500/50 font-bold text-xs shadow-sm transition active:scale-95"
                     title="Reservar directamente por WhatsApp"
                   >
-                    <MessageCircle className="w-4 h-4 text-[#f5d77f]" />
+                    <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
                     <span>Tel: +52 55 1230 5860</span>
                   </a>
                 </div>
@@ -467,32 +483,32 @@ export function ConvocatoriaSliderView({
               </div>
 
               {/* BARRA DE RESERVACIÓN: SELECCIÓN DE FECHA, TIEMPO DE ESTANCIA Y CATEGORÍA */}
-              <div className="mt-3.5 pt-3 border-t border-blue-900/80 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+              <div className="mt-3 pt-2.5 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
                 
                 {/* Filtro 1: Fecha de Reservación */}
-                <div className="bg-[#002244] border border-blue-700/60 rounded-xl p-2.5 text-left">
-                  <label className="text-[10px] font-sans uppercase text-[#f5d77f] font-bold flex items-center gap-1.5 mb-1">
-                    <Calendar className="w-3.5 h-3.5 text-[#d4af37]" />
+                <div className="bg-[#12284c] border border-[#D7B158]/30 rounded-xl p-2 text-left">
+                  <label className="text-[10px] font-sans uppercase text-[#D7B158] font-bold flex items-center gap-1 mb-1">
+                    <Calendar className="w-3 h-3 text-[#D7B158]" />
                     <span>Fecha de Reservación</span>
                   </label>
                   <input
                     type="date"
                     value={bookingDate}
                     onChange={(e) => setBookingDate(e.target.value)}
-                    className="w-full bg-black/40 text-white text-xs font-semibold rounded-lg p-1.5 border border-blue-500/40 focus:outline-none focus:border-[#d4af37] cursor-pointer"
+                    className="w-full bg-black/30 text-[#F0F2F7] text-xs font-semibold rounded-lg p-1.5 border border-white/10 focus:outline-none focus:border-[#D7B158] cursor-pointer"
                   />
                 </div>
 
                 {/* Filtro 2: Modalidad de Estancia por Hora */}
-                <div className="bg-[#002244] border border-blue-700/60 rounded-xl p-2.5 text-left">
-                  <label className="text-[10px] font-sans uppercase text-[#f5d77f] font-bold flex items-center gap-1.5 mb-1">
-                    <Clock className="w-3.5 h-3.5 text-[#d4af37]" />
+                <div className="bg-[#12284c] border border-[#D7B158]/30 rounded-xl p-2 text-left">
+                  <label className="text-[10px] font-sans uppercase text-[#D7B158] font-bold flex items-center gap-1 mb-1">
+                    <Clock className="w-3 h-3 text-[#D7B158]" />
                     <span>Modalidad de Renta por Tiempo</span>
                   </label>
                   <select
                     value={bookingStayHours}
                     onChange={(e) => setBookingStayHours(e.target.value as any)}
-                    className="w-full bg-black/40 text-white text-xs font-semibold rounded-lg p-1.5 border border-blue-500/40 focus:outline-none focus:border-[#d4af37] cursor-pointer"
+                    className="w-full bg-black/30 text-[#F0F2F7] text-xs font-semibold rounded-lg p-1.5 border border-white/10 focus:outline-none focus:border-[#D7B158] cursor-pointer"
                   >
                     <option value="TODAS">⏱️ Todas las modalidades (4h, 6h o Noche)</option>
                     <option value="4h">⏱️ 4 Horas (Estancia Corta Express)</option>
@@ -502,17 +518,17 @@ export function ConvocatoriaSliderView({
                 </div>
 
                 {/* Filtro 3: Tipo de Habitación / Amenidad */}
-                <div className="bg-[#002244] border border-blue-700/60 rounded-xl p-2.5 text-left">
-                  <label className="text-[10px] font-sans uppercase text-[#f5d77f] font-bold flex items-center gap-1.5 mb-1">
-                    <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" />
+                <div className="bg-[#12284c] border border-[#D7B158]/30 rounded-xl p-2 text-left">
+                  <label className="text-[10px] font-sans uppercase text-[#D7B158] font-bold flex items-center gap-1 mb-1">
+                    <Sparkles className="w-3 h-3 text-[#D7B158]" />
                     <span>Tipo de Habitación</span>
                   </label>
                   <select
                     value={kanbanFilter}
                     onChange={(e) => setKanbanFilter(e.target.value)}
-                    className="w-full bg-black/40 text-white text-xs font-semibold rounded-lg p-1.5 border border-blue-500/40 focus:outline-none focus:border-[#d4af37] cursor-pointer"
+                    className="w-full bg-black/30 text-[#F0F2F7] text-xs font-semibold rounded-lg p-1.5 border border-white/10 focus:outline-none focus:border-[#D7B158] cursor-pointer"
                   >
-                    <option value="TODAS">✨ Todas las Suites y Renders</option>
+                    <option value="TODAS">✨ Todas las Suites y Habitaciones</option>
                     <option value="Insignia">✨ Suite Insignia (Vapor / Jacuzzi Doble)</option>
                     <option value="Express">✨ Suite Express (Renta por Hora Rápida)</option>
                     <option value="Jacuzzi & Spa">✨ Jacuzzi & Spa (Tina Hidromasaje)</option>
@@ -524,22 +540,22 @@ export function ConvocatoriaSliderView({
             </div>
 
             {/* CATÁLOGO DE HOTELES CON RENDERS REALES PARA RESERVACIÓN */}
-            <div className="w-full space-y-2.5">
+            <div className="w-full space-y-2">
               
               <div className="flex items-center justify-between px-1">
                 <div className="flex items-center gap-2">
-                  <Building2 className="w-4 h-4 text-[#f5d77f]" />
-                  <span className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider font-serif">
+                  <Building2 className="w-4 h-4 text-[#D7B158]" />
+                  <span className="text-xs sm:text-sm font-bold text-[#F0F2F7] uppercase tracking-wider font-['Trebuchet_MS']">
                     Selecciona tu Hotel para Reservar
                   </span>
                 </div>
-                <span className="text-xs text-[#f5d77f] font-sans">
-                  Fecha: {bookingDate}
+                <span className="text-xs text-[#D7B158] font-sans">
+                  Fecha: {bookingDate ? bookingDate.split('-').reverse().join('/') : '15/10/2026'}
                 </span>
               </div>
 
-              {/* Grid de Tarjetas con Renders Reales */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-2.5">
+              {/* Grid de Tarjetas estrictamente en 2 Columnas (grid-cols-1 sm:grid-cols-2) */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {filteredHotels.map((hotel) => {
                   const currentPhotoType = cardPhotoView[hotel.id] || 'fachada';
                   const currentImg = currentPhotoType === 'fachada' ? hotel.imgFachada : hotel.imgHabitacion;
@@ -547,7 +563,7 @@ export function ConvocatoriaSliderView({
                   return (
                     <div 
                       key={hotel.id}
-                      className="bg-[#00172e] border border-blue-800/60 hover:border-[#d4af37] rounded-xl overflow-hidden shadow-lg transition-all duration-200 flex flex-col justify-between group text-left"
+                      className="bg-[#1E3A66] border border-[#D7B158]/40 hover:border-[#D7B158] rounded-xl overflow-hidden shadow-lg transition-all duration-200 flex flex-col justify-between group text-left"
                     >
                       {/* Imagen Renderizada (Fachada / Habitación) */}
                       <div className="relative aspect-[16/10] overflow-hidden bg-black">
@@ -567,7 +583,7 @@ export function ConvocatoriaSliderView({
                             }}
                             className={`px-1.5 py-0.5 rounded text-[8px] font-bold transition cursor-pointer ${
                               currentPhotoType === 'fachada'
-                                ? 'bg-[#d4af37] text-black font-black shadow'
+                                ? 'bg-[#D7B158] text-black font-black shadow'
                                 : 'bg-black/70 text-zinc-300 hover:bg-black/90'
                             }`}
                             title="Render: Fachada Principal"
@@ -581,7 +597,7 @@ export function ConvocatoriaSliderView({
                             }}
                             className={`px-1.5 py-0.5 rounded text-[8px] font-bold transition cursor-pointer ${
                               currentPhotoType === 'habitacion'
-                                ? 'bg-[#d4af37] text-black font-black shadow'
+                                ? 'bg-[#D7B158] text-black font-black shadow'
                                 : 'bg-black/70 text-zinc-300 hover:bg-black/90'
                             }`}
                             title="Render: Habitación & Suite"
@@ -592,19 +608,19 @@ export function ConvocatoriaSliderView({
 
                         <div className="absolute bottom-1 left-1.5 right-1.5">
                           <p className="text-[10px] text-zinc-300 flex items-center gap-1 truncate">
-                            <MapPin className="w-2.5 h-2.5 text-[#d4af37] shrink-0" />
+                            <MapPin className="w-2.5 h-2.5 text-[#D7B158] shrink-0" />
                             <span className="truncate">{hotel.zona}</span>
                           </p>
                         </div>
                       </div>
 
                       {/* Datos de Reservación y Tarifas */}
-                      <div className="p-2 space-y-1.5 flex-1 flex flex-col justify-between">
+                      <div className="p-2.5 space-y-2 flex-1 flex flex-col justify-between">
                         <div>
-                          <h4 className="font-bold text-white text-xs font-serif leading-snug line-clamp-1">
+                          <h4 className="font-bold text-[#F0F2F7] text-xs font-['Trebuchet_MS'] leading-snug line-clamp-1">
                             {hotel.nombre}
                           </h4>
-                          <span className="text-[9px] px-1.5 py-0.5 rounded bg-blue-950 border border-blue-700/60 text-blue-200 block truncate mt-0.5">
+                          <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#12284c] border border-[#D7B158]/30 text-[#D7B158] block truncate mt-0.5">
                             {hotel.tag}
                           </span>
                         </div>
@@ -613,11 +629,11 @@ export function ConvocatoriaSliderView({
                         <div className="bg-black/40 rounded-lg p-1.5 border border-white/5 space-y-0.5 text-xs">
                           <div className="flex justify-between items-center text-[11px]">
                             <span className="text-zinc-400">⏱️ 4h:</span>
-                            <span className="font-bold text-[#f5d77f] font-sans">${hotel.tarifa4h}</span>
+                            <span className="font-bold text-[#D7B158] font-sans">${hotel.tarifa4h}</span>
                           </div>
                           <div className="flex justify-between items-center text-[11px]">
                             <span className="text-zinc-400">⏱️ 6h:</span>
-                            <span className="font-bold text-white font-sans">${hotel.tarifa6h}</span>
+                            <span className="font-bold text-[#F0F2F7] font-sans">${hotel.tarifa6h}</span>
                           </div>
                           <div className="flex justify-between items-center text-[11px]">
                             <span className="text-zinc-400">🌙 Noche:</span>
@@ -625,14 +641,14 @@ export function ConvocatoriaSliderView({
                           </div>
                         </div>
 
-                        {/* Botón Único de Reservación Directa */}
+                        {/* Botón Único de Reservación Directa y "Ver fotos y detalles" */}
                         <div className="space-y-1 pt-0.5">
                           <button
                             onClick={() => {
                               setSelectedHotelForPayment(hotel);
                               setPaymentModalOpen(true);
                             }}
-                            className="w-full py-1.5 px-2 rounded-lg bg-[#d4af37] hover:bg-[#c49f27] text-zinc-950 text-xs font-black transition flex items-center justify-center gap-1 cursor-pointer shadow-md active:scale-95"
+                            className="w-full py-1.5 px-2 rounded-lg bg-[#D7B158] hover:bg-[#c59f45] text-zinc-950 text-xs font-black transition flex items-center justify-center gap-1 cursor-pointer shadow-md active:scale-95"
                           >
                             <CreditCard className="w-3.5 h-3.5" />
                             <span>Reservar Ahora</span>
@@ -643,10 +659,10 @@ export function ConvocatoriaSliderView({
                               setActiveHotelDetail(hotel);
                               setActivePhotoTab(currentPhotoType);
                             }}
-                            className="w-full py-1 px-2 rounded-lg bg-blue-950/70 hover:bg-blue-900 text-blue-200 hover:text-white text-[10px] font-semibold transition flex items-center justify-center gap-1 cursor-pointer border border-blue-800/40"
+                            className="w-full py-1 px-2 rounded-lg bg-[#12284c] hover:bg-[#18325a] text-[#F0F2F7] hover:text-white text-[10px] font-semibold transition flex items-center justify-center gap-1 cursor-pointer border border-[#D7B158]/30"
                           >
-                            <Maximize2 className="w-3 h-3" />
-                            <span>Ver Renders Detallados</span>
+                            <Maximize2 className="w-3 h-3 text-[#D7B158]" />
+                            <span>Ver fotos y detalles</span>
                           </button>
                         </div>
                       </div>
@@ -944,8 +960,11 @@ export function ConvocatoriaSliderView({
         {/* ========================================================= */}
         {/* SECCIÓN 3: ¿QUÉ ES EL SISTEMA INTEGRAL BLUE OCEAN? (BLANCO) */}
         {/* ========================================================= */}
+                {/* ========================================================= */}
+        {/* SECCIÓN 3: ¿QUÉ ES EL SISTEMA INTEGRAL BLUE OCEAN? (BLANCO) */}
+        {/* ========================================================= */}
         {currentSlide === 2 && (
-          <div className="w-full bg-[#fcfbf9] border-2 border-[#d4af37]/50 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
+          <div className="w-full bg-[#fcfbf9] border-2 border-[#d4af37]/50 rounded-3xl p-5 sm:p-7 shadow-xl flex flex-col justify-between space-y-4 text-left">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-amber-200/80 pb-3">
               <div>
                 <span className="text-xs font-sans uppercase text-[#b89028] font-bold tracking-widest block">
@@ -958,9 +977,9 @@ export function ConvocatoriaSliderView({
               <LCMLogo size="sm" />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-              <div className="md:col-span-7 space-y-3 text-xs sm:text-sm text-zinc-700 leading-relaxed">
-                <p className="font-bold text-blue-950 text-base">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-center">
+              <div className="md:col-span-7 space-y-2 text-xs sm:text-sm text-zinc-700 leading-relaxed">
+                <p className="font-bold text-blue-950 text-sm sm:text-base">
                   "No inventamos herramientas tecnológicas; articulamos las que ya existen en una cadena de valor indivisible."
                 </p>
                 <p>
@@ -976,13 +995,13 @@ export function ConvocatoriaSliderView({
                   fileName="como trabajamos.jpg"
                   alt="Cómo trabajamos - Sistema Integral Blue Ocean"
                   caption="Especialistas analizando métricas y monitoreo en tiempo real"
-                  aspectClass="h-48 sm:h-56 w-full"
+                  aspectClass="h-40 sm:h-48 w-full"
                 />
               </div>
             </div>
 
             {/* Cadena de Valor Indivisible 8 Pasos */}
-            <div className="space-y-2">
+            <div className="space-y-1.5">
               <span className="text-xs font-bold text-zinc-500 uppercase font-sans block">
                 Cadena de Valor Articulada (8 Módulos de Conversión):
               </span>
@@ -999,7 +1018,7 @@ export function ConvocatoriaSliderView({
                 ].map((s, i) => (
                   <div 
                     key={i} 
-                    className={`p-2.5 rounded-lg text-center text-xs font-bold border transition ${
+                    className={`p-2 rounded-lg text-center text-xs font-bold border transition ${
                       s.gold 
                         ? 'bg-[#d4af37] text-zinc-950 border-[#d4af37] shadow-sm' 
                         : 'bg-zinc-50 text-blue-950 border-zinc-300 shadow-sm'
@@ -1012,8 +1031,36 @@ export function ConvocatoriaSliderView({
               </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 shadow-sm space-y-1 text-xs text-zinc-700">
-              <p className="font-bold text-blue-900 text-sm">Estrategias que juntas gestionan habitaciones vacías.</p>
+            {/* NUEVO BLOQUE: CAPACITACIÓN PROFESIONAL SOLICITADO */}
+            <div className="bg-amber-50/70 border-2 border-amber-300/80 rounded-2xl p-4 sm:p-5 shadow-sm space-y-2.5">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+                <div className="md:col-span-7 space-y-2 text-xs sm:text-sm text-zinc-800 leading-relaxed">
+                  <span className="text-[10px] font-sans uppercase font-bold text-amber-900 bg-amber-200/90 px-2.5 py-0.5 rounded border border-amber-300 inline-block">
+                    Compromiso Central • Educación Continua
+                  </span>
+                  <h3 className="text-sm sm:text-base font-black text-blue-950 font-serif">
+                    Capacitación Profesional: Motor de Transformación del Sector
+                  </h3>
+                  <p className="text-zinc-700 text-xs sm:text-sm">
+                    La verdadera transformación requiere conocimiento. Por ello, la educación y capacitación profesional sin costo para el personal y directivos del hotel forma parte del compromiso central de Blue Ocean.
+                  </p>
+                  <p className="text-zinc-700 text-xs sm:text-sm font-medium">
+                    No se ofrece como un producto adicional ni como un beneficio condicionado a resultados; es una contribución directa a la profesionalización del sector asumida económicamente por Blue Ocean.
+                  </p>
+                </div>
+                <div className="md:col-span-5">
+                  <SlideMediaBox
+                    fileName="capacitacion_profesional.jpg"
+                    alt="Capacitación Profesional y Desarrollo del Personal"
+                    caption="Capacitación profesional sin costo para directivos y personal del hotel"
+                    aspectClass="h-36 sm:h-44 w-full"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="p-3 rounded-xl bg-zinc-50 border border-zinc-200 shadow-sm space-y-0.5 text-xs text-zinc-700">
+              <p className="font-bold text-blue-900 text-xs sm:text-sm">Estrategias que juntas gestionan habitaciones vacías.</p>
               <p>Nuestra Propuesta de Valor: Blue Ocean aporta la tecnología, la integración analítica, la estrategia y el trabajo operativo sin cobros fijos.</p>
             </div>
           </div>
@@ -1048,9 +1095,9 @@ export function ConvocatoriaSliderView({
 
               <div className="space-y-3">
                 <SlideMediaBox
-                  fileName="tecnología.jpg"
-                  alt="Tecnología e Infraestructura de Conectividad"
-                  caption="🌐 Conectividad centralizada: Motores de reserva, APIs y visibilidad digital"
+                  fileName="reserva_hotel.jpg"
+                  alt="Reservación Hotel en Línea"
+                  caption="📱 Sistema de reservación móvil y conversión digital en tiempo real"
                   aspectClass="h-40 sm:h-48 w-full"
                 />
                 <div className="grid grid-cols-2 gap-2.5">
@@ -1440,26 +1487,29 @@ export function ConvocatoriaSliderView({
                 Apartado 08 • Anticipación Estratégica
               </span>
               <h2 className="text-xl sm:text-2xl font-black text-blue-950 font-serif">
-                El Forecasting en el Total Revenue Management
+                El Pronóstico y su Importancia
               </h2>
             </div>
 
-            <div className="p-5 rounded-xl bg-amber-500/15 border border-[#d4af37] text-center">
-              <h3 className="text-base sm:text-xl font-black text-blue-950 font-serif leading-snug">
-                "El Forecasting no intenta adivinar lo que ocurrirá. Nos permite tomar decisiones antes de que SUCEDAN LAS COSAS."
-              </h3>
-            </div>
-
-            <div className="text-xs sm:text-sm text-zinc-700 space-y-2 text-center max-w-3xl mx-auto">
-              <p>El corazón del Total Revenue Management es el Forecasting. Sin él, la estrategia se convierte en una simple reacción a la baja ocupación.</p>
+            {/* Texto solicitado como primera línea con ortografía revisada */}
+            <div className="p-4 rounded-2xl bg-amber-50/80 border-2 border-amber-300 shadow-sm space-y-2 text-xs sm:text-sm text-zinc-800 leading-relaxed">
+              <p className="font-semibold text-zinc-800">
+                El pronóstico es la estimación anticipada de la demanda futura. Es la base del Revenue Management y permite tomar decisiones de precio, inventario y estrategia basadas en datos y métodos analíticos.
+              </p>
+              <blockquote className="font-bold text-blue-950 italic border-l-4 border-[#d4af37] pl-3 py-0.5">
+                "No bastaba con pronosticar cuántos huéspedes habrá".
+              </blockquote>
+              <p className="text-zinc-800">
+                Un forecast bien estructurado con datos sólidos, nos anticipa además de cuánto podemos vender a saber cuándo reservarán y cuánto están dispuestos a pagar.
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-center flex-1">
               <div className="md:col-span-5">
                 <SlideMediaBox
-                  fileName="analisis.jpg"
-                  alt="Análisis y Tendencias de Forecasting"
-                  caption="Curvas analíticas y predicción de demanda"
+                  fileName="Forecasting.jpg"
+                  alt="El Pronóstico y su Importancia - Forecasting"
+                  caption="Gráficas de pronóstico y estimación anticipada de demanda"
                   aspectClass="h-48 sm:h-56 w-full"
                 />
               </div>
@@ -1487,65 +1537,63 @@ export function ConvocatoriaSliderView({
         )}
 
         {/* ========================================================= */}
-        {/* SECCIÓN 9: CANALES DE DISTRIBUCIÓN (BLANCO) */}
+        {/* SECCIÓN 9: SEGMENTACIÓN Y CANALES DE DISTRIBUCIÓN (BLANCO) */}
         {/* ========================================================= */}
         {currentSlide === 8 && (
           <div className="w-full bg-white border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
             <div>
               <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
-                Apartado 09 • Canales Comerciales
+                Apartado 09 • Segmentación y Canales
               </span>
-              <h2 className="text-2xl sm:text-4xl font-black text-blue-950 font-serif">
-                Canales de distribución
+              <h2 className="text-2xl sm:text-3xl font-black text-blue-950 font-serif">
+                Segmentación y Canales de Distribución
               </h2>
             </div>
 
-            <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed max-w-3xl">
-              Apertura de demanda directa: clientes de microestancia, parejas por horas y convenios de descanso para transportistas de carga en corredores logísticos.
-            </p>
+            {/* Imagen 1: Al inicio del bloque antes del texto */}
+            <SlideMediaBox
+              fileName="omnicanalidad.jpg"
+              alt="Omnicanalidad y Canales de Distribución"
+              caption="Conectividad omnicanal: Canales digitales, móviles y de atención directa"
+              aspectClass="h-40 sm:h-52 w-full"
+            />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 flex-1">
-              
-              {/* Canal Parejas */}
-              <div className="p-6 rounded-2xl bg-zinc-50 border-2 border-blue-900/20 shadow-md space-y-3 flex flex-col justify-between">
-                <div>
-                  <span className="px-3 py-1 rounded-full bg-rose-100 text-rose-900 font-bold text-xs uppercase">
-                    Canal B2C Directo
-                  </span>
-                  <h3 className="text-lg font-black text-blue-950 font-serif mt-2">
-                    Parejas & Microestancias
-                  </h3>
-                  <p className="text-xs sm:text-sm text-zinc-600 mt-2 leading-relaxed">
-                    Captación digital de alta discreción orientada a estancias cortas de 4 a 6 horas y fines de semana. Reserva sin fricción y acceso vehicular directo.
-                  </p>
-                </div>
-                <div className="p-3 rounded-lg bg-white border border-zinc-200 text-xs font-sans text-zinc-700">
-                  Mayor ticket promedio por rotación en viernes, sábados y fechas especiales.
-                </div>
+            {/* Párrafo 1 */}
+            <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 shadow-sm text-xs sm:text-sm text-zinc-700 leading-relaxed">
+              <p>
+                El objetivo principal de la gestión de ingresos es vender el producto correcto al cliente correcto, en el momento correcto, por el precio correcto. Es alinear los precios de tus productos y luego distribuirlos estratégicamente en los canales adecuados a los clientes adecuados.
+              </p>
+            </div>
+
+            {/* Imagen 2: En medio de los textos */}
+            <SlideMediaBox
+              fileName="canales_distribucion.jpg"
+              alt="Canales de Distribución y Segmentación"
+              caption="Red global de distribución y segmentación de mercado"
+              aspectClass="h-40 sm:h-52 w-full"
+            />
+
+            {/* Párrafo 2 */}
+            <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 shadow-sm text-xs sm:text-sm text-zinc-700 leading-relaxed">
+              <p>
+                La segmentación es un medio para dividir el mercado en segmentos que son definibles, accesibles, accionables y rentables, y que tienen potencial de crecimiento.
+              </p>
+              <p className="mt-2 font-medium text-blue-950">
+                El objetivo con la segmentación es mostrar una comprensión de cómo agrupar a los tipos de clientes.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              <div className="p-4 rounded-xl bg-blue-50 border border-blue-200 text-xs text-blue-950">
+                <strong>Canal B2C Directo:</strong> Parejas y microestancias con reserva sin fricción y acceso vehicular directo.
               </div>
-
-              {/* Canal Convenios Transportistas */}
-              <div className="p-6 rounded-2xl bg-zinc-50 border-2 border-blue-900/20 shadow-md space-y-3 flex flex-col justify-between">
-                <div>
-                  <span className="px-3 py-1 rounded-full bg-cyan-100 text-cyan-900 font-bold text-xs uppercase">
-                    Canal B2B Convenios
-                  </span>
-                  <h3 className="text-lg font-black text-blue-950 font-serif mt-2">
-                    Convenios Logísticos y Descanso
-                  </h3>
-                  <p className="text-xs sm:text-sm text-zinc-600 mt-2 leading-relaxed">
-                    Llenado de horas muertas de lunes a jueves con operadores de carga y paquetería que requieren descanso diurno seguro, estacionamiento y regadera.
-                  </p>
-                </div>
-                <div className="p-3 rounded-lg bg-white border border-zinc-200 text-xs font-sans text-zinc-700">
-                  Flujo de caja garantizado durante horarios valle (10:00 AM a 4:00 PM).
-                </div>
+              <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-950">
+                <strong>Canal B2B Convenios:</strong> Llenado de horas muertas con operadores de carga y paquetería en horarios valle.
               </div>
-
             </div>
 
             <div className="text-center text-xs font-sans text-blue-900 font-bold">
-              direccion@oceanrevenue-management.com
+              Metodología Total Revenue Management • L.C. Monroy
             </div>
           </div>
         )}
