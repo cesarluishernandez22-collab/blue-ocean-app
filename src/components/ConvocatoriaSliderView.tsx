@@ -26,7 +26,12 @@ import {
   Check,
   Percent,
   CreditCard,
-  MessageCircle
+  MessageCircle,
+  GraduationCap,
+  Handshake,
+  BookOpen,
+  Award,
+  ArrowDown
 } from 'lucide-react';
 import { LCMLogo } from './LCMLogo';
 import { OnlinePaymentModal } from './OnlinePaymentModal';
@@ -154,17 +159,17 @@ const SLIDE1_PROPIEDADES: Slide1Hotel[] = [
 ];
 
 const SECCIONES_TITULOS = [
-  { num: '01', title: 'Portada & Hoteles', icon: '🏢' },
-  { num: '02', title: '¿Qué es Blue Ocean?', icon: '🌊' },
-  { num: '03', title: 'Sistema Blue Ocean', icon: '⚙️' },
-  { num: '04', title: 'Captación en Línea', icon: '💻' },
-  { num: '05', title: 'TRM vs RM (Gráfica)', icon: '📊', isGraph: true },
-  { num: '06', title: 'TARIFA DINÁMICA (Gráfica)', icon: '📈', isGraph: true },
-  { num: '07', title: '¿Qué es el Pricing?', icon: '💡', isGraph: true },
-  { num: '08', title: 'El Forecasting', icon: '⏱️' },
-  { num: '09', title: 'Canales Distribución', icon: '🛣️' },
-  { num: '10', title: 'PROYECCIÓN IMPACTO (Gráfica)', icon: '📊', isGraph: true },
-  { num: '11', title: 'Cierre Institucional', icon: '🤝' }
+  { num: '01', title: 'Portada & Hoteles' },
+  { num: '02', title: '¿Qué es Blue Ocean?' },
+  { num: '03', title: 'Sistema Blue Ocean' },
+  { num: '04', title: 'Captación en Línea' },
+  { num: '05', title: 'TRM vs RM (Gráfica)', isGraph: true },
+  { num: '06', title: 'TARIFA DINÁMICA (Gráfica)', isGraph: true },
+  { num: '07', title: '¿Qué es el Pricing?', isGraph: true },
+  { num: '08', title: 'El Forecasting' },
+  { num: '09', title: 'Canales Distribución' },
+  { num: '10', title: 'PROYECCIÓN IMPACTO (Gráfica)', isGraph: true },
+  { num: '11', title: 'Cierre Institucional' }
 ];
 
 export function ConvocatoriaSliderView({ 
@@ -258,14 +263,12 @@ export function ConvocatoriaSliderView({
   });
 
   return (
-    <div className={`relative w-full min-h-[calc(100vh-64px)] ${containerBg} ${mainTextColor} flex flex-col justify-start overflow-x-hidden overflow-y-auto select-none font-sans transition-colors duration-300 pb-28 sm:pb-24`}>
+    <div className={`relative w-full h-[calc(100vh-64px)] max-h-[calc(100vh-64px)] ${containerBg} ${mainTextColor} flex flex-col justify-between overflow-hidden select-none font-sans transition-colors duration-300 pb-16`}>
 
       {/* ========================================================= */}
       {/* 1. BARRA SUPERIOR DE APARTADOS (OCULTABLE PARA GANAR ESPACIO) */}
       {/* ========================================================= */}
-      {currentSlide > 0 && (
-        <>
-          {showTopNav ? (
+      {showTopNav ? (
             <>
               <div className={`w-full ${isBlueSlide ? 'bg-[#00172e] border-blue-900/60' : 'bg-white border-zinc-200'} border-b px-3 sm:px-6 py-2 shrink-0 z-20 shadow-sm`}>
                 <div className="max-w-[1680px] mx-auto flex items-center justify-between gap-3 overflow-x-auto no-scrollbar">
@@ -298,7 +301,6 @@ export function ConvocatoriaSliderView({
                           }`}
                           title={`Ir a ${sec.num}. ${sec.title}`}
                         >
-                          <span>{sec.icon}</span>
                           <span>{sec.num}. {sec.title}</span>
                           {sec.isGraph && (
                             <span className="text-[9px] px-1 py-0.2 rounded bg-amber-400 text-black font-extrabold uppercase">
@@ -403,13 +405,11 @@ export function ConvocatoriaSliderView({
               </button>
             </div>
           )}
-        </>
-      )}
 
       {/* ========================================================= */}
       {/* 3. CONTENEDOR PRINCIPAL DE LA SECCIÓN ACTIVA */}
       {/* ========================================================= */}
-      <div className={`w-full ${currentSlide === 0 ? 'max-w-[1680px]' : 'max-w-6xl'} mx-auto px-3 sm:px-6 py-4 flex flex-col items-stretch space-y-6 h-auto`}>
+      <div className="flex-1 w-full max-w-[1680px] mx-auto px-2 sm:px-6 py-2 sm:py-3 flex flex-col items-stretch overflow-hidden min-h-0">
 
         {/* ========================================================= */}
         {/* SECCIÓN 1: HERO COMPACTO + GALERÍA DE HOTELES MODELO */}
@@ -420,6 +420,42 @@ export function ConvocatoriaSliderView({
         {currentSlide === 0 && (
           <div className="w-full flex flex-col space-y-4 h-auto text-left">
             
+            {/* PORTADA FOTOGRÁFICA DE BIENVENIDA */}
+            <div className="relative w-full h-[250px] sm:h-[300px] md:h-[340px] rounded-2xl overflow-hidden shadow-2xl border border-blue-900/40">
+              {/* Imagen a todo el ancho, recortada al centro */}
+              <img
+                src="/images/slides/habitacion.modelo.web.jpg"
+                alt="Hoteles y Moteles - Blue Ocean"
+                onError={(e) => {
+                  (e.target as any).src = '/habitacion.modelo.web.jpg';
+                }}
+                className="w-full h-full object-cover object-center"
+              />
+
+              {/* Sombra azul marino suave, más oscura arriba y abajo */}
+              <div className="absolute inset-0 bg-gradient-to-b from-[#00172e]/85 via-[#002244]/40 to-[#00172e]/90 pointer-events-none" />
+
+              {/* Contenido en texto real (en blanco) */}
+              <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between z-10 pointer-events-none">
+                {/* Arriba, centrado y en mayúsculas */}
+                <div className="w-full text-center">
+                  <span className="text-xs sm:text-sm font-black uppercase tracking-[0.25em] text-white/95 font-sans drop-shadow-md">
+                    HOTELES Y MOTELES
+                  </span>
+                </div>
+
+                {/* Abajo a la izquierda */}
+                <div className="text-left space-y-1">
+                  <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-white font-['Trebuchet_MS'] tracking-tight drop-shadow-lg leading-tight">
+                    Blue Ocean
+                  </h2>
+                  <p className="text-xs sm:text-base font-medium text-white/95 drop-shadow-md font-sans">
+                    Captamos la demanda digital que tu propiedad necesita
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* HERO PRINCIPAL DE RESERVACIÓN */}
             <div className="bg-[#1E3A66] border border-[#D7B158]/50 rounded-2xl p-3 sm:p-4 shadow-xl relative overflow-hidden">
               {/* CHAT CON MAX EN ESQUINA SUPERIOR DERECHA */}
@@ -458,7 +494,16 @@ export function ConvocatoriaSliderView({
                 </div>
 
                 {/* Botones de Acción Superiores (Compactos y Discretos) */}
-                <div className="shrink-0 flex items-center gap-2 mt-1 sm:mt-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-white/10 w-full sm:w-auto justify-end">
+                <div className="shrink-0 flex flex-wrap items-center gap-2 mt-1 sm:mt-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-white/10 w-full sm:w-auto justify-end">
+                  <button
+                    onClick={() => setIsContactOpen(true)}
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#D7B158] hover:bg-[#c49f27] text-zinc-950 font-bold text-xs shadow-sm transition cursor-pointer active:scale-95"
+                    title="Agrega tu propiedad a la plataforma Blue Ocean"
+                  >
+                    <Building2 className="w-3.5 h-3.5 text-zinc-950" />
+                    <span>Agrega tu propiedad</span>
+                  </button>
+
                   <button
                     onClick={() => {
                       setSelectedHotelForPayment(SLIDE1_PROPIEDADES[0]);
@@ -514,10 +559,10 @@ export function ConvocatoriaSliderView({
                     onChange={(e) => setBookingStayHours(e.target.value as any)}
                     className="w-full bg-black/30 text-[#F0F2F7] text-xs font-semibold rounded-lg p-1.5 border border-white/10 focus:outline-none focus:border-[#D7B158] cursor-pointer"
                   >
-                    <option value="TODAS">⏱️ Todas las modalidades (4h, 6h o Noche)</option>
-                    <option value="4h">⏱️ 4 Horas (Estancia Corta Express)</option>
-                    <option value="6h">⏱️ 6 Horas (Estancia Confort)</option>
-                    <option value="noche">🌙 Noche Completa (Pernocta)</option>
+                    <option value="TODAS">Todas las modalidades (4h, 6h o Noche)</option>
+                    <option value="4h">4 Horas (Estancia Corta Express)</option>
+                    <option value="6h">6 Horas (Estancia Confort)</option>
+                    <option value="noche">Noche Completa (Pernocta)</option>
                   </select>
                 </div>
 
@@ -532,11 +577,11 @@ export function ConvocatoriaSliderView({
                     onChange={(e) => setKanbanFilter(e.target.value)}
                     className="w-full bg-black/30 text-[#F0F2F7] text-xs font-semibold rounded-lg p-1.5 border border-white/10 focus:outline-none focus:border-[#D7B158] cursor-pointer"
                   >
-                    <option value="TODAS">✨ Todas las Suites y Habitaciones</option>
-                    <option value="Insignia">✨ Suite Insignia (Vapor / Jacuzzi Doble)</option>
-                    <option value="Express">✨ Suite Express (Renta por Hora Rápida)</option>
-                    <option value="Jacuzzi & Spa">✨ Jacuzzi & Spa (Tina Hidromasaje)</option>
-                    <option value="Villas">✨ Villas Privadas (Cochera Cerrada)</option>
+                    <option value="TODAS">Todas las Suites y Habitaciones</option>
+                    <option value="Insignia">Suite Insignia (Vapor / Jacuzzi Doble)</option>
+                    <option value="Express">Suite Express (Renta por Hora Rápida)</option>
+                    <option value="Jacuzzi & Spa">Jacuzzi & Spa (Tina Hidromasaje)</option>
+                    <option value="Villas">Villas Privadas (Cochera Cerrada)</option>
                   </select>
                 </div>
 
@@ -685,277 +730,73 @@ export function ConvocatoriaSliderView({
         {/* ========================================================= */}
         {/* SECCIÓN 2: ¿QUÉ ES BLUE OCEAN? Y SISTEMA INTEGRAL (UNIFICADO CON SCROLL - FONDO #fcfbf9) */}
         {/* ========================================================= */}
+        {/* ========================================================= */}
+        {/* SECCIÓN 2: PLANTILLA CANVA - ESTRUCTURA 2 COLUMNAS, FLUJO PARALELO Y SECCIÓN AZUL */}
+        {/* ========================================================= */}
         {currentSlide === 1 && (
-          <div className="w-full bg-[#fcfbf9] border-2 border-[#d4af37]/60 rounded-3xl p-5 sm:p-7 shadow-xl text-left max-h-[calc(100vh-130px)] overflow-y-auto pr-2 sm:pr-4 space-y-6 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:bg-[#d4af37]/50 [&::-webkit-scrollbar-track]:bg-amber-50/50">
-            {/* Encabezado Institucional de la Lámina Unificada */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b-2 border-amber-200/90 pb-4 sticky top-0 bg-[#fcfbf9]/95 backdrop-blur-sm z-10">
+          <div className="w-full h-full max-h-full bg-[#fcfbf9] rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl text-left border border-zinc-200/90 flex flex-col justify-between overflow-hidden min-h-0">
+            
+            {/* ENCABEZADO INSTITUCIONAL (COMPACTO Y ELEGANTE) */}
+            <div className="flex items-center justify-between gap-4 border-b border-zinc-200/90 pb-3 shrink-0">
               <div>
-                <span className="text-xs font-sans uppercase text-[#b89028] font-bold tracking-widest block">
-                  Apartado 02 • Modelo, Fundamentos & Sistema Integral
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-black text-blue-950 font-serif tracking-tight">
-                  BLUE OCEAN
-                </h2>
-                <p className="text-xs sm:text-sm font-semibold text-blue-900/90 pt-0.5">
-                  Estrategia, Tecnología y Rentabilidad para la Hotelería de Renta por Hora
-                </p>
-              </div>
-              <LCMLogo size="sm" />
-            </div>
-
-            {/* BLOQUE 1: PROPÓSITO CENTRAL Y DEFINICIÓN DEL MODELO */}
-            <div className="bg-white border-2 border-amber-300/80 rounded-2xl p-5 sm:p-6 shadow-sm space-y-4">
-              <div className="flex items-center gap-2">
-                <span className="text-[11px] uppercase font-sans font-bold text-amber-900 bg-amber-100/90 px-3 py-1 rounded border border-amber-300">
-                  Definición & Propósito
-                </span>
-                <span className="text-xs font-black text-blue-950 uppercase tracking-wide">
-                  Modelo de Rentabilidad Especializado
-                </span>
-              </div>
-              <p className="text-sm sm:text-base text-zinc-800 leading-relaxed">
-                <strong className="text-blue-950 font-black">Blue Ocean</strong> es un <strong className="text-blue-950 font-bold">modelo de rentabilidad diseñado específicamente para hoteles de renta por hora</strong>. Integra una <strong className="text-blue-950 font-bold">plataforma tecnológica</strong>, <strong className="text-blue-950 font-bold">estrategias comerciales</strong>, <strong className="text-blue-950 font-bold">Revenue Management</strong> e <strong className="text-blue-950 font-bold">inteligencia de datos</strong> para identificar oportunidades, generar nuevas reservas y <strong className="text-emerald-800 font-bold">aprovechar al máximo el potencial de cada propiedad</strong>.
-              </p>
-
-              {/* IMAGEN OFICIAL: PROYECCIÓN DE RENTABILIDAD & CRECIMIENTO */}
-              <SlideMediaBox
-                fileName="Imagen que es Blue Ocean.jpg"
-                alt="¿Qué es Blue Ocean? - Proyección de Rentabilidad y Crecimiento"
-                caption="📈 Gráfica de Proyección y Rentabilidad Dinámica • Medición de Desempeño y Crecimiento"
-                aspectClass="h-56 sm:h-72 w-full"
-                className="my-3"
-              />
-
-              <div className="p-3.5 rounded-xl bg-blue-50/80 border border-blue-200 text-xs sm:text-sm text-blue-950 leading-relaxed">
-                <strong className="font-bold text-blue-900">El propósito principal es claro:</strong> generar más reservas en un mercado que ya está digitalizado. Centraliza la operación comercial y conecta a tu establecimiento con nuevas oportunidades de negocio, ofreciendo herramientas profesionales para mejorar la ocupación y la rentabilidad.
-              </div>
-              <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed italic border-l-4 border-[#d4af37] pl-3 py-1">
-                <strong>Simplicidad para el hotelero:</strong> no necesita convertirse en un experto en tecnología ni en Revenue Management, ni requiere desarrollar sistemas propios o complejos. Blue Ocean proporciona toda la infraestructura, gestiona la complejidad técnica y acompaña la implementación en todo momento.
-              </p>
-            </div>
-
-            {/* BLOQUE 2: BASES ESTRATÉGICAS Y RESPALDO DEL CREADOR (CREDENCIALES COMPLETAS) */}
-            <div className="bg-white border-2 border-[#d4af37]/60 rounded-2xl p-5 sm:p-6 shadow-md space-y-4">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-amber-200 pb-3">
-                <div className="flex items-center gap-2">
-                  <span className="text-[11px] uppercase font-sans font-bold text-blue-950 bg-blue-100/90 px-3 py-1 rounded border border-blue-200">
-                    Bases Estratégicas & Credenciales
-                  </span>
-                  <h3 className="text-sm sm:text-base font-black text-blue-950 font-serif">
-                    Respaldo del Creador: Confianza y Fundamento Profesional
-                  </h3>
-                </div>
-                <span className="text-xs font-sans font-bold text-amber-800 bg-amber-50 px-2.5 py-1 rounded border border-amber-200">
-                  30+ Años de Experiencia
-                </span>
-              </div>
-
-              <p className="text-xs sm:text-sm text-zinc-800 leading-relaxed">
-                Blue Ocean <strong className="text-blue-950 font-bold">no es una propuesta teórica ni un experimento improvisado</strong>; es un proyecto concebido, diseñado y construido desde el conocimiento profundo de la industria hotelera y la aplicación práctica de herramientas de gestión de demanda de nivel internacional.
-              </p>
-
-              {/* Trayectoria Corporativa con Cadenas de Alto Nivel */}
-              <div className="p-4 rounded-xl bg-amber-50/70 border border-amber-200/90 space-y-2">
-                <span className="text-xs font-sans uppercase tracking-wider text-amber-900 font-bold block">
-                  Trayectoria en Cadenas Hoteleras Corporativas
-                </span>
-                <p className="text-xs sm:text-sm text-zinc-800 leading-relaxed">
-                  El desarrollo del modelo está respaldado por <strong className="text-blue-950 font-bold">más de 30 años de experiencia comercial y estratégica</strong> dentro del sector hotelero corporativo y de gestión de viajes, colaborando con marcas de alto nivel y liderando proyectos en:
-                </p>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 text-center">
-                  <div className="p-2 bg-white rounded-lg border border-amber-300 font-bold text-xs text-blue-950 shadow-sm">
-                    🏨 Meliá Hotels
-                  </div>
-                  <div className="p-2 bg-white rounded-lg border border-amber-300 font-bold text-xs text-blue-950 shadow-sm">
-                    🏨 Barceló Hotel Group
-                  </div>
-                  <div className="p-2 bg-white rounded-lg border border-amber-300 font-bold text-xs text-blue-950 shadow-sm">
-                    🏨 Grupo Vidanta
-                  </div>
-                  <div className="p-2 bg-white rounded-lg border border-amber-300 font-bold text-xs text-blue-950 shadow-sm">
-                    🏨 Grupo Posadas
-                  </div>
-                </div>
-              </div>
-
-              {/* Credenciales Académicas Oficiales y Especializadas */}
-              <div className="space-y-2">
-                <span className="text-xs font-sans uppercase tracking-wider text-blue-950 font-bold block">
-                  Preparación Académica Especializada & Certificaciones de Autoridad:
-                </span>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
-                  <div className="p-3 bg-blue-50/60 rounded-xl border border-blue-200 space-y-1">
-                    <span className="text-xs font-black text-blue-950 block">
-                      🎓 ESSEC Business School
-                    </span>
-                    <p className="text-xs text-zinc-700">
-                      <strong>Especialidad en Revenue Management y Gestión de Demanda:</strong> Técnicas avanzadas de optimización de capacidad y yield management de clase mundial.
-                    </p>
-                  </div>
-
-                  <div className="p-3 bg-blue-50/60 rounded-xl border border-blue-200 space-y-1">
-                    <span className="text-xs font-black text-blue-950 block">
-                      🎓 Starweaver
-                    </span>
-                    <p className="text-xs text-zinc-700">
-                      <strong>Máster en Finanzas Hoteleras:</strong> Análisis de rentabilidad de activos inmobiliarios, estructura de costos y retorno sobre inversión operativa.
-                    </p>
-                  </div>
-
-                  <div className="p-3 bg-amber-50/80 rounded-xl border border-amber-200 space-y-1">
-                    <span className="text-xs font-black text-amber-950 block">
-                      🇦🇪 Dubai College of Tourism
-                    </span>
-                    <p className="text-xs text-zinc-700">
-                      <strong>Certificación en Hospitalidad Operativa:</strong> Avalada por el Gobierno de los Emiratos Árabes Unidos en estándares de excelencia de servicio.
-                    </p>
-                  </div>
-
-                  <div className="p-3 bg-amber-50/80 rounded-xl border border-amber-200 space-y-1">
-                    <span className="text-xs font-black text-amber-950 block">
-                      📊 Microsoft & Google
-                    </span>
-                    <p className="text-xs text-zinc-700">
-                      <strong>Certificaciones en Análisis de Datos y Negocios:</strong> Arquitectura de bases de datos, analítica predictiva y automatización comercial.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Dos Años de Investigación Inmersiva en Campo */}
-              <div className="p-4 rounded-xl bg-gradient-to-r from-blue-950 to-[#00172e] text-white space-y-2 border border-[#d4af37]/60 shadow-sm">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-sans uppercase tracking-wider text-[#f5d77f] font-bold">
-                    Origen del Modelo • 2 Años de Investigación Inmersiva
-                  </span>
-                  <span className="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 px-2 py-0.5 rounded font-sans font-bold">
-                    Investigación en Campo
+                <div className="flex items-center gap-2 mb-0.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#1E3A66]" />
+                  <span className="text-[10px] sm:text-xs font-sans uppercase font-bold tracking-widest text-[#1E3A66]">
+                    Apartado 02 • Modelo, Estrategia & Metodología
                   </span>
                 </div>
-                <p className="text-xs sm:text-sm text-blue-100 leading-relaxed">
-                  Blue Ocean es el resultado de <strong className="text-white">dos años de investigación inmersiva profesional</strong> dedicados a conocer, estudiar y documentar el funcionamiento real y operativo de los hoteles de renta por hora.
+                <h1 className="text-xl sm:text-3xl font-extrabold text-[#1E3A66] font-['Trebuchet_MS'] tracking-tight">
+                  ¿QUÉ ES BLUE OCEAN?
+                </h1>
+                <p className="text-[11px] sm:text-xs font-semibold text-zinc-600">
+                  Modelo de Rentabilidad y Metodología Especializada para la Hotelería de Renta por Hora
                 </p>
-                <p className="text-xs text-blue-200/90 leading-relaxed">
-                  Este sector posee una <strong className="text-[#f5d77f]">naturaleza única que lo distingue por completo de la hotelería convencional</strong>: rotación constante por hora, microestancias, picos abruptos de demanda y retos cotidianos de control operativo. Por ello, no se trata de trasladar a ciegas fórmulas de cadenas, sino de adaptar las mejores metodologías a su realidad concreta.
-                </p>
+              </div>
+              <div className="shrink-0">
+                <LCMLogo size="sm" />
               </div>
             </div>
 
-
-
-            {/* BLOQUE 3: MÉTRICA ESPECIALIZADA (RevPASH) Y ENFOQUE OPERATIVO */}
-            <div className="bg-white border border-amber-200/90 rounded-2xl p-5 sm:p-6 shadow-sm space-y-4">
-              <div className="flex items-center gap-2">
-                <span className="text-[11px] uppercase font-sans font-bold text-amber-900 bg-amber-100/90 px-3 py-1 rounded border border-amber-300">
-                  Métrica Exclusiva
-                </span>
-                <h3 className="text-sm sm:text-base font-black text-blue-950 font-serif">
-                  Estrategias Comerciales, Revenue Management y Medición (RevPASH)
-                </h3>
-              </div>
+            {/* CONTENIDO PRINCIPAL: DOS COLUMNAS A PANTALLA COMPLETA SIN SCROLL */}
+            <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 items-stretch pt-3 sm:pt-4 overflow-hidden min-h-0">
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200 space-y-1.5">
-                  <span className="text-xs font-bold text-blue-950 block">
-                    🧠 Inteligencia de Datos para Decisiones Certeras
-                  </span>
-                  <p className="text-xs text-zinc-700 leading-relaxed">
-                    Convierte los datos en información útil. Analiza la información propia del hotel junto con variables externas del entorno y del mercado para detectar patrones de demanda. Las decisiones comerciales dejan de depender de la intuición y se apoyan en datos claros.
+              {/* Columna Izquierda: Texto Libre y Limpio */}
+              <div className="flex flex-col justify-between space-y-3 sm:space-y-4 text-left overflow-y-auto no-scrollbar pr-1">
+                <div className="space-y-3">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1E3A66]/10 text-[#1E3A66] text-xs font-bold font-sans">
+                    <span>Ecosistema & Modelo Comercial</span>
+                  </div>
+
+                  <p className="text-sm sm:text-base lg:text-lg text-zinc-900 leading-relaxed font-semibold">
+                    <strong className="text-[#1E3A66] font-black">Blue Ocean</strong> es un modelo de rentabilidad diseñado específicamente para hoteles de renta por hora. Integra una plataforma tecnológica, estrategias comerciales, Revenue Management e inteligencia de datos para identificar oportunidades, generar nuevas reservas y aprovechar al máximo el potencial de cada propiedad.
+                  </p>
+
+                  <p className="text-xs sm:text-sm lg:text-base text-zinc-700 leading-relaxed">
+                    <strong className="text-[#1E3A66] font-bold">El propósito principal es claro:</strong> generar más reservas en un mercado que ya está digitalizado. Centraliza la operación comercial y conecta a tu establecimiento con nuevas oportunidades de negocio, ofreciendo herramientas profesionales para mejorar la ocupación y la rentabilidad.
                   </p>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200 space-y-1.5">
-                  <span className="text-xs font-bold text-amber-950 block">
-                    ⏱️ Métrica Especializada (RevPASH)
-                  </span>
-                  <p className="text-xs text-zinc-700 leading-relaxed">
-                    Cada hora disponible en una habitación representa una oportunidad de ingreso. El uso del <strong>RevPASH (Revenue Per Available Space Hour)</strong> permite evaluar el rendimiento real de la capacidad en relación con el tiempo, detectar horas de oportunidad a lo largo del día y mejorar el aprovechamiento de cada habitación.
-                  </p>
+                <div className="text-xs sm:text-sm text-zinc-700 leading-relaxed border-l-4 border-[#1E3A66] pl-3 py-2 bg-[#1E3A66]/5 rounded-r-lg">
+                  No inventamos herramientas; articulamos las que ya existen en una cadena de valor indivisible: integramos la analítica predictiva, la estrategia de precios dinámicos para horas de baja demanda y la captación digital directa en línea.
                 </div>
               </div>
+
+              {/* Columna Derecha: Imagen Omnicanal Ocupando Todo el Espacio Centrada e Impactante */}
+              <div className="flex flex-col items-center justify-center h-full w-full min-h-0 overflow-hidden">
+                <div className="w-full h-full rounded-2xl overflow-hidden bg-[#00172e] border border-blue-900/60 shadow-xl flex items-center justify-center">
+                  <img
+                    src="/images/slides/omnicanalidad.jpg"
+                    alt="Mapa Digital de Distribución y Omnicanalidad"
+                    onError={(e) => {
+                      (e.target as any).src = '/src/assets/images/omnicanalidad_1791947143844.jpg';
+                    }}
+                    className="w-full h-full object-contain p-2 sm:p-3"
+                  />
+                </div>
+              </div>
+
             </div>
 
-            {/* BLOQUE 4: QUÉ ES EL SISTEMA INTEGRAL BLUE OCEAN Y CADENA DE VALOR (8 MÓDULOS) */}
-            <div className="bg-white border border-amber-200/90 rounded-2xl p-5 sm:p-6 shadow-sm space-y-4">
-              <div className="border-b border-amber-100 pb-3">
-                <span className="text-[11px] uppercase font-sans font-bold text-[#b89028] tracking-widest block">
-                  Arquitectura Operativa
-                </span>
-                <h3 className="text-lg sm:text-xl font-black text-blue-950 font-serif">
-                  ¿Qué es el Sistema Integral BLUE OCEAN?
-                </h3>
-                <p className="text-xs sm:text-sm text-zinc-700 pt-1 italic font-semibold">
-                  "No inventamos herramientas tecnológicas; articulamos las que ya existen en una cadena de valor indivisible."
-                </p>
-              </div>
-
-              <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
-                Es un enfoque estratégico basado en el diagnóstico individual de cada propiedad. Integramos analítica, gestión de precios dinámicos para horas de baja demanda y captación digital en línea para maximizar la ocupación de microestancias.
-              </p>
-
-              <div className="space-y-2 pt-1">
-                <span className="text-xs font-bold text-zinc-700 uppercase font-sans block">
-                  Cadena de Valor Articulada (8 Módulos de Conversión Indivisibles):
-                </span>
-                <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 w-full">
-                  {[
-                    { title: 'Inteligencia Artificial', desc: 'Diagnóstico y patrones' },
-                    { title: 'APIs Automatización', desc: 'Conexión en tiempo real' },
-                    { title: 'Agentes de IA', desc: 'Atención 24/7' },
-                    { title: 'Pasarelas Pago', desc: 'Mercado Pago seguro' },
-                    { title: 'Visibilidad en Línea', desc: 'Captación digital' },
-                    { title: 'Nuevos Canales', desc: 'Demanda extendida' },
-                    { title: 'Pricing Dinámico', desc: 'Horas valle y pico' },
-                    { title: 'Estrategias TRM', desc: 'Monetización constante' }
-                  ].map((s, i) => (
-                    <div 
-                      key={i} 
-                      className="p-2.5 rounded-xl text-center text-xs font-bold border bg-gradient-to-b from-white to-amber-50/40 border-amber-300/80 shadow-sm hover:border-[#d4af37] transition"
-                    >
-                      <span className="block text-[10px] text-amber-700 font-sans">0{i + 1}</span>
-                      <span className="text-blue-950 block text-[11px] leading-tight font-black">{s.title}</span>
-                      <span className="text-[9px] text-zinc-500 font-normal block pt-1">{s.desc}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* BLOQUE 5: EL COMPROMISO BLUE OCEAN (INVERSIÓN, CAPACITACIÓN Y VALIDACIÓN) */}
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50/50 border-2 border-amber-300/80 rounded-2xl p-5 sm:p-6 shadow-sm space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-sans uppercase tracking-wider text-amber-900 font-black">
-                  Compromiso Central Blue Ocean
-                </span>
-                <span className="text-xs font-bold text-emerald-800 bg-emerald-100/80 px-2.5 py-0.5 rounded border border-emerald-300">
-                  Sin Cobros Fijos Ni Costos de Desarrollo
-                </span>
-              </div>
-              <h4 className="text-sm sm:text-base font-black text-blue-950 font-serif">
-                Inversión, Acompañamiento y Validación en Condiciones Reales
-              </h4>
-              <p className="text-xs sm:text-sm text-zinc-800 leading-relaxed">
-                Blue Ocean asume el esfuerzo financiero para desarrollar y validar el modelo en condiciones reales. La incorporación del hotelero al proceso de validación no implica costos por desarrollo tecnológico ni cobros fijos de ninguna índole.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-xs text-zinc-800">
-                <div className="flex items-start gap-2 bg-white/90 p-2.5 rounded-lg border border-amber-200">
-                  <span className="text-amber-700 font-bold">✓</span>
-                  <span><strong>Capacitación continua y sin costo:</strong> Para el personal y equipo directivo en servicio, comercialización y rentabilidad.</span>
-                </div>
-                <div className="flex items-start gap-2 bg-white/90 p-2.5 rounded-lg border border-amber-200">
-                  <span className="text-amber-700 font-bold">✓</span>
-                  <span><strong>Acompañamiento cercano:</strong> Para la puesta en marcha de las estrategias operativas día con día.</span>
-                </div>
-                <div className="flex items-start gap-2 bg-white/90 p-2.5 rounded-lg border border-amber-200">
-                  <span className="text-amber-700 font-bold">✓</span>
-                  <span><strong>Infraestructura Global y Pagos Transparentes:</strong> Plataforma en la nube segura (SOC 2, ISO 27001) y liquidaciones directas vía Mercado Pago.</span>
-                </div>
-                <div className="flex items-start gap-2 bg-white/90 p-2.5 rounded-lg border border-amber-200">
-                  <span className="text-amber-700 font-bold">✓</span>
-                  <span><strong>Resultados Verificables en Campo:</strong> Demostración de valor medible a través del aumento de ingresos por hora disponible.</span>
-                </div>
-              </div>
-            </div>
           </div>
         )}
 
@@ -1023,7 +864,7 @@ export function ConvocatoriaSliderView({
                     className={`p-2 rounded-lg text-center text-xs font-bold border transition ${
                       s.gold 
                         ? 'bg-[#d4af37] text-zinc-950 border-[#d4af37] shadow-sm' 
-                        : 'bg-zinc-50 text-blue-950 border-zinc-300 shadow-sm'
+                        : 'bg-[#1E3A66]/10 text-blue-950 border-[#1E3A66]/20 shadow-sm'
                     }`}
                   >
                     <span className="block text-[10px] opacity-60 font-sans">0{i + 1}</span>
@@ -1061,7 +902,7 @@ export function ConvocatoriaSliderView({
               </div>
             </div>
 
-            <div className="p-3 rounded-xl bg-zinc-50 border border-zinc-200 shadow-sm space-y-0.5 text-xs text-zinc-700">
+            <div className="p-3 rounded-xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-sm space-y-0.5 text-xs text-zinc-800">
               <p className="font-bold text-blue-900 text-xs sm:text-sm">Estrategias que juntas gestionan habitaciones vacías.</p>
               <p>Nuestra Propuesta de Valor: Blue Ocean aporta la tecnología, la integración analítica, la estrategia y el trabajo operativo sin cobros fijos.</p>
             </div>
@@ -1072,7 +913,7 @@ export function ConvocatoriaSliderView({
         {/* SECCIÓN 4: CAPTACIÓN EN LÍNEA (BLANCO - FIEL A 4 BO.JPG) */}
         {/* ========================================================= */}
         {currentSlide === 3 && (
-          <div className="w-full bg-white border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
+          <div className="w-full bg-[#fcfbf9] border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
             <div>
               <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
                 Apartado 04 • Conversión Digital
@@ -1084,10 +925,10 @@ export function ConvocatoriaSliderView({
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center flex-1">
               <div className="space-y-3 text-xs sm:text-sm text-zinc-700">
-                <div className="p-3.5 rounded-xl bg-white border border-zinc-200 shadow-sm font-bold text-blue-950">
+                <div className="p-3.5 rounded-xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-sm font-bold text-blue-950">
                   "Visualización intuitiva: Diseñada para maximizar la captación."
                 </div>
-                <div className="p-3.5 rounded-xl bg-white border border-zinc-200 shadow-sm leading-relaxed">
+                <div className="p-3.5 rounded-xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-sm leading-relaxed text-zinc-800">
                   "Interfaces de alto impacto diseñadas para convertir visitas en reservas, integrando gestión de inventario y visibilidad en tiempo real."
                 </div>
                 <div className="p-3.5 rounded-xl bg-amber-500/10 border border-[#d4af37] text-xs text-blue-950 font-semibold leading-relaxed">
@@ -1155,7 +996,7 @@ export function ConvocatoriaSliderView({
         {/* SECCIÓN 5: REVENUE MANAGEMENT VS TRM (GRÁFICA MES A MES) */}
         {/* ========================================================= */}
         {currentSlide === 4 && (
-          <div className="w-full bg-white border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
+          <div className="w-full bg-[#fcfbf9] border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
             <div>
               <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
                 Apartado 05 • Metodología Comparada & Gráfica
@@ -1165,14 +1006,14 @@ export function ConvocatoriaSliderView({
               </h2>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200 shadow-sm text-xs sm:text-sm text-zinc-700">
+            <div className="p-3.5 rounded-xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-sm text-xs sm:text-sm text-zinc-800">
               El Revenue Management tradicional solo maximiza venta de habitaciones. El <strong className="text-blue-950">Total Revenue Management (TRM)</strong> optimiza toda la operación integral: rotación, horas valle, consumo adicional y canales directos.
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center flex-1">
               
               {/* Gráfica de Barras Crecientes de Alto Contraste */}
-              <div className="md:col-span-6 p-5 rounded-2xl bg-zinc-50 border-2 border-blue-900/30 shadow-lg text-center">
+              <div className="md:col-span-6 p-5 rounded-2xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-lg text-center">
                 <div className="flex justify-between items-center mb-3">
                   <span className="text-xs font-black text-blue-950 uppercase tracking-wide">
                     Crecimiento de Ingresos Mes a Mes
@@ -1243,7 +1084,7 @@ export function ConvocatoriaSliderView({
         {/* SECCIÓN 6: TARIFA DINÁMICA (GRÁFICA COMPLETA DE TARIFA DINAMICA.JPG) */}
         {/* ========================================================= */}
         {currentSlide === 5 && (
-          <div className="w-full bg-white border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
+          <div className="w-full bg-[#fcfbf9] border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
             <div className="border-b border-zinc-200 pb-2">
               <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
                 Apartado 06 • Gráfica Comparativa Oficial
@@ -1253,7 +1094,7 @@ export function ConvocatoriaSliderView({
               </h2>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200 shadow-sm text-center text-xs sm:text-sm text-zinc-700">
+            <div className="p-3.5 rounded-xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-sm text-center text-xs sm:text-sm text-zinc-800">
               No cambia el valor de la habitación; cambia la forma de aprovechar cada oportunidad de venta según <strong>demanda, disponibilidad y momento de compra</strong>.
             </div>
 
@@ -1261,7 +1102,7 @@ export function ConvocatoriaSliderView({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 flex-1">
               
               {/* TARIFA DINÁMICA (MODELO LCM) */}
-              <div className="p-5 rounded-2xl bg-zinc-50 border-2 border-[#d4af37] shadow-xl flex flex-col justify-between space-y-3">
+              <div className="p-5 rounded-2xl bg-[#1E3A66]/10 border-2 border-[#d4af37] shadow-xl flex flex-col justify-between space-y-3">
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <span className="w-3 h-3 rounded-full bg-[#d4af37]" />
@@ -1395,7 +1236,7 @@ export function ConvocatoriaSliderView({
         {/* SECCIÓN 7: ¿QUÉ ES EL PRICING? (FIEL A QUE ES EL PRICING.JPG) */}
         {/* ========================================================= */}
         {currentSlide === 6 && (
-          <div className="w-full bg-white border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
+          <div className="w-full bg-[#fcfbf9] border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
             <div className="border-b border-zinc-200 pb-2">
               <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
                 Apartado 07 • Estrategia Comercial Oficial
@@ -1405,7 +1246,7 @@ export function ConvocatoriaSliderView({
               </h2>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200 shadow-sm text-center text-xs sm:text-sm text-zinc-700">
+            <div className="p-3.5 rounded-xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-sm text-center text-xs sm:text-sm text-zinc-800">
               El proceso de definir la estrategia de precios considerando <strong>costos, competencia, demanda y objetivos de rentabilidad</strong>.
             </div>
 
@@ -1431,7 +1272,7 @@ export function ConvocatoriaSliderView({
 
             {/* 4 Pilares del Pricing */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 flex-1">
-              <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 shadow-md space-y-2">
+              <div className="p-4 rounded-xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-sm space-y-2">
                 <span className="text-xs font-sans uppercase text-[#d4af37] font-bold block">Pilar 01</span>
                 <span className="text-sm font-bold text-blue-950 block">Costos Operativos</span>
                 <p className="text-xs text-zinc-600 leading-relaxed">
@@ -1439,7 +1280,7 @@ export function ConvocatoriaSliderView({
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 shadow-md space-y-2">
+              <div className="p-4 rounded-xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-sm space-y-2">
                 <span className="text-xs font-sans uppercase text-[#d4af37] font-bold block">Pilar 02</span>
                 <span className="text-sm font-bold text-blue-950 block">Demanda en Tiempo Real</span>
                 <p className="text-xs text-zinc-600 leading-relaxed">
@@ -1447,7 +1288,7 @@ export function ConvocatoriaSliderView({
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 shadow-md space-y-2">
+              <div className="p-4 rounded-xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-sm space-y-2">
                 <span className="text-xs font-sans uppercase text-[#d4af37] font-bold block">Pilar 03</span>
                 <span className="text-sm font-bold text-blue-950 block">Competencia Local</span>
                 <p className="text-xs text-zinc-600 leading-relaxed">
@@ -1455,7 +1296,7 @@ export function ConvocatoriaSliderView({
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 shadow-md space-y-2">
+              <div className="p-4 rounded-xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-sm space-y-2">
                 <span className="text-xs font-sans uppercase text-[#d4af37] font-bold block">Pilar 04</span>
                 <span className="text-sm font-bold text-blue-950 block">Momento de Compra</span>
                 <p className="text-xs text-zinc-600 leading-relaxed">
@@ -1483,7 +1324,7 @@ export function ConvocatoriaSliderView({
         {/* SECCIÓN 8: EL FORECASTING (BLANCO) */}
         {/* ========================================================= */}
         {currentSlide === 7 && (
-          <div className="w-full bg-white border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
+          <div className="w-full bg-[#fcfbf9] border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
             <div>
               <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
                 Apartado 08 • Anticipación Estratégica
@@ -1517,7 +1358,7 @@ export function ConvocatoriaSliderView({
               </div>
 
               <div className="md:col-span-7 space-y-3">
-                <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 shadow-sm text-xs sm:text-sm text-zinc-700 space-y-2">
+                <div className="p-4 rounded-xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-sm text-xs sm:text-sm text-zinc-800 space-y-2">
                   <p className="font-bold text-blue-950 text-base">Anticipar la demanda antes de que cambie el mercado:</p>
                   <p className="leading-relaxed">
                     Permite administrar disponibilidad, activar promociones a tiempo, coordinar personal de limpieza y capturar mejores ingresos sin sacrificar tarifa media.
@@ -1542,7 +1383,7 @@ export function ConvocatoriaSliderView({
         {/* SECCIÓN 9: SEGMENTACIÓN Y CANALES DE DISTRIBUCIÓN (BLANCO) */}
         {/* ========================================================= */}
         {currentSlide === 8 && (
-          <div className="w-full bg-white border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
+          <div className="w-full bg-[#fcfbf9] border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
             <div>
               <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
                 Apartado 09 • Segmentación y Canales
@@ -1561,7 +1402,7 @@ export function ConvocatoriaSliderView({
             />
 
             {/* Párrafo 1 */}
-            <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 shadow-sm text-xs sm:text-sm text-zinc-700 leading-relaxed">
+            <div className="p-4 rounded-xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-sm text-xs sm:text-sm text-zinc-800 leading-relaxed">
               <p>
                 El objetivo principal de la gestión de ingresos es vender el producto correcto al cliente correcto, en el momento correcto, por el precio correcto. Es alinear los precios de tus productos y luego distribuirlos estratégicamente en los canales adecuados a los clientes adecuados.
               </p>
@@ -1576,7 +1417,7 @@ export function ConvocatoriaSliderView({
             />
 
             {/* Párrafo 2 */}
-            <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 shadow-sm text-xs sm:text-sm text-zinc-700 leading-relaxed">
+            <div className="p-4 rounded-xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-sm text-xs sm:text-sm text-zinc-800 leading-relaxed">
               <p>
                 La segmentación es un medio para dividir el mercado en segmentos que son definibles, accesibles, accionables y rentables, y que tienen potencial de crecimiento.
               </p>
@@ -1586,7 +1427,7 @@ export function ConvocatoriaSliderView({
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-              <div className="p-4 rounded-xl bg-blue-50 border border-blue-200 text-xs text-blue-950">
+              <div className="p-4 rounded-xl bg-[#1E3A66]/15 border border-[#1E3A66]/30 text-xs text-blue-950">
                 <strong>Canal B2C Directo:</strong> Parejas y microestancias con reserva sin fricción y acceso vehicular directo.
               </div>
               <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-950">
@@ -1604,7 +1445,7 @@ export function ConvocatoriaSliderView({
         {/* SECCIÓN 10: PROYECCIÓN DE RENDIMIENTO (GRÁFICA SEMANA 1 A 6) */}
         {/* ========================================================= */}
         {currentSlide === 9 && (
-          <div className="w-full bg-white border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
+          <div className="w-full bg-[#fcfbf9] border border-zinc-200/90 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between space-y-6 text-left">
             <div className="border-b border-zinc-200 pb-2">
               <span className="text-xs font-sans uppercase text-[#d4af37] font-bold tracking-widest block">
                 Apartado 10 • Gráfica de Retorno Oficial
@@ -1614,14 +1455,14 @@ export function ConvocatoriaSliderView({
               </h2>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200 shadow-sm text-xs sm:text-sm text-zinc-700">
+            <div className="p-3.5 rounded-xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-sm text-xs sm:text-sm text-zinc-800">
               Medimos la eficiencia operativa para transformar horas muertas en flujo de caja real.
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-center flex-1">
               
               {/* Gráfica Evolutiva de Semanas de Implementación (Fiel a proyección de impacto.jpg) */}
-              <div className="md:col-span-6 p-5 rounded-2xl bg-zinc-50 border-2 border-blue-900/30 shadow-xl text-center">
+              <div className="md:col-span-6 p-5 rounded-2xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-xl text-center">
                 <div className="flex justify-between items-center mb-3">
                   <span className="text-xs font-black text-blue-950 uppercase tracking-wide">
                     Evolución de Ingresos (Semana 1 a Semana 6)
@@ -1700,7 +1541,7 @@ export function ConvocatoriaSliderView({
                   caption="Crecimiento neto de ingresos y flujo de caja para el hotelero"
                   aspectClass="h-36 sm:h-44 w-full"
                 />
-                <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 shadow-sm">
+                <div className="p-4 rounded-xl bg-[#1E3A66]/10 border border-[#1E3A66]/20 shadow-sm">
                   <h3 className="text-xs sm:text-sm font-bold text-blue-950 leading-relaxed">
                     "Incremento proyectado en ingresos por optimización de tarifas y horas muertas: 15% a 35%."
                   </h3>

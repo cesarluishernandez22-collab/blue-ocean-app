@@ -46,7 +46,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0e0f12] text-zinc-100 flex flex-col font-sans selection:bg-amber-500 selection:text-zinc-950">
+    <div className={`h-screen max-h-screen ${activeTab === 'convocatoria' ? 'overflow-hidden' : 'overflow-y-auto'} bg-[#0e0f12] text-zinc-100 flex flex-col font-sans selection:bg-amber-500 selection:text-zinc-950`}>
       {/* Header Unificado de Trabajo */}
       <Header
         activeTab={activeTab}
@@ -58,7 +58,7 @@ export default function App() {
       />
 
       {/* Main Content Area */}
-      <main className="flex-1 w-full">
+      <main className="flex-1 w-full overflow-hidden min-h-0">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -66,7 +66,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.15, ease: 'easeOut' }}
-            className="w-full"
+            className="w-full h-full min-h-0"
           >
             {activeTab === 'convocatoria' && (
               <div className="w-full h-full">
